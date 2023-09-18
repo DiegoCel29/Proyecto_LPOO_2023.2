@@ -4,6 +4,7 @@ using namespace System;
 
 public ref class Recorrido {
 private:
+	int Codigo;
 	String^ Personal;
 	String^ Ruta;
 	String^ Autobus;
@@ -13,5 +14,5 @@ private:
 
 private:
 	Recorrido();
-	Recorrido(String^ Personal, String^ Ruta, String^ Autobus, String^ HoraSalida, String^ HoraLlegada, String^ Combustible);
+	Recorrido(int Codigo, String^ Personal, String^ Ruta, String^ Autobus, String^ HoraSalida, String^ HoraLlegada, String^ Combustible);
 };

@@ -3,7 +3,8 @@
 Recorrido::Recorrido() {
 };
 
-Recorrido::Recorrido(String^ Personal, String^ Ruta, String^ Autobus, String^ HoraSalida, String^ HoraLlegada, String^ Combustible) {
+Recorrido::Recorrido(int Codigo, String^ Personal, String^ Ruta, String^ Autobus, String^ HoraSalida, String^ HoraLlegada, String^ Combustible) {
+	this->Codigo = Codigo;
 	this->Personal = Personal;
 	this->Ruta = Ruta;
 	this->Autobus = Autobus;

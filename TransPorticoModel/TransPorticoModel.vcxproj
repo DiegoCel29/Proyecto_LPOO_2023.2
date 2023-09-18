@@ -112,10 +112,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Emergencia.h" />
+    <ClInclude Include="Autobus.h" />
+    <ClInclude Include="Tarjeta.h" />
+    <ClInclude Include="Ruta.h" />
+    <ClInclude Include="Paradero.cpp" />
+    <ClInclude Include="Paradero.h" />
+    <ClInclude Include="Mantenimiento.h" />
+    <ClInclude Include="Pasajero.h" />
+    <ClInclude Include="Persona.h" />
     <ClInclude Include="Recorrido.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Recorrido.cpp" />
+    <ClCompile Include="Persona.cpp" />
+    <ClCompile Include="Pasajero.cpp" />
+    <ClCompile Include="Emergencia.cpp" />
+    <ClCompile Include="Mantenimiento.cpp" />
+    <ClCompile Include="Autobus.cpp" />
+    <ClCompile Include="Ruta.cpp" />
+    <ClCompile Include="Tarjeta.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
