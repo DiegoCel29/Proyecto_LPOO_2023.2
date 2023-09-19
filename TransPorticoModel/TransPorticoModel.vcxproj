@@ -114,6 +114,17 @@
   <ItemGroup>
     <ClInclude Include="Emergencia.h" />
     <ClInclude Include="Autobus.h" />
+    <ClInclude Include="Empleado.h" />
+    <ClInclude Include="Calificacion.h" />
+    <ClInclude Include="Atajo.h" />
+    <ClInclude Include="BuzonSugerencia.h" />
+    <ClInclude Include="Gestion.h" />
+    <ClInclude Include="Promociones.h" />
+    <ClInclude Include="MedidasEstadisticas.h" />
+    <ClInclude Include="InformeEconomico.h" />
+    <ClInclude Include="ParaderosRecorridos.h" />
+    <ClInclude Include="Horario.h" />
+    <ClInclude Include="SituacionRecorrido.h" />
     <ClInclude Include="Tarjeta.h" />
     <ClInclude Include="Ruta.h" />
     <ClInclude Include="Paradero.cpp" />
@@ -131,6 +142,17 @@
     <ClCompile Include="Mantenimiento.cpp" />
     <ClCompile Include="Autobus.cpp" />
     <ClCompile Include="Ruta.cpp" />
+    <ClCompile Include="Empleado.cpp" />
+    <ClCompile Include="SituacionRecorrido.cpp" />
+    <ClCompile Include="Horario.cpp" />
+    <ClCompile Include="Calificacion.cpp" />
+    <ClCompile Include="ParaderosRecorridos.cpp" />
+    <ClCompile Include="Atajo.cpp" />
+    <ClCompile Include="BuzonSugerencia.cpp" />
+    <ClCompile Include="InformeEconomico.cpp" />
+    <ClCompile Include="Gestion.cpp" />
+    <ClCompile Include="MedidasEstadisticas.cpp" />
+    <ClCompile Include="Promociones.cpp" />
     <ClCompile Include="Tarjeta.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
