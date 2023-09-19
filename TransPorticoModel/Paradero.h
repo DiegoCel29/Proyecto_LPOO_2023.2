@@ -2,13 +2,13 @@
 
 using namespace System;
 
-public ref class Paradero{
+public ref class Paradero {
 private:
 	int Codigo;
 	String^ Nombre;
 	double X_Paradero;
 	double Y_Paradero;
-	int frecuencia;
+	int Frecuencia;
 	double Distancia;
 
 public:

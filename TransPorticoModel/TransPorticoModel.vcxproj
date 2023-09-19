@@ -43,7 +43,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CLRSupport>true</CLRSupport>
@@ -119,6 +119,7 @@
     <ClInclude Include="Atajo.h" />
     <ClInclude Include="BuzonSugerencia.h" />
     <ClInclude Include="Gestion.h" />
+    <ClInclude Include="Paradero.h" />
     <ClInclude Include="Promociones.h" />
     <ClInclude Include="MedidasEstadisticas.h" />
     <ClInclude Include="InformeEconomico.h" />
@@ -127,8 +128,6 @@
     <ClInclude Include="SituacionRecorrido.h" />
     <ClInclude Include="Tarjeta.h" />
     <ClInclude Include="Ruta.h" />
-    <ClInclude Include="Paradero.cpp" />
-    <ClInclude Include="Paradero.h" />
     <ClInclude Include="Mantenimiento.h" />
     <ClInclude Include="Pasajero.h" />
     <ClInclude Include="Persona.h" />
@@ -153,6 +152,7 @@
     <ClCompile Include="Gestion.cpp" />
     <ClCompile Include="MedidasEstadisticas.cpp" />
     <ClCompile Include="Promociones.cpp" />
+    <ClCompile Include="Source.cpp" />
     <ClCompile Include="Tarjeta.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
