@@ -1,5 +1,7 @@
 #include "Mantenimiento.h"
 
+using namespace TransPorticoModel;
+
 Mantenimiento::Mantenimiento() {
 
 };

@@ -1,5 +1,7 @@
 #include "Atajo.h"
 
+using namespace TransPorticoModel;
+
 Atajo::Atajo() {
 
 };

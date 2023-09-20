@@ -1,5 +1,7 @@
 #include "SituacionRecorrido.h"
 
+using namespace TransPorticoModel;
+
 SituacionRecorrido::SituacionRecorrido() {
 
 };

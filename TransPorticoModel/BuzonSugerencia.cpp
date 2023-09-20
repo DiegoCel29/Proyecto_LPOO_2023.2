@@ -1,5 +1,7 @@
 #include "BuzonSugerencia.h"
 
+using namespace TransPorticoModel;
+
 BuzonSugerencia::BuzonSugerencia() {
 
 };

@@ -35,6 +35,8 @@ namespace TransPorticoView {
 			}
 		}
 
+	protected:
+
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.

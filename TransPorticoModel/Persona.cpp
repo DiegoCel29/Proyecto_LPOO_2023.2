@@ -1,5 +1,7 @@
 #include "Persona.h"
 
+using namespace TransPorticoModel;
+
 Persona::Persona() {
 
 };

@@ -1,5 +1,7 @@
 #include "Horario.h"
 
+using namespace TransPorticoModel;
+
 Horario::Horario() {
 
 };

@@ -1,5 +1,7 @@
 #include "Pasajero.h"
 
+using namespace TransPorticoModel;
+
 Pasajero::Pasajero() : Persona() {
 
 };

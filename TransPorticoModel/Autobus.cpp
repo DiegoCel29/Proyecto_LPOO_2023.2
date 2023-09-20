@@ -1,5 +1,7 @@
 #include "Autobus.h"
 
+using namespace TransPorticoModel;
+
 Autobus::Autobus() {
 
 };

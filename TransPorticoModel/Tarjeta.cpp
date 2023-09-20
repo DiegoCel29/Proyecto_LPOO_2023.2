@@ -1,5 +1,7 @@
 #include "Tarjeta.h"
 
+using namespace TransPorticoModel;
+
 Tarjeta::Tarjeta() {
 
 };

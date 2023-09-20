@@ -1,5 +1,7 @@
 #include "Promociones.h"
 
+using namespace TransPorticoModel;
+
 Promociones::Promociones() {
 
 };

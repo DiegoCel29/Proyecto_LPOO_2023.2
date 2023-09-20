@@ -1,5 +1,7 @@
 #include "Gestion.h"
 
+using namespace TransPorticoModel;
+
 Gestion::Gestion() {
 
 };

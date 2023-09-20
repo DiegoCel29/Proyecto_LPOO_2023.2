@@ -1,5 +1,7 @@
 #include "Emergencia.h"
 
+using namespace TransPorticoModel;
+
 Emergencia::Emergencia() {
 
 };

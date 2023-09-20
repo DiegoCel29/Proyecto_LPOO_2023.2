@@ -1,5 +1,7 @@
 #include "Recorrido.h"
 
+using namespace TransPorticoModel;
+
 Recorrido::Recorrido() {
 };
 

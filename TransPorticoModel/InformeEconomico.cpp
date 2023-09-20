@@ -1,5 +1,7 @@
 #include "InformeEconomico.h"
 
+using namespace TransPorticoModel;
+
 InformeEconomico::InformeEconomico() {
 
 };

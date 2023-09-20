@@ -1,5 +1,7 @@
 #include "Calificacion.h"
 
+using namespace TransPorticoModel;
+
 Calificacion::Calificacion() {
 
 };

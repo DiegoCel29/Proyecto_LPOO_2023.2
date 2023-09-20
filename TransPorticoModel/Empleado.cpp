@@ -1,5 +1,7 @@
 #include "Empleado.h"
 
+using namespace TransPorticoModel;
+
 Empleado::Empleado() :Persona() {
 
 };

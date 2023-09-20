@@ -1,5 +1,7 @@
 #include "ParaderosRecorridos.h"
 
+using namespace TransPorticoModel;
+
 ParaderosRecorridos::ParaderosRecorridos() {
 
 };

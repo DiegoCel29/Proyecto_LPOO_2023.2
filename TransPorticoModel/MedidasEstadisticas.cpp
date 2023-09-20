@@ -1,5 +1,7 @@
 #include "MedidasEstadisticas.h"
 
+using namespace TransPorticoModel;
+
 MedidasEstadisticas::MedidasEstadisticas() {
 
 };

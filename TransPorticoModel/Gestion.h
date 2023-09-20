@@ -2,14 +2,16 @@
 
 using namespace System;
 
-public ref class  Gestion{
-private:
-	int Codigo;
-	String^ Ruta;
-	int CantPasajerosRuta;
-	double MediaPuntaje;
+namespace TransPorticoModel {
+	public ref class  Gestion {
+	private:
+		int Codigo;
+		String^ Ruta;
+		int CantPasajerosRuta;
+		double MediaPuntaje;
 
-public:
-	Gestion();
-	Gestion(int Codigo, String^ Ruta, int CantPasajerosRuta, double MediaPuntaje);
+	public:
+		Gestion();
+		Gestion(int Codigo, String^ Ruta, int CantPasajerosRuta, double MediaPuntaje);
+	};
 };

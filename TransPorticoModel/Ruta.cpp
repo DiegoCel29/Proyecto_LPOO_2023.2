@@ -1,5 +1,7 @@
 #include "Ruta.h"
 
+using namespace TransPorticoModel;
+
 Ruta::Ruta() {
 
 };
