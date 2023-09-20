@@ -1,4 +1,4 @@
-#include "FrmPrincipal.h"
+#include "FrmPantallaIngreso.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -8,6 +8,6 @@ void main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	FrmPrincipal Ventana;
+	FrmPantallaIngreso Ventana;
 	Application::Run(% Ventana);
 }

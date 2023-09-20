@@ -50,16 +50,18 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FrmPrincipal::typeid));
 			this->SuspendLayout();
 			// 
 			// FrmPrincipal
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(558, 469);
-			this->IsMdiContainer = true;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(866, 469);
+			this->DoubleBuffered = true;
 			this->Name = L"FrmPrincipal";
-			this->SizeGripStyle = System::Windows::Forms::SizeGripStyle::Show;
 			this->Text = L"FrmPrincipal";
 			this->ResumeLayout(false);
 

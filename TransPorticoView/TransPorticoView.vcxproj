@@ -114,6 +114,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FrmPantallaIngreso.cpp" />
     <ClCompile Include="FrmPrincipal.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -125,11 +126,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FrmPantallaIngreso.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FrmPrincipal.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmPantallaIngreso.resx">
+      <DependentUpon>FrmPantallaIngreso.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.h</DependentUpon>
     </EmbeddedResource>
