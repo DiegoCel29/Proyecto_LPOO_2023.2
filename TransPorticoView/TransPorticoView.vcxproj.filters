@@ -39,6 +39,24 @@
     <ClCompile Include="FrmMantenimientoPersona.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
+    <ClCompile Include="FrmMantenimientoMantenimiento.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="frmMantenimientoRuta.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="frmMantenimientoParadero.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="frmMantenimientoHorario.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="frmMantenimientoEmergencia.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="frmMantenimientoCalificacion.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FrmPantallaIngreso.h">
@@ -62,8 +80,36 @@
     <ClInclude Include="FrmMantenimientoPersona.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="FrmMantenimientoMantenimiento.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoRuta.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoParadero.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoHorario.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoEmergencia.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoCalificacion.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="BuzonSugerencia.txt" />
+    <Text Include="Promociones.txt" />
+    <Text Include="Empleados.txt" />
+    <Text Include="Tarjetas.txt" />
+    <Text Include="Personas.txt" />
+    <Text Include="Mantenimientos.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Calificacion.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Emergencia.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Horario.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Paradero.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Ruta.txt" />
   </ItemGroup>
 </Project>

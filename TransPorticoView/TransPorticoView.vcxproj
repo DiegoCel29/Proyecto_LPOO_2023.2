@@ -115,9 +115,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp" />
+    <ClCompile Include="frmMantenimientoCalificacion.cpp" />
+    <ClCompile Include="frmMantenimientoEmergencia.cpp" />
     <ClCompile Include="FrmMantenimientoEmpleado.cpp" />
+    <ClCompile Include="frmMantenimientoHorario.cpp" />
+    <ClCompile Include="FrmMantenimientoMantenimiento.cpp" />
+    <ClCompile Include="frmMantenimientoParadero.cpp" />
     <ClCompile Include="FrmMantenimientoPersona.cpp" />
     <ClCompile Include="FrmMantenimientoPromociones.cpp" />
+    <ClCompile Include="frmMantenimientoRuta.cpp" />
     <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
     <ClCompile Include="FrmPantallaIngreso.cpp" />
@@ -134,13 +140,31 @@
     <ClInclude Include="FrmMantenimientoBuzonSugerencias.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="frmMantenimientoCalificacion.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoEmergencia.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FrmMantenimientoEmpleado.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoHorario.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FrmMantenimientoMantenimiento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoParadero.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoPersona.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoPromociones.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoRuta.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoTarjeta.h">
@@ -159,6 +183,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoEmpleado.resx">
       <DependentUpon>FrmMantenimientoEmpleado.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoMantenimiento.resx">
+      <DependentUpon>FrmMantenimientoMantenimiento.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoPersona.resx">
       <DependentUpon>FrmMantenimientoPersona.h</DependentUpon>
@@ -185,7 +212,17 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Calificacion.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Emergencia.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Horario.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Paradero.txt" />
+    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Ruta.txt" />
     <Text Include="BuzonSugerencia.txt" />
+    <Text Include="Empleados.txt" />
+    <Text Include="Mantenimientos.txt" />
+    <Text Include="Personas.txt" />
+    <Text Include="Promociones.txt" />
+    <Text Include="Tarjetas.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

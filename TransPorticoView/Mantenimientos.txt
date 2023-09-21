@@ -1,0 +1,4 @@
+1;Si;Rutina;Rutinario
+2;No;Choque;Choco
+3;Si;Accidente;Choco
+4;No;A;a

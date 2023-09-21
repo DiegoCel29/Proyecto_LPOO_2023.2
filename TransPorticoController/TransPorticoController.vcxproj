@@ -113,9 +113,29 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BuzonSugerenciaController.h" />
+    <ClInclude Include="CalificacionController.h" />
+    <ClInclude Include="EmergenciaController.h" />
+    <ClInclude Include="EmpleadoController.h" />
+    <ClInclude Include="HorarioController.h" />
+    <ClInclude Include="MantenimientoController.h" />
+    <ClInclude Include="ParaderoController.h" />
+    <ClInclude Include="PersonaController.h" />
+    <ClInclude Include="PromocionesController.h" />
+    <ClInclude Include="RutaController.h" />
+    <ClInclude Include="TarjetaController.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BuzonSugerenciaController.cpp" />
+    <ClCompile Include="CalificacionController.cpp" />
+    <ClCompile Include="EmergenciaController.cpp" />
+    <ClCompile Include="EmpleadoController.cpp" />
+    <ClCompile Include="HorarioController.cpp" />
+    <ClCompile Include="MantenimientoController.cpp" />
+    <ClCompile Include="ParaderoController.cpp" />
+    <ClCompile Include="PersonaController.cpp" />
+    <ClCompile Include="PromocionesController.cpp" />
+    <ClCompile Include="RutaController.cpp" />
+    <ClCompile Include="TarjetaController.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransPorticoModel\TransPorticoModel.vcxproj">
@@ -124,6 +144,7 @@
   </ItemGroup>
   <ItemGroup>
     <Text Include="BuzonSugerencia.txt" />
+    <Text Include="Promociones.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Fondo.png" />

@@ -8,6 +8,9 @@ namespace TransPorticoView {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Collections::Generic;
+	using namespace TransPorticoModel;
+	using namespace TransPorticoController;
 
 	/// <summary>
 	/// Resumen de FrmMantenimientoPersona
@@ -40,12 +43,32 @@ namespace TransPorticoView {
 
 
 	private: System::Windows::Forms::Button^ Boton_Buscar;
-	private: System::Windows::Forms::DataGridView^ DGV_BuzonSugerencias;
+	private: System::Windows::Forms::DataGridView^ DGV_Persona;
+
 	private: System::Windows::Forms::Button^ Boton_Anadir;
 	private: System::Windows::Forms::Button^ Boton_Borrar;
 	private: System::Windows::Forms::Button^ Boton_Editar;
 	private: System::Windows::Forms::GroupBox^ GB_CriteriosBusqueda;
-	private: System::Windows::Forms::ComboBox^ ComboBox_Nombre;
+	private: System::Windows::Forms::TextBox^ TB_Apellido;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -68,13 +91,21 @@ namespace TransPorticoView {
 		{
 			this->LabelNombre = (gcnew System::Windows::Forms::Label());
 			this->Boton_Buscar = (gcnew System::Windows::Forms::Button());
-			this->DGV_BuzonSugerencias = (gcnew System::Windows::Forms::DataGridView());
+			this->DGV_Persona = (gcnew System::Windows::Forms::DataGridView());
 			this->Boton_Anadir = (gcnew System::Windows::Forms::Button());
 			this->Boton_Borrar = (gcnew System::Windows::Forms::Button());
 			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
 			this->GB_CriteriosBusqueda = (gcnew System::Windows::Forms::GroupBox());
-			this->ComboBox_Nombre = (gcnew System::Windows::Forms::ComboBox());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_BuzonSugerencias))->BeginInit();
+			this->TB_Apellido = (gcnew System::Windows::Forms::TextBox());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Persona))->BeginInit();
 			this->GB_CriteriosBusqueda->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -103,14 +134,19 @@ namespace TransPorticoView {
 			this->Boton_Buscar->TabIndex = 0;
 			this->Boton_Buscar->Text = L"Buscar";
 			this->Boton_Buscar->UseVisualStyleBackColor = false;
+			this->Boton_Buscar->Click += gcnew System::EventHandler(this, &FrmMantenimientoPersona::Boton_Buscar_Click);
 			// 
-			// DGV_BuzonSugerencias
+			// DGV_Persona
 			// 
-			this->DGV_BuzonSugerencias->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->DGV_BuzonSugerencias->Location = System::Drawing::Point(43, 100);
-			this->DGV_BuzonSugerencias->Name = L"DGV_BuzonSugerencias";
-			this->DGV_BuzonSugerencias->Size = System::Drawing::Size(825, 312);
-			this->DGV_BuzonSugerencias->TabIndex = 3;
+			this->DGV_Persona->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DGV_Persona->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
+				this->Column1,
+					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
+			});
+			this->DGV_Persona->Location = System::Drawing::Point(43, 100);
+			this->DGV_Persona->Name = L"DGV_Persona";
+			this->DGV_Persona->Size = System::Drawing::Size(825, 312);
+			this->DGV_Persona->TabIndex = 3;
 			// 
 			// Boton_Anadir
 			// 
@@ -153,7 +189,7 @@ namespace TransPorticoView {
 			// 
 			// GB_CriteriosBusqueda
 			// 
-			this->GB_CriteriosBusqueda->Controls->Add(this->ComboBox_Nombre);
+			this->GB_CriteriosBusqueda->Controls->Add(this->TB_Apellido);
 			this->GB_CriteriosBusqueda->Controls->Add(this->Boton_Buscar);
 			this->GB_CriteriosBusqueda->Controls->Add(this->LabelNombre);
 			this->GB_CriteriosBusqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
@@ -165,15 +201,52 @@ namespace TransPorticoView {
 			this->GB_CriteriosBusqueda->TabStop = false;
 			this->GB_CriteriosBusqueda->Text = L"Criterios de Busqueda";
 			// 
-			// ComboBox_Nombre
+			// TB_Apellido
 			// 
-			this->ComboBox_Nombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->ComboBox_Nombre->FormattingEnabled = true;
-			this->ComboBox_Nombre->Location = System::Drawing::Point(95, 40);
-			this->ComboBox_Nombre->Name = L"ComboBox_Nombre";
-			this->ComboBox_Nombre->Size = System::Drawing::Size(150, 24);
-			this->ComboBox_Nombre->TabIndex = 4;
+			this->TB_Apellido->Location = System::Drawing::Point(95, 40);
+			this->TB_Apellido->Name = L"TB_Apellido";
+			this->TB_Apellido->Size = System::Drawing::Size(150, 22);
+			this->TB_Apellido->TabIndex = 2;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Codigo";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Nombres";
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"ApellidoPat";
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"ApellidoMat";
+			this->Column4->Name = L"Column4";
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"DNI";
+			this->Column5->Name = L"Column5";
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"Edad";
+			this->Column6->Name = L"Column6";
+			// 
+			// Column7
+			// 
+			this->Column7->HeaderText = L"Genero";
+			this->Column7->Name = L"Column7";
+			// 
+			// Column8
+			// 
+			this->Column8->HeaderText = L"Telefono";
+			this->Column8->Name = L"Column8";
 			// 
 			// FrmMantenimientoPersona
 			// 
@@ -184,10 +257,10 @@ namespace TransPorticoView {
 			this->Controls->Add(this->Boton_Editar);
 			this->Controls->Add(this->Boton_Borrar);
 			this->Controls->Add(this->Boton_Anadir);
-			this->Controls->Add(this->DGV_BuzonSugerencias);
+			this->Controls->Add(this->DGV_Persona);
 			this->Name = L"FrmMantenimientoPersona";
 			this->Text = L"FrmMantenimientoPersona";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_BuzonSugerencias))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Persona))->EndInit();
 			this->GB_CriteriosBusqueda->ResumeLayout(false);
 			this->GB_CriteriosBusqueda->PerformLayout();
 			this->ResumeLayout(false);
@@ -196,5 +269,30 @@ namespace TransPorticoView {
 #pragma endregion
 	private: System::Void listView1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void Boton_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ BuscarApellidoPat = this->TB_Apellido->Text; /* Se selecciona el texto*/
+		PersonaController^ ObjPersonaController = gcnew PersonaController();
+		List<Persona^>^ ListaPersonas = ObjPersonaController->BuscarPersona(BuscarApellidoPat);
+		MostrarGrilla(ListaPersonas);
+	}
+	private: void MostrarGrilla(List<Persona^>^ ListaPersonas) {
+		this->DGV_Persona->Rows->Clear(); /*Elimino toda la informacion del datagrid*/
+		for (int i = 0; i < ListaPersonas->Count; i++) {
+			Persona^ ObjPersona = ListaPersonas[i];
+
+			array<String^>^ FilaGrilla = gcnew array<String^>(8);
+
+			FilaGrilla[0] = Convert::ToString(ObjPersona->GetCodigo());
+			FilaGrilla[1] = ObjPersona->GetNombre();
+			FilaGrilla[2] = ObjPersona->GetApellidoPat();
+			FilaGrilla[3] = ObjPersona->GetApellidoMat();
+			FilaGrilla[4] = ObjPersona->GetDNI();
+			FilaGrilla[5] = Convert::ToString(ObjPersona->GetEdad());
+			FilaGrilla[6] = ObjPersona->GetGenero();
+			FilaGrilla[7] = ObjPersona->GetTelefono();
+
+			this->DGV_Persona->Rows->Add(FilaGrilla);
+		}
+	}
+};
 }

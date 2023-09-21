@@ -8,6 +8,9 @@ namespace TransPorticoView {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Collections::Generic;
+	using namespace TransPorticoModel;
+	using namespace TransPorticoController;
 
 	/// <summary>
 	/// Resumen de FrmMantenimientoPromociones
@@ -40,12 +43,18 @@ namespace TransPorticoView {
 
 
 	private: System::Windows::Forms::Button^ Boton_Buscar;
-	private: System::Windows::Forms::DataGridView^ DGV_BuzonSugerencias;
+	private: System::Windows::Forms::DataGridView^ DGV_Promociones;
+
 	private: System::Windows::Forms::Button^ Boton_Anadir;
 	private: System::Windows::Forms::Button^ Boton_Borrar;
 	private: System::Windows::Forms::Button^ Boton_Editar;
 	private: System::Windows::Forms::GroupBox^ GB_CriteriosBusqueda;
 	private: System::Windows::Forms::ComboBox^ ComboBox_Titulo;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
 
 
 
@@ -69,13 +78,18 @@ namespace TransPorticoView {
 		{
 			this->LabelTitulo = (gcnew System::Windows::Forms::Label());
 			this->Boton_Buscar = (gcnew System::Windows::Forms::Button());
-			this->DGV_BuzonSugerencias = (gcnew System::Windows::Forms::DataGridView());
+			this->DGV_Promociones = (gcnew System::Windows::Forms::DataGridView());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Boton_Anadir = (gcnew System::Windows::Forms::Button());
 			this->Boton_Borrar = (gcnew System::Windows::Forms::Button());
 			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
 			this->GB_CriteriosBusqueda = (gcnew System::Windows::Forms::GroupBox());
 			this->ComboBox_Titulo = (gcnew System::Windows::Forms::ComboBox());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_BuzonSugerencias))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Promociones))->BeginInit();
 			this->GB_CriteriosBusqueda->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -104,14 +118,44 @@ namespace TransPorticoView {
 			this->Boton_Buscar->TabIndex = 0;
 			this->Boton_Buscar->Text = L"Buscar";
 			this->Boton_Buscar->UseVisualStyleBackColor = false;
+			this->Boton_Buscar->Click += gcnew System::EventHandler(this, &FrmMantenimientoPromociones::Boton_Buscar_Click);
 			// 
-			// DGV_BuzonSugerencias
+			// DGV_Promociones
 			// 
-			this->DGV_BuzonSugerencias->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->DGV_BuzonSugerencias->Location = System::Drawing::Point(43, 100);
-			this->DGV_BuzonSugerencias->Name = L"DGV_BuzonSugerencias";
-			this->DGV_BuzonSugerencias->Size = System::Drawing::Size(825, 312);
-			this->DGV_BuzonSugerencias->TabIndex = 3;
+			this->DGV_Promociones->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DGV_Promociones->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+				this->Column1,
+					this->Column2, this->Column3, this->Column4, this->Column5
+			});
+			this->DGV_Promociones->Location = System::Drawing::Point(43, 100);
+			this->DGV_Promociones->Name = L"DGV_Promociones";
+			this->DGV_Promociones->Size = System::Drawing::Size(825, 312);
+			this->DGV_Promociones->TabIndex = 3;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Codigo";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Titulo";
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Fecha de Inicio";
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"Fecha de Fin";
+			this->Column4->Name = L"Column4";
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"Descripcion";
+			this->Column5->Name = L"Column5";
 			// 
 			// Boton_Anadir
 			// 
@@ -171,6 +215,7 @@ namespace TransPorticoView {
 			this->ComboBox_Titulo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ComboBox_Titulo->FormattingEnabled = true;
+			this->ComboBox_Titulo->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"Todo", L"Tres cuartos", L"Un decimo", L"Mitad" });
 			this->ComboBox_Titulo->Location = System::Drawing::Point(95, 40);
 			this->ComboBox_Titulo->Name = L"ComboBox_Titulo";
 			this->ComboBox_Titulo->Size = System::Drawing::Size(150, 24);
@@ -185,10 +230,10 @@ namespace TransPorticoView {
 			this->Controls->Add(this->Boton_Editar);
 			this->Controls->Add(this->Boton_Borrar);
 			this->Controls->Add(this->Boton_Anadir);
-			this->Controls->Add(this->DGV_BuzonSugerencias);
+			this->Controls->Add(this->DGV_Promociones);
 			this->Name = L"FrmMantenimientoPromociones";
 			this->Text = L"FrmMantenimientoPromociones";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_BuzonSugerencias))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Promociones))->EndInit();
 			this->GB_CriteriosBusqueda->ResumeLayout(false);
 			this->GB_CriteriosBusqueda->PerformLayout();
 			this->ResumeLayout(false);
@@ -197,5 +242,28 @@ namespace TransPorticoView {
 #pragma endregion
 	private: System::Void listView1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void Boton_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ BuscarTitulo = this->ComboBox_Titulo->Text; /* Se selecciona el texto*/
+		PromocionesController^ ObjPromocionesController = gcnew PromocionesController();
+		List<Promociones^>^ ListaPromociones = ObjPromocionesController->BuscarPromocion(BuscarTitulo);
+		MostrarGrilla(ListaPromociones);
+
+	}
+	private: void MostrarGrilla(List<Promociones^>^ ListaPromociones) {
+		this->DGV_Promociones->Rows->Clear(); /*Elimino toda la informacion del datagrid*/
+		for (int i = 0; i < ListaPromociones->Count; i++) {
+			Promociones^ ObjPromociones = ListaPromociones[i];
+
+			array<String^>^ FilaGrilla = gcnew array<String^>(5);
+
+			FilaGrilla[0] = Convert::ToString(ObjPromociones->GetCodigo());
+			FilaGrilla[1] = ObjPromociones->GetTitulo();
+			FilaGrilla[2] = ObjPromociones->GetFechaInicio();
+			FilaGrilla[3] = ObjPromociones->GetFechaFin();
+			FilaGrilla[4] = ObjPromociones->GetDescripcion();
+
+			this->DGV_Promociones->Rows->Add(FilaGrilla);
+		}
+	}
+};
 }
