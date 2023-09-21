@@ -112,6 +112,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Downloads\Avance_2 (2)\Avance_2\TransPorticoModel\MedidasEstadisticas.h" />
     <ClInclude Include="Emergencia.h" />
     <ClInclude Include="Autobus.h" />
     <ClInclude Include="Empleado.h" />
@@ -121,7 +122,6 @@
     <ClInclude Include="Gestion.h" />
     <ClInclude Include="Paradero.h" />
     <ClInclude Include="Promociones.h" />
-    <ClInclude Include="MedidasEstadisticas.h" />
     <ClInclude Include="InformeEconomico.h" />
     <ClInclude Include="ParaderosRecorridos.h" />
     <ClInclude Include="Horario.h" />
@@ -134,6 +134,7 @@
     <ClInclude Include="Recorrido.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Downloads\Avance_2 (2)\Avance_2\TransPorticoModel\MedidasEstadisticas.cpp" />
     <ClCompile Include="Recorrido.cpp" />
     <ClCompile Include="Persona.cpp" />
     <ClCompile Include="Pasajero.cpp" />
@@ -150,7 +151,6 @@
     <ClCompile Include="BuzonSugerencia.cpp" />
     <ClCompile Include="InformeEconomico.cpp" />
     <ClCompile Include="Gestion.cpp" />
-    <ClCompile Include="MedidasEstadisticas.cpp" />
     <ClCompile Include="Promociones.cpp" />
     <ClCompile Include="Paradero.cpp" />
     <ClCompile Include="Tarjeta.cpp" />

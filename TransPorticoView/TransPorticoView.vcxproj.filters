@@ -60,13 +60,16 @@
     <ClCompile Include="MantenimientoConductor.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="MantenimientoParaderosRecorridos.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="MantenimientoPasajero.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="MantenimientoSituacionRecorrido.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="frmMantenimientoMedidasEstadisticas.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="MantenimientoParaderosRecorridos.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>
@@ -120,6 +123,9 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="MantenimientoSituacionRecorrido.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoMedidasEstadisticas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

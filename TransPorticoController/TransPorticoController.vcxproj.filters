@@ -60,6 +60,9 @@
     <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\PasajeroController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\Avance_2 (2)\Avance_2\TransPorticoController\MedidasEstadisticasController.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BuzonSugerenciaController.cpp">
@@ -105,6 +108,9 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\PasajeroController.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\Avance_2 (2)\Avance_2\TransPorticoController\MedidasEstadisticasController.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

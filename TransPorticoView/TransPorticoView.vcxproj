@@ -119,6 +119,7 @@
     <ClCompile Include="frmMantenimientoEmergencia.cpp" />
     <ClCompile Include="frmMantenimientoHorario.cpp" />
     <ClCompile Include="FrmMantenimientoMantenimiento.cpp" />
+    <ClCompile Include="frmMantenimientoMedidasEstadisticas.cpp" />
     <ClCompile Include="frmMantenimientoParadero.cpp" />
     <ClCompile Include="FrmMantenimientoPersona.cpp" />
     <ClCompile Include="FrmMantenimientoPromociones.cpp" />
@@ -154,6 +155,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoMantenimiento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmMantenimientoMedidasEstadisticas.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="frmMantenimientoParadero.h">
