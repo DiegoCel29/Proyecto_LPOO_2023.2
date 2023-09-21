@@ -1,5 +1,5 @@
 #pragma once
-#include "FrmPrincipal.h"
+#include "FrmPantallaAdministrador.h"
 
 namespace TransPorticoView {
 
@@ -88,8 +88,8 @@ namespace TransPorticoView {
 		}
 #pragma endregion
 	private: System::Void BotonIngresar_Click(System::Object^ sender, System::EventArgs^ e) {
-		FrmPrincipal^ VentanaPrincipal = gcnew FrmPrincipal();
-		VentanaPrincipal->Show();
+		FrmPantallaAdministrador^ VentanaAdministrador = gcnew FrmPantallaAdministrador();
+		VentanaAdministrador->Show();
 		this->Hide();
 	}
 	};

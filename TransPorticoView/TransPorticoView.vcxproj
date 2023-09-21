@@ -114,8 +114,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp" />
+    <ClCompile Include="FrmMantenimientoEmpleado.cpp" />
+    <ClCompile Include="FrmMantenimientoPersona.cpp" />
+    <ClCompile Include="FrmMantenimientoPromociones.cpp" />
+    <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
+    <ClCompile Include="FrmPantallaAdministrador.cpp" />
     <ClCompile Include="FrmPantallaIngreso.cpp" />
-    <ClCompile Include="FrmPrincipal.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -126,19 +131,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FrmPantallaIngreso.h">
+    <ClInclude Include="FrmMantenimientoBuzonSugerencias.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FrmPrincipal.h">
+    <ClInclude Include="FrmMantenimientoEmpleado.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FrmMantenimientoPersona.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FrmMantenimientoPromociones.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FrmMantenimientoTarjeta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FrmPantallaAdministrador.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FrmPantallaIngreso.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="FrmMantenimientoBuzonSugerencias.resx">
+      <DependentUpon>FrmMantenimientoBuzonSugerencias.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoEmpleado.resx">
+      <DependentUpon>FrmMantenimientoEmpleado.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoPromociones.resx">
+      <DependentUpon>FrmMantenimientoPromociones.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoTarjeta.resx">
+      <DependentUpon>FrmMantenimientoTarjeta.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPantallaAdministrador.resx">
+      <DependentUpon>FrmPantallaAdministrador.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPantallaIngreso.resx">
       <DependentUpon>FrmPantallaIngreso.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPrincipal.resx">
-      <DependentUpon>FrmPrincipal.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
