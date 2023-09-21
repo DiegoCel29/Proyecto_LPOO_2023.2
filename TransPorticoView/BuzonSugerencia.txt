@@ -1,0 +1,4 @@
+20213824;29/12/2002;23:35;Sugerencia;Mejoren;DieCel1;ASK-234
+20213825;30/01/2012;12:08;Consulta;Mejorenx2;DieCel2;ASK-237
+20213826;14/12/2000;05:33;Reclamo;Mejorenx3;DieCel3;ASK-235
+20213827;24/04/1995;09:56;Sugerencia;Mejorenx4;DieCel4;ASK-134

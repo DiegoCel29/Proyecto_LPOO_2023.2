@@ -34,16 +34,18 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::ListView^ listView1;
 	private: System::Windows::Forms::Label^ LabelNombre;
+	protected:
 
 
-	private: System::Windows::Forms::TextBox^ TB_Tipo;
+
 	private: System::Windows::Forms::Button^ Boton_Buscar;
 	private: System::Windows::Forms::DataGridView^ DGV_BuzonSugerencias;
 	private: System::Windows::Forms::Button^ Boton_Anadir;
 	private: System::Windows::Forms::Button^ Boton_Borrar;
 	private: System::Windows::Forms::Button^ Boton_Editar;
+	private: System::Windows::Forms::GroupBox^ GB_CriteriosBusqueda;
+	private: System::Windows::Forms::ComboBox^ ComboBox_Nombre;
 
 
 
@@ -64,49 +66,30 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->LabelNombre = (gcnew System::Windows::Forms::Label());
-			this->TB_Tipo = (gcnew System::Windows::Forms::TextBox());
 			this->Boton_Buscar = (gcnew System::Windows::Forms::Button());
 			this->DGV_BuzonSugerencias = (gcnew System::Windows::Forms::DataGridView());
 			this->Boton_Anadir = (gcnew System::Windows::Forms::Button());
 			this->Boton_Borrar = (gcnew System::Windows::Forms::Button());
 			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
+			this->GB_CriteriosBusqueda = (gcnew System::Windows::Forms::GroupBox());
+			this->ComboBox_Nombre = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_BuzonSugerencias))->BeginInit();
+			this->GB_CriteriosBusqueda->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// listView1
-			// 
-			this->listView1->HideSelection = false;
-			this->listView1->Location = System::Drawing::Point(12, 12);
-			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(887, 445);
-			this->listView1->TabIndex = 0;
-			this->listView1->UseCompatibleStateImageBehavior = false;
-			this->listView1->SelectedIndexChanged += gcnew System::EventHandler(this, &FrmMantenimientoEmpleado::listView1_SelectedIndexChanged);
 			// 
 			// LabelNombre
 			// 
 			this->LabelNombre->AutoSize = true;
-			this->LabelNombre->BackColor = System::Drawing::Color::White;
+			this->LabelNombre->BackColor = System::Drawing::Color::Transparent;
 			this->LabelNombre->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->LabelNombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->LabelNombre->Location = System::Drawing::Point(40, 30);
+			this->LabelNombre->Location = System::Drawing::Point(15, 40);
 			this->LabelNombre->Name = L"LabelNombre";
 			this->LabelNombre->Size = System::Drawing::Size(59, 16);
 			this->LabelNombre->TabIndex = 1;
 			this->LabelNombre->Text = L"Nombre:";
-			// 
-			// TB_Tipo
-			// 
-			this->TB_Tipo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Tipo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->TB_Tipo->Location = System::Drawing::Point(120, 30);
-			this->TB_Tipo->Name = L"TB_Tipo";
-			this->TB_Tipo->Size = System::Drawing::Size(150, 22);
-			this->TB_Tipo->TabIndex = 2;
 			// 
 			// Boton_Buscar
 			// 
@@ -114,7 +97,7 @@ namespace TransPorticoView {
 			this->Boton_Buscar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Boton_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Boton_Buscar->Location = System::Drawing::Point(300, 30);
+			this->Boton_Buscar->Location = System::Drawing::Point(275, 40);
 			this->Boton_Buscar->Name = L"Boton_Buscar";
 			this->Boton_Buscar->Size = System::Drawing::Size(75, 23);
 			this->Boton_Buscar->TabIndex = 0;
@@ -168,24 +151,46 @@ namespace TransPorticoView {
 			this->Boton_Editar->Text = L"Editar";
 			this->Boton_Editar->UseVisualStyleBackColor = false;
 			// 
+			// GB_CriteriosBusqueda
+			// 
+			this->GB_CriteriosBusqueda->Controls->Add(this->ComboBox_Nombre);
+			this->GB_CriteriosBusqueda->Controls->Add(this->Boton_Buscar);
+			this->GB_CriteriosBusqueda->Controls->Add(this->LabelNombre);
+			this->GB_CriteriosBusqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->GB_CriteriosBusqueda->Location = System::Drawing::Point(43, 12);
+			this->GB_CriteriosBusqueda->Name = L"GB_CriteriosBusqueda";
+			this->GB_CriteriosBusqueda->Size = System::Drawing::Size(825, 82);
+			this->GB_CriteriosBusqueda->TabIndex = 7;
+			this->GB_CriteriosBusqueda->TabStop = false;
+			this->GB_CriteriosBusqueda->Text = L"Criterios de Busqueda";
+			// 
+			// ComboBox_Nombre
+			// 
+			this->ComboBox_Nombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->ComboBox_Nombre->FormattingEnabled = true;
+			this->ComboBox_Nombre->Location = System::Drawing::Point(95, 40);
+			this->ComboBox_Nombre->Name = L"ComboBox_Nombre";
+			this->ComboBox_Nombre->Size = System::Drawing::Size(150, 24);
+			this->ComboBox_Nombre->TabIndex = 4;
+			// 
 			// FrmMantenimientoEmpleado
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(911, 469);
+			this->Controls->Add(this->GB_CriteriosBusqueda);
 			this->Controls->Add(this->Boton_Editar);
 			this->Controls->Add(this->Boton_Borrar);
 			this->Controls->Add(this->Boton_Anadir);
 			this->Controls->Add(this->DGV_BuzonSugerencias);
-			this->Controls->Add(this->Boton_Buscar);
-			this->Controls->Add(this->TB_Tipo);
-			this->Controls->Add(this->LabelNombre);
-			this->Controls->Add(this->listView1);
 			this->Name = L"FrmMantenimientoEmpleado";
 			this->Text = L"FrmMantenimientoEmpleado";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_BuzonSugerencias))->EndInit();
+			this->GB_CriteriosBusqueda->ResumeLayout(false);
+			this->GB_CriteriosBusqueda->PerformLayout();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -193,4 +198,3 @@ namespace TransPorticoView {
 	}
 	};
 }
-

@@ -1,0 +1,4 @@
+1;20213824;29/12/2002;23:35;Sugerencia;DieCel1;ASK-234;Mejoren
+2;20213825;30/01/2012;12:08;Consulta;DieCel2;ASK-237;Mejorenx2
+3;20213826;14/12/2000;05:33;Reclamo;DieCel3;ASK-235;Mejorenx3
+4;20213827;24/04/1995;09:56;Sugerencia;DieCel4;ASK-134;Mejorenx4

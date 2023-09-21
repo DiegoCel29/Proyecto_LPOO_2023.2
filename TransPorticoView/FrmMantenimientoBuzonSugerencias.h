@@ -8,6 +8,9 @@ namespace TransPorticoView {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Collections::Generic;
+	using namespace TransPorticoModel;
+	using namespace TransPorticoController;
 
 	/// <summary>
 	/// Resumen de FrmMantenimientoBuzonSugerencias
@@ -34,14 +37,23 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::ListView^ listView1;
+
 	private: System::Windows::Forms::Label^ LabelTipo;
-	private: System::Windows::Forms::TextBox^ TB_Tipo;
+
 	private: System::Windows::Forms::Button^ Boton_Buscar;
 	private: System::Windows::Forms::DataGridView^ DGV_BuzonSugerencias;
 	private: System::Windows::Forms::Button^ Boton_Anadir;
 	private: System::Windows::Forms::Button^ Boton_Borrar;
 	private: System::Windows::Forms::Button^ Boton_Editar;
+	private: System::Windows::Forms::GroupBox^ GB_CriteriosBusqueda;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
+	private: System::Windows::Forms::ComboBox^ ComboBox_Tipo;
 
 
 
@@ -62,49 +74,37 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->listView1 = (gcnew System::Windows::Forms::ListView());
 			this->LabelTipo = (gcnew System::Windows::Forms::Label());
-			this->TB_Tipo = (gcnew System::Windows::Forms::TextBox());
 			this->Boton_Buscar = (gcnew System::Windows::Forms::Button());
 			this->DGV_BuzonSugerencias = (gcnew System::Windows::Forms::DataGridView());
 			this->Boton_Anadir = (gcnew System::Windows::Forms::Button());
 			this->Boton_Borrar = (gcnew System::Windows::Forms::Button());
 			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
+			this->GB_CriteriosBusqueda = (gcnew System::Windows::Forms::GroupBox());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->ComboBox_Tipo = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_BuzonSugerencias))->BeginInit();
+			this->GB_CriteriosBusqueda->SuspendLayout();
 			this->SuspendLayout();
-			// 
-			// listView1
-			// 
-			this->listView1->HideSelection = false;
-			this->listView1->Location = System::Drawing::Point(12, 12);
-			this->listView1->Name = L"listView1";
-			this->listView1->Size = System::Drawing::Size(887, 445);
-			this->listView1->TabIndex = 0;
-			this->listView1->UseCompatibleStateImageBehavior = false;
-			this->listView1->SelectedIndexChanged += gcnew System::EventHandler(this, &FrmMantenimientoBuzonSugerencias::listView1_SelectedIndexChanged);
 			// 
 			// LabelTipo
 			// 
 			this->LabelTipo->AutoSize = true;
-			this->LabelTipo->BackColor = System::Drawing::Color::White;
+			this->LabelTipo->BackColor = System::Drawing::Color::Transparent;
 			this->LabelTipo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->LabelTipo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->LabelTipo->Location = System::Drawing::Point(40, 30);
+			this->LabelTipo->Location = System::Drawing::Point(15, 40);
 			this->LabelTipo->Name = L"LabelTipo";
 			this->LabelTipo->Size = System::Drawing::Size(41, 16);
 			this->LabelTipo->TabIndex = 1;
 			this->LabelTipo->Text = L"Tipo: ";
-			// 
-			// TB_Tipo
-			// 
-			this->TB_Tipo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Tipo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->TB_Tipo->Location = System::Drawing::Point(120, 30);
-			this->TB_Tipo->Name = L"TB_Tipo";
-			this->TB_Tipo->Size = System::Drawing::Size(150, 22);
-			this->TB_Tipo->TabIndex = 2;
 			// 
 			// Boton_Buscar
 			// 
@@ -112,16 +112,21 @@ namespace TransPorticoView {
 			this->Boton_Buscar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Boton_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Boton_Buscar->Location = System::Drawing::Point(300, 30);
+			this->Boton_Buscar->Location = System::Drawing::Point(275, 40);
 			this->Boton_Buscar->Name = L"Boton_Buscar";
 			this->Boton_Buscar->Size = System::Drawing::Size(75, 23);
 			this->Boton_Buscar->TabIndex = 0;
 			this->Boton_Buscar->Text = L"Buscar";
 			this->Boton_Buscar->UseVisualStyleBackColor = false;
+			this->Boton_Buscar->Click += gcnew System::EventHandler(this, &FrmMantenimientoBuzonSugerencias::Boton_Buscar_Click);
 			// 
 			// DGV_BuzonSugerencias
 			// 
 			this->DGV_BuzonSugerencias->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DGV_BuzonSugerencias->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
+				this->Column1,
+					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7
+			});
 			this->DGV_BuzonSugerencias->Location = System::Drawing::Point(43, 100);
 			this->DGV_BuzonSugerencias->Name = L"DGV_BuzonSugerencias";
 			this->DGV_BuzonSugerencias->Size = System::Drawing::Size(825, 312);
@@ -166,28 +171,110 @@ namespace TransPorticoView {
 			this->Boton_Editar->Text = L"Editar";
 			this->Boton_Editar->UseVisualStyleBackColor = false;
 			// 
+			// GB_CriteriosBusqueda
+			// 
+			this->GB_CriteriosBusqueda->Controls->Add(this->ComboBox_Tipo);
+			this->GB_CriteriosBusqueda->Controls->Add(this->Boton_Buscar);
+			this->GB_CriteriosBusqueda->Controls->Add(this->LabelTipo);
+			this->GB_CriteriosBusqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->GB_CriteriosBusqueda->Location = System::Drawing::Point(43, 12);
+			this->GB_CriteriosBusqueda->Name = L"GB_CriteriosBusqueda";
+			this->GB_CriteriosBusqueda->Size = System::Drawing::Size(825, 82);
+			this->GB_CriteriosBusqueda->TabIndex = 7;
+			this->GB_CriteriosBusqueda->TabStop = false;
+			this->GB_CriteriosBusqueda->Text = L"Criterios de Busqueda";
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Codigo";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Fecha";
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Hora";
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"Tipo";
+			this->Column4->Name = L"Column4";
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"Usuario";
+			this->Column5->Name = L"Column5";
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"Placa";
+			this->Column6->Name = L"Column6";
+			// 
+			// Column7
+			// 
+			this->Column7->HeaderText = L"Comentario";
+			this->Column7->Name = L"Column7";
+			// 
+			// ComboBox_Tipo
+			// 
+			this->ComboBox_Tipo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->ComboBox_Tipo->FormattingEnabled = true;
+			this->ComboBox_Tipo->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Consulta", L"Reclamo", L"Sugerencia" });
+			this->ComboBox_Tipo->Location = System::Drawing::Point(95, 40);
+			this->ComboBox_Tipo->Name = L"ComboBox_Tipo";
+			this->ComboBox_Tipo->Size = System::Drawing::Size(150, 24);
+			this->ComboBox_Tipo->TabIndex = 3;
+			// 
 			// FrmMantenimientoBuzonSugerencias
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(911, 469);
+			this->Controls->Add(this->GB_CriteriosBusqueda);
 			this->Controls->Add(this->Boton_Editar);
 			this->Controls->Add(this->Boton_Borrar);
 			this->Controls->Add(this->Boton_Anadir);
 			this->Controls->Add(this->DGV_BuzonSugerencias);
-			this->Controls->Add(this->Boton_Buscar);
-			this->Controls->Add(this->TB_Tipo);
-			this->Controls->Add(this->LabelTipo);
-			this->Controls->Add(this->listView1);
 			this->Name = L"FrmMantenimientoBuzonSugerencias";
 			this->Text = L"FrmMantenimientoBuzonSugerencias";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_BuzonSugerencias))->EndInit();
+			this->GB_CriteriosBusqueda->ResumeLayout(false);
+			this->GB_CriteriosBusqueda->PerformLayout();
 			this->ResumeLayout(false);
-			this->PerformLayout();
 
 		}
 #pragma endregion
 	private: System::Void listView1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void Boton_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ BuscarTipo = this->ComboBox_Tipo->Text; /* Se selecciona el texto*/
+		BuzonSugerenciaController^ ObjBuzonSugerenciaController = gcnew BuzonSugerenciaController();
+		List<BuzonSugerencia^>^ ListaBuzonSugerencia = ObjBuzonSugerenciaController->BuscarBuzonSugerencia(BuscarTipo);
+		MostrarGrilla(ListaBuzonSugerencia);
+	}
+	private: void MostrarGrilla(List<BuzonSugerencia^>^ ListaBuzonSugerencia) {
+		this->DGV_BuzonSugerencias->Rows->Clear(); /*Elimino toda la informacion del datagrid*/
+		for (int i = 0; i < ListaBuzonSugerencia->Count; i++) {
+			BuzonSugerencia^ objBuzonSugerencia = ListaBuzonSugerencia[i];
+
+			array<String^>^ FilaGrilla = gcnew array<String^>(7);
+
+			FilaGrilla[0] = Convert::ToString(objBuzonSugerencia->GetCodigo());
+			FilaGrilla[1] = objBuzonSugerencia->GetFecha();
+			FilaGrilla[2] = objBuzonSugerencia->GetHora();
+			FilaGrilla[3] = objBuzonSugerencia->GetTipo();
+			FilaGrilla[4] = objBuzonSugerencia->GetUsuario();
+			FilaGrilla[5] = objBuzonSugerencia->GetPlaca();
+			FilaGrilla[6] = objBuzonSugerencia->GetComentario();
+
+			this->DGV_BuzonSugerencias->Rows->Add(FilaGrilla);
+		}
 	}
 };
 }

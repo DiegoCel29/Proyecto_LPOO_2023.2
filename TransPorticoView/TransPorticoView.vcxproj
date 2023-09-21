@@ -160,6 +160,9 @@
     <EmbeddedResource Include="FrmMantenimientoEmpleado.resx">
       <DependentUpon>FrmMantenimientoEmpleado.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMantenimientoPersona.resx">
+      <DependentUpon>FrmMantenimientoPersona.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoPromociones.resx">
       <DependentUpon>FrmMantenimientoPromociones.h</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +175,17 @@
     <EmbeddedResource Include="FrmPantallaIngreso.resx">
       <DependentUpon>FrmPantallaIngreso.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TransPorticoController\TransPorticoController.vcxproj">
+      <Project>{3106c80a-9fd0-4d12-b90f-13ade956130e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\TransPorticoModel\TransPorticoModel.vcxproj">
+      <Project>{d71ae4d6-0f14-4f12-b17f-5b69bee2c1cb}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="BuzonSugerencia.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
