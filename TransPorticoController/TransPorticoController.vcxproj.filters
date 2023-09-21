@@ -21,9 +21,6 @@
     <ClInclude Include="PromocionesController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="EmpleadoController.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="TarjetaController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -48,15 +45,27 @@
     <ClInclude Include="RutaController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\AtajosController.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ParaderosRecorridosController.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\SituacionRecorridoController.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ConductorController.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\PasajeroController.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BuzonSugerenciaController.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="PromocionesController.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="EmpleadoController.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="TarjetaController.cpp">
@@ -81,6 +90,21 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="RutaController.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\AtajosController.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ParaderosRecorridosController.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\SituacionRecorridoController.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ConductorController.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\PasajeroController.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

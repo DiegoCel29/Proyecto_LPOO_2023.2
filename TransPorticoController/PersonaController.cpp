@@ -30,7 +30,7 @@ List<Persona^>^ PersonaController::BuscarPersona(String^ BuscarApellidoPat) {
 		String^ Contrasena = Datos[8];
 
 		if (ApellidoPat->Contains(BuscarApellidoPat)) {
-			Persona^ ObjPersona = gcnew Persona(Codigo, Nombre, ApellidoPat, ApellidoMat, DNI, Edad, Genero, Telefono, Contrasena);
+			Persona^ ObjPersona = gcnew Persona(DNI,Nombre,ApellidoPat,ApellidoMat,Edad,Genero,Telefono,Contrasena);
 			ListPersonasEncontradas->Add(ObjPersona);
 		}
 	}

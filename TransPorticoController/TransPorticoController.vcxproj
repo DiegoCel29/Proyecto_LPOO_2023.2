@@ -112,10 +112,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\AtajosController.h" />
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ConductorController.h" />
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ParaderosRecorridosController.h" />
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\PasajeroController.h" />
+    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\SituacionRecorridoController.h" />
     <ClInclude Include="BuzonSugerenciaController.h" />
     <ClInclude Include="CalificacionController.h" />
     <ClInclude Include="EmergenciaController.h" />
-    <ClInclude Include="EmpleadoController.h" />
     <ClInclude Include="HorarioController.h" />
     <ClInclude Include="MantenimientoController.h" />
     <ClInclude Include="ParaderoController.h" />
@@ -125,10 +129,14 @@
     <ClInclude Include="TarjetaController.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\AtajosController.cpp" />
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ConductorController.cpp" />
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ParaderosRecorridosController.cpp" />
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\PasajeroController.cpp" />
+    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\SituacionRecorridoController.cpp" />
     <ClCompile Include="BuzonSugerenciaController.cpp" />
     <ClCompile Include="CalificacionController.cpp" />
     <ClCompile Include="EmergenciaController.cpp" />
-    <ClCompile Include="EmpleadoController.cpp" />
     <ClCompile Include="HorarioController.cpp" />
     <ClCompile Include="MantenimientoController.cpp" />
     <ClCompile Include="ParaderoController.cpp" />

@@ -6,14 +6,33 @@ namespace TransPorticoModel {
 	public ref class Atajo {
 	private:
 		int Codigo;
-		double X_Inicio;
-		double Y_Inicio;
-		double X_Final;
-		double Y_Final;
+		int X_Inicio;
+		int Y_Inicio;
+		String^ Paradero_Inicio;
+		int X_Final;
+		int Y_Final;
+		String^ Paradero_Final;
 		String^ RutaAsociada;
+
 
 	public:
 		Atajo();
-		Atajo(int Codigo, double X_Inicio, double Y_Inicio, double X_Final, double Y_Final, String^ RutaAsociada);
+		Atajo(int Codigo, int X_Inicio, int Y_Inicio, String^ Paradero_Inicio, int X_Final, int Y_Final, String^ Paradero_Final, String^ RutaAsociada);
+		int getCodigo();
+		void setCodigo(int Codigo);
+		int getX_Inicio();
+		void setX_Inicio(int X_Inicio);
+		int getY_Inicio();
+		void setY_Inicio(int Y_Inicio);
+		String^ getParadero_Inicio();
+		void setParadero_Inicio(String^ Paradero_Inicio);
+		int getX_Final();
+		void setX_Final(int X_Final);
+		int getY_Final();
+		void setY_Final(int Y_Final);
+		String^ getParadero_Final();
+		void setParadero_Final(String^ Paradero_Final);
+		String^ getRutaAsociada();
+		void setRutaAsociada(String^ RutaAsociada);
 	};
 };

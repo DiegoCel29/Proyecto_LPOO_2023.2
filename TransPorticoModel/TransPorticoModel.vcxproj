@@ -145,7 +145,7 @@
     <ClCompile Include="SituacionRecorrido.cpp" />
     <ClCompile Include="Horario.cpp" />
     <ClCompile Include="Calificacion.cpp" />
-    <ClCompile Include="Viajes.cpp" />
+    <ClCompile Include="ParaderosRecorridos.cpp" />
     <ClCompile Include="Atajo.cpp" />
     <ClCompile Include="BuzonSugerencia.cpp" />
     <ClCompile Include="InformeEconomico.cpp" />

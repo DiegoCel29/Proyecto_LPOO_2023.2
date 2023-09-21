@@ -50,7 +50,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Button^ Boton_Editar;
 	private: System::Windows::Forms::GroupBox^ GB_CriteriosBusqueda;
 	private: System::Windows::Forms::TextBox^ TB_Apellido;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
@@ -58,6 +57,14 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column6;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
+
+
+
+
+
+
+
+
 
 
 
@@ -97,7 +104,6 @@ namespace TransPorticoView {
 			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
 			this->GB_CriteriosBusqueda = (gcnew System::Windows::Forms::GroupBox());
 			this->TB_Apellido = (gcnew System::Windows::Forms::TextBox());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -139,9 +145,9 @@ namespace TransPorticoView {
 			// DGV_Persona
 			// 
 			this->DGV_Persona->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->DGV_Persona->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
-				this->Column1,
-					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
+			this->DGV_Persona->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(7) {
+				this->Column2,
+					this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
 			});
 			this->DGV_Persona->Location = System::Drawing::Point(43, 100);
 			this->DGV_Persona->Name = L"DGV_Persona";
@@ -207,11 +213,6 @@ namespace TransPorticoView {
 			this->TB_Apellido->Name = L"TB_Apellido";
 			this->TB_Apellido->Size = System::Drawing::Size(150, 22);
 			this->TB_Apellido->TabIndex = 2;
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"Codigo";
-			this->Column1->Name = L"Column1";
 			// 
 			// Column2
 			// 
@@ -280,16 +281,15 @@ namespace TransPorticoView {
 		for (int i = 0; i < ListaPersonas->Count; i++) {
 			Persona^ ObjPersona = ListaPersonas[i];
 
-			array<String^>^ FilaGrilla = gcnew array<String^>(8);
+			array<String^>^ FilaGrilla = gcnew array<String^>(7);
 
-			FilaGrilla[0] = Convert::ToString(ObjPersona->GetCodigo());
-			FilaGrilla[1] = ObjPersona->GetNombre();
-			FilaGrilla[2] = ObjPersona->GetApellidoPat();
-			FilaGrilla[3] = ObjPersona->GetApellidoMat();
-			FilaGrilla[4] = ObjPersona->GetDNI();
-			FilaGrilla[5] = Convert::ToString(ObjPersona->GetEdad());
-			FilaGrilla[6] = ObjPersona->GetGenero();
-			FilaGrilla[7] = ObjPersona->GetTelefono();
+			FilaGrilla[0] = ObjPersona->GetNombre();
+			FilaGrilla[1] = ObjPersona->GetApellidoPat();
+			FilaGrilla[2] = ObjPersona->GetApellidoMat();
+			FilaGrilla[3] = ObjPersona->GetDNI();
+			FilaGrilla[4] = Convert::ToString(ObjPersona->GetEdad());
+			FilaGrilla[5] = ObjPersona->GetGenero();
+			FilaGrilla[6] = ObjPersona->GetTelefono();
 
 			this->DGV_Persona->Rows->Add(FilaGrilla);
 		}

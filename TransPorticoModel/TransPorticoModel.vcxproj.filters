@@ -113,7 +113,7 @@
     <ClCompile Include="Calificacion.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Viajes.cpp">
+    <ClCompile Include="ParaderosRecorridos.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Atajo.cpp">

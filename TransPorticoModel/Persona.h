@@ -4,8 +4,7 @@ using namespace System;
 
 namespace TransPorticoModel {
 	public ref class Persona {
-	private:
-		int Codigo;
+	protected:
 		String^ Nombre;
 		String^ ApellidoPat;
 		String^ ApellidoMat;
@@ -17,13 +16,9 @@ namespace TransPorticoModel {
 
 	public:
 		Persona();
-		Persona(int Codigo, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, String^ DNI, int Edad, String^ Genero, String^ Telefono, String^ Contrasena);
-		
-		int GetCodigo();
-		void SetCodigo(int Codigo);
-
-		int GetEdad();
-		void SetEdad(int Codigo);
+		Persona(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena);
+		String^ GetDNI();
+		void SetDNI(String^ DNI);
 
 		String^ GetNombre();
 		void SetNombre(String^ Nombre);
@@ -34,8 +29,8 @@ namespace TransPorticoModel {
 		String^ GetApellidoMat();
 		void SetApellidoMat(String^ ApellidoMat);
 
-		String^ GetDNI();
-		void SetDNI(String^ DNI);
+		int GetEdad();
+		void SetEdad(int Edad);
 
 		String^ GetGenero();
 		void SetGenero(String^ Genero);

@@ -6,105 +6,83 @@ Empleado::Empleado() :Persona() {
 
 };
 
-Empleado::Empleado(int Codigo, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, String^ DNI, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, double Sueldo, String^ IdPersonal, String^ EstadoContrato) :Persona(Codigo, Nombre, ApellidoPat, ApellidoMat, DNI, Edad, Genero, Telefono, Contrasena) {
+Empleado::Empleado(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, int Sueldo, String^ EstadoContrato) :Persona(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena) {
 	this->Sueldo = Sueldo;
-	this->IdPersonal = IdPersonal;
 	this->EstadoContrato = EstadoContrato;
 
 };
+String^ Empleado::get_DNI_() {
+	return this->DNI;
+}
 
-int Empleado::GetCodigoE() {
-	return GetCodigo();
-};
+void Empleado::set_DNI_(String^ DNI) {
+	this->DNI = DNI;
+}
 
-void Empleado::SetCodigoE(int Codigo) {
-	SetCodigo(Codigo);
-};
+String^ Empleado::get_Nombre_() {
+	return this->Nombre;
+}
 
-int Empleado::GetEdadE() {
-	return GetEdad();
-};
+void Empleado::set_Nombre_(String^ Nombre) {
+	this->Nombre = Nombre;
+}
+String^ Empleado::get_ApellidoPat_() {
+	return this->ApellidoPat;
+}
 
-void Empleado::SetEdadE(int Edad) {
-	SetEdad(Edad);
-};
+void Empleado::set_ApellidoPat_(String^ ApellidoPat) {
+	this->ApellidoPat = ApellidoPat;
+}
 
-double Empleado::GetSueldo() {
+String^ Empleado::get_ApellidoMat_() {
+	return this->ApellidoMat;
+}
+
+void Empleado::set_ApellidoMat_(String^ ApellidoMat) {
+	this->ApellidoMat = ApellidoMat;
+}
+int Empleado::get_Edad_() {
+	return this->Edad;
+}
+
+void Empleado::set_Edad_(int Edad) {
+	this->Edad = Edad;
+}
+String^ Empleado::get_Genero_() {
+	return this->Genero;
+}
+
+void Empleado::set_Genero_(String^ Genero) {
+	this->Genero = Genero;
+}
+String^ Empleado::get_Telefono_() {
+	return this->Telefono;
+}
+
+void Empleado::set_Telefono_(String^ Telefono) {
+	this->Telefono = Telefono;
+}
+String^ Empleado::get_Contrasena_() {
+	return this->Contrasena;
+}
+
+void Empleado::set_Contrasena_(String^ Contrasena) {
+	this->Contrasena = Contrasena;
+}
+
+int Empleado::get_Sueldo_() {
 	return this->Sueldo;
-};
+}
 
-void Empleado::SetSueldo(double Sueldo) {
+void Empleado::set_Sueldo_(int Sueldo) {
 	this->Sueldo = Sueldo;
-};
+}
 
-String^ Empleado::GetNombreE() {
-	return GetNombre();
-};
 
-void Empleado::SetNombreE(String^ Nombre) {
-	SetNombre(Nombre);
-};
-
-String^ Empleado::GetApellidoPatE() {
-	return GetApellidoPat();
-};
-
-void Empleado::SetApellidoPatE(String^ ApellidoPat) {
-	SetApellidoPat(ApellidoPat);
-};
-
-String^ Empleado::GetApellidoMatE() {
-	return GetApellidoMat();
-};
-
-void Empleado::SetApellidoMatE(String^ ApellidoMat) {
-	SetApellidoMat(ApellidoMat);
-};
-
-String^ Empleado::GetDNIE() {
-	return GetDNI();
-};
-
-void Empleado::SetDNIE(String^ DNI) {
-	SetDNI(DNI);
-};
-
-String^ Empleado::GetGeneroE() {
-	return GetGenero();
-};
-
-void Empleado::SetGeneroE(String^ Genero) {
-	SetGenero(Genero);
-};
-
-String^ Empleado::GetTelefonoE() {
-	return GetTelefono();
-};
-
-void Empleado::SetTelefonoE(String^ Telefono) {
-	SetTelefono(Telefono);
-};
-
-String^ Empleado::GetContrasenaE() {
-	return GetContrasena();
-};
-
-void Empleado::SetContrasenaE(String^ Contrasena) {
-	SetContrasena(Contrasena);
-};
-
-String^ Empleado::GetIdPersonal() {
-	return this->IdPersonal;
-};
-
-void Empleado::SetIdPersonal() {
-	this->IdPersonal = IdPersonal;
-};
-
-String^ Empleado::GetEstadoContrato() {
+String^ Empleado::get_EstadoContrato_() {
 	return this->EstadoContrato;
-};
+}
 
-void Empleado::SetEstadoContrato() {
+void Empleado::set_EstadoContrato_(String^ EstadoContrato) {
 	this->EstadoContrato = EstadoContrato;
-};
+}

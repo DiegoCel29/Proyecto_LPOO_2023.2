@@ -117,7 +117,6 @@
     <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp" />
     <ClCompile Include="frmMantenimientoCalificacion.cpp" />
     <ClCompile Include="frmMantenimientoEmergencia.cpp" />
-    <ClCompile Include="FrmMantenimientoEmpleado.cpp" />
     <ClCompile Include="frmMantenimientoHorario.cpp" />
     <ClCompile Include="FrmMantenimientoMantenimiento.cpp" />
     <ClCompile Include="frmMantenimientoParadero.cpp" />
@@ -128,6 +127,11 @@
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
     <ClCompile Include="FrmPantallaIngreso.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MantenimientoAtajo.cpp" />
+    <ClCompile Include="MantenimientoConductor.cpp" />
+    <ClCompile Include="MantenimientoParaderosRecorridos.cpp" />
+    <ClCompile Include="MantenimientoPasajero.cpp" />
+    <ClCompile Include="MantenimientoSituacionRecorrido.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -144,9 +148,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="frmMantenimientoEmergencia.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="FrmMantenimientoEmpleado.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="frmMantenimientoHorario.h">
@@ -176,13 +177,25 @@
     <ClInclude Include="FrmPantallaIngreso.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="MantenimientoAtajo.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MantenimientoConductor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MantenimientoParaderosRecorridos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MantenimientoPasajero.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MantenimientoSituacionRecorrido.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FrmMantenimientoBuzonSugerencias.resx">
       <DependentUpon>FrmMantenimientoBuzonSugerencias.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimientoEmpleado.resx">
-      <DependentUpon>FrmMantenimientoEmpleado.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoMantenimiento.resx">
       <DependentUpon>FrmMantenimientoMantenimiento.h</DependentUpon>
@@ -217,6 +230,11 @@
     <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Horario.txt" />
     <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Paradero.txt" />
     <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Ruta.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_Atajos.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_conductores.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_ParaderosRecorridos.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_pasajeros.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_SituacionRecorrido.txt" />
     <Text Include="BuzonSugerencia.txt" />
     <Text Include="Empleados.txt" />
     <Text Include="Mantenimientos.txt" />

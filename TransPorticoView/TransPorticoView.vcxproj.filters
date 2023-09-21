@@ -33,9 +33,6 @@
     <ClCompile Include="FrmMantenimientoTarjeta.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="FrmMantenimientoEmpleado.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
     <ClCompile Include="FrmMantenimientoPersona.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
@@ -57,6 +54,21 @@
     <ClCompile Include="frmMantenimientoCalificacion.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
+    <ClCompile Include="MantenimientoAtajo.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="MantenimientoConductor.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="MantenimientoParaderosRecorridos.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="MantenimientoPasajero.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="MantenimientoSituacionRecorrido.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FrmPantallaIngreso.h">
@@ -72,9 +84,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoTarjeta.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="FrmMantenimientoEmpleado.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoPersona.h">
@@ -98,6 +107,21 @@
     <ClInclude Include="frmMantenimientoCalificacion.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="MantenimientoAtajo.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MantenimientoConductor.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MantenimientoParaderosRecorridos.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MantenimientoPasajero.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="MantenimientoSituacionRecorrido.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="BuzonSugerencia.txt" />
@@ -111,5 +135,10 @@
     <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Horario.txt" />
     <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Paradero.txt" />
     <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Ruta.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_Atajos.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_ParaderosRecorridos.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_SituacionRecorrido.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_conductores.txt" />
+    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_pasajeros.txt" />
   </ItemGroup>
 </Project>
