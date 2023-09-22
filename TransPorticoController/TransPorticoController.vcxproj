@@ -112,39 +112,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Downloads\Avance_2 (2)\Avance_2\TransPorticoController\MedidasEstadisticasController.h" />
-    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\AtajosController.h" />
-    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ConductorController.h" />
-    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ParaderosRecorridosController.h" />
-    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\PasajeroController.h" />
-    <ClInclude Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\SituacionRecorridoController.h" />
+    <ClInclude Include="AtajosController.h" />
     <ClInclude Include="BuzonSugerenciaController.h" />
     <ClInclude Include="CalificacionController.h" />
+    <ClInclude Include="ConductorController.h" />
     <ClInclude Include="EmergenciaController.h" />
     <ClInclude Include="HorarioController.h" />
     <ClInclude Include="MantenimientoController.h" />
     <ClInclude Include="ParaderoController.h" />
+    <ClInclude Include="ParaderosRecorridosController.h" />
+    <ClInclude Include="PasajeroController.h" />
     <ClInclude Include="PersonaController.h" />
     <ClInclude Include="PromocionesController.h" />
     <ClInclude Include="RutaController.h" />
+    <ClInclude Include="SituacionRecorridoController.h" />
     <ClInclude Include="TarjetaController.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Downloads\Avance_2 (2)\Avance_2\TransPorticoController\MedidasEstadisticasController.cpp" />
-    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\AtajosController.cpp" />
-    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ConductorController.cpp" />
-    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\ParaderosRecorridosController.cpp" />
-    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\PasajeroController.cpp" />
-    <ClCompile Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoController\SituacionRecorridoController.cpp" />
+    <ClCompile Include="AtajosController.cpp" />
     <ClCompile Include="BuzonSugerenciaController.cpp" />
     <ClCompile Include="CalificacionController.cpp" />
+    <ClCompile Include="ConductorController.cpp" />
     <ClCompile Include="EmergenciaController.cpp" />
     <ClCompile Include="HorarioController.cpp" />
     <ClCompile Include="MantenimientoController.cpp" />
     <ClCompile Include="ParaderoController.cpp" />
+    <ClCompile Include="ParaderosRecorridosController.cpp" />
+    <ClCompile Include="PasajeroController.cpp" />
     <ClCompile Include="PersonaController.cpp" />
     <ClCompile Include="PromocionesController.cpp" />
     <ClCompile Include="RutaController.cpp" />
+    <ClCompile Include="SituacionRecorridoController.cpp" />
     <ClCompile Include="TarjetaController.cpp" />
   </ItemGroup>
   <ItemGroup>
