@@ -13,12 +13,12 @@ namespace TransPorticoView {
 	using namespace TransPorticoController;
 
 	/// <summary>
-	/// Resumen de FrmMatenimientoInformeEconomico
+	/// Resumen de FrmMantenimientoInformeEconomico
 	/// </summary>
-	public ref class FrmMatenimientoInformeEconomico : public System::Windows::Forms::Form
+	public ref class FrmMantenimientoInformeEconomico : public System::Windows::Forms::Form
 	{
 	public:
-		FrmMatenimientoInformeEconomico(void)
+		FrmMantenimientoInformeEconomico(void)
 		{
 			InitializeComponent();
 			//
@@ -30,15 +30,17 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~FrmMatenimientoInformeEconomico()
+		~FrmMantenimientoInformeEconomico()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ LabelAnho;
+	protected:
 
-	private: System::Windows::Forms::Label^ LabelTipo;
+
 
 	private: System::Windows::Forms::Button^ Boton_Buscar;
 	private: System::Windows::Forms::DataGridView^ DGV_InformeEconomico;
@@ -92,36 +94,36 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->LabelTipo = (gcnew System::Windows::Forms::Label());
+			this->LabelAnho = (gcnew System::Windows::Forms::Label());
 			this->Boton_Buscar = (gcnew System::Windows::Forms::Button());
 			this->DGV_InformeEconomico = (gcnew System::Windows::Forms::DataGridView());
-			this->Boton_Anadir = (gcnew System::Windows::Forms::Button());
-			this->Boton_Borrar = (gcnew System::Windows::Forms::Button());
-			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
-			this->GB_CriteriosBusqueda = (gcnew System::Windows::Forms::GroupBox());
-			this->ComboBox_Tipo = (gcnew System::Windows::Forms::ComboBox());
 			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column5 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Boton_Anadir = (gcnew System::Windows::Forms::Button());
+			this->Boton_Borrar = (gcnew System::Windows::Forms::Button());
+			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
+			this->GB_CriteriosBusqueda = (gcnew System::Windows::Forms::GroupBox());
+			this->ComboBox_Tipo = (gcnew System::Windows::Forms::ComboBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_InformeEconomico))->BeginInit();
 			this->GB_CriteriosBusqueda->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// LabelTipo
+			// LabelAnho
 			// 
-			this->LabelTipo->AutoSize = true;
-			this->LabelTipo->BackColor = System::Drawing::Color::Transparent;
-			this->LabelTipo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LabelTipo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->LabelAnho->AutoSize = true;
+			this->LabelAnho->BackColor = System::Drawing::Color::Transparent;
+			this->LabelAnho->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->LabelAnho->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->LabelTipo->Location = System::Drawing::Point(15, 40);
-			this->LabelTipo->Name = L"LabelTipo";
-			this->LabelTipo->Size = System::Drawing::Size(41, 16);
-			this->LabelTipo->TabIndex = 1;
-			this->LabelTipo->Text = L"Tipo: ";
+			this->LabelAnho->Location = System::Drawing::Point(15, 40);
+			this->LabelAnho->Name = L"LabelAnho";
+			this->LabelAnho->Size = System::Drawing::Size(37, 16);
+			this->LabelAnho->TabIndex = 1;
+			this->LabelAnho->Text = L"Año: ";
 			// 
 			// Boton_Buscar
 			// 
@@ -135,7 +137,7 @@ namespace TransPorticoView {
 			this->Boton_Buscar->TabIndex = 0;
 			this->Boton_Buscar->Text = L"Buscar";
 			this->Boton_Buscar->UseVisualStyleBackColor = false;
-			this->Boton_Buscar->Click += gcnew System::EventHandler(this, &FrmMatenimientoInformeEconomico::Boton_Buscar_Click);
+			this->Boton_Buscar->Click += gcnew System::EventHandler(this, &FrmMantenimientoInformeEconomico::Boton_Buscar_Click);
 			// 
 			// DGV_InformeEconomico
 			// 
@@ -148,6 +150,36 @@ namespace TransPorticoView {
 			this->DGV_InformeEconomico->Name = L"DGV_InformeEconomico";
 			this->DGV_InformeEconomico->Size = System::Drawing::Size(825, 312);
 			this->DGV_InformeEconomico->TabIndex = 3;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Codigo";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Año";
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Ingresos";
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"Salario del administrador";
+			this->Column4->Name = L"Column4";
+			// 
+			// Column5
+			// 
+			this->Column5->HeaderText = L"Salario del conductor";
+			this->Column5->Name = L"Column5";
+			// 
+			// Column6
+			// 
+			this->Column6->HeaderText = L"Costo de mantenimientos";
+			this->Column6->Name = L"Column6";
 			// 
 			// Boton_Anadir
 			// 
@@ -192,7 +224,7 @@ namespace TransPorticoView {
 			// 
 			this->GB_CriteriosBusqueda->Controls->Add(this->ComboBox_Tipo);
 			this->GB_CriteriosBusqueda->Controls->Add(this->Boton_Buscar);
-			this->GB_CriteriosBusqueda->Controls->Add(this->LabelTipo);
+			this->GB_CriteriosBusqueda->Controls->Add(this->LabelAnho);
 			this->GB_CriteriosBusqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->GB_CriteriosBusqueda->Location = System::Drawing::Point(43, 12);
@@ -207,43 +239,12 @@ namespace TransPorticoView {
 			this->ComboBox_Tipo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ComboBox_Tipo->FormattingEnabled = true;
-			this->ComboBox_Tipo->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Consulta", L"Reclamo", L"Sugerencia" });
 			this->ComboBox_Tipo->Location = System::Drawing::Point(95, 40);
 			this->ComboBox_Tipo->Name = L"ComboBox_Tipo";
 			this->ComboBox_Tipo->Size = System::Drawing::Size(150, 24);
 			this->ComboBox_Tipo->TabIndex = 3;
 			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"Codigo";
-			this->Column1->Name = L"Column1";
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"Año";
-			this->Column2->Name = L"Column2";
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"Ingresos";
-			this->Column3->Name = L"Column3";
-			// 
-			// Column4
-			// 
-			this->Column4->HeaderText = L"Salario del administrador";
-			this->Column4->Name = L"Column4";
-			// 
-			// Column5
-			// 
-			this->Column5->HeaderText = L"Salario del conductor";
-			this->Column5->Name = L"Column5";
-			// 
-			// Column6
-			// 
-			this->Column6->HeaderText = L"Costo de mantenimientos";
-			this->Column6->Name = L"Column6";
-			// 
-			// FrmMatenimientoInformeEconomico
+			// FrmMantenimientoInformeEconomico
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -253,8 +254,8 @@ namespace TransPorticoView {
 			this->Controls->Add(this->Boton_Borrar);
 			this->Controls->Add(this->Boton_Anadir);
 			this->Controls->Add(this->DGV_InformeEconomico);
-			this->Name = L"FrmMatenimientoInformeEconomico";
-			this->Text = L"FrmMatenimientoInformeEconomico";
+			this->Name = L"FrmMantenimientoInformeEconomico";
+			this->Text = L"FrmMantenimientoInformeEconomico";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_InformeEconomico))->EndInit();
 			this->GB_CriteriosBusqueda->ResumeLayout(false);
 			this->GB_CriteriosBusqueda->PerformLayout();

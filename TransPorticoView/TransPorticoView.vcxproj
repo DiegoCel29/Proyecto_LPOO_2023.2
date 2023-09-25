@@ -243,6 +243,18 @@
     <EmbeddedResource Include="MantenimientoAtajo.resx">
       <DependentUpon>MantenimientoAtajo.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoConductor.resx">
+      <DependentUpon>MantenimientoConductor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoParaderosRecorridos.resx">
+      <DependentUpon>MantenimientoParaderosRecorridos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoPasajero.resx">
+      <DependentUpon>MantenimientoPasajero.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoSituacionRecorrido.resx">
+      <DependentUpon>MantenimientoSituacionRecorrido.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransPorticoController\TransPorticoController.vcxproj">

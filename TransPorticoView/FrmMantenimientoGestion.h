@@ -37,8 +37,10 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::Label^ LabelCodigo;
+	protected:
 
-	private: System::Windows::Forms::Label^ LabelTipo;
+
 
 	private: System::Windows::Forms::Button^ Boton_Buscar;
 	private: System::Windows::Forms::DataGridView^ DGV_Gestion;
@@ -79,34 +81,34 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->LabelTipo = (gcnew System::Windows::Forms::Label());
+			this->LabelCodigo = (gcnew System::Windows::Forms::Label());
 			this->Boton_Buscar = (gcnew System::Windows::Forms::Button());
 			this->DGV_Gestion = (gcnew System::Windows::Forms::DataGridView());
+			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Boton_Anadir = (gcnew System::Windows::Forms::Button());
 			this->Boton_Borrar = (gcnew System::Windows::Forms::Button());
 			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
 			this->GB_CriteriosBusqueda = (gcnew System::Windows::Forms::GroupBox());
 			this->ComboBox_Tipo = (gcnew System::Windows::Forms::ComboBox());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Gestion))->BeginInit();
 			this->GB_CriteriosBusqueda->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// LabelTipo
+			// LabelCodigo
 			// 
-			this->LabelTipo->AutoSize = true;
-			this->LabelTipo->BackColor = System::Drawing::Color::Transparent;
-			this->LabelTipo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->LabelTipo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->LabelCodigo->AutoSize = true;
+			this->LabelCodigo->BackColor = System::Drawing::Color::Transparent;
+			this->LabelCodigo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->LabelCodigo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->LabelTipo->Location = System::Drawing::Point(15, 40);
-			this->LabelTipo->Name = L"LabelTipo";
-			this->LabelTipo->Size = System::Drawing::Size(41, 16);
-			this->LabelTipo->TabIndex = 1;
-			this->LabelTipo->Text = L"Tipo: ";
+			this->LabelCodigo->Location = System::Drawing::Point(15, 40);
+			this->LabelCodigo->Name = L"LabelCodigo";
+			this->LabelCodigo->Size = System::Drawing::Size(57, 16);
+			this->LabelCodigo->TabIndex = 1;
+			this->LabelCodigo->Text = L"Codigo: ";
 			// 
 			// Boton_Buscar
 			// 
@@ -133,6 +135,26 @@ namespace TransPorticoView {
 			this->DGV_Gestion->Name = L"DGV_Gestion";
 			this->DGV_Gestion->Size = System::Drawing::Size(825, 312);
 			this->DGV_Gestion->TabIndex = 3;
+			// 
+			// Column1
+			// 
+			this->Column1->HeaderText = L"Codigo";
+			this->Column1->Name = L"Column1";
+			// 
+			// Column2
+			// 
+			this->Column2->HeaderText = L"Ruta";
+			this->Column2->Name = L"Column2";
+			// 
+			// Column3
+			// 
+			this->Column3->HeaderText = L"Cantidad de pasajeros en la ruta";
+			this->Column3->Name = L"Column3";
+			// 
+			// Column4
+			// 
+			this->Column4->HeaderText = L"Calificacion promedio de la ruta";
+			this->Column4->Name = L"Column4";
 			// 
 			// Boton_Anadir
 			// 
@@ -177,7 +199,7 @@ namespace TransPorticoView {
 			// 
 			this->GB_CriteriosBusqueda->Controls->Add(this->ComboBox_Tipo);
 			this->GB_CriteriosBusqueda->Controls->Add(this->Boton_Buscar);
-			this->GB_CriteriosBusqueda->Controls->Add(this->LabelTipo);
+			this->GB_CriteriosBusqueda->Controls->Add(this->LabelCodigo);
 			this->GB_CriteriosBusqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->GB_CriteriosBusqueda->Location = System::Drawing::Point(43, 12);
@@ -192,31 +214,10 @@ namespace TransPorticoView {
 			this->ComboBox_Tipo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->ComboBox_Tipo->FormattingEnabled = true;
-			this->ComboBox_Tipo->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Consulta", L"Reclamo", L"Sugerencia" });
 			this->ComboBox_Tipo->Location = System::Drawing::Point(95, 40);
 			this->ComboBox_Tipo->Name = L"ComboBox_Tipo";
 			this->ComboBox_Tipo->Size = System::Drawing::Size(150, 24);
 			this->ComboBox_Tipo->TabIndex = 3;
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"Codigo";
-			this->Column1->Name = L"Column1";
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"Ruta";
-			this->Column2->Name = L"Column2";
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"Cantidad de pasajeros en la ruta";
-			this->Column3->Name = L"Column3";
-			// 
-			// Column4
-			// 
-			this->Column4->HeaderText = L"Calificacion promedio de la ruta";
-			this->Column4->Name = L"Column4";
 			// 
 			// FrmMatenimientoGestion
 			// 

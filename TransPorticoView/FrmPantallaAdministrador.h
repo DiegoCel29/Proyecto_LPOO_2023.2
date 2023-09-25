@@ -411,8 +411,8 @@ namespace TransPorticoView {
 		VentanaMantenimientoAutobus->ShowDialog();
 	}
 	private: System::Void informesEconomicosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		FrmMantenimientoInformeEconomico^ VentanaMantenimientoAutobus = gcnew FrmMantenimientoInformeEconomico();
-		VentanaMantenimientoAutobus->ShowDialog();
+		FrmMantenimientoInformeEconomico^ VentanaMantenimientoInformeEconomico = gcnew FrmMantenimientoInformeEconomico();
+		VentanaMantenimientoInformeEconomico->ShowDialog();
 	}
 	private: System::Void gestionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		FrmMatenimientoGestion^ VentanaMantenimientoGestion = gcnew FrmMatenimientoGestion();
