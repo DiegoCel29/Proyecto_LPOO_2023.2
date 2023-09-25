@@ -6,7 +6,8 @@ Persona::Persona() {
 
 };
 
-Persona::Persona(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena) {
+Persona::Persona(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena) {
+	this->Codigo = Codigo;
 	this->DNI = DNI;
 	this->Nombre = Nombre;
 	this->ApellidoPat = ApellidoPat;
@@ -16,6 +17,14 @@ Persona::Persona(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ Apell
 	this->Telefono = Telefono;
 	this->Contrasena = Contrasena;
 };
+
+int Persona::GetCodigo() {
+	return this->Codigo;
+}
+
+void Persona::SetCodigo(int Codigo) {
+	this->Codigo = Codigo;
+}
 
 String^ Persona::GetDNI() {
 	return this->DNI;

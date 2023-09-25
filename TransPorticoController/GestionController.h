@@ -9,7 +9,7 @@ namespace TransPorticoController {
 	public ref class GestionController {
 	public:
 		GestionController();
-		List<Gestion^>^ buscarRuta(String^ Ruta);
+		List<Gestion^>^ BuscarGestion(String^ BuscarRuta);
 	};
 
 

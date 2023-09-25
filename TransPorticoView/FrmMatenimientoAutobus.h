@@ -13,12 +13,12 @@ namespace TransPorticoView {
 	using namespace TransPorticoModel;
 
 	/// <summary>
-	/// Resumen de FrmMatenimientoAutobuses
+	/// Resumen de FrmMatenimientoAutobus
 	/// </summary>
-	public ref class FrmMatenimientoAutobuses : public System::Windows::Forms::Form
+	public ref class FrmMatenimientoAutobus : public System::Windows::Forms::Form
 	{
 	public:
-		FrmMatenimientoAutobuses(void)
+		FrmMatenimientoAutobus(void)
 		{
 			InitializeComponent();
 			//
@@ -30,7 +30,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~FrmMatenimientoAutobuses()
+		~FrmMatenimientoAutobus()
 		{
 			if (components)
 			{
@@ -123,7 +123,7 @@ namespace TransPorticoView {
 			this->label1->Size = System::Drawing::Size(47, 17);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Placa:";
-			this->label1->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobuses::label1_Click_1);
+			this->label1->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::label1_Click_1);
 			// 
 			// button1
 			// 
@@ -136,7 +136,7 @@ namespace TransPorticoView {
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobuses::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::button1_Click);
 			// 
 			// textBox1
 			// 
@@ -160,7 +160,7 @@ namespace TransPorticoView {
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->Size = System::Drawing::Size(602, 238);
 			this->dataGridView1->TabIndex = 5;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FrmMatenimientoAutobuses::dataGridView1_CellContentClick);
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FrmMatenimientoAutobus::dataGridView1_CellContentClick);
 			// 
 			// Column6
 			// 
@@ -211,7 +211,7 @@ namespace TransPorticoView {
 			this->Column5->Name = L"Column5";
 			this->Column5->Width = 125;
 			// 
-			// FrmMatenimientoAutobuses
+			// FrmMatenimientoAutobus
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -221,8 +221,8 @@ namespace TransPorticoView {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
-			this->Name = L"FrmMatenimientoAutobuses";
-			this->Text = L"FrmMatenimientoAutobuses";
+			this->Name = L"FrmMatenimientoAutobus";
+			this->Text = L"FrmMatenimientoAutobus";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();

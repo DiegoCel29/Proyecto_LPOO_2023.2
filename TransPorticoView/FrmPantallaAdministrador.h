@@ -15,7 +15,9 @@
 #include "MantenimientoPasajero.h"
 #include "mantenimientoSituacionRecorrido.h"
 #include "frmMantenimientoMedidasEstadisticas.h"
-#include "FrmMatenimientoAutobuses.h"
+#include "FrmMatenimientoAutobus.h"
+#include "FrmMantenimientoInformeEconomico.h"
+#include "FrmMantenimientoGestion.h"
 
 namespace TransPorticoView {
 
@@ -50,6 +52,7 @@ namespace TransPorticoView {
 			{
 				delete components;
 			}
+			
 		}
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	private: System::Windows::Forms::ToolStripMenuItem^ personasToolStripMenuItem;
@@ -163,12 +166,14 @@ namespace TransPorticoView {
 			this->gestionToolStripMenuItem->Name = L"gestionToolStripMenuItem";
 			this->gestionToolStripMenuItem->Size = System::Drawing::Size(59, 20);
 			this->gestionToolStripMenuItem->Text = L"Gestion";
+			this->gestionToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::gestionToolStripMenuItem_Click);
 			// 
 			// informesEconomicosToolStripMenuItem
 			// 
 			this->informesEconomicosToolStripMenuItem->Name = L"informesEconomicosToolStripMenuItem";
 			this->informesEconomicosToolStripMenuItem->Size = System::Drawing::Size(134, 20);
 			this->informesEconomicosToolStripMenuItem->Text = L"Informes Economicos";
+			this->informesEconomicosToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::informesEconomicosToolStripMenuItem_Click);
 			// 
 			// medidasEstadisticasToolStripMenuItem
 			// 
@@ -240,7 +245,7 @@ namespace TransPorticoView {
 			// atajosToolStripMenuItem
 			// 
 			this->atajosToolStripMenuItem->Name = L"atajosToolStripMenuItem";
-			this->atajosToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->atajosToolStripMenuItem->Size = System::Drawing::Size(130, 22);
 			this->atajosToolStripMenuItem->Text = L"Atajos";
 			this->atajosToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::atajosToolStripMenuItem_Click);
 			// 
@@ -251,21 +256,21 @@ namespace TransPorticoView {
 					this->mantenimientosToolStripMenuItem
 			});
 			this->autobusesToolStripMenuItem->Name = L"autobusesToolStripMenuItem";
-			this->autobusesToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->autobusesToolStripMenuItem->Size = System::Drawing::Size(130, 22);
 			this->autobusesToolStripMenuItem->Text = L"Autobuses";
 			this->autobusesToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::autobusesToolStripMenuItem_Click);
 			// 
 			// emergenciasToolStripMenuItem
 			// 
 			this->emergenciasToolStripMenuItem->Name = L"emergenciasToolStripMenuItem";
-			this->emergenciasToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->emergenciasToolStripMenuItem->Size = System::Drawing::Size(161, 22);
 			this->emergenciasToolStripMenuItem->Text = L"Emergencias";
 			this->emergenciasToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::emergenciasToolStripMenuItem_Click);
 			// 
 			// mantenimientosToolStripMenuItem
 			// 
 			this->mantenimientosToolStripMenuItem->Name = L"mantenimientosToolStripMenuItem";
-			this->mantenimientosToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->mantenimientosToolStripMenuItem->Size = System::Drawing::Size(161, 22);
 			this->mantenimientosToolStripMenuItem->Text = L"Mantenimientos";
 			this->mantenimientosToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::mantenimientosToolStripMenuItem_Click);
 			// 
@@ -273,7 +278,7 @@ namespace TransPorticoView {
 			// 
 			this->rutasToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->paraderosToolStripMenuItem });
 			this->rutasToolStripMenuItem->Name = L"rutasToolStripMenuItem";
-			this->rutasToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->rutasToolStripMenuItem->Size = System::Drawing::Size(130, 22);
 			this->rutasToolStripMenuItem->Text = L"Rutas";
 			this->rutasToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::rutasToolStripMenuItem_Click_1);
 			// 
@@ -287,21 +292,21 @@ namespace TransPorticoView {
 			// situacionToolStripMenuItem
 			// 
 			this->situacionToolStripMenuItem->Name = L"situacionToolStripMenuItem";
-			this->situacionToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->situacionToolStripMenuItem->Size = System::Drawing::Size(130, 22);
 			this->situacionToolStripMenuItem->Text = L"Situacion";
 			this->situacionToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::situacionToolStripMenuItem_Click);
 			// 
 			// horariosToolStripMenuItem
 			// 
 			this->horariosToolStripMenuItem->Name = L"horariosToolStripMenuItem";
-			this->horariosToolStripMenuItem->Size = System::Drawing::Size(180, 22);
+			this->horariosToolStripMenuItem->Size = System::Drawing::Size(130, 22);
 			this->horariosToolStripMenuItem->Text = L"Horarios";
 			this->horariosToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::horariosToolStripMenuItem_Click);
 			// 
 			// viajesToolStripMenuItem1
 			// 
 			this->viajesToolStripMenuItem1->Name = L"viajesToolStripMenuItem1";
-			this->viajesToolStripMenuItem1->Size = System::Drawing::Size(180, 22);
+			this->viajesToolStripMenuItem1->Size = System::Drawing::Size(130, 22);
 			this->viajesToolStripMenuItem1->Text = L"Viajes";
 			this->viajesToolStripMenuItem1->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::viajesToolStripMenuItem1_Click);
 			// 
@@ -402,8 +407,16 @@ namespace TransPorticoView {
 		VentanaMantenimientoMedidasEstadisticas->ShowDialog();
 	}
 	private: System::Void autobusesToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		FrmMatenimientoAutobuses^ VentanaMantenimientoAutobus = gcnew FrmMatenimientoAutobuses();
+		FrmMatenimientoAutobus^ VentanaMantenimientoAutobus = gcnew FrmMatenimientoAutobus();
 		VentanaMantenimientoAutobus->ShowDialog();
+	}
+	private: System::Void informesEconomicosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		FrmMantenimientoInformeEconomico^ VentanaMantenimientoAutobus = gcnew FrmMantenimientoInformeEconomico();
+		VentanaMantenimientoAutobus->ShowDialog();
+	}
+	private: System::Void gestionToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		FrmMatenimientoGestion^ VentanaMantenimientoGestion = gcnew FrmMatenimientoGestion();
+		VentanaMantenimientoGestion->ShowDialog();
 	}
 };
 }

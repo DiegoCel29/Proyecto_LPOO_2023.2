@@ -72,7 +72,13 @@
     <ClCompile Include="MantenimientoParaderosRecorridos.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="FrmMatenimientoAutobuses.cpp">
+    <ClCompile Include="FrmMatenimientoAutobus.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="FrmMantenimientoGestion.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="FrmMantenimientoInformeEconomico.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>
@@ -131,7 +137,13 @@
     <ClInclude Include="frmMantenimientoMedidasEstadisticas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="FrmMatenimientoAutobuses.h">
+    <ClInclude Include="FrmMatenimientoAutobus.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="FrmMantenimientoGestion.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="FrmMantenimientoInformeEconomico.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -152,14 +164,8 @@
     <Text Include="MedidasEstadisticas.txt" />
     <Text Include="Paradero.txt" />
     <Text Include="Ruta.txt" />
-    <Text Include="Lista_Autobuses.txt">
-      <Filter>Archivos de encabezado</Filter>
-    </Text>
-    <Text Include="Lista_Informes.txt">
-      <Filter>Archivos de encabezado</Filter>
-    </Text>
-    <Text Include="Lista_Rutas.txt">
-      <Filter>Archivos de encabezado</Filter>
-    </Text>
+    <Text Include="Lista_Autobuses.txt" />
+    <Text Include="Lista_Rutas.txt" />
+    <Text Include="Lista_Informes.txt" />
   </ItemGroup>
 </Project>

@@ -15,6 +15,14 @@ InformeEconomico::InformeEconomico(int Codigo, String^ Anhio, int Ingresos, int 
 	this->CostoMantenimientos = CostoMantenimientos;
 };
 
+int InformeEconomico::GetCodigo() {
+	return this->Codigo;
+}
+
+void InformeEconomico::SetCodigo(int Codigo) {
+	this->Codigo = Codigo;
+}
+
 String^ InformeEconomico::GetAnhio() {
 	return this->Anhio;
 }

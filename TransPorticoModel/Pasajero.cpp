@@ -6,7 +6,7 @@ Pasajero::Pasajero() : Persona() {
 
 };
 
-Pasajero::Pasajero(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ FechaNacimiento) :Persona(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena) {
+Pasajero::Pasajero(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ FechaNacimiento) :Persona(0, DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena) {
 	this->FechaNacimiento = FechaNacimiento;
 
 };

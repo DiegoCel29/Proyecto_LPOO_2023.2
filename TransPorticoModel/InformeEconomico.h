@@ -16,6 +16,9 @@ namespace TransPorticoModel {
 		InformeEconomico();
 		InformeEconomico(int Codigo, String^ Anhio,int Ingresos, int SalarioAdministrador,int SalarioConductor, int CostoMantenimientos);
 		
+		int GetCodigo();
+		void SetCodigo(int Codigo);
+
 		String^ GetAnhio();
 		void SetAnhio(String^ Anhio);
 
