@@ -72,7 +72,7 @@
     <ClInclude Include="Paradero.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Downloads\Avance_2 (2)\Avance_2\TransPorticoModel\MedidasEstadisticas.h">
+    <ClInclude Include="MedidasEstadisticas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -134,7 +134,7 @@
     <ClCompile Include="Paradero.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Downloads\Avance_2 (2)\Avance_2\TransPorticoModel\MedidasEstadisticas.cpp">
+    <ClCompile Include="MedidasEstadisticas.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>

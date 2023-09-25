@@ -113,12 +113,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="AtajosController.h" />
+    <ClInclude Include="AutobusController.h" />
     <ClInclude Include="BuzonSugerenciaController.h" />
     <ClInclude Include="CalificacionController.h" />
     <ClInclude Include="ConductorController.h" />
     <ClInclude Include="EmergenciaController.h" />
+    <ClInclude Include="GestionController.h" />
     <ClInclude Include="HorarioController.h" />
+    <ClInclude Include="InformeEconomicoController.h" />
     <ClInclude Include="MantenimientoController.h" />
+    <ClInclude Include="MedidasEstadisticasController.h" />
     <ClInclude Include="ParaderoController.h" />
     <ClInclude Include="ParaderosRecorridosController.h" />
     <ClInclude Include="PasajeroController.h" />
@@ -130,12 +134,16 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AtajosController.cpp" />
+    <ClCompile Include="AutobusController.cpp" />
     <ClCompile Include="BuzonSugerenciaController.cpp" />
     <ClCompile Include="CalificacionController.cpp" />
     <ClCompile Include="ConductorController.cpp" />
     <ClCompile Include="EmergenciaController.cpp" />
+    <ClCompile Include="GestionController.cpp" />
     <ClCompile Include="HorarioController.cpp" />
+    <ClCompile Include="InformeEconomicoController.cpp" />
     <ClCompile Include="MantenimientoController.cpp" />
+    <ClCompile Include="MedidasEstadisticasController.cpp" />
     <ClCompile Include="ParaderoController.cpp" />
     <ClCompile Include="ParaderosRecorridosController.cpp" />
     <ClCompile Include="PasajeroController.cpp" />

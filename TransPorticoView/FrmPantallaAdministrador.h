@@ -15,6 +15,7 @@
 #include "MantenimientoPasajero.h"
 #include "mantenimientoSituacionRecorrido.h"
 #include "frmMantenimientoMedidasEstadisticas.h"
+#include "FrmMatenimientoAutobuses.h"
 
 namespace TransPorticoView {
 
@@ -252,18 +253,19 @@ namespace TransPorticoView {
 			this->autobusesToolStripMenuItem->Name = L"autobusesToolStripMenuItem";
 			this->autobusesToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->autobusesToolStripMenuItem->Text = L"Autobuses";
+			this->autobusesToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::autobusesToolStripMenuItem_Click);
 			// 
 			// emergenciasToolStripMenuItem
 			// 
 			this->emergenciasToolStripMenuItem->Name = L"emergenciasToolStripMenuItem";
-			this->emergenciasToolStripMenuItem->Size = System::Drawing::Size(161, 22);
+			this->emergenciasToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->emergenciasToolStripMenuItem->Text = L"Emergencias";
 			this->emergenciasToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::emergenciasToolStripMenuItem_Click);
 			// 
 			// mantenimientosToolStripMenuItem
 			// 
 			this->mantenimientosToolStripMenuItem->Name = L"mantenimientosToolStripMenuItem";
-			this->mantenimientosToolStripMenuItem->Size = System::Drawing::Size(161, 22);
+			this->mantenimientosToolStripMenuItem->Size = System::Drawing::Size(180, 22);
 			this->mantenimientosToolStripMenuItem->Text = L"Mantenimientos";
 			this->mantenimientosToolStripMenuItem->Click += gcnew System::EventHandler(this, &FrmPantallaAdministrador::mantenimientosToolStripMenuItem_Click);
 			// 
@@ -322,6 +324,7 @@ namespace TransPorticoView {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"FrmPantallaAdministrador";
 			this->Text = L"FrmPantallaAdministrador";
+			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -397,6 +400,10 @@ namespace TransPorticoView {
 	private: System::Void medidasEstadisticasToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		frmMantenimientoMedidasEstadisticas^ VentanaMantenimientoMedidasEstadisticas = gcnew frmMantenimientoMedidasEstadisticas();
 		VentanaMantenimientoMedidasEstadisticas->ShowDialog();
+	}
+	private: System::Void autobusesToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+		FrmMatenimientoAutobuses^ VentanaMantenimientoAutobus = gcnew FrmMatenimientoAutobuses();
+		VentanaMantenimientoAutobus->ShowDialog();
 	}
 };
 }

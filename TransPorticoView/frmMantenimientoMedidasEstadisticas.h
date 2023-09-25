@@ -54,7 +54,8 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button2;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
-	private: System::Windows::Forms::DateTimePicker^ dateTimePicker1;
+	private: System::Windows::Forms::TextBox^ textBox1;
+
 
 	private:
 		/// <summary>
@@ -80,11 +81,11 @@ namespace TransPorticoView {
 			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
@@ -96,11 +97,10 @@ namespace TransPorticoView {
 				this->Column1,
 					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
 			});
-			this->dataGridView1->Location = System::Drawing::Point(61, 171);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
+			this->dataGridView1->Location = System::Drawing::Point(46, 139);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->Size = System::Drawing::Size(707, 315);
+			this->dataGridView1->Size = System::Drawing::Size(530, 256);
 			this->dataGridView1->TabIndex = 26;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &frmMantenimientoMedidasEstadisticas::dataGridView1_CellContentClick);
 			// 
@@ -162,10 +162,9 @@ namespace TransPorticoView {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(601, 516);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
+			this->button4->Location = System::Drawing::Point(451, 419);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(100, 28);
+			this->button4->Size = System::Drawing::Size(75, 23);
 			this->button4->TabIndex = 25;
 			this->button4->Text = L"Eliminar";
 			this->button4->UseVisualStyleBackColor = true;
@@ -173,34 +172,22 @@ namespace TransPorticoView {
 			// 
 			// groupBox1
 			// 
-			this->groupBox1->Controls->Add(this->dateTimePicker1);
+			this->groupBox1->Controls->Add(this->textBox1);
 			this->groupBox1->Controls->Add(this->button1);
 			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Location = System::Drawing::Point(30, 51);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
+			this->groupBox1->Location = System::Drawing::Point(22, 41);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
-			this->groupBox1->Size = System::Drawing::Size(776, 112);
+			this->groupBox1->Size = System::Drawing::Size(582, 91);
 			this->groupBox1->TabIndex = 22;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Criterio de Búsqueda";
 			this->groupBox1->Enter += gcnew System::EventHandler(this, &frmMantenimientoMedidasEstadisticas::groupBox1_Enter);
 			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->dateTimePicker1->Location = System::Drawing::Point(266, 70);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(200, 22);
-			this->dateTimePicker1->TabIndex = 6;
-			this->dateTimePicker1->ValueChanged += gcnew System::EventHandler(this, &frmMantenimientoMedidasEstadisticas::dateTimePicker1_ValueChanged);
-			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(513, 62);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(385, 50);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(100, 28);
+			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
@@ -212,19 +199,17 @@ namespace TransPorticoView {
 			this->label1->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(173, 70);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(130, 57);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(65, 20);
+			this->label1->Size = System::Drawing::Size(51, 16);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Fecha: ";
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(353, 516);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
+			this->button3->Location = System::Drawing::Point(265, 419);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(100, 28);
+			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 24;
 			this->button3->Text = L"Editar";
 			this->button3->UseVisualStyleBackColor = true;
@@ -232,25 +217,32 @@ namespace TransPorticoView {
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(105, 516);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(79, 419);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 28);
+			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 23;
 			this->button2->Text = L"Nuevo";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &frmMantenimientoMedidasEstadisticas::button2_Click);
 			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(243, 57);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(100, 20);
+			this->textBox1->TabIndex = 2;
+			// 
 			// frmMantenimientoMedidasEstadisticas
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(855, 656);
+			this->ClientSize = System::Drawing::Size(641, 533);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"frmMantenimientoMedidasEstadisticas";
 			this->Text = L"frmMantenimientoMedidasEstadisticas";
 			this->Load += gcnew System::EventHandler(this, &frmMantenimientoMedidasEstadisticas::frmMantenimientoMedidasEstadisticas_Load);
@@ -262,7 +254,7 @@ namespace TransPorticoView {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ Fecha = this->dateTimePicker1->Text;
+		String^ Fecha = this->textBox1->Text;
 		MedidasEstadisticasController^ objMedidasEstadisticas = gcnew MedidasEstadisticasController();
 		objMedidasEstadisticas->buscarMedidasEstadisticas(Fecha);
 		List<MedidasEstadisticas^>^ listaMedidasEstadisticas = objMedidasEstadisticas->buscarMedidasEstadisticas(Fecha);

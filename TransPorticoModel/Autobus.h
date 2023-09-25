@@ -11,13 +11,37 @@ namespace TransPorticoModel {
 		int CantAsientos;
 		int CantPasajeros;
 		int Capacidad;
-		double X_Autobus;
-		double Y_Autobus;
-		double Velocidad;
-		Mantenimiento^ ObjMantenimiento;
+		int X_Autobus;
+		int Y_Autobus;
+		int Velocidad;
 
 	public:
 		Autobus();
-		Autobus(int Codigo, String^ Placa, int CantAsientos, int CantPasajeros, int Capacidad, double X_Autobus, double Y_Autobus, double Velocidad, Mantenimiento^ ObjMantenimiento);
+		Autobus(int Codigo, String^ Placa, int CantAsientos, int CantPasajeros, int Capacidad, int X_Autobus, int Y_Autobus, int Velocidad);
+
+		String^ GetPlaca();
+		void SetPlaca(String^ Placa);
+
+		int GetCantAsientos();
+		void SetCantAsientos(int CantAsientos);
+
+		int GetCantPasajeros();
+		void SetCantPasajeros(int CantPasajeros);
+
+		int GetCapacidad();
+		void SetCapacidad(int Capacidad);
+
+		int GetX_Autobus();
+		void SetX_Autobus(int X_Autobus);
+
+		int GetY_Autobus();
+		void SetY_Autobus(int Y_Autobus);
+
+		int GetVelocidad();
+		void SetVelocidad(int Velocidad);
+
+
+
+
 	};
 };

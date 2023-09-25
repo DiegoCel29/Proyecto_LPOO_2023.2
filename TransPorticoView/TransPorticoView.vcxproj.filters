@@ -72,6 +72,9 @@
     <ClCompile Include="MantenimientoParaderosRecorridos.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
+    <ClCompile Include="FrmMatenimientoAutobuses.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="FrmPantallaIngreso.h">
@@ -128,6 +131,9 @@
     <ClInclude Include="frmMantenimientoMedidasEstadisticas.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="FrmMatenimientoAutobuses.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="BuzonSugerencia.txt" />
@@ -136,15 +142,24 @@
     <Text Include="Tarjetas.txt" />
     <Text Include="Personas.txt" />
     <Text Include="Mantenimientos.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Calificacion.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Emergencia.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Horario.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Paradero.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Ruta.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_Atajos.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_ParaderosRecorridos.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_SituacionRecorrido.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_conductores.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_pasajeros.txt" />
+    <Text Include="Calificacion.txt" />
+    <Text Include="Emergencia.txt" />
+    <Text Include="Horario.txt" />
+    <Text Include="Lista_Atajos.txt" />
+    <Text Include="Lista_ParaderosRecorridos.txt" />
+    <Text Include="Lista_pasajeros.txt" />
+    <Text Include="Lista_SituacionRecorrido.txt" />
+    <Text Include="MedidasEstadisticas.txt" />
+    <Text Include="Paradero.txt" />
+    <Text Include="Ruta.txt" />
+    <Text Include="Lista_Autobuses.txt">
+      <Filter>Archivos de encabezado</Filter>
+    </Text>
+    <Text Include="Lista_Informes.txt">
+      <Filter>Archivos de encabezado</Filter>
+    </Text>
+    <Text Include="Lista_Rutas.txt">
+      <Filter>Archivos de encabezado</Filter>
+    </Text>
   </ItemGroup>
 </Project>

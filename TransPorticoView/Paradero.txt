@@ -1,0 +1,9 @@
+1;Javier Prado;15;35;60;59
+2;Los Cedros;25;35;40;70
+3;Barcelona;35;45;30;68
+4;Alberto del Campo;64;30;50;6
+5;Salaverry;33;22;70;41
+6;Godofredo;59;58;30;30
+7;Paul Harris;48;35;20;15
+8;Belén;77;15;90;11
+9;Alvarez Calderón;88;20;10;0

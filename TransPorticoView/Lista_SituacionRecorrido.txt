@@ -1,0 +1,3 @@
+1;true;false;true;Paradero Jiron Cusco
+2;false;true;true;Paradero Ucayali
+3;true;true;true;Paradero Jose Díaz

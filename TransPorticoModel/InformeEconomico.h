@@ -6,12 +6,32 @@ namespace TransPorticoModel {
 	public ref class InformeEconomico {
 	private:
 		int Codigo;
-		double Ingresos;
-		double Salarios;
-		double CostoMantenimientos;
-
+		String^ Anhio;
+		int Ingresos;
+		int SalarioAdministrador;
+		int SalarioConductor;
+		int CostoMantenimientos;
+		
 	public:
 		InformeEconomico();
-		InformeEconomico(int Codigo, double Ingresos, double Salarios, double CostoMantenimientos);
+		InformeEconomico(int Codigo, String^ Anhio,int Ingresos, int SalarioAdministrador,int SalarioConductor, int CostoMantenimientos);
+		
+		String^ GetAnhio();
+		void SetAnhio(String^ Anhio);
+
+		int GetIngresos();
+		void SetIngresos(int Ingresos);
+		
+		int GetSalarioAdministrador();
+		void SetSalarioAdministrador(int SalarioAdministrador);
+		
+		int GetSalarioConductor();
+		void SetSalarioConductor(int SalarioConductor);
+		
+		int GetCostoMantenimientos();
+		void SetCostoMantenimientos(int CostoMantenimientos);
+
+
+	
 	};
 };

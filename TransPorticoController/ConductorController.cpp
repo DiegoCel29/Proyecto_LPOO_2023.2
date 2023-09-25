@@ -12,7 +12,7 @@ ConductorController::ConductorController() {
 List<Empleado^>^ ConductorController::buscarConductores(String^ conductores) {
 	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
 	List<Empleado^>^ listaConductoresEncontrados = gcnew List<Empleado^>();
-	array<String^>^ lineas = File::ReadAllLines("Lista_conductores.txt");
+	array<String^>^ lineas = File::ReadAllLines("Empleados.txt");
 
 	String^ separadores = ";"; /*Aqui defino el caracter por el cual voy a separar la informacion de cada linea*/
 	/*Esta instruccion for each nos permite ir elemento por elemento de un array*/

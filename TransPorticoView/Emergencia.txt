@@ -1,0 +1,6 @@
+1;true;Tráfico
+2;true;Choque
+3;true;Velocidad
+4;false;Tráfico
+5;false;Choque
+6;false;Velocidad

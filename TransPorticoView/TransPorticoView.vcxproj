@@ -125,6 +125,7 @@
     <ClCompile Include="FrmMantenimientoPromociones.cpp" />
     <ClCompile Include="frmMantenimientoRuta.cpp" />
     <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
+    <ClCompile Include="FrmMatenimientoAutobuses.cpp" />
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
     <ClCompile Include="FrmPantallaIngreso.cpp" />
     <ClCompile Include="main.cpp" />
@@ -175,6 +176,9 @@
     <ClInclude Include="FrmMantenimientoTarjeta.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="FrmMatenimientoAutobuses.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FrmPantallaAdministrador.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -204,6 +208,9 @@
     <EmbeddedResource Include="FrmMantenimientoMantenimiento.resx">
       <DependentUpon>FrmMantenimientoMantenimiento.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMantenimientoMedidasEstadisticas.resx">
+      <DependentUpon>frmMantenimientoMedidasEstadisticas.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoPersona.resx">
       <DependentUpon>FrmMantenimientoPersona.h</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +226,9 @@
     <EmbeddedResource Include="FrmPantallaIngreso.resx">
       <DependentUpon>FrmPantallaIngreso.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoAtajo.resx">
+      <DependentUpon>MantenimientoAtajo.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransPorticoController\TransPorticoController.vcxproj">
@@ -229,21 +239,24 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Calificacion.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Emergencia.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Horario.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Paradero.txt" />
-    <Text Include="..\..\..\..\Downloads\Avance_2\TransPorticoView\Ruta.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_Atajos.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_conductores.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_ParaderosRecorridos.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_pasajeros.txt" />
-    <Text Include="..\..\..\..\Downloads\AVANCE_EDÚ\Proyecto_LPOO_2023.2\TransPorticoView\Lista_SituacionRecorrido.txt" />
     <Text Include="BuzonSugerencia.txt" />
+    <Text Include="Calificacion.txt" />
+    <Text Include="Emergencia.txt" />
     <Text Include="Empleados.txt" />
+    <Text Include="Horario.txt" />
+    <Text Include="Lista_Atajos.txt" />
+    <Text Include="Lista_Autobuses.txt" />
+    <Text Include="Lista_Informes.txt" />
+    <Text Include="Lista_ParaderosRecorridos.txt" />
+    <Text Include="Lista_pasajeros.txt" />
+    <Text Include="Lista_Rutas.txt" />
+    <Text Include="Lista_SituacionRecorrido.txt" />
     <Text Include="Mantenimientos.txt" />
+    <Text Include="MedidasEstadisticas.txt" />
+    <Text Include="Paradero.txt" />
     <Text Include="Personas.txt" />
     <Text Include="Promociones.txt" />
+    <Text Include="Ruta.txt" />
     <Text Include="Tarjetas.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

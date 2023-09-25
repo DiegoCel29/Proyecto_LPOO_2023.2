@@ -1,3 +1,3 @@
-1;Milen Margaret;Toribio;Alva;76849076;19;Femenino;991593244;Alasha26;0;2612004;Si
-2;Cesar Edú;Peña;Rengifo;72457071;19;Masculino;936893016;Sultan29;0;2912004;No
-3;Carlos Enrique;Díaz;Palma;73456722;23;Masculino;943225017;Rocotin36;0;2872000;Si
+76849076;Milen Margaret;Toribio;Alva;19;Femenino;991593244;Alasha26;5000;Contratado(4 meses)
+72457071;Cesar Edú;Peña;Rengifo;19;Masculino;936893016;Sultan29;3000;Sin Contrato
+73456722;Carlos Enrique;Díaz;Palma;23;Masculino;943225017;Rocotin36;1500;Contratado(6 meses)
