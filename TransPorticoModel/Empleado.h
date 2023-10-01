@@ -9,7 +9,7 @@ namespace TransPorticoModel {
 
 	public:
 		Empleado();
-		Empleado(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, int Sueldo, String^ EstadoContrato);
+		Empleado(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ Tipo, int Sueldo, String^ EstadoContrato);
 
 		String^ get_DNI_();
 		void set_DNI_(String^ DNI);

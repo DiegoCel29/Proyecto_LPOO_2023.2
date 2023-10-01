@@ -6,7 +6,7 @@ Empleado::Empleado() :Persona() {
 
 };
 
-Empleado::Empleado(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, int Sueldo, String^ EstadoContrato) :Persona(0, DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena) {
+Empleado::Empleado(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ Tipo, int Sueldo, String^ EstadoContrato) :Persona(Codigo, DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, Tipo) {
 	this->Sueldo = Sueldo;
 	this->EstadoContrato = EstadoContrato;
 
@@ -20,11 +20,11 @@ void Empleado::set_DNI_(String^ DNI) {
 }
 
 String^ Empleado::get_Nombre_() {
-	return this->Nombre;
+	return this->Nombres;
 }
 
 void Empleado::set_Nombre_(String^ Nombre) {
-	this->Nombre = Nombre;
+	this->Nombres = Nombre;
 }
 String^ Empleado::get_ApellidoPat_() {
 	return this->ApellidoPat;

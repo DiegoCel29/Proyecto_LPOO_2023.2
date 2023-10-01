@@ -6,16 +6,17 @@ Persona::Persona() {
 
 };
 
-Persona::Persona(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena) {
+Persona::Persona(int Codigo, String^ Nombres, String^ ApellidoPat, String^ ApellidoMat, String^ DNI, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ Tipo) {
 	this->Codigo = Codigo;
 	this->DNI = DNI;
-	this->Nombre = Nombre;
+	this->Nombres = Nombres;
 	this->ApellidoPat = ApellidoPat;
 	this->ApellidoMat = ApellidoMat;
 	this->Edad = Edad;
 	this->Genero = Genero;
 	this->Telefono = Telefono;
 	this->Contrasena = Contrasena;
+	this->Tipo = Tipo;
 };
 
 int Persona::GetCodigo() {
@@ -34,12 +35,12 @@ void Persona::SetDNI(String^ DNI) {
 	this->DNI = DNI;
 }
 
-String^ Persona::GetNombre() {
-	return this->Nombre;
+String^ Persona::GetNombres() {
+	return this->Nombres;
 }
 
-void Persona::SetNombre(String^ Nombre) {
-	this->Nombre = Nombre;
+void Persona::SetNombres(String^ Nombres) {
+	this->Nombres = Nombres;
 }
 String^ Persona::GetApellidoPat() {
 	return this->ApellidoPat;
@@ -77,10 +78,19 @@ String^ Persona::GetTelefono() {
 void Persona::SetTelefono(String^ Telefono) {
 	this->Telefono = Telefono;
 }
+
 String^ Persona::GetContrasena() {
 	return this->Contrasena;
 }
 
 void Persona::SetContrasena(String^ Contrasena) {
 	this->Contrasena = Contrasena;
+}
+
+String^ Persona::GetTipo() {
+	return this->Tipo;
+}
+
+void Persona::SetTipo(String^ Tipo) {
+	this->Tipo = Tipo;
 }

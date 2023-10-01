@@ -6,7 +6,7 @@ Pasajero::Pasajero() : Persona() {
 
 };
 
-Pasajero::Pasajero(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ FechaNacimiento) :Persona(0, DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena) {
+Pasajero::Pasajero(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ FechaNacimiento) :Persona(Codigo, DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, "Pasajero") {
 	this->FechaNacimiento = FechaNacimiento;
 
 };
@@ -20,11 +20,11 @@ void Pasajero::set_DNI(String^ DNI) {
 }
 
 String^ Pasajero::get_Nombre() {
-	return this->Nombre;
+	return this->Nombres;
 }
 
 void Pasajero::set_Nombre(String^ Nombre) {
-	this->Nombre = Nombre;
+	this->Nombres = Nombre;
 }
 String^ Pasajero::get_ApellidoPat() {
 	return this->ApellidoPat;

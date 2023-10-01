@@ -301,7 +301,7 @@ namespace TransPorticoView {
 			array<String^>^ FilaGrilla = gcnew array<String^>(8);
 			
 			FilaGrilla[0] = Convert::ToString(ObjPersona->GetCodigo());
-			FilaGrilla[1] = ObjPersona->GetNombre();
+			FilaGrilla[1] = ObjPersona->GetNombres();
 			FilaGrilla[2] = ObjPersona->GetApellidoPat();
 			FilaGrilla[3] = ObjPersona->GetApellidoMat();
 			FilaGrilla[4] = ObjPersona->GetDNI();

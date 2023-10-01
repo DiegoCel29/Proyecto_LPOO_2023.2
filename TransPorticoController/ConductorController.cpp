@@ -9,7 +9,7 @@ ConductorController::ConductorController() {
 
 }
 
-List<Empleado^>^ ConductorController::buscarConductores(String^ conductores) {
+List<Empleado^>^ ConductorController::buscarConductores(String^ Conductores) {
 	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
 	List<Empleado^>^ listaConductoresEncontrados = gcnew List<Empleado^>();
 	array<String^>^ lineas = File::ReadAllLines("Empleados.txt");
@@ -18,19 +18,22 @@ List<Empleado^>^ ConductorController::buscarConductores(String^ conductores) {
 	/*Esta instruccion for each nos permite ir elemento por elemento de un array*/
 	for each (String ^ lineaConductores in lineas) {
 		/*Voy a separar cada elemento del String por ; con el split*/
-		array<String^>^ datos = lineaConductores->Split(separadores->ToCharArray());
-		String^ DNI = datos[0];
-		String^ Nombre = datos[1];
-		String^ ApellidoPat = datos[2];
-		String^ ApellidoMat = datos[3];
-		int Edad = Convert::ToInt32(datos[4]);
-		String^ Genero = datos[5];
-		String^ Telefono = datos[6];
-		String^ Contrasena = datos[7];
-		int Sueldo = Convert::ToInt32(datos[8]);
-		String^ EstadoContrato = datos[9];
-		if (Nombre->Contains(conductores)) {
-			Empleado^ objConductor = gcnew Empleado(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, Sueldo, EstadoContrato);
+		array<String^>^ Datos = lineaConductores->Split(separadores->ToCharArray());
+		int Codigo = Convert::ToInt32(Datos[0]);
+		String^ DNI = Datos[1];
+		String^ Nombre = Datos[2];
+		String^ ApellidoPat = Datos[3];
+		String^ ApellidoMat = Datos[4];
+		int Edad = Convert::ToInt32(Datos[5]);
+		String^ Genero = Datos[6];
+		String^ Telefono = Datos[7];
+		String^ Contrasena = Datos[8];
+		String^ Tipo = Datos[9];
+		int Sueldo = Convert::ToInt32(Datos[10]);
+		String^ EstadoContrato = Datos[11];
+
+		if (Nombre->Contains(Conductores)) {
+			Empleado^ objConductor = gcnew Empleado(Codigo, DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, Tipo, Sueldo, EstadoContrato);
 			listaConductoresEncontrados->Add(objConductor);
 		}
 	}

@@ -114,6 +114,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CrearCuenta.cpp" />
     <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp" />
     <ClCompile Include="frmMantenimientoCalificacion.cpp" />
     <ClCompile Include="frmMantenimientoEmergencia.cpp" />
@@ -136,6 +137,7 @@
     <ClCompile Include="MantenimientoParaderosRecorridos.cpp" />
     <ClCompile Include="MantenimientoPasajero.cpp" />
     <ClCompile Include="MantenimientoSituacionRecorrido.cpp" />
+    <ClCompile Include="OlvidoContrasena.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -145,6 +147,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CrearCuenta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="FrmMantenimientoBuzonSugerencias.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -208,8 +213,14 @@
     <ClInclude Include="MantenimientoSituacionRecorrido.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="OlvidoContrasena.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CrearCuenta.resx">
+      <DependentUpon>CrearCuenta.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoBuzonSugerencias.resx">
       <DependentUpon>FrmMantenimientoBuzonSugerencias.h</DependentUpon>
     </EmbeddedResource>
@@ -254,6 +265,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoSituacionRecorrido.resx">
       <DependentUpon>MantenimientoSituacionRecorrido.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OlvidoContrasena.resx">
+      <DependentUpon>OlvidoContrasena.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

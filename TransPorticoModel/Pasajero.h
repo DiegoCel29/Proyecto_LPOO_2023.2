@@ -9,7 +9,7 @@ namespace TransPorticoModel {
 		String^ FechaNacimiento;
 	public:
 		Pasajero();
-		Pasajero(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ FechaNacimiento);
+		Pasajero(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ FechaNacimiento);
 
 
 		String^ get_DNI();

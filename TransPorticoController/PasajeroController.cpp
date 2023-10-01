@@ -10,26 +10,29 @@ PasajeroController::PasajeroController() {
 }
 
 List<Pasajero^>^ PasajeroController::buscarPasajeros(String^ pasajeros) {
-	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
+
 	List<Pasajero^>^ listaPasajerosEncontrados = gcnew List<Pasajero^>();
 	array<String^>^ lineas = File::ReadAllLines("Lista_pasajeros.txt");
 
-	String^ separadores = ";"; /*Aqui defino el caracter por el cual voy a separar la informacion de cada linea*/
-	/*Esta instruccion for each nos permite ir elemento por elemento de un array*/
+	String^ separadores = ";";
+
 	for each (String ^ lineaPasajeros in lineas) {
-		/*Voy a separar cada elemento del String por ; con el split*/
-		array<String^>^ datos = lineaPasajeros->Split(separadores->ToCharArray());
-		String^ DNI = datos[0];
-		String^ Nombre = datos[1];
-		String^ ApellidoPat = datos[2];
-		String^ ApellidoMat = datos[3];
-		int Edad = Convert::ToInt32(datos[4]);
-		String^ Genero = datos[5];
-		String^ Telefono = datos[6];
-		String^ Contrasena = datos[7];
-		String^ FechaNacimiento = datos[8];
+
+		array<String^>^ Datos = lineaPasajeros->Split(separadores->ToCharArray());
+
+		int Codigo = Convert::ToInt32(Datos[0]);
+		String^ DNI = Datos[1];
+		String^ Nombre = Datos[2];
+		String^ ApellidoPat = Datos[3];
+		String^ ApellidoMat = Datos[4];
+		int Edad = Convert::ToInt32(Datos[5]);
+		String^ Genero = Datos[6];
+		String^ Telefono = Datos[7];
+		String^ Contrasena = Datos[8];
+		String^ FechaNacimiento = Datos[9];
+
 		if (Nombre->Contains(pasajeros)) {
-			Pasajero^ objPasajero = gcnew Pasajero(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, FechaNacimiento);
+			Pasajero^ objPasajero = gcnew Pasajero(Codigo, DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, FechaNacimiento);
 			listaPasajerosEncontrados->Add(objPasajero);
 		}
 	}

@@ -6,7 +6,7 @@ namespace TransPorticoModel {
 	public ref class Persona {
 	protected:
 		int Codigo;
-		String^ Nombre;
+		String^ Nombres;
 		String^ ApellidoPat;
 		String^ ApellidoMat;
 		String^ DNI;
@@ -14,18 +14,19 @@ namespace TransPorticoModel {
 		String^ Genero;
 		String^ Telefono;
 		String^ Contrasena;
+		String^ Tipo;
 
 	public:
 		Persona();
-		Persona(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena);
+		Persona(int Codigo, String^ Nombres, String^ ApellidoPat, String^ ApellidoMat, String^ DNI, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ Tipo);
 		int GetCodigo();
 		void SetCodigo(int Codigo);
 
 		String^ GetDNI();
 		void SetDNI(String^ DNI);
 
-		String^ GetNombre();
-		void SetNombre(String^ Nombre);
+		String^ GetNombres();
+		void SetNombres(String^ Nombres);
 
 		String^ GetApellidoPat();
 		void SetApellidoPat(String^ ApellidoPat);
@@ -44,5 +45,8 @@ namespace TransPorticoModel {
 
 		String^ GetContrasena();
 		void SetContrasena(String^ Contrasena);
+
+		String^ GetTipo();
+		void SetTipo(String^ Tipo);
 	};
 };
