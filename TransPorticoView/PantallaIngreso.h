@@ -15,12 +15,12 @@ namespace TransPorticoView {
 	using namespace TransPorticoController;
 
 	/// <summary>
-	/// Resumen de FrmPantallaIngreso
+	/// Resumen de PantallaIngreso
 	/// </summary>
-	public ref class FrmPantallaIngreso : public System::Windows::Forms::Form
+	public ref class PantallaIngreso : public System::Windows::Forms::Form
 	{
 	public:
-		FrmPantallaIngreso(void)
+		PantallaIngreso(void)
 		{
 			InitializeComponent();
 			//
@@ -32,7 +32,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~FrmPantallaIngreso()
+		~PantallaIngreso()
 		{
 			if (components)
 			{
@@ -70,7 +70,7 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(FrmPantallaIngreso::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PantallaIngreso::typeid));
 			this->B_BotonIngresar = (gcnew System::Windows::Forms::Button());
 			this->L_OlvidoContrasena = (gcnew System::Windows::Forms::Label());
 			this->TB_DNI = (gcnew System::Windows::Forms::TextBox());
@@ -93,7 +93,7 @@ namespace TransPorticoView {
 			this->B_BotonIngresar->TabIndex = 0;
 			this->B_BotonIngresar->Text = L"Iniciar sesión";
 			this->B_BotonIngresar->UseVisualStyleBackColor = false;
-			this->B_BotonIngresar->Click += gcnew System::EventHandler(this, &FrmPantallaIngreso::BotonIngresar_Click);
+			this->B_BotonIngresar->Click += gcnew System::EventHandler(this, &PantallaIngreso::BotonIngresar_Click);
 			// 
 			// L_OlvidoContrasena
 			// 
@@ -109,9 +109,9 @@ namespace TransPorticoView {
 			this->L_OlvidoContrasena->TabIndex = 1;
 			this->L_OlvidoContrasena->Text = L"¿Olvidaste tu contraseña\?";
 			this->L_OlvidoContrasena->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
-			this->L_OlvidoContrasena->Click += gcnew System::EventHandler(this, &FrmPantallaIngreso::L_OlvidoContrasena_Click);
-			this->L_OlvidoContrasena->MouseLeave += gcnew System::EventHandler(this, &FrmPantallaIngreso::L_OlvidoContrasena_MouseLeave);
-			this->L_OlvidoContrasena->MouseHover += gcnew System::EventHandler(this, &FrmPantallaIngreso::L_OlvidoContrasena_MouseHover);
+			this->L_OlvidoContrasena->Click += gcnew System::EventHandler(this, &PantallaIngreso::L_OlvidoContrasena_Click);
+			this->L_OlvidoContrasena->MouseLeave += gcnew System::EventHandler(this, &PantallaIngreso::L_OlvidoContrasena_MouseLeave);
+			this->L_OlvidoContrasena->MouseHover += gcnew System::EventHandler(this, &PantallaIngreso::L_OlvidoContrasena_MouseHover);
 			// 
 			// TB_DNI
 			// 
@@ -175,9 +175,9 @@ namespace TransPorticoView {
 			this->B_CrearCuenta->TabIndex = 6;
 			this->B_CrearCuenta->Text = L"Crear cuenta nueva";
 			this->B_CrearCuenta->UseVisualStyleBackColor = false;
-			this->B_CrearCuenta->Click += gcnew System::EventHandler(this, &FrmPantallaIngreso::B_CrearCuenta_Click);
+			this->B_CrearCuenta->Click += gcnew System::EventHandler(this, &PantallaIngreso::B_CrearCuenta_Click);
 			// 
-			// FrmPantallaIngreso
+			// PantallaIngreso
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -192,10 +192,10 @@ namespace TransPorticoView {
 			this->Controls->Add(this->L_OlvidoContrasena);
 			this->Controls->Add(this->B_BotonIngresar);
 			this->DoubleBuffered = true;
-			this->Name = L"FrmPantallaIngreso";
-			this->Text = L"FrmPantallaIngreso";
+			this->Name = L"PantallaIngreso";
+			this->Text = L"PantallaIngreso";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
-			this->Load += gcnew System::EventHandler(this, &FrmPantallaIngreso::FrmPantallaIngreso_Load);
+			this->Load += gcnew System::EventHandler(this, &PantallaIngreso::PantallaIngreso_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -263,11 +263,11 @@ namespace TransPorticoView {
 		this->B_CrearCuenta->Location = System::Drawing::Point(CentroX, CentroY + 135);
 		
 	}
-	private: System::Void FrmPantallaIngreso_Load(System::Object^ sender, System::EventArgs^ e) {
-		this->SizeChanged += (gcnew System::EventHandler(this,&FrmPantallaIngreso::FrmPantallaIngreso_SizeChaged));
+	private: System::Void PantallaIngreso_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this,&PantallaIngreso::PantallaIngreso_SizeChaged));
 		CentrarForm();
 	}
-	private: System::Void FrmPantallaIngreso_SizeChaged(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void PantallaIngreso_SizeChaged(System::Object^ sender, System::EventArgs^ e) {
 		CentrarForm();
 	}
 	private: System::Void L_OlvidoContrasena_Click(System::Object^ sender, System::EventArgs^ e) {

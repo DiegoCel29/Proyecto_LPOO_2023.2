@@ -121,9 +121,9 @@ bool PersonaController::ExistePersonaTelefono(String^ Telefono) {
 			return true;
 		}
 		else {
-			return false;
 		}
 	}
+	return false;
 }
 
 void PersonaController::CambiarPersonaContrasenaTelefono(String^ Telefono, String^ NuevaContrasena) {

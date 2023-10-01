@@ -130,7 +130,7 @@
     <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
     <ClCompile Include="FrmMatenimientoAutobus.cpp" />
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
-    <ClCompile Include="FrmPantallaIngreso.cpp" />
+    <ClCompile Include="PantallaIngreso.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MantenimientoAtajo.cpp" />
     <ClCompile Include="MantenimientoConductor.cpp" />
@@ -138,6 +138,7 @@
     <ClCompile Include="MantenimientoPasajero.cpp" />
     <ClCompile Include="MantenimientoSituacionRecorrido.cpp" />
     <ClCompile Include="OlvidoContrasena.cpp" />
+    <ClCompile Include="PantallaPrincipalAdministrador.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -195,7 +196,7 @@
     <ClInclude Include="FrmPantallaAdministrador.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FrmPantallaIngreso.h">
+    <ClInclude Include="PantallaIngreso.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MantenimientoAtajo.h">
@@ -214,6 +215,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="OlvidoContrasena.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PantallaPrincipalAdministrador.h">
       <FileType>CppForm</FileType>
     </ClInclude>
   </ItemGroup>
@@ -248,8 +252,8 @@
     <EmbeddedResource Include="FrmPantallaAdministrador.resx">
       <DependentUpon>FrmPantallaAdministrador.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPantallaIngreso.resx">
-      <DependentUpon>FrmPantallaIngreso.h</DependentUpon>
+    <EmbeddedResource Include="PantallaIngreso.resx">
+      <DependentUpon>PantallaIngreso.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoAtajo.resx">
       <DependentUpon>MantenimientoAtajo.h</DependentUpon>
@@ -268,6 +272,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OlvidoContrasena.resx">
       <DependentUpon>OlvidoContrasena.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipalAdministrador.resx">
+      <DependentUpon>PantallaPrincipalAdministrador.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
