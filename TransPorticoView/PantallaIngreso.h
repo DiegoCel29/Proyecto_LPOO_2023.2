@@ -48,6 +48,12 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Label^ L_DNI;
 	private: System::Windows::Forms::Label^ L_Contrasena;
 	private: System::Windows::Forms::Button^ B_CrearCuenta;
+	private: System::Windows::Forms::CheckedListBox^ Fondo_pequeno;
+	private: System::Windows::Forms::Label^ Bienvenido;
+
+
+	private: System::Windows::Forms::PictureBox^ Logo;
+
 
 
 
@@ -78,18 +84,22 @@ namespace TransPorticoView {
 			this->L_DNI = (gcnew System::Windows::Forms::Label());
 			this->L_Contrasena = (gcnew System::Windows::Forms::Label());
 			this->B_CrearCuenta = (gcnew System::Windows::Forms::Button());
+			this->Fondo_pequeno = (gcnew System::Windows::Forms::CheckedListBox());
+			this->Bienvenido = (gcnew System::Windows::Forms::Label());
+			this->Logo = (gcnew System::Windows::Forms::PictureBox());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// B_BotonIngresar
 			// 
-			this->B_BotonIngresar->BackColor = System::Drawing::Color::Yellow;
 			this->B_BotonIngresar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_BotonIngresar->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->B_BotonIngresar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_BotonIngresar->Location = System::Drawing::Point(12, 178);
+			this->B_BotonIngresar->Location = System::Drawing::Point(540, 481);
+			this->B_BotonIngresar->Margin = System::Windows::Forms::Padding(4);
 			this->B_BotonIngresar->Name = L"B_BotonIngresar";
-			this->B_BotonIngresar->Size = System::Drawing::Size(200, 40);
+			this->B_BotonIngresar->Size = System::Drawing::Size(267, 49);
 			this->B_BotonIngresar->TabIndex = 0;
 			this->B_BotonIngresar->Text = L"Iniciar sesión";
 			this->B_BotonIngresar->UseVisualStyleBackColor = false;
@@ -102,10 +112,11 @@ namespace TransPorticoView {
 			this->L_OlvidoContrasena->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->L_OlvidoContrasena->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->L_OlvidoContrasena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
-			this->L_OlvidoContrasena->ForeColor = System::Drawing::Color::Blue;
-			this->L_OlvidoContrasena->Location = System::Drawing::Point(13, 232);
+			this->L_OlvidoContrasena->ForeColor = System::Drawing::Color::Black;
+			this->L_OlvidoContrasena->Location = System::Drawing::Point(549, 545);
+			this->L_OlvidoContrasena->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_OlvidoContrasena->Name = L"L_OlvidoContrasena";
-			this->L_OlvidoContrasena->Size = System::Drawing::Size(194, 20);
+			this->L_OlvidoContrasena->Size = System::Drawing::Size(240, 25);
 			this->L_OlvidoContrasena->TabIndex = 1;
 			this->L_OlvidoContrasena->Text = L"¿Olvidaste tu contraseña\?";
 			this->L_OlvidoContrasena->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
@@ -118,9 +129,10 @@ namespace TransPorticoView {
 			this->TB_DNI->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_DNI->ForeColor = System::Drawing::Color::Black;
-			this->TB_DNI->Location = System::Drawing::Point(12, 45);
+			this->TB_DNI->Location = System::Drawing::Point(540, 317);
+			this->TB_DNI->Margin = System::Windows::Forms::Padding(4);
 			this->TB_DNI->Name = L"TB_DNI";
-			this->TB_DNI->Size = System::Drawing::Size(200, 40);
+			this->TB_DNI->Size = System::Drawing::Size(265, 49);
 			this->TB_DNI->TabIndex = 2;
 			// 
 			// TB_Contrasena
@@ -128,10 +140,11 @@ namespace TransPorticoView {
 			this->TB_Contrasena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_Contrasena->ForeColor = System::Drawing::Color::Black;
-			this->TB_Contrasena->Location = System::Drawing::Point(12, 121);
+			this->TB_Contrasena->Location = System::Drawing::Point(540, 411);
+			this->TB_Contrasena->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Contrasena->Name = L"TB_Contrasena";
 			this->TB_Contrasena->PasswordChar = '*';
-			this->TB_Contrasena->Size = System::Drawing::Size(200, 40);
+			this->TB_Contrasena->Size = System::Drawing::Size(265, 49);
 			this->TB_Contrasena->TabIndex = 3;
 			// 
 			// L_DNI
@@ -140,10 +153,11 @@ namespace TransPorticoView {
 			this->L_DNI->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_DNI->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->L_DNI->Location = System::Drawing::Point(12, 9);
+			this->L_DNI->Location = System::Drawing::Point(452, 317);
+			this->L_DNI->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_DNI->Name = L"L_DNI";
 			this->L_DNI->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->L_DNI->Size = System::Drawing::Size(200, 30);
+			this->L_DNI->Size = System::Drawing::Size(80, 37);
 			this->L_DNI->TabIndex = 4;
 			this->L_DNI->Text = L"DNI:";
 			this->L_DNI->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -154,36 +168,73 @@ namespace TransPorticoView {
 			this->L_Contrasena->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Contrasena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->L_Contrasena->Location = System::Drawing::Point(12, 88);
+			this->L_Contrasena->Location = System::Drawing::Point(354, 419);
+			this->L_Contrasena->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Contrasena->Name = L"L_Contrasena";
 			this->L_Contrasena->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->L_Contrasena->Size = System::Drawing::Size(200, 30);
+			this->L_Contrasena->Size = System::Drawing::Size(178, 37);
 			this->L_Contrasena->TabIndex = 5;
 			this->L_Contrasena->Text = L"Contraseña:";
 			this->L_Contrasena->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// B_CrearCuenta
 			// 
-			this->B_CrearCuenta->BackColor = System::Drawing::Color::Yellow;
 			this->B_CrearCuenta->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_CrearCuenta->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->B_CrearCuenta->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_CrearCuenta->Location = System::Drawing::Point(12, 273);
+			this->B_CrearCuenta->Location = System::Drawing::Point(540, 598);
+			this->B_CrearCuenta->Margin = System::Windows::Forms::Padding(4);
 			this->B_CrearCuenta->Name = L"B_CrearCuenta";
-			this->B_CrearCuenta->Size = System::Drawing::Size(200, 40);
+			this->B_CrearCuenta->Size = System::Drawing::Size(267, 49);
 			this->B_CrearCuenta->TabIndex = 6;
 			this->B_CrearCuenta->Text = L"Crear cuenta nueva";
 			this->B_CrearCuenta->UseVisualStyleBackColor = false;
 			this->B_CrearCuenta->Click += gcnew System::EventHandler(this, &PantallaIngreso::B_CrearCuenta_Click);
 			// 
+			// Fondo_pequeno
+			// 
+			this->Fondo_pequeno->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
+				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->Fondo_pequeno->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->Fondo_pequeno->FormattingEnabled = true;
+			this->Fondo_pequeno->Location = System::Drawing::Point(315, 21);
+			this->Fondo_pequeno->Name = L"Fondo_pequeno";
+			this->Fondo_pequeno->Size = System::Drawing::Size(713, 682);
+			this->Fondo_pequeno->TabIndex = 7;
+			this->Fondo_pequeno->SelectedIndexChanged += gcnew System::EventHandler(this, &PantallaIngreso::checkedListBox1_SelectedIndexChanged);
+			// 
+			// Bienvenido
+			// 
+			this->Bienvenido->AutoSize = true;
+			this->Bienvenido->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Bienvenido->Location = System::Drawing::Point(582, 248);
+			this->Bienvenido->Name = L"Bienvenido";
+			this->Bienvenido->Size = System::Drawing::Size(196, 38);
+			this->Bienvenido->TabIndex = 8;
+			this->Bienvenido->Text = L"¡Bienvenido!";
+			// 
+			// Logo
+			// 
+			this->Logo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->Logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Logo.Image")));
+			this->Logo->Location = System::Drawing::Point(571, 67);
+			this->Logo->Name = L"Logo";
+			this->Logo->Size = System::Drawing::Size(234, 164);
+			this->Logo->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->Logo->TabIndex = 9;
+			this->Logo->TabStop = false;
+			// 
 			// PantallaIngreso
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackColor = System::Drawing::Color::RoyalBlue;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(963, 540);
+			this->ClientSize = System::Drawing::Size(1340, 738);
+			this->Controls->Add(this->Logo);
+			this->Controls->Add(this->Bienvenido);
 			this->Controls->Add(this->B_CrearCuenta);
 			this->Controls->Add(this->L_Contrasena);
 			this->Controls->Add(this->L_DNI);
@@ -191,11 +242,14 @@ namespace TransPorticoView {
 			this->Controls->Add(this->TB_DNI);
 			this->Controls->Add(this->L_OlvidoContrasena);
 			this->Controls->Add(this->B_BotonIngresar);
+			this->Controls->Add(this->Fondo_pequeno);
 			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"PantallaIngreso";
 			this->Text = L"PantallaIngreso";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &PantallaIngreso::PantallaIngreso_Load);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -254,13 +308,16 @@ namespace TransPorticoView {
 	private: System::Void CentrarForm() {
 		int CentroX = (this->ClientSize.Width - L_OlvidoContrasena->Width) / 2;
 		int CentroY = (this->ClientSize.Height) / 2;
-		this->L_DNI->Location = System::Drawing::Point(CentroX, CentroY - 130);
-		this->TB_DNI->Location = System::Drawing::Point(CentroX, CentroY - 95);
-		this->L_Contrasena->Location = System::Drawing::Point(CentroX, CentroY - 50);
-		this->TB_Contrasena->Location = System::Drawing::Point(CentroX, CentroY - 15);
-		this->B_BotonIngresar->Location = System::Drawing::Point(CentroX, CentroY + 45);
-		this->L_OlvidoContrasena->Location = System::Drawing::Point(CentroX, CentroY + 85);
-		this->B_CrearCuenta->Location = System::Drawing::Point(CentroX, CentroY + 135);
+		this->L_DNI->Location = System::Drawing::Point(CentroX-70, CentroY - 35);
+		this->TB_DNI->Location = System::Drawing::Point(CentroX, CentroY - 35);
+		this->L_Contrasena->Location = System::Drawing::Point(CentroX-140, CentroY +30);
+		this->TB_Contrasena->Location = System::Drawing::Point(CentroX, CentroY + 30);
+		this->B_BotonIngresar->Location = System::Drawing::Point(CentroX, CentroY + 95);
+		this->L_OlvidoContrasena->Location = System::Drawing::Point(CentroX+2, CentroY + 140);
+		this->B_CrearCuenta->Location = System::Drawing::Point(CentroX, CentroY + 195);
+		this->Fondo_pequeno->Location = System::Drawing::Point(CentroX-175, CentroY-270);
+		this->Logo->Location = System::Drawing::Point(CentroX+13, CentroY - 250);
+		this->Bienvenido->Location = System::Drawing::Point(CentroX+19, CentroY - 110);
 		
 	}
 	private: System::Void PantallaIngreso_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -281,5 +338,7 @@ namespace TransPorticoView {
 		this->Show();
 	}
 	
+private: System::Void checkedListBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

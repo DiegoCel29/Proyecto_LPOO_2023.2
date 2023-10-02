@@ -1,5 +1,6 @@
 1;Milen Margaret;Toribio;Alva;76849076;19;Femenino;991593244;Alasha26;Administrador
-2;Cesar Edú;Peña;Rengifo;72457071;19;Masculino;936893016;Sultan29;Pasajero
+2;Cesar Edú;Peña;Rengifo;72457071;19;Masculino;936893016;alianza29;Pasajero
 3;Carlos Enrique;Díaz;Palma;73456722;23;Masculino;943225017;Rocotin36;Pasajero
 4;Cesar Edu;Peña ;Rengifo;72457071;19;Masculino;936893016;Sultan29;Pasajero
 5;Cesar Edu;Peña;Rengifo;72457071;19;Masculino;936893016;sultan29;Pasajero
+6;Cesar Edu;Peña;Rengifo;72457071;19;Masculino;936893016;sultan29;Pasajero
