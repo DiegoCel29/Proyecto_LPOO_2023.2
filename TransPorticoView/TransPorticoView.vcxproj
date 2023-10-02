@@ -115,6 +115,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CrearCuenta.cpp" />
+    <ClCompile Include="frmAgregarAutobuses.cpp" />
+    <ClCompile Include="frmEditarAutobuses.cpp" />
+    <ClCompile Include="frmEliminarAutobuses.cpp" />
     <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp" />
     <ClCompile Include="frmMantenimientoCalificacion.cpp" />
     <ClCompile Include="frmMantenimientoEmergencia.cpp" />
@@ -149,6 +152,15 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CrearCuenta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmAgregarAutobuses.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmEditarAutobuses.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="frmEliminarAutobuses.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoBuzonSugerencias.h">
@@ -225,6 +237,12 @@
     <EmbeddedResource Include="CrearCuenta.resx">
       <DependentUpon>CrearCuenta.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarAutobuses.resx">
+      <DependentUpon>frmAgregarAutobuses.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditarAutobuses.resx">
+      <DependentUpon>frmEditarAutobuses.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoBuzonSugerencias.resx">
       <DependentUpon>FrmMantenimientoBuzonSugerencias.h</DependentUpon>
     </EmbeddedResource>
@@ -248,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoTarjeta.resx">
       <DependentUpon>FrmMantenimientoTarjeta.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMatenimientoAutobus.resx">
+      <DependentUpon>FrmMatenimientoAutobus.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPantallaAdministrador.resx">
       <DependentUpon>FrmPantallaAdministrador.h</DependentUpon>
