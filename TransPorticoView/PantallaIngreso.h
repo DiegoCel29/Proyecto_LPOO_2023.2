@@ -92,6 +92,7 @@ namespace TransPorticoView {
 			// 
 			// B_BotonIngresar
 			// 
+			this->B_BotonIngresar->BackColor = System::Drawing::SystemColors::Control;
 			this->B_BotonIngresar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_BotonIngresar->FlatStyle = System::Windows::Forms::FlatStyle::System;
 			this->B_BotonIngresar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
@@ -108,7 +109,7 @@ namespace TransPorticoView {
 			// L_OlvidoContrasena
 			// 
 			this->L_OlvidoContrasena->AutoSize = true;
-			this->L_OlvidoContrasena->BackColor = System::Drawing::Color::Transparent;
+			this->L_OlvidoContrasena->BackColor = System::Drawing::Color::OldLace;
 			this->L_OlvidoContrasena->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->L_OlvidoContrasena->FlatStyle = System::Windows::Forms::FlatStyle::Popup;
 			this->L_OlvidoContrasena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12));
@@ -149,7 +150,7 @@ namespace TransPorticoView {
 			// 
 			// L_DNI
 			// 
-			this->L_DNI->BackColor = System::Drawing::Color::Transparent;
+			this->L_DNI->BackColor = System::Drawing::Color::OldLace;
 			this->L_DNI->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_DNI->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -164,7 +165,7 @@ namespace TransPorticoView {
 			// 
 			// L_Contrasena
 			// 
-			this->L_Contrasena->BackColor = System::Drawing::Color::Transparent;
+			this->L_Contrasena->BackColor = System::Drawing::Color::OldLace;
 			this->L_Contrasena->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Contrasena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -194,8 +195,7 @@ namespace TransPorticoView {
 			// 
 			// Fondo_pequeno
 			// 
-			this->Fondo_pequeno->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(0)), static_cast<System::Int32>(static_cast<System::Byte>(0)),
-				static_cast<System::Int32>(static_cast<System::Byte>(192)));
+			this->Fondo_pequeno->BackColor = System::Drawing::SystemColors::Control;
 			this->Fondo_pequeno->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->Fondo_pequeno->FormattingEnabled = true;
 			this->Fondo_pequeno->Location = System::Drawing::Point(315, 21);
@@ -207,6 +207,7 @@ namespace TransPorticoView {
 			// Bienvenido
 			// 
 			this->Bienvenido->AutoSize = true;
+			this->Bienvenido->BackColor = System::Drawing::Color::OldLace;
 			this->Bienvenido->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 19.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Bienvenido->Location = System::Drawing::Point(582, 248);
@@ -217,9 +218,11 @@ namespace TransPorticoView {
 			// 
 			// Logo
 			// 
+			this->Logo->BackColor = System::Drawing::SystemColors::Control;
 			this->Logo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->Logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Logo.Image")));
 			this->Logo->Location = System::Drawing::Point(571, 67);
+			this->Logo->Margin = System::Windows::Forms::Padding(1);
 			this->Logo->Name = L"Logo";
 			this->Logo->Size = System::Drawing::Size(234, 164);
 			this->Logo->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -230,18 +233,18 @@ namespace TransPorticoView {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::RoyalBlue;
+			this->BackColor = System::Drawing::Color::DarkBlue;
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1340, 738);
+			this->Controls->Add(this->TB_DNI);
+			this->Controls->Add(this->TB_Contrasena);
+			this->Controls->Add(this->B_BotonIngresar);
 			this->Controls->Add(this->Logo);
 			this->Controls->Add(this->Bienvenido);
 			this->Controls->Add(this->B_CrearCuenta);
 			this->Controls->Add(this->L_Contrasena);
 			this->Controls->Add(this->L_DNI);
-			this->Controls->Add(this->TB_Contrasena);
-			this->Controls->Add(this->TB_DNI);
 			this->Controls->Add(this->L_OlvidoContrasena);
-			this->Controls->Add(this->B_BotonIngresar);
 			this->Controls->Add(this->Fondo_pequeno);
 			this->DoubleBuffered = true;
 			this->Margin = System::Windows::Forms::Padding(4);

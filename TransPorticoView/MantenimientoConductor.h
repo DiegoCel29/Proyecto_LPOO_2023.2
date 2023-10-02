@@ -256,7 +256,7 @@ namespace TransPorticoView {
 			// 
 			// panel1
 			// 
-			this->panel1->BackColor = System::Drawing::Color::RoyalBlue;
+			this->panel1->BackColor = System::Drawing::Color::DarkBlue;
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(0, 0);
 			this->panel1->Name = L"panel1";
@@ -276,7 +276,7 @@ namespace TransPorticoView {
 			// 
 			// panel2
 			// 
-			this->panel2->BackColor = System::Drawing::Color::RoyalBlue;
+			this->panel2->BackColor = System::Drawing::Color::DarkBlue;
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Right;
 			this->panel2->Location = System::Drawing::Point(1396, 0);
 			this->panel2->Name = L"panel2";
@@ -287,7 +287,7 @@ namespace TransPorticoView {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::Color::OldLace;
+			this->BackColor = System::Drawing::SystemColors::Control;
 			this->ClientSize = System::Drawing::Size(1471, 638);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->pictureBox1);
