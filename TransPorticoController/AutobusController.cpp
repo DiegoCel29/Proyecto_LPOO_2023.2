@@ -33,3 +33,21 @@ List<Autobus^>^ AutobusController::buscarAutobus(String^ buses) {
 		}
 	return listaAutoBusesEncontrados;
 }
+
+
+int AutobusController::ExisteAutobus(int codigo) {
+
+	int existe = 0;
+	String^ buses;
+	List<Autobus^>^ listaAutobus = buscarAutobus(buses);
+	for (int i = 0;i < listaAutobus->Count;i++) {
+		Autobus^ objAutobus = listaAutobus[i];
+		if ((codigo)==(objAutobus->GetCodigo())) {
+			existe = 1;
+			break;
+		}
+	}
+
+
+	return existe;
+}

@@ -11,6 +11,7 @@ namespace TransPorticoController {
 	public:
 		AutobusController();
 		List<Autobus^>^ buscarAutobus(String^ buses);
+		int ExisteAutobus(int codigo);
 	};
 
 
