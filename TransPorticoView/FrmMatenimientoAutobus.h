@@ -1,5 +1,6 @@
 #pragma once
 #include "frmAgregarAutobuses.h"
+#include "frmEditarAutobuses.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -11,7 +12,7 @@ namespace TransPorticoView {
 	using namespace TransPorticoController;
 	using namespace System::Collections::Generic;
 	using namespace TransPorticoModel;
-
+	using namespace TransPorticoController;
 	/// <summary>
 	/// Resumen de FrmMatenimientoAutobus
 	/// </summary>
@@ -145,7 +146,7 @@ namespace TransPorticoView {
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->Location = System::Drawing::Point(532, 98);
-			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(119, 38);
 			this->button1->TabIndex = 3;
@@ -156,7 +157,7 @@ namespace TransPorticoView {
 			// textBox1
 			// 
 			this->textBox1->Location = System::Drawing::Point(368, 109);
-			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(138, 20);
 			this->textBox1->TabIndex = 4;
@@ -169,7 +170,7 @@ namespace TransPorticoView {
 					this->Column6, this->Column3, this->Column4, this->Column2, this->Column1, this->Column7, this->Column5
 			});
 			this->dataGridView1->Location = System::Drawing::Point(146, 165);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
@@ -238,31 +239,33 @@ namespace TransPorticoView {
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button2->Location = System::Drawing::Point(562, 429);
-			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button2->Margin = System::Windows::Forms::Padding(2);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(68, 30);
 			this->button2->TabIndex = 6;
 			this->button2->Text = L"Eliminar";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::button2_Click);
 			// 
 			// button3
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button3->Location = System::Drawing::Point(422, 429);
-			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button3->Margin = System::Windows::Forms::Padding(2);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(64, 30);
 			this->button3->TabIndex = 7;
 			this->button3->Text = L"Editar";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::button3_Click);
 			// 
 			// button4
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button4->Location = System::Drawing::Point(282, 429);
-			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->button4->Margin = System::Windows::Forms::Padding(2);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(69, 30);
 			this->button4->TabIndex = 8;
@@ -282,7 +285,7 @@ namespace TransPorticoView {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"FrmMatenimientoAutobus";
 			this->Text = L"FrmMatenimientoAutobus";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -331,6 +334,26 @@ namespace TransPorticoView {
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		frmAgregarAutobuses^ VentanaAgregarAutobuses = gcnew frmAgregarAutobuses;
 		VentanaAgregarAutobuses->ShowDialog();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		//¿Como se cual es la fila uqe he seleccionado para eliminarla?
+		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
+		//Si quiero eliminar 2 seria SelectedRows[1] , 3 SelectedRows[2]
+		//Ya tengo la fila que selecioné en la variable
+		int codigoAeliminar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+		//Ya tengo el codigo a eliminar
+		AutobusController^ objetoAutobusController = gcnew AutobusController;
+		objetoAutobusController->EliminarAutobus(codigoAeliminar);
+		List<Autobus^>^ listaAutobuses = objetoAutobusController->buscarAutobusall();
+		mostrarGrilla(listaAutobuses);
+	}
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		
+		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
+		int codigoAeliminar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+		frmEditarAutobuses^ VentanaEditarAutobus = gcnew frmEditarAutobuses;
+		VentanaEditarAutobus->ShowDialog();
+		
 	}
 };
 }

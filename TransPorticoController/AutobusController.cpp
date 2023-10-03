@@ -90,14 +90,12 @@ void AutobusController::escribirArchivo(List<Autobus^>^ ListaAutobuses){
 	File::WriteAllLines("Lista_Autobuses.txt", lineasArchivo);
 }
 
-
-
-void AutobusController::EliminarAutobus(String^ Placa) {
-	
+//PAra eliminar
+void AutobusController::EliminarAutobus(int codigo) {
 	List<Autobus^>^ ListaAutobus = buscarAutobusall();
 	for (int i=0; i < ListaAutobus->Count; i++) {
 		Autobus^ objAutobus = ListaAutobus[i];
-		if ( (objAutobus->GetPlaca())==(Placa)) {
+		if ( (objAutobus->GetCodigo())==(codigo)) {
 			ListaAutobus->RemoveAt(i);
 			break;
 		}
@@ -105,8 +103,7 @@ void AutobusController::EliminarAutobus(String^ Placa) {
 	escribirArchivo(ListaAutobus);
 }
 
-
-
+//Para agregar
 void AutobusController::agregarAutobus(int codigo, String^ Placa, int capacidad) {
 	
 	int CantAsientos=0;
@@ -119,4 +116,19 @@ void AutobusController::agregarAutobus(int codigo, String^ Placa, int capacidad)
 	listaAutobus->Add(objBus);
 	escribirArchivo(listaAutobus);
 
+}
+//Para editar
+Autobus^ AutobusController::buscarBus(int codigo) {
+	Autobus^ objBus = gcnew Autobus;
+	//Traemos todas carreras a una lista
+	List<Autobus^>^ ListBus = buscarAutobusall();
+	for (int i = 0; i < ListBus->Count; i++) {
+		if ((ListBus[i]->GetCodigo()) == codigo) {
+			objBus->SetCodigo(ListBus[i]->GetCodigo());
+			objBus->SetPlaca(ListBus[i]->GetPlaca());
+			objBus->SetCapacidad(ListBus[i]->GetCapacidad());
+			break;
+		}
+	}
+	return objBus;
 }

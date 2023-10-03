@@ -11,12 +11,12 @@ namespace TransPorticoController {
 	public:
 		AutobusController();
 		List<Autobus^>^ buscarAutobus(String^ buses);
-		List<Autobus^>^ buscarAutobusall();
+		Autobus^ buscarBus(int codigo);
 		int ExisteAutobus(int codigo);
-		void EliminarAutobus(String^ Placa);
+		void EliminarAutobus(int codigo);
 		void escribirArchivo(List<Autobus^>^ ListaAutobuses);
 		void agregarAutobus(int codigo, String^ Placa, int capacidad);
-		
+		List<Autobus^>^ buscarAutobusall();
 	};
 
 

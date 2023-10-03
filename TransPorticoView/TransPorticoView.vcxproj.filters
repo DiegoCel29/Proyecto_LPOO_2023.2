@@ -93,9 +93,6 @@
     <ClCompile Include="frmAgregarAutobuses.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="frmEliminarAutobuses.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
     <ClCompile Include="frmEditarAutobuses.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
@@ -174,9 +171,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="frmAgregarAutobuses.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="frmEliminarAutobuses.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="frmEditarAutobuses.h">
