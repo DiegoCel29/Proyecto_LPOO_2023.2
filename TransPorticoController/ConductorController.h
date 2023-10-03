@@ -10,5 +10,6 @@ namespace TransPorticoController {
 	public:
 		ConductorController();
 		List<Empleado^>^ buscarConductores(String^ conductores);
+		List<Empleado^>^ buscarConductoresAll( );
 	};
 }
