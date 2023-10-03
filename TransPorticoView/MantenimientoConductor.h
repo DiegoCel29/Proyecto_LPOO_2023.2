@@ -1,5 +1,5 @@
 #pragma once
-
+#include "Editar_Conductor.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -105,27 +105,30 @@ namespace TransPorticoView {
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(104, 50);
+			this->label1->Location = System::Drawing::Point(139, 62);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(62, 16);
+			this->label1->Size = System::Drawing::Size(78, 20);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Nombre :";
 			// 
 			// textBox1
 			// 
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox1->Location = System::Drawing::Point(243, 49);
+			this->textBox1->Location = System::Drawing::Point(324, 60);
+			this->textBox1->Margin = System::Windows::Forms::Padding(4);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(256, 20);
+			this->textBox1->Size = System::Drawing::Size(341, 22);
 			this->textBox1->TabIndex = 2;
 			// 
 			// button1
 			// 
 			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button1->Location = System::Drawing::Point(560, 38);
+			this->button1->Location = System::Drawing::Point(747, 47);
+			this->button1->Margin = System::Windows::Forms::Padding(4);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(109, 35);
+			this->button1->Size = System::Drawing::Size(145, 43);
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
@@ -138,10 +141,11 @@ namespace TransPorticoView {
 				this->Column1,
 					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8, this->Column9, this->Column10
 			});
-			this->dataGridView1->Location = System::Drawing::Point(62, 99);
+			this->dataGridView1->Location = System::Drawing::Point(83, 122);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->Size = System::Drawing::Size(981, 266);
+			this->dataGridView1->Size = System::Drawing::Size(1308, 327);
 			this->dataGridView1->TabIndex = 4;
 			// 
 			// Column1
@@ -218,9 +222,10 @@ namespace TransPorticoView {
 			// 
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button2->Location = System::Drawing::Point(171, 404);
+			this->button2->Location = System::Drawing::Point(228, 497);
+			this->button2->Margin = System::Windows::Forms::Padding(4);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(165, 41);
+			this->button2->Size = System::Drawing::Size(220, 50);
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"Añadir";
 			this->button2->UseVisualStyleBackColor = true;
@@ -229,41 +234,45 @@ namespace TransPorticoView {
 			// 
 			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button3->Location = System::Drawing::Point(490, 404);
+			this->button3->Location = System::Drawing::Point(653, 497);
+			this->button3->Margin = System::Windows::Forms::Padding(4);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(165, 41);
+			this->button3->Size = System::Drawing::Size(220, 50);
 			this->button3->TabIndex = 6;
 			this->button3->Text = L"Borrar";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MantenimientoConductor::button3_Click);
 			// 
 			// button4
 			// 
 			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button4->Location = System::Drawing::Point(776, 404);
+			this->button4->Location = System::Drawing::Point(1035, 497);
+			this->button4->Margin = System::Windows::Forms::Padding(4);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(165, 41);
+			this->button4->Size = System::Drawing::Size(220, 50);
 			this->button4->TabIndex = 7;
 			this->button4->Text = L"Editar";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MantenimientoConductor::button4_Click);
 			// 
 			// panel1
 			// 
 			this->panel1->BackColor = System::Drawing::Color::DarkBlue;
 			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
 			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Margin = System::Windows::Forms::Padding(2);
+			this->panel1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(56, 518);
+			this->panel1->Size = System::Drawing::Size(75, 638);
 			this->panel1->TabIndex = 8;
 			// 
 			// pictureBox1
 			// 
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(947, 19);
-			this->pictureBox1->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox1->Location = System::Drawing::Point(1263, 23);
+			this->pictureBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(73, 54);
+			this->pictureBox1->Size = System::Drawing::Size(97, 66);
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 9;
 			this->pictureBox1->TabStop = false;
@@ -273,18 +282,18 @@ namespace TransPorticoView {
 			// 
 			this->panel2->BackColor = System::Drawing::Color::DarkBlue;
 			this->panel2->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel2->Location = System::Drawing::Point(1047, 0);
-			this->panel2->Margin = System::Windows::Forms::Padding(2);
+			this->panel2->Location = System::Drawing::Point(1396, 0);
+			this->panel2->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(56, 518);
+			this->panel2->Size = System::Drawing::Size(75, 638);
 			this->panel2->TabIndex = 10;
 			// 
 			// MantenimientoConductor
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
-			this->ClientSize = System::Drawing::Size(1103, 518);
+			this->ClientSize = System::Drawing::Size(1471, 638);
 			this->Controls->Add(this->panel2);
 			this->Controls->Add(this->pictureBox1);
 			this->Controls->Add(this->panel1);
@@ -295,6 +304,7 @@ namespace TransPorticoView {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MantenimientoConductor";
 			this->Text = L"MantenimientoConductor";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
@@ -332,5 +342,21 @@ namespace TransPorticoView {
 	}
 	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	ConductorController^ objetoConductor;
+	int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
+	String^ DNI_Eliminar_Conductor = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+	objetoConductor->eliminarConductorFisico(DNI_Eliminar_Conductor);
+	MessageBox::Show("El Conductor ha sido eliminado con éxito");
+}
+
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
+	String^ DNI_Editar_Conductor = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+	ConductorController^ objConductorController = gcnew ConductorController();
+	Empleado^ objConductor = objConductorController->buscarConductorxDNI(DNI_Editar_Conductor);
+	Editar_Conductor^ ventanaEditarConductor = gcnew Editar_Conductor(objConductor);
+	ventanaEditarConductor->ShowDialog();
+}
 };
 }

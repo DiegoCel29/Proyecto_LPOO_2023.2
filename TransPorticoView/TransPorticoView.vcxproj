@@ -115,6 +115,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CrearCuenta.cpp" />
+    <ClCompile Include="Editar_Conductor.cpp" />
     <ClCompile Include="Editar_Pasajero.cpp" />
     <ClCompile Include="FrmAgregarAutobuses.cpp" />
     <ClCompile Include="FrmEditarAutobuses.cpp" />
@@ -153,6 +154,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CrearCuenta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Editar_Conductor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Editar_Pasajero.h">
@@ -240,6 +244,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CrearCuenta.resx">
       <DependentUpon>CrearCuenta.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_Conductor.resx">
+      <DependentUpon>Editar_Conductor.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_Pasajero.resx">
       <DependentUpon>Editar_Pasajero.h</DependentUpon>

@@ -106,6 +106,9 @@
 >>>>>>> V5.0.1
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
+    <ClCompile Include="Editar_Conductor.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PantallaIngreso.h">
@@ -191,6 +194,9 @@
 =======
     <ClInclude Include="TarifarioMantenimientoAnadir.h">
 >>>>>>> V5.0.1
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Editar_Conductor.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

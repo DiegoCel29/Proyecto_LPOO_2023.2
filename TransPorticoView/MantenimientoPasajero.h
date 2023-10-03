@@ -288,7 +288,7 @@ namespace TransPorticoView {
 		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
 		String^ DNI_Eliminar = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
 		objetoPasajero->eliminarPasajeroFisico(DNI_Eliminar);
-		MessageBox::Show("El proyecto ha sido eliminado con éxito");
+		MessageBox::Show("El Pasajero ha sido eliminado con éxito");
 	}
 
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
