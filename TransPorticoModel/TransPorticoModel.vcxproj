@@ -123,7 +123,7 @@
     <ClInclude Include="Paradero.h" />
     <ClInclude Include="Promociones.h" />
     <ClInclude Include="InformeEconomico.h" />
-    <ClInclude Include="ParaderosRecorridos.h" />
+    <ClInclude Include="Tarifario.h" />
     <ClInclude Include="Horario.h" />
     <ClInclude Include="SituacionRecorrido.h" />
     <ClInclude Include="Tarjeta.h" />
@@ -146,7 +146,7 @@
     <ClCompile Include="SituacionRecorrido.cpp" />
     <ClCompile Include="Horario.cpp" />
     <ClCompile Include="Calificacion.cpp" />
-    <ClCompile Include="ParaderosRecorridos.cpp" />
+    <ClCompile Include="Tarifario.cpp" />
     <ClCompile Include="Atajo.cpp" />
     <ClCompile Include="BuzonSugerencia.cpp" />
     <ClCompile Include="InformeEconomico.cpp" />

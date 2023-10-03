@@ -124,7 +124,7 @@
     <ClInclude Include="MantenimientoController.h" />
     <ClInclude Include="MedidasEstadisticasController.h" />
     <ClInclude Include="ParaderoController.h" />
-    <ClInclude Include="ParaderosRecorridosController.h" />
+    <ClInclude Include="TarifarioController.h" />
     <ClInclude Include="PasajeroController.h" />
     <ClInclude Include="PersonaController.h" />
     <ClInclude Include="PromocionesController.h" />
@@ -145,7 +145,7 @@
     <ClCompile Include="MantenimientoController.cpp" />
     <ClCompile Include="MedidasEstadisticasController.cpp" />
     <ClCompile Include="ParaderoController.cpp" />
-    <ClCompile Include="ParaderosRecorridosController.cpp" />
+    <ClCompile Include="TarifarioController.cpp" />
     <ClCompile Include="PasajeroController.cpp" />
     <ClCompile Include="PersonaController.cpp" />
     <ClCompile Include="PromocionesController.cpp" />

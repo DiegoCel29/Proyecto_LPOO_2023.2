@@ -51,7 +51,7 @@
     <ClInclude Include="ConductorController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="ParaderosRecorridosController.h">
+    <ClInclude Include="TarifarioController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="PasajeroController.h">
@@ -110,7 +110,7 @@
     <ClCompile Include="ConductorController.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="ParaderosRecorridosController.cpp">
+    <ClCompile Include="TarifarioController.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="PasajeroController.cpp">

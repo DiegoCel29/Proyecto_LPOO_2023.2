@@ -1,6 +1,5 @@
 #pragma once
-#include "CrearCuenta.h"
-#include "Editar_Pasajero.h"
+
 namespace TransPorticoView {
 
 	using namespace System;
@@ -56,10 +55,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Panel^ panel2;
-	private: System::Windows::Forms::PictureBox^ pictureBox1;
 
 	protected:
 
@@ -76,7 +71,6 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MantenimientoPasajero::typeid));
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
@@ -88,36 +82,27 @@ namespace TransPorticoView {
 			this->Column6 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// textBox1
 			// 
 			this->textBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->textBox1->Location = System::Drawing::Point(229, 33);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4);
+			this->textBox1->Location = System::Drawing::Point(172, 27);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(254, 22);
+			this->textBox1->Size = System::Drawing::Size(191, 20);
 			this->textBox1->TabIndex = 2;
 			this->textBox1->TextChanged += gcnew System::EventHandler(this, &MantenimientoPasajero::textBox1_TextChanged);
 			// 
 			// button1
 			// 
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
-			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button1->Location = System::Drawing::Point(535, 28);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(401, 27);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(135, 30);
+			this->button1->Size = System::Drawing::Size(107, 20);
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
@@ -126,168 +111,98 @@ namespace TransPorticoView {
 			// dataGridView1
 			// 
 			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(9) {
+			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
 				this->Column1,
-					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8, this->Column9
+					this->Column2, this->Column3, this->Column4, this->Column5, this->Column6, this->Column7, this->Column8
 			});
-			this->dataGridView1->Location = System::Drawing::Point(56, 131);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
+			this->dataGridView1->Location = System::Drawing::Point(61, 102);
 			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->Size = System::Drawing::Size(1178, 267);
+			this->dataGridView1->Size = System::Drawing::Size(845, 217);
 			this->dataGridView1->TabIndex = 4;
 			// 
 			// Column1
 			// 
 			this->Column1->HeaderText = L"DNI";
-			this->Column1->MinimumWidth = 6;
 			this->Column1->Name = L"Column1";
-			this->Column1->Width = 125;
 			// 
 			// Column2
 			// 
 			this->Column2->HeaderText = L"Nombre";
-			this->Column2->MinimumWidth = 6;
 			this->Column2->Name = L"Column2";
-			this->Column2->Width = 125;
 			// 
 			// Column3
 			// 
 			this->Column3->HeaderText = L"Apellido Paterno";
-			this->Column3->MinimumWidth = 6;
 			this->Column3->Name = L"Column3";
-			this->Column3->Width = 125;
 			// 
 			// Column4
 			// 
 			this->Column4->HeaderText = L"Apellido Materno";
-			this->Column4->MinimumWidth = 6;
 			this->Column4->Name = L"Column4";
-			this->Column4->Width = 125;
 			// 
 			// Column5
 			// 
 			this->Column5->HeaderText = L"Edad";
-			this->Column5->MinimumWidth = 6;
 			this->Column5->Name = L"Column5";
-			this->Column5->Width = 125;
 			// 
 			// Column6
 			// 
 			this->Column6->HeaderText = L"Genero";
-			this->Column6->MinimumWidth = 6;
 			this->Column6->Name = L"Column6";
-			this->Column6->Width = 125;
 			// 
 			// Column7
 			// 
 			this->Column7->HeaderText = L"Telefono";
-			this->Column7->MinimumWidth = 6;
 			this->Column7->Name = L"Column7";
-			this->Column7->Width = 125;
 			// 
 			// Column8
 			// 
 			this->Column8->HeaderText = L"Contraseña";
-			this->Column8->MinimumWidth = 6;
 			this->Column8->Name = L"Column8";
-			this->Column8->Width = 125;
-			// 
-			// Column9
-			// 
-			this->Column9->HeaderText = L"Fecha de Cumpleaños";
-			this->Column9->MinimumWidth = 6;
-			this->Column9->Name = L"Column9";
-			this->Column9->Width = 125;
 			// 
 			// button2
 			// 
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
-			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button2->Location = System::Drawing::Point(273, 427);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(205, 347);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 28);
+			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"Añadir";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MantenimientoPasajero::button2_Click);
 			// 
 			// button3
 			// 
-			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button3->Location = System::Drawing::Point(619, 427);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
+			this->button3->Location = System::Drawing::Point(459, 347);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(100, 28);
+			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 6;
 			this->button3->Text = L"Borrar";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MantenimientoPasajero::button3_Click);
 			// 
 			// button4
 			// 
-			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
-			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->button4->Location = System::Drawing::Point(961, 427);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
+			this->button4->Location = System::Drawing::Point(721, 347);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(100, 28);
+			this->button4->Size = System::Drawing::Size(75, 23);
 			this->button4->TabIndex = 7;
 			this->button4->Text = L"Editar";
 			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &MantenimientoPasajero::button4_Click);
 			// 
 			// label1
 			// 
 			this->label1->AutoSize = true;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(100, 36);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(75, 29);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(78, 20);
+			this->label1->Size = System::Drawing::Size(62, 16);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Nombre :";
 			// 
-			// panel1
-			// 
-			this->panel1->BackColor = System::Drawing::Color::DarkBlue;
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(40, 577);
-			this->panel1->TabIndex = 8;
-			// 
-			// panel2
-			// 
-			this->panel2->BackColor = System::Drawing::Color::DarkBlue;
-			this->panel2->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel2->Location = System::Drawing::Point(1245, 0);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(40, 577);
-			this->panel2->TabIndex = 9;
-			// 
-			// pictureBox1
-			// 
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(1110, 12);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(97, 67);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 10;
-			this->pictureBox1->TabStop = false;
-			// 
 			// MantenimientoPasajero
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
-			this->ClientSize = System::Drawing::Size(1285, 577);
-			this->Controls->Add(this->pictureBox1);
-			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->panel1);
+			this->ClientSize = System::Drawing::Size(941, 416);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
@@ -295,12 +210,9 @@ namespace TransPorticoView {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"MantenimientoPasajero";
 			this->Text = L"MantenimientoPasajero";
-			this->Load += gcnew System::EventHandler(this, &MantenimientoPasajero::MantenimientoPasajero_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -333,29 +245,6 @@ namespace TransPorticoView {
 	}
 	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		PasajeroController^ objetoPasajero;
-		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-		String^ DNI_Eliminar = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-		objetoPasajero->eliminarPasajeroFisico(DNI_Eliminar);
-		MessageBox::Show("El proyecto ha sido eliminado con éxito");
-	}
-
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	CrearCuenta^ VentanaCrearCuenta = gcnew CrearCuenta();
-	VentanaCrearCuenta->ShowDialog();
-	this->Show();
-}
-private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-	int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-	String^ DNI_Editar = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-	PasajeroController^ objPasajeroController = gcnew PasajeroController();
-	Pasajero^ objPasajero = objPasajeroController->buscarPasajeroxDNI(DNI_Editar);
-	Editar_Pasajero^ ventanaEditarPasajero = gcnew Editar_Pasajero(objPasajero);
-	ventanaEditarPasajero->ShowDialog();
-}
-private: System::Void MantenimientoPasajero_Load(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	};
 }
 //DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena,Fecha Nacimiento//
