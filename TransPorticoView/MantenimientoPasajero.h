@@ -1,5 +1,6 @@
 #pragma once
-
+#include "CrearCuenta.h"
+#include "Editar_Pasajero.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -220,6 +221,7 @@ namespace TransPorticoView {
 			this->button4->TabIndex = 7;
 			this->button4->Text = L"Editar";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MantenimientoPasajero::button4_Click);
 			// 
 			// label1
 			// 
@@ -290,6 +292,17 @@ namespace TransPorticoView {
 	}
 
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	CrearCuenta^ VentanaCrearCuenta = gcnew CrearCuenta();
+	VentanaCrearCuenta->ShowDialog();
+	this->Show();
+}
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
+	String^ DNI_Editar = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+	PasajeroController^ objPasajeroController = gcnew PasajeroController();
+	Pasajero^ objPasajero = objPasajeroController->buscarPasajeroxDNI(DNI_Editar);
+	Editar_Pasajero^ ventanaEditarPasajero = gcnew Editar_Pasajero(objPasajero);
+	ventanaEditarPasajero->ShowDialog();
 }
 };
 }

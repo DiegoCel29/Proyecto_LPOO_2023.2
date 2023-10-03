@@ -1,3 +1,3 @@
-76849076;Milen Margaret;Toribio;Alva;19;Femenino;991593244;Alasha26;26/01/2004
+76849076;Milen Margaret;Toribio;Alva;19;Masculino;991593244;Alasha26;26/01/2004
 72457071;Cesar Edú;Peña;Rengifo;19;Masculino;936893016;Sultan29;29/01/2004
 40760776;Jessica;Rengifo;Molina;42;Femenino;936893016;Jessy26;26/12/1980
