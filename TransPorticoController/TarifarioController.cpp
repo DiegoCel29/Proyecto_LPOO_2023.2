@@ -66,7 +66,7 @@ void TarifarioController::EscribirTarifario(List<Tarifario^>^ ListTarifario) {
 
 	for (int i = 0; i < ListTarifario->Count; i++) {
 		Tarifario^ ObjTarifario = ListTarifario[i];
-		Lineas[i] = ObjTarifario->GetIdentificador() + ";" + ObjTarifario->GetRutaAsociada() + ":" + ObjTarifario->GetParaderoInicial() + ";" + ObjTarifario->GetParaderoFinal() + ";" + ObjTarifario->GetTarifa();
+		Lineas[i] = ObjTarifario->GetIdentificador() + ";" + ObjTarifario->GetRutaAsociada() + ";" + ObjTarifario->GetParaderoInicial() + ";" + ObjTarifario->GetParaderoFinal() + ";" + ObjTarifario->GetTarifa();
 	}
 	File::WriteAllLines("Tarifario.txt", Lineas);
 };
