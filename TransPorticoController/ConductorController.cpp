@@ -63,3 +63,57 @@ List<Empleado^>^ ConductorController::buscarConductoresAll( ) {
 	}
 	return listaConductoresEncontrados;
 }
+
+void ConductorController::escribirConductor(List<Empleado^>^ listaConductores) {
+	array<String^>^ lineasConductor = gcnew array<String^>(listaConductores->Count);
+	for (int i = 0; i < listaConductores->Count; i++) {
+		Empleado^ objeto = listaConductores[i];
+		lineasConductor[i] = objeto->get_DNI_() + ";" + objeto->get_Nombre_() + ";" + objeto->get_ApellidoPat_() + ";" + objeto->get_ApellidoMat_() + ";" + objeto->get_Edad_() + ";" + objeto->get_Genero_() + ";" + objeto->get_Telefono_() + ";" + objeto->get_Contrasena_() + ";" + objeto->get_Sueldo_()+objeto->get_EstadoContrato_();
+	}
+	File::WriteAllLines("Empleados.txt", lineasConductor);
+}
+
+void ConductorController::eliminarConductorFisico(String^ DNI_Eliminar_Conductor) {
+	List<Empleado^>^ listaConductores = buscarConductoresAll();
+	for (int i = 0; i < listaConductores->Count; i++) {
+		/*encontr[*/
+		if (listaConductores[i]->get_DNI_() == DNI_Eliminar_Conductor) {
+			listaConductores->RemoveAt(i);
+		}
+	}
+	escribirConductor(listaConductores);
+}
+void ConductorController::agregarConductor(Empleado^ objConductor) {
+	List<Empleado^>^ listaConductores = buscarConductoresAll();
+	listaConductores->Add(objConductor);
+	escribirConductor(listaConductores);
+}
+
+Empleado^ ConductorController::buscarConductorxDNI(String^ DNI_) {
+	List<Empleado^>^ listaConductores = buscarConductoresAll();
+	for (int i = 0; i < listaConductores->Count; i++) {
+		if (listaConductores[i]->get_DNI_() == DNI_) {
+			return listaConductores[i];
+		}
+	}
+}
+
+void ConductorController::actualizarConductor(Empleado^ objConductor) {
+	List<Empleado^>^ listaConductores = buscarConductoresAll();
+	for (int i = 0; i < listaConductores->Count; i++) {
+		if (listaConductores[i]->get_DNI_() == objConductor->get_DNI_()) {
+			/*Voy a actualizar cada dato de ese proyecto en la lista*/
+			listaConductores[i]->set_Nombre_(objConductor->get_Nombre_());
+			listaConductores[i]->set_ApellidoPat_(objConductor->get_ApellidoPat_());
+			listaConductores[i]->set_ApellidoMat_(objConductor->get_ApellidoMat_());
+			listaConductores[i]->set_Edad_(objConductor->get_Edad_());
+			listaConductores[i]->set_Genero_(objConductor->get_Genero_());
+			listaConductores[i]->set_Telefono_(objConductor->get_Telefono_());
+			listaConductores[i]->set_Contrasena_(objConductor->get_Contrasena_());
+			listaConductores[i]->set_Sueldo_(objConductor->get_Sueldo_());
+			listaConductores[i]->set_EstadoContrato_(objConductor->get_EstadoContrato_());
+			break;
+		}
+	}
+	escribirConductor(listaConductores);
+}
