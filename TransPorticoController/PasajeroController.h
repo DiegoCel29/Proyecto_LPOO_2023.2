@@ -13,7 +13,5 @@ namespace TransPorticoController {
 		void escribirPasajero(List<Pasajero^>^ listaPasajeros);
 		void eliminarPasajeroFisico(String^ DNI_Eliminar);
 		void agregarPasajero(Pasajero^ objPasajero);
-		Pasajero^ buscarPasajeroxDNI(String^ DNI);
-		void actualizarPasajero(Pasajero^ objPasajero);
 	};
 }
