@@ -69,9 +69,6 @@
     <ClCompile Include="frmMantenimientoMedidasEstadisticas.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="MantenimientoParaderosRecorridos.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
     <ClCompile Include="FrmMatenimientoAutobus.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
@@ -90,13 +87,16 @@
     <ClCompile Include="PantallaPrincipalAdministrador.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="frmAgregarAutobuses.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
-    <ClCompile Include="frmEditarAutobuses.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
     <ClCompile Include="Editar_Pasajero.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="TarifarioMantenimiento.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="FrmAgregarAutobuses.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="FrmEditarAutobuses.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>
@@ -143,9 +143,6 @@
     <ClInclude Include="MantenimientoConductor.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="MantenimientoParaderosRecorridos.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="MantenimientoPasajero.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -173,13 +170,16 @@
     <ClInclude Include="PantallaPrincipalAdministrador.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="frmAgregarAutobuses.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="frmEditarAutobuses.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="Editar_Pasajero.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="TarifarioMantenimiento.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="FrmAgregarAutobuses.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="FrmEditarAutobuses.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -203,5 +203,18 @@
     <Text Include="Lista_Autobuses.txt" />
     <Text Include="Lista_Rutas.txt" />
     <Text Include="Lista_Informes.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Botones.jpeg">
+      <Filter>Archivos de recursos</Filter>
+    </Image>
+    <Image Include="Fondo.png">
+      <Filter>Archivos de recursos</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="TarifarioMantenimiento.resx">
+      <Filter>Archivos de recursos</Filter>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

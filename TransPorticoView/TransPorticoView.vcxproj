@@ -116,6 +116,8 @@
   <ItemGroup>
     <ClCompile Include="CrearCuenta.cpp" />
     <ClCompile Include="Editar_Pasajero.cpp" />
+    <ClCompile Include="FrmAgregarAutobuses.cpp" />
+    <ClCompile Include="FrmEditarAutobuses.cpp" />
     <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp" />
     <ClCompile Include="frmMantenimientoCalificacion.cpp" />
     <ClCompile Include="frmMantenimientoEmergencia.cpp" />
@@ -153,6 +155,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Editar_Pasajero.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FrmAgregarAutobuses.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="FrmEditarAutobuses.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoBuzonSugerencias.h">
@@ -231,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_Pasajero.resx">
       <DependentUpon>Editar_Pasajero.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarAutobuses.resx">
+      <DependentUpon>FrmAgregarAutobuses.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoBuzonSugerencias.resx">
       <DependentUpon>FrmMantenimientoBuzonSugerencias.h</DependentUpon>

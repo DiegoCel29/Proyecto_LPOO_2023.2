@@ -1,4 +1,7 @@
 #pragma once
+#pragma once
+#include "FrmAgregarAutobuses.h"
+#include "FrmEditarAutobuses.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -330,6 +333,9 @@ namespace TransPorticoView {
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		FrmAgregarAutobuses^ VentanaAgregarAutobuses = gcnew FrmAgregarAutobuses;
+		VentanaAgregarAutobuses->ShowDialog();
+
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		//¿Como se cual es la fila uqe he seleccionado para eliminarla?
