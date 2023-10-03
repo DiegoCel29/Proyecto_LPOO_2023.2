@@ -40,6 +40,7 @@ int AutobusController::ExisteAutobus(int codigo) {
 	int existe = 0;
 	String^ buses;
 	List<Autobus^>^ listaAutobus = buscarAutobus(buses);
+	
 	for (int i = 0;i < listaAutobus->Count;i++) {
 		Autobus^ objAutobus = listaAutobus[i];
 		if ((codigo)==(objAutobus->GetCodigo())) {
@@ -50,4 +51,46 @@ int AutobusController::ExisteAutobus(int codigo) {
 
 
 	return existe;
+}
+
+//Sobre escribe uns lista sobre el achivo txt
+void AutobusController::escribirArchivo(List<Autobus^>^ ListaAutobuses){
+	array<String^>^ lineasArchivo = gcnew array<String^>(ListaAutobuses->Count);
+	for (int i = 0; i < ListaAutobuses->Count; i++) {
+		Autobus^objBus = ListaAutobuses[i];
+		lineasArchivo[i] = objBus->GetCodigo() + ";" + objBus->GetPlaca() + ";" + objBus->GetCantAsientos() + ";" + objBus->GetCantPasajeros() + ";" + objBus->GetCapacidad() + ";" + objBus->GetX_Autobus() + ";" + objBus->GetY_Autobus() + ";" + objBus->GetVelocidad();
+		
+	}
+	File::WriteAllLines("Lista_Autobuses.txt", lineasArchivo);
+}
+
+
+
+void AutobusController::EliminarAutobus(String^ Placa) {
+	String^ buses;
+	List<Autobus^>^ ListaAutobus = buscarAutobus(buses);
+	for (int i=0; i < ListaAutobus->Count; i++) {
+		Autobus^ objAutobus = ListaAutobus[i];
+		if ( (objAutobus->GetPlaca())==(Placa)) {
+			ListaAutobus->RemoveAt(i);
+			break;
+		}
+	}
+	escribirArchivo(ListaAutobus);
+}
+
+
+
+void AutobusController::agregarAutobus(int codigo, String^ Placa, int capacidad) {
+	String^ buses;
+	int CantAsientos=0;
+	int cantPasajeros=0;
+	int X_Autobus=0;
+	int Y_Autobus=0;
+	int Velocidad=0;
+	List<Autobus^>^ listaAutobus = buscarAutobus(buses);
+	Autobus^ objBus = gcnew Autobus(codigo, Placa, CantAsientos, cantPasajeros, capacidad, X_Autobus, Y_Autobus, Velocidad);
+	listaAutobus->Add(objBus);
+	escribirArchivo(listaAutobus);
+
 }

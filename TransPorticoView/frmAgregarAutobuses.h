@@ -1,5 +1,6 @@
 #pragma once
 
+
 namespace TransPorticoView {
 
 	using namespace System;
@@ -8,7 +9,7 @@ namespace TransPorticoView {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
-
+	using namespace TransPorticoController;
 	/// <summary>
 	/// Resumen de frmAgregarAutobuses
 	/// </summary>
@@ -186,6 +187,17 @@ namespace TransPorticoView {
 		int codigo = Convert::ToInt32(this->textBox1->Text);
 		String^ Placa = this->textBox2->Text;
 		int Capacidad = Convert::ToInt32(this->textBox3->Text);
+		AutobusController^ objAutobusController = gcnew AutobusController();
+		int existe = objAutobusController->ExisteAutobus(codigo);
+		if (existe) {
+			MessageBox::Show("Ya existe un autobus con ese codigo");
+
+		}
+		else {
+			objAutobusController->agregarAutobus(codigo, Placa, Capacidad);
+			MessageBox::Show("La carrera ha sido registrada con exito");
+			this->Close();
+		}
 	}
 };
 }

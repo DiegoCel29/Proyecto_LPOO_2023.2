@@ -132,9 +132,10 @@ namespace TransPorticoView {
 			this->label1->BackColor = System::Drawing::SystemColors::ControlLightLight;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(372, 135);
+			this->label1->Location = System::Drawing::Point(279, 110);
+			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(56, 20);
+			this->label1->Size = System::Drawing::Size(47, 17);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Placa:";
 			this->label1->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::label1_Click_1);
@@ -143,10 +144,10 @@ namespace TransPorticoView {
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(709, 121);
-			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->button1->Location = System::Drawing::Point(532, 98);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(159, 47);
+			this->button1->Size = System::Drawing::Size(119, 38);
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
@@ -154,10 +155,10 @@ namespace TransPorticoView {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(491, 134);
-			this->textBox1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->textBox1->Location = System::Drawing::Point(368, 109);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(183, 22);
+			this->textBox1->Size = System::Drawing::Size(138, 20);
 			this->textBox1->TabIndex = 4;
 			// 
 			// dataGridView1
@@ -167,12 +168,12 @@ namespace TransPorticoView {
 				this->Column8,
 					this->Column6, this->Column3, this->Column4, this->Column2, this->Column1, this->Column7, this->Column5
 			});
-			this->dataGridView1->Location = System::Drawing::Point(200, 214);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->dataGridView1->Location = System::Drawing::Point(146, 165);
+			this->dataGridView1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
 			this->dataGridView1->RowTemplate->Height = 24;
-			this->dataGridView1->Size = System::Drawing::Size(803, 293);
+			this->dataGridView1->Size = System::Drawing::Size(602, 238);
 			this->dataGridView1->TabIndex = 5;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FrmMatenimientoAutobus::dataGridView1_CellContentClick);
 			// 
@@ -236,9 +237,10 @@ namespace TransPorticoView {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(750, 528);
+			this->button2->Location = System::Drawing::Point(562, 429);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(90, 37);
+			this->button2->Size = System::Drawing::Size(68, 30);
 			this->button2->TabIndex = 6;
 			this->button2->Text = L"Eliminar";
 			this->button2->UseVisualStyleBackColor = true;
@@ -247,9 +249,10 @@ namespace TransPorticoView {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(562, 528);
+			this->button3->Location = System::Drawing::Point(422, 429);
+			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(85, 37);
+			this->button3->Size = System::Drawing::Size(64, 30);
 			this->button3->TabIndex = 7;
 			this->button3->Text = L"Editar";
 			this->button3->UseVisualStyleBackColor = true;
@@ -258,9 +261,10 @@ namespace TransPorticoView {
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(376, 528);
+			this->button4->Location = System::Drawing::Point(282, 429);
+			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(92, 37);
+			this->button4->Size = System::Drawing::Size(69, 30);
 			this->button4->TabIndex = 8;
 			this->button4->Text = L"Nuevo";
 			this->button4->UseVisualStyleBackColor = true;
@@ -268,9 +272,9 @@ namespace TransPorticoView {
 			// 
 			// FrmMatenimientoAutobus
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(1200, 606);
+			this->ClientSize = System::Drawing::Size(900, 492);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
@@ -278,7 +282,7 @@ namespace TransPorticoView {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"FrmMatenimientoAutobus";
 			this->Text = L"FrmMatenimientoAutobus";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
