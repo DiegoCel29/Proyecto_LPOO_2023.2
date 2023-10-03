@@ -1,3 +1,3 @@
 76849076;Milen Margaret;Toribio;Alva;19;Masculino;991593244;Alasha26;26/01/2004
 72457071;Cesar Edú;Peña;Rengifo;19;Masculino;936893016;Sultan29;29/01/2004
-73456722;Carlos Enrique;Díaz;Palma;23;Masculino;943225017;Rocotin36;28/07/2000
+71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;13/06/2000
