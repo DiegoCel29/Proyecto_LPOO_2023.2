@@ -34,12 +34,38 @@ List<Autobus^>^ AutobusController::buscarAutobus(String^ buses) {
 	return listaAutoBusesEncontrados;
 }
 
+List<Autobus^>^ AutobusController::buscarAutobusall() {
+
+	List<Autobus^>^ listaAutoBusesEncontrados = gcnew List<Autobus^>();
+	array<String^>^ lineas = File::ReadAllLines("Lista_Autobuses.txt");
+
+	String^ separadores = ";";
+	for each (String ^ lineaAutobuses in lineas) {
+		array<String^>^ datos = lineaAutobuses->Split(separadores->ToCharArray());
+		int Codigo = Convert::ToInt32(datos[0]);
+		String^ Placa = datos[1];
+		int CantAsientos = Convert::ToInt32(datos[2]);
+		int CantPasajeros = Convert::ToInt32(datos[3]);
+		int Capacidad = Convert::ToInt32(datos[4]);
+		int  X_Autobus = Convert::ToInt32(datos[5]);
+		int  Y_Autobus = Convert::ToInt32(datos[6]);
+		int Velocidad = Convert::ToInt32(datos[7]);
+
+
+
+		
+		Autobus^ objBus = gcnew Autobus(Codigo, Placa, CantAsientos, CantPasajeros, Capacidad, X_Autobus, Y_Autobus, Velocidad);
+		listaAutoBusesEncontrados->Add(objBus);
+		
+	}
+	return listaAutoBusesEncontrados;
+}
 
 int AutobusController::ExisteAutobus(int codigo) {
 
 	int existe = 0;
-	String^ buses;
-	List<Autobus^>^ listaAutobus = buscarAutobus(buses);
+	
+	List<Autobus^>^ listaAutobus = buscarAutobusall();
 	
 	for (int i = 0;i < listaAutobus->Count;i++) {
 		Autobus^ objAutobus = listaAutobus[i];
@@ -67,8 +93,8 @@ void AutobusController::escribirArchivo(List<Autobus^>^ ListaAutobuses){
 
 
 void AutobusController::EliminarAutobus(String^ Placa) {
-	String^ buses;
-	List<Autobus^>^ ListaAutobus = buscarAutobus(buses);
+	
+	List<Autobus^>^ ListaAutobus = buscarAutobusall();
 	for (int i=0; i < ListaAutobus->Count; i++) {
 		Autobus^ objAutobus = ListaAutobus[i];
 		if ( (objAutobus->GetPlaca())==(Placa)) {
@@ -82,13 +108,13 @@ void AutobusController::EliminarAutobus(String^ Placa) {
 
 
 void AutobusController::agregarAutobus(int codigo, String^ Placa, int capacidad) {
-	String^ buses;
+	
 	int CantAsientos=0;
 	int cantPasajeros=0;
 	int X_Autobus=0;
 	int Y_Autobus=0;
 	int Velocidad=0;
-	List<Autobus^>^ listaAutobus = buscarAutobus(buses);
+	List<Autobus^>^ listaAutobus = buscarAutobusall();
 	Autobus^ objBus = gcnew Autobus(codigo, Placa, CantAsientos, cantPasajeros, capacidad, X_Autobus, Y_Autobus, Velocidad);
 	listaAutobus->Add(objBus);
 	escribirArchivo(listaAutobus);
