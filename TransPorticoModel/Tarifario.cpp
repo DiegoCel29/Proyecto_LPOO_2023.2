@@ -6,8 +6,7 @@ Tarifario::Tarifario() {
 
 };
 
-Tarifario::Tarifario(int Codigo, String^ RutaAsociada, String^ Identificador, String^ ParaderoInicial, String^ ParaderoFinal, double Tarifa) {
-	this->Codigo = Codigo;
+Tarifario::Tarifario(String^ Identificador, String^ RutaAsociada, String^ ParaderoInicial, String^ ParaderoFinal, double Tarifa) {
 	this->RutaAsociada = RutaAsociada;
 	this->Identificador = Identificador;
 	this->ParaderoInicial = ParaderoInicial;
@@ -15,12 +14,6 @@ Tarifario::Tarifario(int Codigo, String^ RutaAsociada, String^ Identificador, St
 	this->Tarifa = Tarifa;
 }
 
-int Tarifario::GetCodigo() {
-	return this->Codigo;
-}
-void Tarifario::SetCodigo(int Codigo) {
-	this->Codigo = Codigo;
-}
 
 String^ Tarifario::GetIdentificador() {
 	return this->Identificador;

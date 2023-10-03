@@ -312,12 +312,13 @@ namespace TransPorticoView {
 			this->DGV_Persona->Rows->Add(FilaGrilla);
 		}
 	}
-private: System::Void Boton_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
-	int FilaSeleccionada = this->DGV_Persona->SelectedRows[0]->Index;
-	int DNIPersonaEliminar = Convert::ToInt32(this->DGV_Persona->SelectedRows[FilaSeleccionada]->Cells[0]->Value->ToString());
-	PersonaController^ ObjPersonaController = gcnew PersonaController();
-	ObjPersonaController->EliminarPersona(DNIPersonaEliminar);
-	MessageBox::Show("La persona ha sido retirada, de la base de datos, con exito");
-}
+	private: System::Void Boton_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
+		int FilaSeleccionada = this->DGV_Persona->SelectedRows[0]->Index;
+		int DNIPersonaEliminar = Convert::ToInt32(this->DGV_Persona->SelectedRows[FilaSeleccionada]->Cells[0]->Value->ToString());
+
+		PersonaController^ ObjPersonaController = gcnew PersonaController();
+		ObjPersonaController->EliminarPersona(DNIPersonaEliminar);
+		MessageBox::Show("La persona ha sido retirada, de la base de datos, con exito");
+	}
 };
 }

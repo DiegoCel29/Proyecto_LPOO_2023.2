@@ -5,7 +5,6 @@ using namespace System;
 namespace TransPorticoModel {
 	public ref class Tarifario {
 	private:
-		int Codigo;
 		String^ RutaAsociada;
 		String^ Identificador;
 		String^ ParaderoInicial;
@@ -14,9 +13,7 @@ namespace TransPorticoModel {
 
 	public:
 		Tarifario();
-		Tarifario(int Codigo, String^ RutaAsociada, String^ Identificador, String^ ParaderoInicial, String^ ParaderoFinal,double Tarifa);
-		int GetCodigo();
-		void SetCodigo(int Codigo);
+		Tarifario(String^ Identificador, String^ RutaAsociada, String^ ParaderoInicial, String^ ParaderoFinal, double Tarifa);
 
 		String^ GetRutaAsociada();
 		void SetRutaAsociada(String^ RutaAsociada);

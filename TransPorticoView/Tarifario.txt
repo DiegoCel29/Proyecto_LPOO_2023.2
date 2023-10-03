@@ -1,0 +1,7 @@
+A1;A;Plaza Tupac Amaru;Yungay;1.00
+A2;A;Plaza Tupac Amaru;Bolivar;1.50
+A3;A;Plaza Tupac Amaru;Grau;2.00
+A4;A;Plaza Tupac Amaru;Alfonso Ugarte;2.50
+B1;B;Calle M;20a, 150;1.00
+B2;B;Calle M;Avenida Túpac Amaru;1.50
+B3;B;Calle M;20a, 140;2.00

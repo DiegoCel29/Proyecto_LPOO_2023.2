@@ -10,26 +10,55 @@ TarifarioController::TarifarioController() {
 };
 
 List<Tarifario^>^ TarifarioController::BuscarTarifarioAll() {
-	List<Tarifario^>^ listaTarifarioEncontrados = gcnew List<Tarifario^>();
-	array<String^>^ lineas = File::ReadAllLines("Tarifario.txt");
+	List<Tarifario^>^ ListTarifarioGeneral = gcnew List<Tarifario^>();
+	array<String^>^ Lineas = File::ReadAllLines("Tarifario.txt");
 
 	String^ Separador = ";";
 
-	for each (String ^ Lineas in lineas) {
+	for each (String ^ Linea in Lineas) {
 
-		array<String^>^ Datos = Lineas->Split(Separador->ToCharArray());
+		array<String^>^ Datos = Linea->Split(Separador->ToCharArray());
 
-		int Codigo = Convert::ToInt16(Datos[0]);
-		String^ RutaAsociada = Datos[1];
-		String^ Identificador = Datos[2];
-		String^ ParaderoInicial = Datos[3];
-		String^ ParaderoFinal = Datos[4];
-		double Tarifa = Convert::ToDouble(Datos[5]);
+		String^ Identificador = Datos[0];
+		String^ RutaAsociada = Datos[1];		
+		String^ ParaderoInicial = Datos[2];
+		String^ ParaderoFinal = Datos[3];
+		double Tarifa = Convert::ToDouble(Datos[4]);
 
-		Tarifario^ objParaderoRecorrido = gcnew Tarifario(Codigo, RutaAsociada, Identificador, ParaderoInicial, ParaderoFinal, Tarifa);
-		listaTarifarioEncontrados->Add(objParaderoRecorrido);
+		Tarifario^ ObjTarifario = gcnew Tarifario(Identificador, RutaAsociada, ParaderoInicial, ParaderoFinal, Tarifa);
+		ListTarifarioGeneral->Add(ObjTarifario);
 	}
-	return listaTarifarioEncontrados;
+	return ListTarifarioGeneral;
+};
+
+List<Tarifario^>^ TarifarioController::BuscarTarifarioIdentificador(List<Tarifario^>^ ListTarifarioGeneral, String^ Identificador) {
+	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
+	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {
+		if (ListTarifarioGeneral[i]->GetIdentificador()->Contains(Identificador)) {
+			ListTarifarioEspecifico->Add(ListTarifarioGeneral[i]);
+		}
+	}
+	return ListTarifarioEspecifico;
+};
+
+List<Tarifario^>^ TarifarioController::BuscarTarifarioParaderoInicial(List<Tarifario^>^ ListTarifarioGeneral, String^ ParaderoInicial) {
+	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
+	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {
+		if (ListTarifarioGeneral[i]->GetParaderoInicial()->Contains(ParaderoInicial)) {
+			ListTarifarioEspecifico->Add(ListTarifarioGeneral[i]);
+		}
+	}
+	return ListTarifarioEspecifico;
+};
+
+List<Tarifario^>^ TarifarioController::BuscarTarifarioTarifa(List<Tarifario^>^ ListTarifarioGeneral, String^ Tarifa) {
+	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
+	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {
+		if (Convert::ToString(ListTarifarioGeneral[i]->GetTarifa())->Contains(Tarifa)){
+			ListTarifarioEspecifico->Add(ListTarifarioGeneral[i]);
+		}
+	}
+	return ListTarifarioEspecifico;
 };
 
 void TarifarioController::EscribirTarifario(List<Tarifario^>^ ListTarifario) {
@@ -37,18 +66,19 @@ void TarifarioController::EscribirTarifario(List<Tarifario^>^ ListTarifario) {
 
 	for (int i = 0; i < ListTarifario->Count; i++) {
 		Tarifario^ ObjTarifario = ListTarifario[i];
-		Lineas[i] = ObjTarifario->GetCodigo() + ";" + ObjTarifario->GetRutaAsociada() + ":" + ObjTarifario->GetIdentificador() + ";" + ObjTarifario->GetParaderoInicial() + ";" + ObjTarifario->GetParaderoFinal() + ";" + ObjTarifario->GetTarifa();
+		Lineas[i] = ObjTarifario->GetIdentificador() + ";" + ObjTarifario->GetRutaAsociada() + ":" + ObjTarifario->GetParaderoInicial() + ";" + ObjTarifario->GetParaderoFinal() + ";" + ObjTarifario->GetTarifa();
 	}
 	File::WriteAllLines("Tarifario.txt", Lineas);
 };
 
-void TarifarioController::EliminarTarifario(int Codigo) {
+void TarifarioController::EliminarTarifario(String^ Identificador) {
 	List<Tarifario^>^ ListTarifario = BuscarTarifarioAll();
 	for (int i = 0; i < ListTarifario->Count; i++) {
-		if (ListTarifario[i]->GetCodigo() == Codigo) {
+		if (ListTarifario[i]->GetIdentificador() == Identificador) {
 			ListTarifario->RemoveAt(i);
 		}
 	}
+	EscribirTarifario(ListTarifario);
 };
 
 void TarifarioController::AgregarTarifario(Tarifario^ ObjTarifario) {
@@ -56,4 +86,5 @@ void TarifarioController::AgregarTarifario(Tarifario^ ObjTarifario) {
 	ListTarifario->Add(ObjTarifario);
 	EscribirTarifario(ListTarifario);
 };
+
 

@@ -90,6 +90,7 @@
     <ClCompile Include="Editar_Pasajero.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="TarifarioMantenimiento.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -97,6 +98,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmEditarAutobuses.cpp">
+=======
+    <ClCompile Include="TarifarioMantenimientoAnadir.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="TarifarioMantenimiento.cpp">
+>>>>>>> V5.0.1
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
   </ItemGroup>
@@ -176,10 +183,14 @@
     <ClInclude Include="TarifarioMantenimiento.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="FrmAgregarAutobuses.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="FrmEditarAutobuses.h">
+=======
+    <ClInclude Include="TarifarioMantenimientoAnadir.h">
+>>>>>>> V5.0.1
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
@@ -194,7 +205,7 @@
     <Text Include="Emergencia.txt" />
     <Text Include="Horario.txt" />
     <Text Include="Lista_Atajos.txt" />
-    <Text Include="Lista_ParaderosRecorridos.txt" />
+    <Text Include="Tarifario.txt" />
     <Text Include="Lista_pasajeros.txt" />
     <Text Include="Lista_SituacionRecorrido.txt" />
     <Text Include="MedidasEstadisticas.txt" />

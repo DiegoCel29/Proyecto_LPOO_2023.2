@@ -142,6 +142,7 @@
     <ClCompile Include="OlvidoContrasena.cpp" />
     <ClCompile Include="PantallaPrincipalAdministrador.cpp" />
     <ClCompile Include="TarifarioMantenimiento.cpp" />
+    <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -232,6 +233,9 @@
     <ClInclude Include="TarifarioMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="TarifarioMantenimientoAnadir.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CrearCuenta.resx">
@@ -295,6 +299,9 @@
       <DependentUpon>PantallaPrincipalAdministrador.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TarifarioMantenimiento.resx" />
+    <EmbeddedResource Include="TarifarioMantenimientoAnadir.resx">
+      <DependentUpon>TarifarioMantenimientoAnadir.h</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransPorticoController\TransPorticoController.vcxproj">
@@ -313,7 +320,7 @@
     <Text Include="Lista_Atajos.txt" />
     <Text Include="Lista_Autobuses.txt" />
     <Text Include="Lista_Informes.txt" />
-    <Text Include="Lista_ParaderosRecorridos.txt" />
+    <Text Include="Tarifario.txt" />
     <Text Include="Lista_pasajeros.txt" />
     <Text Include="Lista_Rutas.txt" />
     <Text Include="Lista_SituacionRecorrido.txt" />
