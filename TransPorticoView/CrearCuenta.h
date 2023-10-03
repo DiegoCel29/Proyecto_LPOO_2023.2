@@ -371,7 +371,7 @@ namespace TransPorticoView {
 			// 
 			this->Lista_CrearCuenta->BackColor = System::Drawing::SystemColors::Control;
 			this->Lista_CrearCuenta->FormattingEnabled = true;
-			this->Lista_CrearCuenta->Location = System::Drawing::Point(157, 12);
+			this->Lista_CrearCuenta->Location = System::Drawing::Point(187, 12);
 			this->Lista_CrearCuenta->Name = L"Lista_CrearCuenta";
 			this->Lista_CrearCuenta->Size = System::Drawing::Size(704, 650);
 			this->Lista_CrearCuenta->TabIndex = 24;
@@ -396,7 +396,7 @@ namespace TransPorticoView {
 			this->Tiempo_Cumpleanos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Tiempo_Cumpleanos->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->Tiempo_Cumpleanos->Location = System::Drawing::Point(769, 386);
+			this->Tiempo_Cumpleanos->Location = System::Drawing::Point(806, 356);
 			this->Tiempo_Cumpleanos->Name = L"Tiempo_Cumpleanos";
 			this->Tiempo_Cumpleanos->Size = System::Drawing::Size(265, 41);
 			this->Tiempo_Cumpleanos->TabIndex = 26;
