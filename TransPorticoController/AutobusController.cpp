@@ -34,6 +34,8 @@ List<Autobus^>^ AutobusController::buscarAutobus(String^ buses) {
 	return listaAutoBusesEncontrados;
 }
 
+
+
 List<Autobus^>^ AutobusController::buscarAutobusall() {
 
 	List<Autobus^>^ listaAutoBusesEncontrados = gcnew List<Autobus^>();
@@ -131,4 +133,20 @@ Autobus^ AutobusController::buscarBus(int codigo) {
 		}
 	}
 	return objBus;
+}
+
+void AutobusController::ActualizarAutobus(int codigo, String^Placa,int Capacidad) {
+	List<Autobus^>^ ListaAutobuses = buscarAutobusall();
+	for (int i = 0; i < ListaAutobuses->Count; i++) {
+		if ((ListaAutobuses[i]->GetCodigo())==codigo) {
+			ListaAutobuses[i]->SetPlaca(Placa);
+			ListaAutobuses[i]->SetCapacidad(Capacidad);
+			//Noactualizamos el codigo no es apto para cambios
+			break;
+
+		}
+	}
+
+	escribirArchivo(ListaAutobuses);
+
 }

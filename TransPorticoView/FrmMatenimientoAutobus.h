@@ -332,11 +332,13 @@ namespace TransPorticoView {
 	}
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
+	//Boton para ir a la ventana agregar
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 		FrmAgregarAutobuses^ VentanaAgregarAutobuses = gcnew FrmAgregarAutobuses;
 		VentanaAgregarAutobuses->ShowDialog();
 
 	}
+	//Botn para eliminar
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		//¿Como se cual es la fila uqe he seleccionado para eliminarla?
 		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
@@ -349,10 +351,17 @@ namespace TransPorticoView {
 		List<Autobus^>^ listaAutobuses = objetoAutobusController->buscarAutobusall();
 		mostrarGrilla(listaAutobuses);
 	}
+
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		
 		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
-		int codigoAeliminar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());		
+		int codigoAeditar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());		
+		AutobusController^ objetocontroller = gcnew AutobusController;
+		Autobus^ objetoBus = objetocontroller->buscarBus(codigoAeditar);
+		FrmEditarAutobuses^ ventanaEditar = gcnew FrmEditarAutobuses(objetoBus);
+		ventanaEditar->ShowDialog();
+
+	
 	}
 };
 }

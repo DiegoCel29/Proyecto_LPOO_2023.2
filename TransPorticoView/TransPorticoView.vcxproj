@@ -243,6 +243,9 @@
     <EmbeddedResource Include="FrmAgregarAutobuses.resx">
       <DependentUpon>FrmAgregarAutobuses.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarAutobuses.resx">
+      <DependentUpon>FrmEditarAutobuses.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoBuzonSugerencias.resx">
       <DependentUpon>FrmMantenimientoBuzonSugerencias.h</DependentUpon>
     </EmbeddedResource>
