@@ -9,5 +9,11 @@ namespace TransPorticoController {
 	public:
 		PasajeroController();
 		List<Pasajero^>^ buscarPasajeros(String^ pasajeros);
+		List<Pasajero^>^ buscarAllPasajeros();
+		void escribirPasajero(List<Pasajero^>^ listaPasajeros);
+		void eliminarPasajeroFisico(String^ DNI_Eliminar);
+		void agregarPasajero(Pasajero^ objPasajero);
+		Pasajero^ buscarPasajeroxDNI(String^ DNI);
+		void actualizarPasajero(Pasajero^ objPasajero);
 	};
 }

@@ -68,6 +68,10 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Button^ B_Cancelar;
 	private: System::Windows::Forms::Button^ B_Crear;
 	private: System::Windows::Forms::CheckedListBox^ Lista_CrearCuenta;
+	private: System::Windows::Forms::Label^ Cumpleanos;
+	private: System::Windows::Forms::DateTimePicker^ Tiempo_Cumpleanos;
+
+
 
 
 
@@ -111,6 +115,8 @@ namespace TransPorticoView {
 			this->B_Cancelar = (gcnew System::Windows::Forms::Button());
 			this->B_Crear = (gcnew System::Windows::Forms::Button());
 			this->Lista_CrearCuenta = (gcnew System::Windows::Forms::CheckedListBox());
+			this->Cumpleanos = (gcnew System::Windows::Forms::Label());
+			this->Tiempo_Cumpleanos = (gcnew System::Windows::Forms::DateTimePicker());
 			this->SuspendLayout();
 			// 
 			// L_Nombres
@@ -134,7 +140,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->TB_Nombres->ForeColor = System::Drawing::Color::Black;
 			this->TB_Nombres->Location = System::Drawing::Point(497, 82);
-			this->TB_Nombres->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_Nombres->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Nombres->Name = L"TB_Nombres";
 			this->TB_Nombres->Size = System::Drawing::Size(265, 41);
 			this->TB_Nombres->TabIndex = 5;
@@ -160,7 +166,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->TB_ApellidoPat->ForeColor = System::Drawing::Color::Black;
 			this->TB_ApellidoPat->Location = System::Drawing::Point(497, 139);
-			this->TB_ApellidoPat->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_ApellidoPat->Margin = System::Windows::Forms::Padding(4);
 			this->TB_ApellidoPat->Name = L"TB_ApellidoPat";
 			this->TB_ApellidoPat->Size = System::Drawing::Size(265, 41);
 			this->TB_ApellidoPat->TabIndex = 7;
@@ -186,7 +192,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->TB_ApellidoMat->ForeColor = System::Drawing::Color::Black;
 			this->TB_ApellidoMat->Location = System::Drawing::Point(497, 199);
-			this->TB_ApellidoMat->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_ApellidoMat->Margin = System::Windows::Forms::Padding(4);
 			this->TB_ApellidoMat->Name = L"TB_ApellidoMat";
 			this->TB_ApellidoMat->Size = System::Drawing::Size(265, 41);
 			this->TB_ApellidoMat->TabIndex = 9;
@@ -212,7 +218,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->TB_DNI->ForeColor = System::Drawing::Color::Black;
 			this->TB_DNI->Location = System::Drawing::Point(497, 266);
-			this->TB_DNI->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_DNI->Margin = System::Windows::Forms::Padding(4);
 			this->TB_DNI->Name = L"TB_DNI";
 			this->TB_DNI->Size = System::Drawing::Size(265, 41);
 			this->TB_DNI->TabIndex = 11;
@@ -238,7 +244,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->TB_Edad->ForeColor = System::Drawing::Color::Black;
 			this->TB_Edad->Location = System::Drawing::Point(497, 322);
-			this->TB_Edad->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_Edad->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Edad->Name = L"TB_Edad";
 			this->TB_Edad->Size = System::Drawing::Size(265, 41);
 			this->TB_Edad->TabIndex = 13;
@@ -279,7 +285,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->TB_Telefono->ForeColor = System::Drawing::Color::Black;
 			this->TB_Telefono->Location = System::Drawing::Point(497, 441);
-			this->TB_Telefono->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_Telefono->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Telefono->Name = L"TB_Telefono";
 			this->TB_Telefono->Size = System::Drawing::Size(265, 41);
 			this->TB_Telefono->TabIndex = 17;
@@ -305,7 +311,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->TB_Contrasena->ForeColor = System::Drawing::Color::Black;
 			this->TB_Contrasena->Location = System::Drawing::Point(497, 494);
-			this->TB_Contrasena->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_Contrasena->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Contrasena->Name = L"TB_Contrasena";
 			this->TB_Contrasena->PasswordChar = '*';
 			this->TB_Contrasena->Size = System::Drawing::Size(265, 41);
@@ -318,7 +324,7 @@ namespace TransPorticoView {
 			this->CB_Genero->FormattingEnabled = true;
 			this->CB_Genero->Items->AddRange(gcnew cli::array< System::Object^  >(2) { L"Masculino", L"Femenino" });
 			this->CB_Genero->Location = System::Drawing::Point(497, 383);
-			this->CB_Genero->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CB_Genero->Margin = System::Windows::Forms::Padding(4);
 			this->CB_Genero->Name = L"CB_Genero";
 			this->CB_Genero->Size = System::Drawing::Size(265, 44);
 			this->CB_Genero->TabIndex = 21;
@@ -335,7 +341,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->B_Cancelar->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->B_Cancelar->Location = System::Drawing::Point(327, 586);
-			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4);
 			this->B_Cancelar->Name = L"B_Cancelar";
 			this->B_Cancelar->Size = System::Drawing::Size(120, 49);
 			this->B_Cancelar->TabIndex = 22;
@@ -353,7 +359,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->B_Crear->ForeColor = System::Drawing::Color::WhiteSmoke;
 			this->B_Crear->Location = System::Drawing::Point(528, 586);
-			this->B_Crear->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Crear->Margin = System::Windows::Forms::Padding(4);
 			this->B_Crear->Name = L"B_Crear";
 			this->B_Crear->Size = System::Drawing::Size(120, 49);
 			this->B_Crear->TabIndex = 23;
@@ -365,10 +371,35 @@ namespace TransPorticoView {
 			// 
 			this->Lista_CrearCuenta->BackColor = System::Drawing::SystemColors::Control;
 			this->Lista_CrearCuenta->FormattingEnabled = true;
-			this->Lista_CrearCuenta->Location = System::Drawing::Point(157, 12);
+			this->Lista_CrearCuenta->Location = System::Drawing::Point(187, 12);
 			this->Lista_CrearCuenta->Name = L"Lista_CrearCuenta";
 			this->Lista_CrearCuenta->Size = System::Drawing::Size(704, 650);
 			this->Lista_CrearCuenta->TabIndex = 24;
+			// 
+			// Cumpleanos
+			// 
+			this->Cumpleanos->BackColor = System::Drawing::Color::OldLace;
+			this->Cumpleanos->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->Cumpleanos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Cumpleanos->Location = System::Drawing::Point(498, 310);
+			this->Cumpleanos->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->Cumpleanos->Name = L"Cumpleanos";
+			this->Cumpleanos->RightToLeft = System::Windows::Forms::RightToLeft::No;
+			this->Cumpleanos->Size = System::Drawing::Size(267, 49);
+			this->Cumpleanos->TabIndex = 25;
+			this->Cumpleanos->Text = L"Cumpleaños:";
+			this->Cumpleanos->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// Tiempo_Cumpleanos
+			// 
+			this->Tiempo_Cumpleanos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->Tiempo_Cumpleanos->Format = System::Windows::Forms::DateTimePickerFormat::Short;
+			this->Tiempo_Cumpleanos->Location = System::Drawing::Point(806, 356);
+			this->Tiempo_Cumpleanos->Name = L"Tiempo_Cumpleanos";
+			this->Tiempo_Cumpleanos->Size = System::Drawing::Size(265, 41);
+			this->Tiempo_Cumpleanos->TabIndex = 26;
 			// 
 			// CrearCuenta
 			// 
@@ -376,6 +407,8 @@ namespace TransPorticoView {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::DarkBlue;
 			this->ClientSize = System::Drawing::Size(1263, 668);
+			this->Controls->Add(this->Tiempo_Cumpleanos);
+			this->Controls->Add(this->Cumpleanos);
 			this->Controls->Add(this->B_Crear);
 			this->Controls->Add(this->B_Cancelar);
 			this->Controls->Add(this->CB_Genero);
@@ -395,7 +428,7 @@ namespace TransPorticoView {
 			this->Controls->Add(this->L_Nombres);
 			this->Controls->Add(this->TB_Nombres);
 			this->Controls->Add(this->Lista_CrearCuenta);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"CrearCuenta";
 			this->Text = L"CrearCuenta";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
@@ -426,8 +459,10 @@ namespace TransPorticoView {
 		this->TB_Telefono->Location = System::Drawing::Point(CentroX + 5, 380);
 		this->L_Contrasena->Location = System::Drawing::Point(CentroX - 205, 430);
 		this->TB_Contrasena->Location = System::Drawing::Point(CentroX + 5, 430);
-		this->B_Cancelar->Location = System::Drawing::Point(CentroX - 125, 480);
-		this->B_Crear->Location = System::Drawing::Point(CentroX + 35, 480);
+		this->Cumpleanos->Location = System::Drawing::Point(CentroX - 205, 480);
+		this->Tiempo_Cumpleanos->Location = System::Drawing::Point(CentroX + 5, 480);
+		this->B_Cancelar->Location = System::Drawing::Point(CentroX - 125, 530);
+		this->B_Crear->Location = System::Drawing::Point(CentroX + 35, 530);
 		this->Lista_CrearCuenta->Location = System::Drawing::Point(CentroX-250,50);
 	}
 	private: System::Void CrearCuenta_Load(System::Object^ sender, System::EventArgs^ e) {
@@ -450,11 +485,16 @@ namespace TransPorticoView {
 		String^ Genero = this->CB_Genero->Text;
 		String^ Telefono = this->TB_Telefono->Text;
 		String^ Contrasena = this->TB_Contrasena->Text;
+		String^ FechaCumpleanos = this->Tiempo_Cumpleanos->Text;
 
 		PersonaController^ ObjPersonaController = gcnew PersonaController();
 		int Codigo = (ObjPersonaController->BuscarUltimoCodigo() + 1);
 		Persona^ ObjPersona = gcnew Persona(Codigo, Nombres, ApellidoPat, ApellidoMat, DNI, Edad, Genero, Telefono, Contrasena, "Pasajero");
 		ObjPersonaController->AgregarPersona(ObjPersona);
+
+		PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
+		Pasajero^ ObjPasajero = gcnew Pasajero(DNI, Nombres, ApellidoPat, ApellidoMat,Edad, Genero, Telefono, Contrasena,FechaCumpleanos);
+		ObjPasajeroController->agregarPasajero(ObjPasajero);
 
 		MessageBox::Show("Cuenta creada con exito.");
 		this->Close();

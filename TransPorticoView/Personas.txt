@@ -1,4 +1,6 @@
 1;Milen Margaret;Toribio;Alva;76849076;19;Femenino;991593244;Alasha26;Administrador
 2;Cesar Edú;Peña;Rengifo;72457071;19;Masculino;936893016;Sultan29;Pasajero
 3;Carlos Enrique;Díaz;Palma;73456722;23;Masculino;943225017;Rocotin36;Pasajero
-4;Diego;Celis;Ccoricasa;71744136;20;Fluido;980152878;C0ntr4;Pasajero
+4;Diego;Celis;Ccoricasa;71744136;20;Fluido;980152878;aaaaaa;Pasajero
+5;Jessica;Rengifo;Molina;40760776;42;Femenino;936893016;Jessy26;Pasajero
+6;Juana Sofia;Rosales;Rengifo;34567812;14;Femenino;978234100;Juanita;Pasajero
