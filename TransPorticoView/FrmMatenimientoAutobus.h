@@ -1,6 +1,4 @@
 #pragma once
-#include "frmAgregarAutobuses.h"
-#include "frmEditarAutobuses.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -332,8 +330,6 @@ namespace TransPorticoView {
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
 	}
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		frmAgregarAutobuses^ VentanaAgregarAutobuses = gcnew frmAgregarAutobuses;
-		VentanaAgregarAutobuses->ShowDialog();
 	}
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		//¿Como se cual es la fila uqe he seleccionado para eliminarla?
@@ -350,10 +346,7 @@ namespace TransPorticoView {
 	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 		
 		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
-		int codigoAeliminar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
-		frmEditarAutobuses^ VentanaEditarAutobus = gcnew frmEditarAutobuses;
-		VentanaEditarAutobus->ShowDialog();
-		
+		int codigoAeliminar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());		
 	}
 };
 }

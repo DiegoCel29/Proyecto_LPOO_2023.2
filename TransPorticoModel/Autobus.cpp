@@ -18,6 +18,13 @@ Autobus::Autobus(int Codigo, String^ Placa, int CantAsientos, int CantPasajeros,
 
 };
 
+int Autobus::GetCodigo() {
+	return this->Codigo;
+}
+void Autobus::SetCodigo(int Codigo) {
+	this->Codigo = Codigo;
+}
+
 String^ Autobus::GetPlaca() {
 	return this->Placa;
 }

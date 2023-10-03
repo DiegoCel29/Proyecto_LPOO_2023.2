@@ -31,6 +31,7 @@ List<Pasajero^>^ PasajeroController::buscarPasajeros(String^ pasajeros) {
 		String^ FechaNacimiento = Datos[8];
 
 		if (Nombre->Contains(pasajeros)) {
+
 			Pasajero^ objPasajero = gcnew Pasajero(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, FechaNacimiento);
 			listaPasajerosEncontrados->Add(objPasajero);
 		}

@@ -116,8 +116,6 @@
   <ItemGroup>
     <ClCompile Include="CrearCuenta.cpp" />
     <ClCompile Include="Editar_Pasajero.cpp" />
-    <ClCompile Include="frmAgregarAutobuses.cpp" />
-    <ClCompile Include="frmEditarAutobuses.cpp" />
     <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp" />
     <ClCompile Include="frmMantenimientoCalificacion.cpp" />
     <ClCompile Include="frmMantenimientoEmergencia.cpp" />
@@ -137,11 +135,11 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MantenimientoAtajo.cpp" />
     <ClCompile Include="MantenimientoConductor.cpp" />
-    <ClCompile Include="MantenimientoParaderosRecorridos.cpp" />
     <ClCompile Include="MantenimientoPasajero.cpp" />
     <ClCompile Include="MantenimientoSituacionRecorrido.cpp" />
     <ClCompile Include="OlvidoContrasena.cpp" />
     <ClCompile Include="PantallaPrincipalAdministrador.cpp" />
+    <ClCompile Include="TarifarioMantenimiento.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -155,12 +153,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Editar_Pasajero.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="frmAgregarAutobuses.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="frmEditarAutobuses.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoBuzonSugerencias.h">
@@ -217,9 +209,6 @@
     <ClInclude Include="MantenimientoConductor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MantenimientoParaderosRecorridos.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="MantenimientoPasajero.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -232,6 +221,9 @@
     <ClInclude Include="PantallaPrincipalAdministrador.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="TarifarioMantenimiento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CrearCuenta.resx">
@@ -239,12 +231,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_Pasajero.resx">
       <DependentUpon>Editar_Pasajero.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmAgregarAutobuses.resx">
-      <DependentUpon>frmAgregarAutobuses.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmEditarAutobuses.resx">
-      <DependentUpon>frmEditarAutobuses.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoBuzonSugerencias.resx">
       <DependentUpon>FrmMantenimientoBuzonSugerencias.h</DependentUpon>
@@ -270,9 +256,6 @@
     <EmbeddedResource Include="FrmMantenimientoTarjeta.resx">
       <DependentUpon>FrmMantenimientoTarjeta.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMatenimientoAutobus.resx">
-      <DependentUpon>FrmMatenimientoAutobus.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmPantallaAdministrador.resx">
       <DependentUpon>FrmPantallaAdministrador.h</DependentUpon>
     </EmbeddedResource>
@@ -284,9 +267,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoConductor.resx">
       <DependentUpon>MantenimientoConductor.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoParaderosRecorridos.resx">
-      <DependentUpon>MantenimientoParaderosRecorridos.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoPasajero.resx">
       <DependentUpon>MantenimientoPasajero.h</DependentUpon>
@@ -300,6 +280,7 @@
     <EmbeddedResource Include="PantallaPrincipalAdministrador.resx">
       <DependentUpon>PantallaPrincipalAdministrador.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TarifarioMantenimiento.resx" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\TransPorticoController\TransPorticoController.vcxproj">
@@ -329,6 +310,10 @@
     <Text Include="Promociones.txt" />
     <Text Include="Ruta.txt" />
     <Text Include="Tarjetas.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Botones.jpeg" />
+    <Image Include="Fondo.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

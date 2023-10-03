@@ -19,6 +19,9 @@ namespace TransPorticoModel {
 		Autobus();
 		Autobus(int Codigo, String^ Placa, int CantAsientos, int CantPasajeros, int Capacidad, int X_Autobus, int Y_Autobus, int Velocidad);
 
+		int GetCodigo();
+		void SetCodigo(int Codigo);
+
 		String^ GetPlaca();
 		void SetPlaca(String^ Placa);
 
