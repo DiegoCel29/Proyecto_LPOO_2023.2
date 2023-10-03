@@ -9,11 +9,11 @@ namespace TransPorticoModel {
 		String^ FechaNacimiento;
 	public:
 		Pasajero();
-		Pasajero(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ FechaNacimiento);
-
-
+		Pasajero(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ FechaNacimiento);
+		
 		String^ get_DNI();
 		void set_DNI(String^ DNI);
+
 
 		String^ get_Nombre();
 		void set_Nombre(String^ Nombre);

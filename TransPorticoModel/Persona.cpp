@@ -18,6 +18,16 @@ Persona::Persona(int Codigo, String^ Nombres, String^ ApellidoPat, String^ Apell
 	this->Contrasena = Contrasena;
 	this->Tipo = Tipo;
 };
+Persona::Persona(String^ DNI, String^ Nombres, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena) {
+	this->DNI = DNI;
+	this->Nombres = Nombres;
+	this->ApellidoPat = ApellidoPat;
+	this->ApellidoMat = ApellidoMat;
+	this->Edad = Edad;
+	this->Genero = Genero;
+	this->Telefono = Telefono;
+	this->Contrasena = Contrasena;
+};
 
 int Persona::GetCodigo() {
 	return this->Codigo;
