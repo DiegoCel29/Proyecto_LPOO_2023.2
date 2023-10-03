@@ -88,3 +88,30 @@ void PasajeroController::agregarPasajero(Pasajero^ objProyecto) {
 	listaPasajeros->Add(objProyecto);
 	escribirPasajero(listaPasajeros);
 }
+
+Pasajero^ PasajeroController::buscarPasajeroxDNI(String^ DNI) {
+	List<Pasajero^>^ listaPasajeros = buscarAllPasajeros();
+	for (int i = 0; i < listaPasajeros->Count; i++) {
+		if (listaPasajeros[i]->get_DNI() == DNI) {
+			return listaPasajeros[i];
+		}
+	}
+}
+
+void PasajeroController::actualizarPasajero(Pasajero^ objPasajero) {
+	List<Pasajero^>^ listaPasajeros = buscarAllPasajeros();
+	for (int i = 0; i < listaPasajeros->Count; i++) {
+		if (listaPasajeros[i]->get_DNI() == objPasajero->get_DNI()) {
+			/*Voy a actualizar cada dato de ese proyecto en la lista*/
+			listaPasajeros[i]->set_Nombre(objPasajero->get_Nombre());
+			listaPasajeros[i]->set_ApellidoPat(objPasajero->get_ApellidoPat());
+			listaPasajeros[i]->set_ApellidoMat(objPasajero->get_ApellidoMat());
+			listaPasajeros[i]->set_Edad(objPasajero->get_Edad());
+			listaPasajeros[i]->set_Genero(objPasajero->get_Genero());
+			listaPasajeros[i]->set_Telefono(objPasajero->get_Telefono());
+			listaPasajeros[i]->set_FechaNacimiento(objPasajero->get_FechaNacimiento());
+			break;
+		}
+	}
+	escribirPasajero(listaPasajeros);
+}
