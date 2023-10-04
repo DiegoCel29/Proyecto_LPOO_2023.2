@@ -256,8 +256,8 @@ namespace TransPorticoView {
 			array<String^>^ FilaGrilla = gcnew array<String^>(4);
 
 			FilaGrilla[0] = Convert::ToString(ObjMantenimiento->GetCodigo());
-			FilaGrilla[1] = ObjMantenimiento->GetTipoMantenimiento();
-			FilaGrilla[2] = ObjMantenimiento->GetDescripcionMantenimiento();
+			FilaGrilla[2] = ObjMantenimiento->GetTipoMantenimiento();
+			FilaGrilla[3] = ObjMantenimiento->GetDescripcionMantenimiento();
 
 			this->DGV_Mantenimiento->Rows->Add(FilaGrilla);
 		}
