@@ -145,6 +145,7 @@
     <ClCompile Include="PantallaPrincipalAdministrador.cpp" />
     <ClCompile Include="TarifarioMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
+    <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -244,6 +245,9 @@
     <ClInclude Include="TarifarioMantenimientoAnadir.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="TarifarioMantenimientoEditar.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CrearCuenta.resx">
@@ -315,6 +319,9 @@
     <EmbeddedResource Include="TarifarioMantenimiento.resx" />
     <EmbeddedResource Include="TarifarioMantenimientoAnadir.resx">
       <DependentUpon>TarifarioMantenimientoAnadir.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TarifarioMantenimientoEditar.resx">
+      <DependentUpon>TarifarioMantenimientoEditar.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -31,17 +31,26 @@ List<Tarifario^>^ TarifarioController::BuscarTarifarioAll() {
 	return ListTarifarioGeneral;
 };
 
-List<Tarifario^>^ TarifarioController::BuscarTarifarioIdentificador(List<Tarifario^>^ ListTarifarioGeneral, String^ Identificador) {
-	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
+Tarifario^ TarifarioController::BuscarTarifarioIdentificador(String^ Identificador) {
+	List<Tarifario^>^ ListTarifarioGeneral = BuscarTarifarioAll();
 	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {
 		if (ListTarifarioGeneral[i]->GetIdentificador()->Contains(Identificador)) {
+			return ListTarifarioGeneral[i];
+		}
+	}
+};
+
+List<Tarifario^>^ TarifarioController::BuscarTarifariosRuta(List<Tarifario^>^ ListTarifarioGeneral, String^ Ruta) {
+	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
+	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {
+		if (ListTarifarioGeneral[i]->GetRutaAsociada()->Contains(Ruta)) {
 			ListTarifarioEspecifico->Add(ListTarifarioGeneral[i]);
 		}
 	}
 	return ListTarifarioEspecifico;
 };
 
-List<Tarifario^>^ TarifarioController::BuscarTarifarioParaderoInicial(List<Tarifario^>^ ListTarifarioGeneral, String^ ParaderoInicial) {
+List<Tarifario^>^ TarifarioController::BuscarTarifariosParaderoInicial(List<Tarifario^>^ ListTarifarioGeneral, String^ ParaderoInicial) {
 	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
 	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {
 		if (ListTarifarioGeneral[i]->GetParaderoInicial()->Contains(ParaderoInicial)) {
@@ -51,7 +60,7 @@ List<Tarifario^>^ TarifarioController::BuscarTarifarioParaderoInicial(List<Tarif
 	return ListTarifarioEspecifico;
 };
 
-List<Tarifario^>^ TarifarioController::BuscarTarifarioTarifa(List<Tarifario^>^ ListTarifarioGeneral, String^ Tarifa) {
+List<Tarifario^>^ TarifarioController::BuscarTarifariosTarifa(List<Tarifario^>^ ListTarifarioGeneral, String^ Tarifa) {
 	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
 	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {
 		if (Convert::ToString(ListTarifarioGeneral[i]->GetTarifa())->Contains(Tarifa)){
@@ -87,4 +96,14 @@ void TarifarioController::AgregarTarifario(Tarifario^ ObjTarifario) {
 	EscribirTarifario(ListTarifario);
 };
 
+void TarifarioController::ActualizarTarifario(Tarifario^ ObjTarifario) {
+	List<Tarifario^>^ ListTarifario = BuscarTarifarioAll();
+	for (int i = 0; i < ListTarifario->Count; i++) {
+		if (ListTarifario[i]->GetIdentificador() == ObjTarifario->GetIdentificador()) {
+			ListTarifario[i]->SetTarifa(ObjTarifario->GetTarifa());
+			break;
+		}
+	}
+	EscribirTarifario(ListTarifario);
+}
 

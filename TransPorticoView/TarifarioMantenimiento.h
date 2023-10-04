@@ -1,4 +1,6 @@
 #pragma once
+#include "TarifarioMantenimientoAnadir.h"
+#include "TarifarioMantenimientoEditar.h"
 
 namespace TransPorticoView {
 
@@ -59,8 +61,10 @@ namespace TransPorticoView {
 
 	private: System::Windows::Forms::GroupBox^ GB_Busqueda;
 	private: System::Windows::Forms::ComboBox^ CB_ParaderoInicial;
-	private: System::Windows::Forms::Label^ L_Identificador;
-	private: System::Windows::Forms::TextBox^ TB_Identificador;
+	private: System::Windows::Forms::Label^ L_Ruta;
+	private: System::Windows::Forms::TextBox^ TB_Ruta;
+
+
 	private: System::Windows::Forms::Label^ L_Tarifa;
 	private: System::Windows::Forms::TextBox^ TB_Tarifa;
 
@@ -113,8 +117,8 @@ namespace TransPorticoView {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TarifarioMantenimiento::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->B_Buscar = (gcnew System::Windows::Forms::Button());
 			this->B_Anadir = (gcnew System::Windows::Forms::Button());
 			this->B_Borrar = (gcnew System::Windows::Forms::Button());
@@ -122,8 +126,8 @@ namespace TransPorticoView {
 			this->L_ParaderoInicial = (gcnew System::Windows::Forms::Label());
 			this->GB_Busqueda = (gcnew System::Windows::Forms::GroupBox());
 			this->CB_ParaderoInicial = (gcnew System::Windows::Forms::ComboBox());
-			this->L_Identificador = (gcnew System::Windows::Forms::Label());
-			this->TB_Identificador = (gcnew System::Windows::Forms::TextBox());
+			this->L_Ruta = (gcnew System::Windows::Forms::Label());
+			this->TB_Ruta = (gcnew System::Windows::Forms::TextBox());
 			this->L_Tarifa = (gcnew System::Windows::Forms::Label());
 			this->TB_Tarifa = (gcnew System::Windows::Forms::TextBox());
 			this->DGV_Tarifario = (gcnew System::Windows::Forms::DataGridView());
@@ -195,6 +199,7 @@ namespace TransPorticoView {
 			this->B_Editar->TabIndex = 4;
 			this->B_Editar->Text = L"Editar";
 			this->B_Editar->UseVisualStyleBackColor = true;
+			this->B_Editar->Click += gcnew System::EventHandler(this, &TarifarioMantenimiento::B_Editar_Click);
 			// 
 			// L_ParaderoInicial
 			// 
@@ -214,8 +219,8 @@ namespace TransPorticoView {
 			// 
 			this->GB_Busqueda->BackColor = System::Drawing::Color::Transparent;
 			this->GB_Busqueda->Controls->Add(this->CB_ParaderoInicial);
-			this->GB_Busqueda->Controls->Add(this->L_Identificador);
-			this->GB_Busqueda->Controls->Add(this->TB_Identificador);
+			this->GB_Busqueda->Controls->Add(this->L_Ruta);
+			this->GB_Busqueda->Controls->Add(this->TB_Ruta);
 			this->GB_Busqueda->Controls->Add(this->L_Tarifa);
 			this->GB_Busqueda->Controls->Add(this->TB_Tarifa);
 			this->GB_Busqueda->Controls->Add(this->L_ParaderoInicial);
@@ -232,33 +237,34 @@ namespace TransPorticoView {
 			// 
 			// CB_ParaderoInicial
 			// 
+			this->CB_ParaderoInicial->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->CB_ParaderoInicial->FormattingEnabled = true;
 			this->CB_ParaderoInicial->Location = System::Drawing::Point(175, 80);
 			this->CB_ParaderoInicial->Name = L"CB_ParaderoInicial";
 			this->CB_ParaderoInicial->Size = System::Drawing::Size(250, 32);
 			this->CB_ParaderoInicial->TabIndex = 11;
 			// 
-			// L_Identificador
+			// L_Ruta
 			// 
-			this->L_Identificador->BackColor = System::Drawing::Color::Moccasin;
-			this->L_Identificador->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->L_Identificador->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->L_Identificador->ForeColor = System::Drawing::Color::Black;
-			this->L_Identificador->Location = System::Drawing::Point(10, 30);
-			this->L_Identificador->Name = L"L_Identificador";
-			this->L_Identificador->Size = System::Drawing::Size(150, 30);
-			this->L_Identificador->TabIndex = 9;
-			this->L_Identificador->Text = L"Identificador:";
-			this->L_Identificador->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Ruta->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Ruta->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_Ruta->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->L_Ruta->ForeColor = System::Drawing::Color::Black;
+			this->L_Ruta->Location = System::Drawing::Point(10, 30);
+			this->L_Ruta->Name = L"L_Ruta";
+			this->L_Ruta->Size = System::Drawing::Size(150, 30);
+			this->L_Ruta->TabIndex = 9;
+			this->L_Ruta->Text = L"Ruta:";
+			this->L_Ruta->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// TB_Identificador
+			// TB_Ruta
 			// 
-			this->TB_Identificador->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Identificador->Location = System::Drawing::Point(175, 30);
-			this->TB_Identificador->Name = L"TB_Identificador";
-			this->TB_Identificador->Size = System::Drawing::Size(250, 29);
-			this->TB_Identificador->TabIndex = 10;
+			this->TB_Ruta->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_Ruta->Location = System::Drawing::Point(175, 30);
+			this->TB_Ruta->Name = L"TB_Ruta";
+			this->TB_Ruta->Size = System::Drawing::Size(250, 29);
+			this->TB_Ruta->TabIndex = 10;
 			// 
 			// L_Tarifa
 			// 
@@ -289,29 +295,29 @@ namespace TransPorticoView {
 			this->DGV_Tarifario->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->DGV_Tarifario->BackgroundColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->DGV_Tarifario->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::Wheat;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::Wheat;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::Color::OliveDrab;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->DGV_Tarifario->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::Color::OliveDrab;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->DGV_Tarifario->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this->DGV_Tarifario->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DGV_Tarifario->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
 				this->DGVC_Identificador,
 					this->DGVC_RutaAsociada, this->DGCV_ParaderoInicial, this->DGVC_ParaderoFinal, this->DGVC_Tarifa
 			});
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->DGV_Tarifario->DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->DGV_Tarifario->DefaultCellStyle = dataGridViewCellStyle4;
 			this->DGV_Tarifario->EnableHeadersVisualStyles = false;
 			this->DGV_Tarifario->Location = System::Drawing::Point(0, 200);
 			this->DGV_Tarifario->Name = L"DGV_Tarifario";
@@ -377,7 +383,7 @@ namespace TransPorticoView {
 		}
 #pragma endregion
 	private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ BuscarIdentificador = this->TB_Identificador->Text;
+		String^ BuscarRuta = this->TB_Ruta->Text;
 		String^ BuscarParaderoInicial = this->CB_ParaderoInicial->Text;
 		String^ BuscarCosto = this->TB_Tarifa->Text;
 
@@ -387,9 +393,9 @@ namespace TransPorticoView {
 		List<Tarifario^>^ ListTarifarioBuscado = gcnew List<Tarifario^>();
 
 		
-		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifarioIdentificador(ListTarifarioGeneral, BuscarIdentificador);
-		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifarioParaderoInicial(ListTarifarioBuscado, BuscarParaderoInicial);
-		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifarioTarifa(ListTarifarioBuscado, BuscarCosto);
+		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosRuta(ListTarifarioGeneral, BuscarRuta);
+		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosParaderoInicial(ListTarifarioBuscado, BuscarParaderoInicial);
+		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosTarifa(ListTarifarioBuscado, BuscarCosto);
 		MostrarGrilla(ListTarifarioBuscado);
 	};
 	private: void MostrarGrilla(List<Tarifario^>^ ListTarifario) {
@@ -427,6 +433,13 @@ namespace TransPorticoView {
 	//
 	// Poner paraderos en el ComboBox
 	//
+	ParaderoController^ ObjParaderoController = gcnew ParaderoController;
+	List<Paradero^>^ ListParaderos = ObjParaderoController->buscarAll();
+	this->CB_ParaderoInicial->Items->Clear();
+	for (int i = 0; i < ListParaderos->Count; i++) {
+		this->CB_ParaderoInicial->Items->Add(ListParaderos[i]->getNombre());
+	}
+
 }
 	private: System::Void TarifarioMantenimiento_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
 	CentrarForm();
@@ -442,8 +455,20 @@ namespace TransPorticoView {
 		}
 	}
 	private: System::Void B_Anadir_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		TarifarioMantenimientoAnadir^ ObjTarifarioMantenimientoAnadir = gcnew TarifarioMantenimientoAnadir();
+		ObjTarifarioMantenimientoAnadir->ShowDialog();
 	}
+	private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->DGV_Tarifario->SelectedRows->Count != 0) {
+			int FilaSeleccionada = this->DGV_Tarifario->SelectedRows[0]->Index;
+			String^ IdentificadorTarifaEditar = this->DGV_Tarifario->Rows[FilaSeleccionada]->Cells[0]->Value->ToString();
 
+			TarifarioController^ ObjTarifarioController = gcnew TarifarioController();
+			Tarifario^ ObjTarifario = ObjTarifarioController->BuscarTarifarioIdentificador(IdentificadorTarifaEditar);
+			
+			TarifarioMantenimientoEditar^ ObjTarifarioMantenimientoEditar = gcnew TarifarioMantenimientoEditar(ObjTarifario);
+			ObjTarifarioMantenimientoEditar->ShowDialog();
+		}
+	}
 };
 }
