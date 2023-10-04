@@ -10,7 +10,7 @@
 #include "frmMantenimientoEmergencia.h"
 #include "frmMantenimientoCalificacion.h"
 #include "MantenimientoAtajo.h"
-#include "MantenimientoConductor.h"
+#include "MantenimientoEmpleado.h"
 #include "TarifarioMantenimiento.h"
 #include "MantenimientoPasajero.h"
 #include "mantenimientoSituacionRecorrido.h"
@@ -387,8 +387,8 @@ namespace TransPorticoView {
 		VentanaMantenimientoAtajo->ShowDialog();
 	}
 	private: System::Void empleadoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		MantenimientoConductor^ VentanaMantenimientoConductor = gcnew MantenimientoConductor();
-		VentanaMantenimientoConductor->ShowDialog();
+		MantenimientoEmpleado^ VentanaMantenimientoEmpleado = gcnew MantenimientoEmpleado();
+		VentanaMantenimientoEmpleado->ShowDialog();
 	}
 	private: System::Void viajesToolStripMenuItem1_Click(System::Object^ sender, System::EventArgs^ e) {
 		TarifarioMantenimiento^ VentanaTarifarioMantenimiento = gcnew TarifarioMantenimiento();

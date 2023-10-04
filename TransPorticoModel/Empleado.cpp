@@ -16,78 +16,78 @@ Empleado::Empleado( String^ DNI, String^ Nombre, String^ ApellidoPat, String^ Ap
 	this->EstadoContrato = EstadoContrato;
 
 };
-String^ Empleado::get_DNI_() {
+String^ Empleado::GetDNI_Empleado() {
 	return this->DNI;
 }
 
-void Empleado::set_DNI_(String^ DNI) {
+void Empleado::SetDNI_Empleado(String^ DNI) {
 	this->DNI = DNI;
 }
 
-String^ Empleado::get_Nombre_() {
+String^ Empleado::GetNombre_Empleado() {
 	return this->Nombres;
 }
 
-void Empleado::set_Nombre_(String^ Nombre) {
+void Empleado::SetNombre_Empleado(String^ Nombre) {
 	this->Nombres = Nombre;
 }
-String^ Empleado::get_ApellidoPat_() {
+String^ Empleado::GetApellidoPat_Empleado() {
 	return this->ApellidoPat;
 }
 
-void Empleado::set_ApellidoPat_(String^ ApellidoPat) {
+void Empleado::SetApellidoPat_Empleado(String^ ApellidoPat) {
 	this->ApellidoPat = ApellidoPat;
 }
 
-String^ Empleado::get_ApellidoMat_() {
+String^ Empleado::GetApellidoMat_Empleado() {
 	return this->ApellidoMat;
 }
 
-void Empleado::set_ApellidoMat_(String^ ApellidoMat) {
+void Empleado::SetApellidoMat_Empleado(String^ ApellidoMat) {
 	this->ApellidoMat = ApellidoMat;
 }
-int Empleado::get_Edad_() {
+int Empleado::GetEdad_Empleado() {
 	return this->Edad;
 }
 
-void Empleado::set_Edad_(int Edad) {
+void Empleado::SetEdad_Empleado(int Edad) {
 	this->Edad = Edad;
 }
-String^ Empleado::get_Genero_() {
+String^ Empleado::GetGenero_Empleado() {
 	return this->Genero;
 }
 
-void Empleado::set_Genero_(String^ Genero) {
+void Empleado::SetGenero_Empleado(String^ Genero) {
 	this->Genero = Genero;
 }
-String^ Empleado::get_Telefono_() {
+String^ Empleado::GetTelefono_Empleado() {
 	return this->Telefono;
 }
 
-void Empleado::set_Telefono_(String^ Telefono) {
+void Empleado::SetTelefono_Empleado(String^ Telefono) {
 	this->Telefono = Telefono;
 }
-String^ Empleado::get_Contrasena_() {
+String^ Empleado::GetContrasena_Empleado() {
 	return this->Contrasena;
 }
 
-void Empleado::set_Contrasena_(String^ Contrasena) {
+void Empleado::SetContrasena_Empleado(String^ Contrasena) {
 	this->Contrasena = Contrasena;
 }
 
-int Empleado::get_Sueldo_() {
+int Empleado::GetSueldo_Empleado() {
 	return this->Sueldo;
 }
 
-void Empleado::set_Sueldo_(int Sueldo) {
+void Empleado::SetSueldo_Empleado(int Sueldo) {
 	this->Sueldo = Sueldo;
 }
 
 
-String^ Empleado::get_EstadoContrato_() {
+String^ Empleado::GetEstadoContrato_Empleado() {
 	return this->EstadoContrato;
 }
 
-void Empleado::set_EstadoContrato_(String^ EstadoContrato) {
+void Empleado::SetEstadoContrato_Empleado(String^ EstadoContrato) {
 	this->EstadoContrato = EstadoContrato;
 }

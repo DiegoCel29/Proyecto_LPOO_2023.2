@@ -11,68 +11,68 @@ Pasajero::Pasajero(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ Ape
 
 };
 
-String^ Pasajero::get_DNI() {
+String^ Pasajero::GetDNI_Pasajero() {
 	return this->DNI;
 }
 
-void Pasajero::set_DNI(String^ DNI) {
+void Pasajero::SetDNI_Pasajero(String^ DNI) {
 	this->DNI = DNI;
 }
 
-String^ Pasajero::get_Nombre() {
+String^ Pasajero::GetNombre_Pasajero() {
 	return this->Nombres;
 }
 
-void Pasajero::set_Nombre(String^ Nombre) {
+void Pasajero::SetNombre_Pasajero(String^ Nombre) {
 	this->Nombres = Nombre;
 }
-String^ Pasajero::get_ApellidoPat() {
+String^ Pasajero::GetApellidoPat_Pasajero() {
 	return this->ApellidoPat;
 }
 
-void Pasajero::set_ApellidoPat(String^ ApellidoPat) {
+void Pasajero::SetApellidoPat_Pasajero(String^ ApellidoPat) {
 	this->ApellidoPat = ApellidoPat;
 }
 
-String^ Pasajero::get_ApellidoMat() {
+String^ Pasajero::GetApellidoMat_Pasajero() {
 	return this->ApellidoMat;
 }
 
-void Pasajero::set_ApellidoMat(String^ ApellidoMat) {
+void Pasajero::SetApellidoMat_Pasajero(String^ ApellidoMat) {
 	this->ApellidoMat = ApellidoMat;
 }
-int Pasajero::get_Edad() {
+int Pasajero::GetEdad_Pasajero() {
 	return this->Edad;
 }
 
-void Pasajero::set_Edad(int Edad) {
+void Pasajero::SetEdad_Pasajero(int Edad) {
 	this->Edad = Edad;
 }
-String^ Pasajero::get_Genero() {
+String^ Pasajero::GetGenero_Pasajero() {
 	return this->Genero;
 }
 
-void Pasajero::set_Genero(String^ Genero) {
+void Pasajero::SetGenero_Pasajero(String^ Genero) {
 	this->Genero = Genero;
 }
-String^ Pasajero::get_Telefono() {
+String^ Pasajero::GetTelefono_Pasajero() {
 	return this->Telefono;
 }
 
-void Pasajero::set_Telefono(String^ Telefono) {
+void Pasajero::SetTelefono_Pasajero(String^ Telefono) {
 	this->Telefono = Telefono;
 }
-String^ Pasajero::get_Contrasena() {
+String^ Pasajero::GetContrasena_Pasajero() {
 	return this->Contrasena;
 }
 
-void Pasajero::set_Contrasena(String^ Contrasena) {
+void Pasajero::SetContrasena_Pasajero(String^ Contrasena) {
 	this->Contrasena = Contrasena;
 }
-String^ Pasajero::get_FechaNacimiento() {
+String^ Pasajero::GetFechaNacimiento_Pasajero() {
 	return this->FechaNacimiento;
 }
 
-void Pasajero::set_FechaNacimiento(String^ FechaNacimiento) {
+void Pasajero::SetFechaNacimiento_Pasajero(String^ FechaNacimiento) {
 	this->FechaNacimiento = FechaNacimiento;
 }

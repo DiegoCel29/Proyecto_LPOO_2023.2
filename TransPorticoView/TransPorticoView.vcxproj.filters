@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Archivod de texto">
+      <UniqueIdentifier>{05847739-0b30-417e-b12d-2433ca7ea357}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -25,9 +28,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
-    <ClCompile Include="FrmMantenimientoPromociones.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmMantenimientoTarjeta.cpp">
@@ -57,7 +57,7 @@
     <ClCompile Include="MantenimientoAtajo.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="MantenimientoConductor.cpp">
+    <ClCompile Include="MantenimientoEmpleado.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="MantenimientoPasajero.cpp">
@@ -99,7 +99,7 @@
     <ClCompile Include="TarifarioMantenimiento.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="Editar_Conductor.cpp">
+    <ClCompile Include="Editar_Empleado.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="TarifarioMantenimiento.cpp">
@@ -111,6 +111,24 @@
     <ClCompile Include="TarifarioMantenimientoEditar.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
+    <ClCompile Include="Editar_Atajos.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="PromocionesMantenimiento.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="NuevoEmpleado.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="Nuevo_Atajos.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="PromocionesMantenimientoAnadir.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
+    <ClCompile Include="PromocionesMantenimientoEditar.cpp">
+      <Filter>Archivos de origen</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PantallaIngreso.h">
@@ -120,9 +138,6 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoBuzonSugerencias.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="FrmMantenimientoPromociones.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="FrmMantenimientoTarjeta.h">
@@ -152,7 +167,7 @@
     <ClInclude Include="MantenimientoAtajo.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="MantenimientoConductor.h">
+    <ClInclude Include="MantenimientoEmpleado.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="MantenimientoPasajero.h">
@@ -197,33 +212,89 @@
     <ClInclude Include="TarifarioMantenimientoAnadir.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Editar_Conductor.h">
+    <ClInclude Include="Editar_Empleado.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="TarifarioMantenimientoEditar.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
+    <ClInclude Include="Editar_Atajos.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="PromocionesMantenimiento.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="NuevoEmpleado.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Nuevo_Atajos.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="PromocionesMantenimientoAnadir.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="PromocionesMantenimientoEditar.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="BuzonSugerencia.txt" />
-    <Text Include="Promociones.txt" />
-    <Text Include="Empleados.txt" />
-    <Text Include="Tarjetas.txt" />
-    <Text Include="Personas.txt" />
-    <Text Include="Mantenimientos.txt" />
-    <Text Include="Calificacion.txt" />
-    <Text Include="Emergencia.txt" />
-    <Text Include="Horario.txt" />
-    <Text Include="Lista_Atajos.txt" />
-    <Text Include="Tarifario.txt" />
-    <Text Include="Lista_pasajeros.txt" />
-    <Text Include="Lista_SituacionRecorrido.txt" />
-    <Text Include="MedidasEstadisticas.txt" />
-    <Text Include="Paradero.txt" />
-    <Text Include="Ruta.txt" />
-    <Text Include="Lista_Autobuses.txt" />
-    <Text Include="Lista_Rutas.txt" />
-    <Text Include="Lista_Informes.txt" />
+    <Text Include="BuzonSugerencia.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Calificacion.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Emergencia.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Empleados.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Horario.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Lista_Atajos.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Lista_Autobuses.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Lista_Informes.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Lista_pasajeros.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Lista_Rutas.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Lista_SituacionRecorrido.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Mantenimientos.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="MedidasEstadisticas.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Paradero.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Personas.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Promociones.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Ruta.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Tarifario.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
+    <Text Include="Tarjetas.txt">
+      <Filter>Archivod de texto</Filter>
+    </Text>
   </ItemGroup>
   <ItemGroup>
     <Image Include="Botones.jpeg">

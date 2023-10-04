@@ -11,34 +11,34 @@ namespace TransPorticoModel {
 		Empleado();
 		Empleado(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ Tipo, int Sueldo, String^ EstadoContrato);
 		Empleado(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, int Sueldo, String^ EstadoContrato);
-		String^ get_DNI_();
-		void set_DNI_(String^ DNI);
+		String^ GetDNI_Empleado();
+		void SetDNI_Empleado(String^ DNI);
 
-		String^ get_Nombre_();
-		void set_Nombre_(String^ Nombre);
+		String^ GetNombre_Empleado();
+		void SetNombre_Empleado(String^ Nombre);
 
-		String^ get_ApellidoPat_();
-		void set_ApellidoPat_(String^ ApellidoPat);
+		String^ GetApellidoPat_Empleado();
+		void SetApellidoPat_Empleado(String^ ApellidoPat);
 
-		String^ get_ApellidoMat_();
-		void set_ApellidoMat_(String^ ApellidoMat);
+		String^ GetApellidoMat_Empleado();
+		void SetApellidoMat_Empleado(String^ ApellidoMat);
 
-		int get_Edad_();
-		void set_Edad_(int Edad);
+		int GetEdad_Empleado();
+		void SetEdad_Empleado(int Edad);
 
-		String^ get_Genero_();
-		void set_Genero_(String^ Genero);
+		String^ GetGenero_Empleado();
+		void SetGenero_Empleado(String^ Genero);
 
-		String^ get_Telefono_();
-		void set_Telefono_(String^ Telefono);
+		String^ GetTelefono_Empleado();
+		void SetTelefono_Empleado(String^ Telefono);
 
-		String^ get_Contrasena_();
-		void set_Contrasena_(String^ Contrasena);
+		String^ GetContrasena_Empleado();
+		void SetContrasena_Empleado(String^ Contrasena);
 
-		int get_Sueldo_();
-		void set_Sueldo_(int Sueldo);
+		int GetSueldo_Empleado();
+		void SetSueldo_Empleado(int Sueldo);
 
-		String^ get_EstadoContrato_();
-		void set_EstadoContrato_(String^ EstadoContrato);
+		String^ GetEstadoContrato_Empleado();
+		void SetEstadoContrato_Empleado(String^ EstadoContrato);
 	};
 };

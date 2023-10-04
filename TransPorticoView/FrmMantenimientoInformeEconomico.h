@@ -173,7 +173,7 @@ namespace TransPorticoView {
 			// 
 			// Column5
 			// 
-			this->Column5->HeaderText = L"Salario del conductor";
+			this->Column5->HeaderText = L"Salario del ";
 			this->Column5->Name = L"Column5";
 			// 
 			// Column6

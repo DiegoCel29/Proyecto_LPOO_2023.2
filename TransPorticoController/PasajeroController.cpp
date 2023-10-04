@@ -9,7 +9,7 @@ PasajeroController::PasajeroController() {
 
 }
 
-List<Pasajero^>^ PasajeroController::buscarPasajeros(String^ pasajeros) {
+List<Pasajero^>^ PasajeroController::BuscarPasajeros(String^ pasajeros) {
 
 	List<Pasajero^>^ listaPasajerosEncontrados = gcnew List<Pasajero^>();
 	array<String^>^ lineas = File::ReadAllLines("Lista_pasajeros.txt");
@@ -39,7 +39,7 @@ List<Pasajero^>^ PasajeroController::buscarPasajeros(String^ pasajeros) {
 	return listaPasajerosEncontrados;
 }
 
-List<Pasajero^>^ PasajeroController::buscarAllPasajeros() {
+List<Pasajero^>^ PasajeroController::BuscarAllPasajeros() {
 	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
 	List<Pasajero^>^ listaPasajerosEncontrados = gcnew List<Pasajero^>();
 	array<String^>^ lineas = File::ReadAllLines("Lista_pasajeros.txt");
@@ -65,54 +65,54 @@ List<Pasajero^>^ PasajeroController::buscarAllPasajeros() {
 	return listaPasajerosEncontrados;
 }
 
-void PasajeroController::escribirPasajero(List<Pasajero^>^ lista) {
+void PasajeroController::EscribirPasajero(List<Pasajero^>^ lista) {
 	array<String^>^ lineasPasajero = gcnew array<String^>(lista->Count);
 	for (int i = 0; i < lista->Count; i++) {
 		Pasajero^ objeto = lista[i];
-		lineasPasajero[i] = objeto->get_DNI() + ";" + objeto->get_Nombre() + ";" + objeto->get_ApellidoPat() + ";" + objeto->get_ApellidoMat() + ";" + objeto->get_Edad() + ";" + objeto->get_Genero() + ";" + objeto->get_Telefono() + ";" + objeto->get_Contrasena() + ";" + objeto->get_FechaNacimiento();
+		lineasPasajero[i] = objeto->GetDNI_Pasajero() + ";" + objeto->GetNombre_Pasajero() + ";" + objeto->GetApellidoPat_Pasajero() + ";" + objeto->GetApellidoMat_Pasajero() + ";" + objeto->GetEdad_Pasajero() + ";" + objeto->GetGenero_Pasajero() + ";" + objeto->GetTelefono_Pasajero() + ";" + objeto->GetContrasena_Pasajero() + ";" + objeto->GetFechaNacimiento_Pasajero();
 	}
 	File::WriteAllLines("Lista_pasajeros.txt", lineasPasajero);
 }
 
-void PasajeroController::eliminarPasajeroFisico(String^ DNI_Eliminar) {
-	List<Pasajero^>^ listaPasajeros = buscarAllPasajeros();
+void PasajeroController::EliminarPasajeroFisico(String^ DNI_Eliminar) {
+	List<Pasajero^>^ listaPasajeros = BuscarAllPasajeros();
 	for (int i = 0; i < listaPasajeros->Count; i++) {
 		/*encontr[*/
-		if (listaPasajeros[i]->get_DNI() == DNI_Eliminar) {
+		if (listaPasajeros[i]->GetDNI_Pasajero() == DNI_Eliminar) {
 			listaPasajeros->RemoveAt(i);
 		}
 	}
-	escribirPasajero(listaPasajeros);
+	EscribirPasajero(listaPasajeros);
 }
-void PasajeroController::agregarPasajero(Pasajero^ objProyecto) {
-	List<Pasajero^>^ listaPasajeros = buscarAllPasajeros();
+void PasajeroController::AgregarPasajero(Pasajero^ objProyecto) {
+	List<Pasajero^>^ listaPasajeros = BuscarAllPasajeros();
 	listaPasajeros->Add(objProyecto);
-	escribirPasajero(listaPasajeros);
+	EscribirPasajero(listaPasajeros);
 }
 
-Pasajero^ PasajeroController::buscarPasajeroxDNI(String^ DNI) {
-	List<Pasajero^>^ listaPasajeros = buscarAllPasajeros();
+Pasajero^ PasajeroController::BuscarPasajeroDNI(String^ DNI) {
+	List<Pasajero^>^ listaPasajeros = BuscarAllPasajeros();
 	for (int i = 0; i < listaPasajeros->Count; i++) {
-		if (listaPasajeros[i]->get_DNI() == DNI) {
+		if (listaPasajeros[i]->GetDNI_Pasajero() == DNI) {
 			return listaPasajeros[i];
 		}
 	}
 }
 
-void PasajeroController::actualizarPasajero(Pasajero^ objPasajero) {
-	List<Pasajero^>^ listaPasajeros = buscarAllPasajeros();
+void PasajeroController::ActualizarPasajero(Pasajero^ objPasajero) {
+	List<Pasajero^>^ listaPasajeros = BuscarAllPasajeros();
 	for (int i = 0; i < listaPasajeros->Count; i++) {
-		if (listaPasajeros[i]->get_DNI() == objPasajero->get_DNI()) {
+		if (listaPasajeros[i]->GetDNI_Pasajero() == objPasajero->GetDNI_Pasajero()) {
 			/*Voy a actualizar cada dato de ese proyecto en la lista*/
-			listaPasajeros[i]->set_Nombre(objPasajero->get_Nombre());
-			listaPasajeros[i]->set_ApellidoPat(objPasajero->get_ApellidoPat());
-			listaPasajeros[i]->set_ApellidoMat(objPasajero->get_ApellidoMat());
-			listaPasajeros[i]->set_Edad(objPasajero->get_Edad());
-			listaPasajeros[i]->set_Genero(objPasajero->get_Genero());
-			listaPasajeros[i]->set_Telefono(objPasajero->get_Telefono());
-			listaPasajeros[i]->set_FechaNacimiento(objPasajero->get_FechaNacimiento());
+			listaPasajeros[i]->SetNombre_Pasajero(objPasajero->GetNombre_Pasajero());
+			listaPasajeros[i]->SetApellidoPat_Pasajero(objPasajero->GetApellidoPat_Pasajero());
+			listaPasajeros[i]->SetApellidoMat_Pasajero(objPasajero->GetApellidoMat_Pasajero());
+			listaPasajeros[i]->SetEdad_Pasajero(objPasajero->GetEdad_Pasajero());
+			listaPasajeros[i]->SetGenero_Pasajero(objPasajero->GetGenero_Pasajero());
+			listaPasajeros[i]->SetTelefono_Pasajero(objPasajero->GetTelefono_Pasajero());
+			listaPasajeros[i]->SetFechaNacimiento_Pasajero(objPasajero->GetFechaNacimiento_Pasajero());
 			break;
 		}
 	}
-	escribirPasajero(listaPasajeros);
+	EscribirPasajero(listaPasajeros);
 }

@@ -470,22 +470,22 @@ namespace TransPorticoView {
 		String^ Tiempo_Cumpleanos = this->Tiempo_Cumpleanos->Text;
 		Pasajero^ objPasajero = gcnew Pasajero(DNI,Nombre,Apellido_Pat,Apellido_Mat,Edad,Genero,Telefono,Contrasena,Tiempo_Cumpleanos);
 		PasajeroController^ objPasajeroController = gcnew PasajeroController();
-		objPasajeroController->actualizarPasajero(objPasajero);
+		objPasajeroController->ActualizarPasajero(objPasajero);
 		MessageBox::Show("La carrera ha sido actualizada con exito");
 		this->Close();
 	}
 private: System::Void Editar_Pasajero_Load(System::Object^ sender, System::EventArgs^ e) {
 	this->SizeChanged += (gcnew System::EventHandler(this, &Editar_Pasajero::Editar_Pasajero_SizeChanged));
 	CentrarForm();
-	this->TB_Nombres->Text = this->objPasajero->get_Nombre();
-	this->TB_ApellidoPat->Text = this->objPasajero->get_ApellidoPat();
-	this->TB_ApellidoMat->Text = this->objPasajero->get_ApellidoMat();
-	this->TB_DNI->Text = this->objPasajero->get_DNI();
-	this->TB_Edad->Text = Convert::ToString(this->objPasajero->get_Edad());
-	this->CB_Genero->Text = this->objPasajero->get_Genero();
-	this->TB_Telefono->Text = this->objPasajero->get_Telefono();
-	this->TB_Contrasena->Text = this->objPasajero->get_Contrasena();
-	this->Tiempo_Cumpleanos->Text = this->objPasajero->get_FechaNacimiento();
+	this->TB_Nombres->Text = this->objPasajero->GetNombre_Pasajero();
+	this->TB_ApellidoPat->Text = this->objPasajero->GetApellidoPat_Pasajero();
+	this->TB_ApellidoMat->Text = this->objPasajero->GetApellidoMat_Pasajero();
+	this->TB_DNI->Text = this->objPasajero->GetDNI_Pasajero();
+	this->TB_Edad->Text = Convert::ToString(this->objPasajero->GetEdad_Pasajero());
+	this->CB_Genero->Text = this->objPasajero->GetGenero_Pasajero();
+	this->TB_Telefono->Text = this->objPasajero->GetTelefono_Pasajero();
+	this->TB_Contrasena->Text = this->objPasajero->GetContrasena_Pasajero();
+	this->Tiempo_Cumpleanos->Text = this->objPasajero->GetFechaNacimiento_Pasajero();
 }
 
 private: System::Void Editar_Pasajero_SizeChanged(System::Object^ sender, System::EventArgs^ e) {

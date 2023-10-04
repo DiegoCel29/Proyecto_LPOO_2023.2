@@ -116,7 +116,7 @@
     <ClInclude Include="AutobusController.h" />
     <ClInclude Include="BuzonSugerenciaController.h" />
     <ClInclude Include="CalificacionController.h" />
-    <ClInclude Include="ConductorController.h" />
+    <ClInclude Include="EmpleadoController.h" />
     <ClInclude Include="EmergenciaController.h" />
     <ClInclude Include="GestionController.h" />
     <ClInclude Include="HorarioController.h" />
@@ -137,7 +137,7 @@
     <ClCompile Include="AutobusController.cpp" />
     <ClCompile Include="BuzonSugerenciaController.cpp" />
     <ClCompile Include="CalificacionController.cpp" />
-    <ClCompile Include="ConductorController.cpp" />
+    <ClCompile Include="EmpleadoController.cpp" />
     <ClCompile Include="EmergenciaController.cpp" />
     <ClCompile Include="GestionController.cpp" />
     <ClCompile Include="HorarioController.cpp" />

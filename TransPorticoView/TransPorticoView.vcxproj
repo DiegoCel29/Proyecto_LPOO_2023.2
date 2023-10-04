@@ -116,7 +116,7 @@
   <ItemGroup>
     <ClCompile Include="CrearCuenta.cpp" />
     <ClCompile Include="Editar_Atajos.cpp" />
-    <ClCompile Include="Editar_Conductor.cpp" />
+    <ClCompile Include="Editar_Empleado.cpp" />
     <ClCompile Include="Editar_Pasajero.cpp" />
     <ClCompile Include="FrmAgregarAutobuses.cpp" />
     <ClCompile Include="FrmEditarAutobuses.cpp" />
@@ -135,12 +135,12 @@
     <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
     <ClCompile Include="FrmMatenimientoAutobus.cpp" />
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
-    <ClCompile Include="NuevoConductor.cpp" />
+    <ClCompile Include="NuevoEmpleado.cpp" />
     <ClCompile Include="Nuevo_Atajos.cpp" />
     <ClCompile Include="PantallaIngreso.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MantenimientoAtajo.cpp" />
-    <ClCompile Include="MantenimientoConductor.cpp" />
+    <ClCompile Include="MantenimientoEmpleado.cpp" />
     <ClCompile Include="MantenimientoPasajero.cpp" />
     <ClCompile Include="MantenimientoSituacionRecorrido.cpp" />
     <ClCompile Include="OlvidoContrasena.cpp" />
@@ -165,7 +165,7 @@
     <ClInclude Include="Editar_Atajos.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Editar_Conductor.h">
+    <ClInclude Include="Editar_Empleado.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Editar_Pasajero.h">
@@ -222,7 +222,7 @@
     <ClInclude Include="FrmPantallaAdministrador.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="NuevoConductor.h">
+    <ClInclude Include="NuevoEmpleado.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Nuevo_Atajos.h">
@@ -234,7 +234,7 @@
     <ClInclude Include="MantenimientoAtajo.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MantenimientoConductor.h">
+    <ClInclude Include="MantenimientoEmpleado.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MantenimientoPasajero.h">
@@ -272,8 +272,8 @@
     <EmbeddedResource Include="Editar_Atajos.resx">
       <DependentUpon>Editar_Atajos.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Editar_Conductor.resx">
-      <DependentUpon>Editar_Conductor.h</DependentUpon>
+    <EmbeddedResource Include="Editar_Empleado.resx">
+      <DependentUpon>Editar_Empleado.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_Pasajero.resx">
       <DependentUpon>Editar_Pasajero.h</DependentUpon>
@@ -311,8 +311,8 @@
     <EmbeddedResource Include="FrmPantallaAdministrador.resx">
       <DependentUpon>FrmPantallaAdministrador.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NuevoConductor.resx">
-      <DependentUpon>NuevoConductor.h</DependentUpon>
+    <EmbeddedResource Include="NuevoEmpleado.resx">
+      <DependentUpon>NuevoEmpleado.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevo_Atajos.resx">
       <DependentUpon>Nuevo_Atajos.h</DependentUpon>
@@ -323,8 +323,8 @@
     <EmbeddedResource Include="MantenimientoAtajo.resx">
       <DependentUpon>MantenimientoAtajo.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoConductor.resx">
-      <DependentUpon>MantenimientoConductor.h</DependentUpon>
+    <EmbeddedResource Include="MantenimientoEmpleado.resx">
+      <DependentUpon>MantenimientoEmpleado.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoPasajero.resx">
       <DependentUpon>MantenimientoPasajero.h</DependentUpon>

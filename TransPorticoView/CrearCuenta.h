@@ -494,7 +494,7 @@ namespace TransPorticoView {
 
 		PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
 		Pasajero^ ObjPasajero = gcnew Pasajero(DNI, Nombres, ApellidoPat, ApellidoMat,Edad, Genero, Telefono, Contrasena,FechaCumpleanos);
-		ObjPasajeroController->agregarPasajero(ObjPasajero);
+		ObjPasajeroController->AgregarPasajero(ObjPasajero);
 
 		MessageBox::Show("Cuenta creada con exito.");
 		this->Close();

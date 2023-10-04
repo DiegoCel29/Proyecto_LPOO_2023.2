@@ -259,7 +259,7 @@ namespace TransPorticoView {
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ ParaderosBuscar = this->textBox1->Text;
 		PasajeroController^ objPasajeroController = gcnew PasajeroController();
-		List<Pasajero^>^ listaPASAJEROS = objPasajeroController->buscarPasajeros(ParaderosBuscar);
+		List<Pasajero^>^ listaPASAJEROS = objPasajeroController->BuscarPasajeros(ParaderosBuscar);
 		// Ahora voy a mostrar las carreras encontradas en la grilla
 		mostrarGrilla(listaPASAJEROS);
 	}
@@ -269,15 +269,15 @@ namespace TransPorticoView {
 			Pasajero^ objPasajero = listaPASAJEROS[i];
 			/*Esta filaGrilla representa una fila del data grid de la pantalla*/
 			array<String^>^ filaGrilla = gcnew array<String^>(9);
-			filaGrilla[0] = objPasajero->get_DNI();
-			filaGrilla[1] = objPasajero->get_Nombre();
-			filaGrilla[2] = objPasajero->get_ApellidoPat();
-			filaGrilla[3] = objPasajero->get_ApellidoMat();
-			filaGrilla[4] = Convert::ToString(objPasajero->get_Edad());
-			filaGrilla[5] = objPasajero->get_Genero();
-			filaGrilla[6] = objPasajero->get_Telefono();
-			filaGrilla[7] = objPasajero->get_Contrasena();
-			filaGrilla[8] = objPasajero->get_FechaNacimiento();
+			filaGrilla[0] = objPasajero->GetDNI_Pasajero();
+			filaGrilla[1] = objPasajero->GetNombre_Pasajero();
+			filaGrilla[2] = objPasajero->GetApellidoPat_Pasajero();
+			filaGrilla[3] = objPasajero->GetApellidoMat_Pasajero();
+			filaGrilla[4] = Convert::ToString(objPasajero->GetEdad_Pasajero());
+			filaGrilla[5] = objPasajero->GetGenero_Pasajero();
+			filaGrilla[6] = objPasajero->GetTelefono_Pasajero();
+			filaGrilla[7] = objPasajero->GetContrasena_Pasajero();
+			filaGrilla[8] = objPasajero->GetFechaNacimiento_Pasajero();
 			this->dataGridView1->Rows->Add(filaGrilla);
 		}
 	}
@@ -287,7 +287,7 @@ namespace TransPorticoView {
 		PasajeroController^ objetoPasajero;
 		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
 		String^ DNI_Eliminar = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-		objetoPasajero->eliminarPasajeroFisico(DNI_Eliminar);
+		objetoPasajero->EliminarPasajeroFisico(DNI_Eliminar);
 		MessageBox::Show("El Pasajero ha sido eliminado con éxito");
 	}
 
@@ -300,7 +300,7 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
 	String^ DNI_Editar = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
 	PasajeroController^ objPasajeroController = gcnew PasajeroController();
-	Pasajero^ objPasajero = objPasajeroController->buscarPasajeroxDNI(DNI_Editar);
+	Pasajero^ objPasajero = objPasajeroController->BuscarPasajeroDNI(DNI_Editar);
 	Editar_Pasajero^ ventanaEditarPasajero = gcnew Editar_Pasajero(objPasajero);
 	ventanaEditarPasajero->ShowDialog();
 }

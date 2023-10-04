@@ -1,6 +1,6 @@
 #pragma once
-#include "Editar_Conductor.h"
-#include "NuevoConductor.h"
+#include "Editar_Empleado.h"
+#include "NuevoEmpleado.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -14,12 +14,12 @@ namespace TransPorticoView {
 	using namespace TransPorticoModel;
 
 	/// <summary>
-	/// Resumen de MantenimientoConductor
+	/// Resumen de MantenimientoEmpleado
 	/// </summary>
-	public ref class MantenimientoConductor : public System::Windows::Forms::Form
+	public ref class MantenimientoEmpleado : public System::Windows::Forms::Form
 	{
 	public:
-		MantenimientoConductor(void)
+		MantenimientoEmpleado(void)
 		{
 			InitializeComponent();
 			//
@@ -31,7 +31,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~MantenimientoConductor()
+		~MantenimientoEmpleado()
 		{
 			if (components)
 			{
@@ -76,7 +76,7 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MantenimientoConductor::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MantenimientoEmpleado::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
@@ -133,7 +133,7 @@ namespace TransPorticoView {
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MantenimientoConductor::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &MantenimientoEmpleado::button1_Click);
 			// 
 			// dataGridView1
 			// 
@@ -230,7 +230,7 @@ namespace TransPorticoView {
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"Añadir";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MantenimientoConductor::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &MantenimientoEmpleado::button2_Click);
 			// 
 			// button3
 			// 
@@ -243,7 +243,7 @@ namespace TransPorticoView {
 			this->button3->TabIndex = 6;
 			this->button3->Text = L"Borrar";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &MantenimientoConductor::button3_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &MantenimientoEmpleado::button3_Click);
 			// 
 			// button4
 			// 
@@ -256,7 +256,7 @@ namespace TransPorticoView {
 			this->button4->TabIndex = 7;
 			this->button4->Text = L"Editar";
 			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &MantenimientoConductor::button4_Click);
+			this->button4->Click += gcnew System::EventHandler(this, &MantenimientoEmpleado::button4_Click);
 			// 
 			// panel1
 			// 
@@ -278,7 +278,7 @@ namespace TransPorticoView {
 			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->pictureBox1->TabIndex = 9;
 			this->pictureBox1->TabStop = false;
-			this->pictureBox1->Click += gcnew System::EventHandler(this, &MantenimientoConductor::pictureBox1_Click);
+			this->pictureBox1->Click += gcnew System::EventHandler(this, &MantenimientoEmpleado::pictureBox1_Click);
 			// 
 			// panel2
 			// 
@@ -290,7 +290,7 @@ namespace TransPorticoView {
 			this->panel2->Size = System::Drawing::Size(75, 638);
 			this->panel2->TabIndex = 10;
 			// 
-			// MantenimientoConductor
+			// MantenimientoEmpleado
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -307,8 +307,8 @@ namespace TransPorticoView {
 			this->Controls->Add(this->textBox1);
 			this->Controls->Add(this->label1);
 			this->Margin = System::Windows::Forms::Padding(4);
-			this->Name = L"MantenimientoConductor";
-			this->Text = L"MantenimientoConductor";
+			this->Name = L"MantenimientoEmpleado";
+			this->Text = L"MantenimientoEmpleado";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
@@ -317,52 +317,52 @@ namespace TransPorticoView {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ ConductoresBuscar = this->textBox1->Text;
-		ConductorController^ objConductorController = gcnew ConductorController();
-		List<Empleado^>^ listaCONDUCTORES = objConductorController->buscarConductores(ConductoresBuscar);
+		String^ EmpleadoesBuscar = this->textBox1->Text;
+		EmpleadoController^ objEmpleadoController = gcnew EmpleadoController();
+		List<Empleado^>^ listaEmpleadoES = objEmpleadoController->BuscarEmpleados(EmpleadoesBuscar);
 		// Ahora voy a mostrar las carreras encontradas en la grilla
-		mostrarGrilla(listaCONDUCTORES);
+		mostrarGrilla(listaEmpleadoES);
 	}
-	private: void mostrarGrilla(List<Empleado^>^ listaCONDUCTORES) {
+	private: void mostrarGrilla(List<Empleado^>^ listaEmpleadoES) {
 		this->dataGridView1->Rows->Clear(); /*Elimino toda la informacion del datagrid*/
-		for (int i = 0; i < listaCONDUCTORES->Count; i++) {
-			Empleado^ objEmpleado = listaCONDUCTORES[i];
+		for (int i = 0; i < listaEmpleadoES->Count; i++) {
+			Empleado^ objEmpleado = listaEmpleadoES[i];
 			/*Esta filaGrilla representa una fila del data grid de la pantalla*/
 			array<String^>^ filaGrilla = gcnew array<String^>(10);
-			filaGrilla[0] = objEmpleado->get_DNI_();
-			filaGrilla[1] = objEmpleado->get_Nombre_();
-			filaGrilla[2] = objEmpleado->get_ApellidoPat_();
-			filaGrilla[3] = objEmpleado->get_ApellidoMat_();
-			filaGrilla[4] = Convert::ToString(objEmpleado->get_Edad_());
-			filaGrilla[5] = objEmpleado->get_Genero_();
-			filaGrilla[6] = objEmpleado->get_Telefono_();
-			filaGrilla[7] = objEmpleado->get_Contrasena_();
-			filaGrilla[8] = Convert::ToString(objEmpleado->get_Sueldo_());
-			filaGrilla[9] = objEmpleado->get_EstadoContrato_();
+			filaGrilla[0] = objEmpleado->GetDNI_Empleado();
+			filaGrilla[1] = objEmpleado->GetNombre_Empleado();
+			filaGrilla[2] = objEmpleado->GetApellidoPat_Empleado();
+			filaGrilla[3] = objEmpleado->GetApellidoMat_Empleado();
+			filaGrilla[4] = Convert::ToString(objEmpleado->GetEdad_Empleado());
+			filaGrilla[5] = objEmpleado->GetGenero_Empleado();
+			filaGrilla[6] = objEmpleado->GetTelefono_Empleado();
+			filaGrilla[7] = objEmpleado->GetContrasena_Empleado();
+			filaGrilla[8] = Convert::ToString(objEmpleado->GetSueldo_Empleado());
+			filaGrilla[9] = objEmpleado->GetEstadoContrato_Empleado();
 			this->dataGridView1->Rows->Add(filaGrilla);
 		}
 	}
 	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-	ConductorController^ objetoConductor;
+	EmpleadoController^ objetoEmpleado;
 	int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-	String^ DNI_Eliminar_Conductor = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-	objetoConductor->eliminarConductorFisico(DNI_Eliminar_Conductor);
-	MessageBox::Show("El Conductor ha sido eliminado con éxito");
+	String^ DNI_Eliminar_Empleado = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+	objetoEmpleado->EliminarEmpleado(DNI_Eliminar_Empleado);
+	MessageBox::Show("El Empleado ha sido eliminado con éxito");
 }
 
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
 	int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-	String^ DNI_Editar_Conductor = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-	ConductorController^ objConductorController = gcnew ConductorController();
-	Empleado^ objConductor = objConductorController->buscarConductorxDNI(DNI_Editar_Conductor);
-	Editar_Conductor^ ventanaEditarConductor = gcnew Editar_Conductor(objConductor);
-	ventanaEditarConductor->ShowDialog();
+	String^ DNI_Editar_Empleado = this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+	EmpleadoController^ objEmpleadoController = gcnew EmpleadoController();
+	Empleado^ objEmpleado = objEmpleadoController->BuscarEmpleadoDNI(DNI_Editar_Empleado);
+	Editar_Empleado^ ventanaEditarEmpleado = gcnew Editar_Empleado(objEmpleado);
+	ventanaEditarEmpleado->ShowDialog();
 }
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	NuevoConductor^ ventanaNuevoConductor = gcnew NuevoConductor( );
-	ventanaNuevoConductor->ShowDialog();
+	NuevoEmpleado^ ventanaNuevoEmpleado = gcnew NuevoEmpleado( );
+	ventanaNuevoEmpleado->ShowDialog();
 }
 };
 }

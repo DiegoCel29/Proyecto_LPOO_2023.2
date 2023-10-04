@@ -48,7 +48,7 @@
     <ClInclude Include="AtajosController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="ConductorController.h">
+    <ClInclude Include="EmpleadoController.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="TarifarioController.h">
@@ -107,7 +107,7 @@
     <ClCompile Include="AtajosController.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="ConductorController.cpp">
+    <ClCompile Include="EmpleadoController.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="TarifarioController.cpp">
