@@ -10,6 +10,6 @@ void main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	FrmMantenimientoPersona Ventana;
+	PantallaIngreso Ventana;
 	Application::Run(% Ventana);
 }

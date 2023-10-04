@@ -68,7 +68,7 @@ void ConductorController::escribirConductor(List<Empleado^>^ listaConductores) {
 	array<String^>^ lineasConductor = gcnew array<String^>(listaConductores->Count);
 	for (int i = 0; i < listaConductores->Count; i++) {
 		Empleado^ objeto = listaConductores[i];
-		lineasConductor[i] = objeto->get_DNI_() + ";" + objeto->get_Nombre_() + ";" + objeto->get_ApellidoPat_() + ";" + objeto->get_ApellidoMat_() + ";" + objeto->get_Edad_() + ";" + objeto->get_Genero_() + ";" + objeto->get_Telefono_() + ";" + objeto->get_Contrasena_() + ";" + objeto->get_Sueldo_()+objeto->get_EstadoContrato_();
+		lineasConductor[i] = objeto->get_DNI_() + ";" + objeto->get_Nombre_() + ";" + objeto->get_ApellidoPat_() + ";" + objeto->get_ApellidoMat_() + ";" + objeto->get_Edad_() + ";" + objeto->get_Genero_() + ";" + objeto->get_Telefono_() + ";" + objeto->get_Contrasena_() + ";" + objeto->get_Sueldo_()+ ";" + objeto->get_EstadoContrato_();
 	}
 	File::WriteAllLines("Empleados.txt", lineasConductor);
 }
