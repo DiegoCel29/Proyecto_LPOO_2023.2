@@ -148,9 +148,10 @@ namespace TransPorticoView {
 			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->B_Buscar->Location = System::Drawing::Point(440, 75);
+			this->B_Buscar->Location = System::Drawing::Point(587, 92);
+			this->B_Buscar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->B_Buscar->Name = L"B_Buscar";
-			this->B_Buscar->Size = System::Drawing::Size(100, 40);
+			this->B_Buscar->Size = System::Drawing::Size(133, 49);
 			this->B_Buscar->TabIndex = 1;
 			this->B_Buscar->Text = L"Buscar";
 			this->B_Buscar->UseVisualStyleBackColor = true;
@@ -163,9 +164,10 @@ namespace TransPorticoView {
 			this->B_Anadir->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Anadir->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Anadir->Location = System::Drawing::Point(0, 520);
+			this->B_Anadir->Location = System::Drawing::Point(0, 640);
+			this->B_Anadir->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->B_Anadir->Name = L"B_Anadir";
-			this->B_Anadir->Size = System::Drawing::Size(100, 40);
+			this->B_Anadir->Size = System::Drawing::Size(133, 49);
 			this->B_Anadir->TabIndex = 2;
 			this->B_Anadir->Text = L"Añadir";
 			this->B_Anadir->UseVisualStyleBackColor = true;
@@ -178,9 +180,10 @@ namespace TransPorticoView {
 			this->B_Borrar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Borrar->Location = System::Drawing::Point(320, 520);
+			this->B_Borrar->Location = System::Drawing::Point(427, 640);
+			this->B_Borrar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->B_Borrar->Name = L"B_Borrar";
-			this->B_Borrar->Size = System::Drawing::Size(100, 40);
+			this->B_Borrar->Size = System::Drawing::Size(133, 49);
 			this->B_Borrar->TabIndex = 3;
 			this->B_Borrar->Text = L"Borrar";
 			this->B_Borrar->UseVisualStyleBackColor = true;
@@ -193,9 +196,10 @@ namespace TransPorticoView {
 			this->B_Editar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Editar->Location = System::Drawing::Point(600, 520);
+			this->B_Editar->Location = System::Drawing::Point(800, 640);
+			this->B_Editar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->B_Editar->Name = L"B_Editar";
-			this->B_Editar->Size = System::Drawing::Size(100, 40);
+			this->B_Editar->Size = System::Drawing::Size(133, 49);
 			this->B_Editar->TabIndex = 4;
 			this->B_Editar->Text = L"Editar";
 			this->B_Editar->UseVisualStyleBackColor = true;
@@ -208,9 +212,10 @@ namespace TransPorticoView {
 			this->L_ParaderoInicial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->L_ParaderoInicial->ForeColor = System::Drawing::Color::Black;
-			this->L_ParaderoInicial->Location = System::Drawing::Point(10, 80);
+			this->L_ParaderoInicial->Location = System::Drawing::Point(13, 98);
+			this->L_ParaderoInicial->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_ParaderoInicial->Name = L"L_ParaderoInicial";
-			this->L_ParaderoInicial->Size = System::Drawing::Size(150, 30);
+			this->L_ParaderoInicial->Size = System::Drawing::Size(200, 37);
 			this->L_ParaderoInicial->TabIndex = 5;
 			this->L_ParaderoInicial->Text = L"Paradero inicial:";
 			this->L_ParaderoInicial->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -228,9 +233,11 @@ namespace TransPorticoView {
 			this->GB_Busqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
-			this->GB_Busqueda->Location = System::Drawing::Point(262, 0);
+			this->GB_Busqueda->Location = System::Drawing::Point(349, 0);
+			this->GB_Busqueda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Size = System::Drawing::Size(550, 180);
+			this->GB_Busqueda->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->GB_Busqueda->Size = System::Drawing::Size(733, 222);
 			this->GB_Busqueda->TabIndex = 8;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
@@ -239,9 +246,10 @@ namespace TransPorticoView {
 			// 
 			this->CB_ParaderoInicial->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->CB_ParaderoInicial->FormattingEnabled = true;
-			this->CB_ParaderoInicial->Location = System::Drawing::Point(175, 80);
+			this->CB_ParaderoInicial->Location = System::Drawing::Point(233, 98);
+			this->CB_ParaderoInicial->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->CB_ParaderoInicial->Name = L"CB_ParaderoInicial";
-			this->CB_ParaderoInicial->Size = System::Drawing::Size(250, 32);
+			this->CB_ParaderoInicial->Size = System::Drawing::Size(332, 37);
 			this->CB_ParaderoInicial->TabIndex = 11;
 			// 
 			// L_Ruta
@@ -251,9 +259,10 @@ namespace TransPorticoView {
 			this->L_Ruta->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->L_Ruta->ForeColor = System::Drawing::Color::Black;
-			this->L_Ruta->Location = System::Drawing::Point(10, 30);
+			this->L_Ruta->Location = System::Drawing::Point(13, 37);
+			this->L_Ruta->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Ruta->Name = L"L_Ruta";
-			this->L_Ruta->Size = System::Drawing::Size(150, 30);
+			this->L_Ruta->Size = System::Drawing::Size(200, 37);
 			this->L_Ruta->TabIndex = 9;
 			this->L_Ruta->Text = L"Ruta:";
 			this->L_Ruta->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -261,9 +270,10 @@ namespace TransPorticoView {
 			// TB_Ruta
 			// 
 			this->TB_Ruta->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Ruta->Location = System::Drawing::Point(175, 30);
+			this->TB_Ruta->Location = System::Drawing::Point(233, 37);
+			this->TB_Ruta->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->TB_Ruta->Name = L"TB_Ruta";
-			this->TB_Ruta->Size = System::Drawing::Size(250, 29);
+			this->TB_Ruta->Size = System::Drawing::Size(333, 34);
 			this->TB_Ruta->TabIndex = 10;
 			// 
 			// L_Tarifa
@@ -273,9 +283,10 @@ namespace TransPorticoView {
 			this->L_Tarifa->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->L_Tarifa->ForeColor = System::Drawing::Color::Black;
-			this->L_Tarifa->Location = System::Drawing::Point(10, 130);
+			this->L_Tarifa->Location = System::Drawing::Point(13, 160);
+			this->L_Tarifa->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Tarifa->Name = L"L_Tarifa";
-			this->L_Tarifa->Size = System::Drawing::Size(150, 30);
+			this->L_Tarifa->Size = System::Drawing::Size(200, 37);
 			this->L_Tarifa->TabIndex = 7;
 			this->L_Tarifa->Text = L"Costo:";
 			this->L_Tarifa->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -283,9 +294,10 @@ namespace TransPorticoView {
 			// TB_Tarifa
 			// 
 			this->TB_Tarifa->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Tarifa->Location = System::Drawing::Point(175, 130);
+			this->TB_Tarifa->Location = System::Drawing::Point(233, 160);
+			this->TB_Tarifa->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->TB_Tarifa->Name = L"TB_Tarifa";
-			this->TB_Tarifa->Size = System::Drawing::Size(250, 29);
+			this->TB_Tarifa->Size = System::Drawing::Size(333, 34);
 			this->TB_Tarifa->TabIndex = 8;
 			// 
 			// DGV_Tarifario
@@ -319,52 +331,58 @@ namespace TransPorticoView {
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->DGV_Tarifario->DefaultCellStyle = dataGridViewCellStyle2;
 			this->DGV_Tarifario->EnableHeadersVisualStyles = false;
-			this->DGV_Tarifario->Location = System::Drawing::Point(0, 200);
+			this->DGV_Tarifario->Location = System::Drawing::Point(0, 246);
+			this->DGV_Tarifario->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->DGV_Tarifario->Name = L"DGV_Tarifario";
 			this->DGV_Tarifario->ReadOnly = true;
 			this->DGV_Tarifario->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
 			this->DGV_Tarifario->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->DGV_Tarifario->Size = System::Drawing::Size(700, 300);
+			this->DGV_Tarifario->Size = System::Drawing::Size(933, 369);
 			this->DGV_Tarifario->TabIndex = 9;
 			// 
 			// DGVC_Identificador
 			// 
 			this->DGVC_Identificador->HeaderText = L"Identificador";
+			this->DGVC_Identificador->MinimumWidth = 6;
 			this->DGVC_Identificador->Name = L"DGVC_Identificador";
 			this->DGVC_Identificador->ReadOnly = true;
 			// 
 			// DGVC_RutaAsociada
 			// 
 			this->DGVC_RutaAsociada->HeaderText = L"Ruta asociada";
+			this->DGVC_RutaAsociada->MinimumWidth = 6;
 			this->DGVC_RutaAsociada->Name = L"DGVC_RutaAsociada";
 			this->DGVC_RutaAsociada->ReadOnly = true;
 			// 
 			// DGCV_ParaderoInicial
 			// 
 			this->DGCV_ParaderoInicial->HeaderText = L"Paradero inicial";
+			this->DGCV_ParaderoInicial->MinimumWidth = 6;
 			this->DGCV_ParaderoInicial->Name = L"DGCV_ParaderoInicial";
 			this->DGCV_ParaderoInicial->ReadOnly = true;
 			// 
 			// DGVC_ParaderoFinal
 			// 
 			this->DGVC_ParaderoFinal->HeaderText = L"Paradero final";
+			this->DGVC_ParaderoFinal->MinimumWidth = 6;
 			this->DGVC_ParaderoFinal->Name = L"DGVC_ParaderoFinal";
 			this->DGVC_ParaderoFinal->ReadOnly = true;
 			// 
 			// DGVC_Tarifa
 			// 
 			this->DGVC_Tarifa->HeaderText = L"Tarifa";
+			this->DGVC_Tarifa->MinimumWidth = 6;
 			this->DGVC_Tarifa->Name = L"DGVC_Tarifa";
 			this->DGVC_Tarifa->ReadOnly = true;
 			// 
 			// TarifarioMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::ActiveBorder;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(966, 618);
+			this->ClientSize = System::Drawing::Size(1369, 790);
 			this->Controls->Add(this->DGV_Tarifario);
 			this->Controls->Add(this->GB_Busqueda);
 			this->Controls->Add(this->B_Editar);
@@ -372,6 +390,7 @@ namespace TransPorticoView {
 			this->Controls->Add(this->B_Anadir);
 			this->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"TarifarioMantenimiento";
 			this->Text = L"TarifarioMantenimiento";
 			this->Load += gcnew System::EventHandler(this, &TarifarioMantenimiento::TarifarioMantenimiento_Load);

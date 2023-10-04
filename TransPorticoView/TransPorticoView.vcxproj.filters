@@ -19,114 +19,116 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TarifarioMantenimiento.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
-    <ClCompile Include="Editar_Atajos.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PromocionesMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="NuevoEmpleado.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Nuevo_Atajos.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PromocionesMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PromocionesMantenimientoEditar.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="CrearCuenta.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="Editar_Atajos.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="Editar_Empleado.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="Editar_Pasajero.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmAgregarAutobuses.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmEditarAutobuses.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="frmMantenimientoCalificacion.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="frmMantenimientoEmergencia.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmMantenimientoGestion.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="frmMantenimientoHorario.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="frmMantenimientoEmergencia.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmMantenimientoInformeEconomico.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="FrmMantenimientoMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="frmMantenimientoMedidasEstadisticas.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="FrmMantenimientoMantenimiento.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="frmMantenimientoParadero.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmMantenimientoPersona.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="frmMantenimientoRuta.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmMantenimientoTarjeta.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmMatenimientoAutobus.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="FrmPantallaAdministrador.cpp">
-      <Filter>Archivos de origen</Filter>
+    <ClCompile Include="frmMantenimientoRuta.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="MantenimientoAtajo.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="FrmPantallaAdministrador.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="MantenimientoEmpleado.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="MantenimientoPasajero.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="Nuevo_Atajos.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="MantenimientoSituacionRecorrido.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="OlvidoContrasena.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PantallaIngreso.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="PantallaPrincipalAdministrador.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="PromocionesMantenimientoAnadir.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="PromocionesMantenimientoEditar.cpp">
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="TarifarioMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="TarifarioMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
+      <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="PromocionesMantenimiento.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="PantallaIngreso.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="TarifarioMantenimientoEditar.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="NuevoEmpleado.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PantallaIngreso.h">

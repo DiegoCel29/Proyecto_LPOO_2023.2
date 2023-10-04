@@ -1,1 +1,2 @@
 1;500;1000;Estacion Las Gatitas;500;500;Estacion Puente Atocongo;Ruta B
+2;2000;3000;Kentucky;2000;2000;Las Palmas;Ruta B
