@@ -231,7 +231,7 @@ namespace TransPorticoView {
 			Atajo^ objAtajo = listaATAJOS[i];
 			/*Esta filaGrilla representa una fila del data grid de la pantalla*/
 			array<String^>^ filaGrilla = gcnew array<String^>(9);
-			filaGrilla[0] = Convert::ToString(objAtajo->getCodigo());
+			filaGrilla[0] = Convert::ToString(objAtajo->getCodigo_A());
 			filaGrilla[1] = Convert::ToString(objAtajo->getX_Inicio());
 			filaGrilla[2] = Convert::ToString(objAtajo->getY_Inicio());
 			filaGrilla[3] = objAtajo->getParadero_Inicio();

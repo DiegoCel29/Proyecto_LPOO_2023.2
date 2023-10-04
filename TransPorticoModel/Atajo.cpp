@@ -17,10 +17,10 @@ Atajo::Atajo(int Codigo, int X_Inicio, int Y_Inicio, String^ Paradero_Inicio, in
 	this->RutaAsociada = RutaAsociada;
 }
 
-void Atajo::setCodigo(int Codigo) {
+void Atajo::setCodigo_A(int Codigo) {
 	this->Codigo = Codigo;
 }
-int Atajo::getCodigo() {
+int Atajo::getCodigo_A() {
 	return this->Codigo;
 }
 

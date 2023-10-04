@@ -18,8 +18,8 @@ namespace TransPorticoModel {
 	public:
 		Atajo();
 		Atajo(int Codigo, int X_Inicio, int Y_Inicio, String^ Paradero_Inicio, int X_Final, int Y_Final, String^ Paradero_Final, String^ RutaAsociada);
-		int getCodigo();
-		void setCodigo(int Codigo);
+		int getCodigo_A();
+		void setCodigo_A(int Codigo);
 		int getX_Inicio();
 		void setX_Inicio(int X_Inicio);
 		int getY_Inicio();

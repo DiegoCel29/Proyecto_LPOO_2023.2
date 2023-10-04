@@ -10,5 +10,12 @@ namespace TransPorticoController {
 	public:
 		AtajosController();
 		List<Atajo^>^ buscarAtajos(String^ atajos);
+		List<Atajo^>^ buscarAllAtajos();
+		void escribirAtajos(List<Atajo^>^ listaAtajos);
+		void eliminarAtajosFisico(int codigo);
+		void agregarAtajos(Atajo^ objAtajo);
+		Atajo^ buscarAtajosxCodigo(int codigo);
+		void actualizarAtajos(Atajo^ objAtajo);
 	};
 }
+
