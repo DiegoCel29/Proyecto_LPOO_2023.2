@@ -9,8 +9,7 @@ namespace TransPorticoModel {
 
 	public:
 		Empleado();
-		Empleado(int Codigo, String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ Tipo, int Sueldo, String^ EstadoContrato);
-		Empleado(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, int Sueldo, String^ EstadoContrato);
+		Empleado(String^ DNI, String^ Nombre, String^ ApellidoPat, String^ ApellidoMat, int Edad, String^ Genero, String^ Telefono, String^ Contrasena, String^ Tipo , int Sueldo, String^ EstadoContrato);
 		String^ GetDNI_Empleado();
 		void SetDNI_Empleado(String^ DNI);
 
@@ -34,6 +33,9 @@ namespace TransPorticoModel {
 
 		String^ GetContrasena_Empleado();
 		void SetContrasena_Empleado(String^ Contrasena);
+
+		String^ GetTipo_Empleado();
+		void SetTipo_Empleado(String^ Contrasena);
 
 		int GetSueldo_Empleado();
 		void SetSueldo_Empleado(int Sueldo);

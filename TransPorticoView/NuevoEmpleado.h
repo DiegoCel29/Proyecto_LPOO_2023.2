@@ -493,16 +493,12 @@ namespace TransPorticoView {
 		String^ Genero = this->CB_Genero->Text;
 		String^ Telefono = this->TB_Telefono->Text;
 		String^ Contrasena = this->TB_Contrasena->Text;
+		String^ Tipo = "ARREGLAR NE-496";
 		int Sueldo = Convert::ToInt32(this->TB_Sueldo->Text);
 		String^ Contrato = this->TB_Contrato->Text;
 
-		PersonaController^ ObjPersonaController = gcnew PersonaController();
-		int Codigo = (ObjPersonaController->BuscarUltimoCodigo() + 1);
-		Persona^ ObjPersona = gcnew Persona(Codigo, Nombres, ApellidoPat, ApellidoMat, DNI, Edad, Genero, Telefono, Contrasena, "Pasajero");
-		ObjPersonaController->AgregarPersona(ObjPersona);
-
 		EmpleadoController^ ObjEmpleadoController = gcnew EmpleadoController();
-		Empleado^ ObjEmpleado = gcnew Empleado(DNI, Nombres, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena,Sueldo,Contrato);
+		Empleado^ ObjEmpleado = gcnew Empleado(DNI, Nombres, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, Tipo, Sueldo, Contrato);
 		ObjEmpleadoController->AgregarEmpleado(ObjEmpleado);
 
 		MessageBox::Show("Cuenta de Empleado creada con exito.");

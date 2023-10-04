@@ -301,21 +301,20 @@ namespace TransPorticoView {
 
 			array<String^>^ FilaGrilla = gcnew array<String^>(8);
 			
-			FilaGrilla[0] = Convert::ToString(ObjPersona->GetCodigo());
+			FilaGrilla[0] = ObjPersona->GetDNI();
 			FilaGrilla[1] = ObjPersona->GetNombres();
 			FilaGrilla[2] = ObjPersona->GetApellidoPat();
 			FilaGrilla[3] = ObjPersona->GetApellidoMat();
-			FilaGrilla[4] = ObjPersona->GetDNI();
-			FilaGrilla[5] = Convert::ToString(ObjPersona->GetEdad());
-			FilaGrilla[6] = ObjPersona->GetGenero();
-			FilaGrilla[7] = ObjPersona->GetTelefono();
+			FilaGrilla[4] = Convert::ToString(ObjPersona->GetEdad());
+			FilaGrilla[5] = ObjPersona->GetGenero();
+			FilaGrilla[6] = ObjPersona->GetTelefono();
 
 			this->DGV_Persona->Rows->Add(FilaGrilla);
 		}
 	}
 	private: System::Void Boton_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
 		int FilaSeleccionada = this->DGV_Persona->SelectedRows[0]->Index;
-		int DNIPersonaEliminar = Convert::ToInt32(this->DGV_Persona->Rows[FilaSeleccionada]->Cells[0]->Value->ToString());
+		String^ DNIPersonaEliminar = this->DGV_Persona->Rows[FilaSeleccionada]->Cells[0]->Value->ToString();
 
 		PersonaController^ ObjPersonaController = gcnew PersonaController();
 		ObjPersonaController->EliminarPersona(DNIPersonaEliminar);

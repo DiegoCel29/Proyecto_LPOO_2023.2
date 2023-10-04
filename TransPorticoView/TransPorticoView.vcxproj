@@ -364,13 +364,13 @@
     <Text Include="BuzonSugerencia.txt" />
     <Text Include="Calificacion.txt" />
     <Text Include="Emergencia.txt" />
-    <Text Include="Empleados.txt" />
+    <Text Include="ListaEmpleados.txt" />
     <Text Include="Horario.txt" />
     <Text Include="Lista_Atajos.txt" />
     <Text Include="Lista_Autobuses.txt" />
     <Text Include="Lista_Informes.txt" />
     <Text Include="Tarifario.txt" />
-    <Text Include="Lista_pasajeros.txt" />
+    <Text Include="ListaPasajeros.txt" />
     <Text Include="Lista_Rutas.txt" />
     <Text Include="Lista_SituacionRecorrido.txt" />
     <Text Include="Mantenimientos.txt" />

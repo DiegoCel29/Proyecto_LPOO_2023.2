@@ -36,6 +36,8 @@ namespace TransPorticoModel {
 		String^ GetContrasena_Pasajero();
 		void SetContrasena_Pasajero(String^ Contrasena);
 
+		String^ GetTipo_Pasajero();
+
 		String^ GetFechaNacimiento_Pasajero();
 		void SetFechaNacimiento_Pasajero(String^ Contrasena);
 

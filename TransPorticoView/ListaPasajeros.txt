@@ -1,0 +1,3 @@
+76849076;Milen Margaret;Toribio;Alva;19;Masculino;991593244;Alasha26;Pasajero;26/01/2004
+72457071;Cesar Edú;Peña;Rengifo;19;Masculino;936893016;Sultan29;Pasajero;29/01/2004
+71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;Pasajero;13/06/2000

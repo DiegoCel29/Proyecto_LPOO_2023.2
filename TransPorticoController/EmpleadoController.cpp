@@ -12,13 +12,14 @@ EmpleadoController::EmpleadoController() {
 List<Empleado^>^ EmpleadoController::BuscarEmpleados(String^ Empleados) {
 	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
 	List<Empleado^>^ listaEmpleadoesEncontrados = gcnew List<Empleado^>();
-	array<String^>^ lineas = File::ReadAllLines("Empleados.txt");
+	array<String^>^ lineas = File::ReadAllLines("ListaEmpleados.txt");
 
 	String^ separadores = ";"; /*Aqui defino el caracter por el cual voy a separar la informacion de cada linea*/
 	/*Esta instruccion for each nos permite ir elemento por elemento de un array*/
 	for each (String ^ lineaEmpleadoes in lineas) {
 		/*Voy a separar cada elemento del String por ; con el split*/
 		array<String^>^ Datos = lineaEmpleadoes->Split(separadores->ToCharArray());
+
 		String^ DNI = Datos[0];
 		String^ Nombre = Datos[1];
 		String^ ApellidoPat = Datos[2];
@@ -27,11 +28,12 @@ List<Empleado^>^ EmpleadoController::BuscarEmpleados(String^ Empleados) {
 		String^ Genero = Datos[5];
 		String^ Telefono = Datos[6];
 		String^ Contrasena = Datos[7];
-		int Sueldo = Convert::ToInt32(Datos[8]);
-		String^ EstadoContrato = Datos[9];
+		String^ Tipo = Datos[8];
+		int Sueldo = Convert::ToInt32(Datos[9]);
+		String^ EstadoContrato = Datos[10];
 
 		if (Nombre->Contains(Empleados)) {
-			Empleado^ objEmpleado = gcnew Empleado(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena,Sueldo, EstadoContrato);
+			Empleado^ objEmpleado = gcnew Empleado(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, Tipo, Sueldo, EstadoContrato);
 			listaEmpleadoesEncontrados->Add(objEmpleado);
 		}
 	}
@@ -40,7 +42,7 @@ List<Empleado^>^ EmpleadoController::BuscarEmpleados(String^ Empleados) {
 List<Empleado^>^ EmpleadoController::BuscarEmpleadosAll( ) {
 	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
 	List<Empleado^>^ listaEmpleadoesEncontrados = gcnew List<Empleado^>();
-	array<String^>^ lineas = File::ReadAllLines("Empleados.txt");
+	array<String^>^ lineas = File::ReadAllLines("ListaEmpleados.txt");
 
 	String^ separadores = ";"; /*Aqui defino el caracter por el cual voy a separar la informacion de cada linea*/
 	/*Esta instruccion for each nos permite ir elemento por elemento de un array*/
@@ -55,10 +57,11 @@ List<Empleado^>^ EmpleadoController::BuscarEmpleadosAll( ) {
 		String^ Genero = Datos[5];
 		String^ Telefono = Datos[6];
 		String^ Contrasena = Datos[7];
-		int Sueldo = Convert::ToInt32(Datos[8]);
-		String^ EstadoContrato = Datos[9];
+		String^ Tipo = Datos[8];
+		int Sueldo = Convert::ToInt32(Datos[9]);
+		String^ EstadoContrato = Datos[10];
 
-		Empleado^ objEmpleado = gcnew Empleado(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, Sueldo, EstadoContrato);
+		Empleado^ objEmpleado = gcnew Empleado(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, Tipo, Sueldo, EstadoContrato);
 		listaEmpleadoesEncontrados->Add(objEmpleado);
 	}
 	return listaEmpleadoesEncontrados;
@@ -70,7 +73,7 @@ void EmpleadoController::EscribirEmpleado(List<Empleado^>^ listaEmpleados) {
 		Empleado^ objeto = listaEmpleados[i];
 		lineasEmpleado[i] = objeto->GetDNI_Empleado() + ";" + objeto->GetNombre_Empleado() + ";" + objeto->GetApellidoPat_Empleado() + ";" + objeto->GetApellidoMat_Empleado() + ";" + objeto->GetEdad_Empleado() + ";" + objeto->GetGenero_Empleado() + ";" + objeto->GetTelefono_Empleado() + ";" + objeto->GetContrasena_Empleado() + ";" + objeto->GetSueldo_Empleado()+ ";" + objeto->GetEstadoContrato_Empleado();
 	}
-	File::WriteAllLines("Empleados.txt", lineasEmpleado);
+	File::WriteAllLines("ListaEmpleados.txt", lineasEmpleado);
 }
 
 void EmpleadoController::EliminarEmpleado(String^ DNI_Eliminar_Empleado) {

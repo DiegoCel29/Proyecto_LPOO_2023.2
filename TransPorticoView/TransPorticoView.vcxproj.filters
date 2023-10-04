@@ -245,7 +245,7 @@
     <Text Include="Emergencia.txt">
       <Filter>Archivod de texto</Filter>
     </Text>
-    <Text Include="Empleados.txt">
+    <Text Include="ListaEmpleados.txt">
       <Filter>Archivod de texto</Filter>
     </Text>
     <Text Include="Horario.txt">
@@ -260,7 +260,7 @@
     <Text Include="Lista_Informes.txt">
       <Filter>Archivod de texto</Filter>
     </Text>
-    <Text Include="Lista_pasajeros.txt">
+    <Text Include="ListaPasajeros.txt">
       <Filter>Archivod de texto</Filter>
     </Text>
     <Text Include="Lista_Rutas.txt">

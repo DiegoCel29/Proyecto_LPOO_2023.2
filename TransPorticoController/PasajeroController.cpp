@@ -12,7 +12,7 @@ PasajeroController::PasajeroController() {
 List<Pasajero^>^ PasajeroController::BuscarPasajeros(String^ pasajeros) {
 
 	List<Pasajero^>^ listaPasajerosEncontrados = gcnew List<Pasajero^>();
-	array<String^>^ lineas = File::ReadAllLines("Lista_pasajeros.txt");
+	array<String^>^ lineas = File::ReadAllLines("ListaPasajeros.txt");
 
 	String^ separadores = ";";
 
@@ -42,7 +42,7 @@ List<Pasajero^>^ PasajeroController::BuscarPasajeros(String^ pasajeros) {
 List<Pasajero^>^ PasajeroController::BuscarAllPasajeros() {
 	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
 	List<Pasajero^>^ listaPasajerosEncontrados = gcnew List<Pasajero^>();
-	array<String^>^ lineas = File::ReadAllLines("Lista_pasajeros.txt");
+	array<String^>^ lineas = File::ReadAllLines("ListaPasajeros.txt");
 
 	String^ separadores = ";"; /*Aqui defino el caracter por el cual voy a separar la informacion de cada linea*/
 	/*Esta instruccion for each nos permite ir elemento por elemento de un array*/
@@ -71,7 +71,7 @@ void PasajeroController::EscribirPasajero(List<Pasajero^>^ lista) {
 		Pasajero^ objeto = lista[i];
 		lineasPasajero[i] = objeto->GetDNI_Pasajero() + ";" + objeto->GetNombre_Pasajero() + ";" + objeto->GetApellidoPat_Pasajero() + ";" + objeto->GetApellidoMat_Pasajero() + ";" + objeto->GetEdad_Pasajero() + ";" + objeto->GetGenero_Pasajero() + ";" + objeto->GetTelefono_Pasajero() + ";" + objeto->GetContrasena_Pasajero() + ";" + objeto->GetFechaNacimiento_Pasajero();
 	}
-	File::WriteAllLines("Lista_pasajeros.txt", lineasPasajero);
+	File::WriteAllLines("ListaPasajeros.txt", lineasPasajero);
 }
 
 void PasajeroController::EliminarPasajeroFisico(String^ DNI_Eliminar) {

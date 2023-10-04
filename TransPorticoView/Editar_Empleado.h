@@ -519,9 +519,10 @@ namespace TransPorticoView {
 		String^ Genero = this->CB_Genero->Text;
 		String^ Telefono = this->TB_Telefono->Text;
 		String^ Contrasena = this->TB_Contrasena->Text;
+		String^ Tipo = "ARREGLAR, EE-522";
 		int Sueldo = Convert::ToInt32(this->TB_Sueldo->Text);
 		String^ Contrato = this->TB_Contrato->Text;
-		Empleado^ objEmpleado = gcnew Empleado(DNI, Nombre, Apellido_Pat, Apellido_Mat, Edad, Genero, Telefono, Contrasena,Sueldo,Contrato);
+		Empleado^ objEmpleado = gcnew Empleado(DNI, Nombre, Apellido_Pat, Apellido_Mat, Edad, Genero, Telefono, Contrasena, Tipo, Sueldo, Contrato);
 		EmpleadoController^ objEmpleadoController = gcnew EmpleadoController();
 		objEmpleadoController->ActualizarEmpleado(objEmpleado);
 		MessageBox::Show("Los datos del Empleado han sido actualizados con exito");

@@ -488,13 +488,8 @@ namespace TransPorticoView {
 		String^ FechaCumpleanos = this->Tiempo_Cumpleanos->Text;
 
 		PersonaController^ ObjPersonaController = gcnew PersonaController();
-		int Codigo = (ObjPersonaController->BuscarUltimoCodigo() + 1);
-		Persona^ ObjPersona = gcnew Persona(Codigo, Nombres, ApellidoPat, ApellidoMat, DNI, Edad, Genero, Telefono, Contrasena, "Pasajero");
+		Persona^ ObjPersona = gcnew Persona(DNI, Nombres, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, "Pasajero");
 		ObjPersonaController->AgregarPersona(ObjPersona);
-
-		PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
-		Pasajero^ ObjPasajero = gcnew Pasajero(DNI, Nombres, ApellidoPat, ApellidoMat,Edad, Genero, Telefono, Contrasena,FechaCumpleanos);
-		ObjPasajeroController->AgregarPasajero(ObjPasajero);
 
 		MessageBox::Show("Cuenta creada con exito.");
 		this->Close();
