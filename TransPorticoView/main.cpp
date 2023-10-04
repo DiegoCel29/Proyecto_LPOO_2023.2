@@ -1,4 +1,4 @@
-#include "MantenimientoAtajo.h"
+#include "MantenimientoEmpleado.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -8,6 +8,6 @@ void main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	MantenimientoAtajo Ventana;
+	MantenimientoEmpleado Ventana;
 	Application::Run(% Ventana);
 }

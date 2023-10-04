@@ -42,9 +42,9 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ B_Crear;
+
 	protected:
-	private: System::Windows::Forms::Button^ B_Cancelar;
+
 	private: System::Windows::Forms::ComboBox^ CB_Genero;
 	private: System::Windows::Forms::Label^ L_Contrasena;
 	private: System::Windows::Forms::TextBox^ TB_Contrasena;
@@ -65,9 +65,11 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::TextBox^ TB_Sueldo;
 	private: System::Windows::Forms::Label^ L_Contrato;
 	private: System::Windows::Forms::TextBox^ TB_Contrato;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Panel^ panel2;
+
+
 	private: Empleado^ objEmpleado; /*Este atributo lo agregamos porque necesitamos manejar la informacion de los pasajeros*/
+	private: System::Windows::Forms::Button^ B_Cancelar;
+	private: System::Windows::Forms::Button^ B_Grabar;
 
 	private:
 		/// <summary>
@@ -82,8 +84,7 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->B_Crear = (gcnew System::Windows::Forms::Button());
-			this->B_Cancelar = (gcnew System::Windows::Forms::Button());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Editar_Empleado::typeid));
 			this->CB_Genero = (gcnew System::Windows::Forms::ComboBox());
 			this->L_Contrasena = (gcnew System::Windows::Forms::Label());
 			this->TB_Contrasena = (gcnew System::Windows::Forms::TextBox());
@@ -104,46 +105,9 @@ namespace TransPorticoView {
 			this->TB_Sueldo = (gcnew System::Windows::Forms::TextBox());
 			this->L_Contrato = (gcnew System::Windows::Forms::Label());
 			this->TB_Contrato = (gcnew System::Windows::Forms::TextBox());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->B_Cancelar = (gcnew System::Windows::Forms::Button());
+			this->B_Grabar = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
-			// 
-			// B_Crear
-			// 
-			this->B_Crear->BackColor = System::Drawing::Color::DodgerBlue;
-			this->B_Crear->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->B_Crear->FlatAppearance->BorderColor = System::Drawing::Color::DodgerBlue;
-			this->B_Crear->FlatAppearance->BorderSize = 0;
-			this->B_Crear->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->B_Crear->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->B_Crear->Location = System::Drawing::Point(438, 630);
-			this->B_Crear->Margin = System::Windows::Forms::Padding(4);
-			this->B_Crear->Name = L"B_Crear";
-			this->B_Crear->Size = System::Drawing::Size(120, 49);
-			this->B_Crear->TabIndex = 64;
-			this->B_Crear->Text = L"Grabar";
-			this->B_Crear->UseVisualStyleBackColor = false;
-			this->B_Crear->Click += gcnew System::EventHandler(this, &Editar_Empleado::B_Crear_Click);
-			// 
-			// B_Cancelar
-			// 
-			this->B_Cancelar->BackColor = System::Drawing::Color::DodgerBlue;
-			this->B_Cancelar->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->B_Cancelar->FlatAppearance->BorderColor = System::Drawing::Color::DodgerBlue;
-			this->B_Cancelar->FlatAppearance->BorderSize = 0;
-			this->B_Cancelar->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->B_Cancelar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->B_Cancelar->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->B_Cancelar->Location = System::Drawing::Point(237, 630);
-			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4);
-			this->B_Cancelar->Name = L"B_Cancelar";
-			this->B_Cancelar->Size = System::Drawing::Size(120, 49);
-			this->B_Cancelar->TabIndex = 63;
-			this->B_Cancelar->Text = L"Cancelar";
-			this->B_Cancelar->UseVisualStyleBackColor = false;
-			this->B_Cancelar->Click += gcnew System::EventHandler(this, &Editar_Empleado::B_Cancelar_Click);
 			// 
 			// CB_Genero
 			// 
@@ -161,7 +125,7 @@ namespace TransPorticoView {
 			// 
 			// L_Contrasena
 			// 
-			this->L_Contrasena->BackColor = System::Drawing::Color::OldLace;
+			this->L_Contrasena->BackColor = System::Drawing::Color::Moccasin;
 			this->L_Contrasena->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Contrasena->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -190,7 +154,7 @@ namespace TransPorticoView {
 			// 
 			// L_Telefono
 			// 
-			this->L_Telefono->BackColor = System::Drawing::Color::OldLace;
+			this->L_Telefono->BackColor = System::Drawing::Color::Moccasin;
 			this->L_Telefono->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Telefono->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -218,7 +182,7 @@ namespace TransPorticoView {
 			// 
 			// L_Genero
 			// 
-			this->L_Genero->BackColor = System::Drawing::Color::OldLace;
+			this->L_Genero->BackColor = System::Drawing::Color::Moccasin;
 			this->L_Genero->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Genero->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -234,7 +198,7 @@ namespace TransPorticoView {
 			// 
 			// L_Edad
 			// 
-			this->L_Edad->BackColor = System::Drawing::Color::OldLace;
+			this->L_Edad->BackColor = System::Drawing::Color::Moccasin;
 			this->L_Edad->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Edad->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -262,7 +226,8 @@ namespace TransPorticoView {
 			// 
 			// L_DNI
 			// 
-			this->L_DNI->BackColor = System::Drawing::Color::OldLace;
+			this->L_DNI->BackColor = System::Drawing::Color::Moccasin;
+			this->L_DNI->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_DNI->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_DNI->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -290,7 +255,7 @@ namespace TransPorticoView {
 			// 
 			// L_ApellidoMat
 			// 
-			this->L_ApellidoMat->BackColor = System::Drawing::Color::OldLace;
+			this->L_ApellidoMat->BackColor = System::Drawing::Color::Moccasin;
 			this->L_ApellidoMat->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_ApellidoMat->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -318,7 +283,8 @@ namespace TransPorticoView {
 			// 
 			// L_ApellidoPat
 			// 
-			this->L_ApellidoPat->BackColor = System::Drawing::Color::OldLace;
+			this->L_ApellidoPat->BackColor = System::Drawing::Color::Moccasin;
+			this->L_ApellidoPat->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_ApellidoPat->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_ApellidoPat->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -346,7 +312,8 @@ namespace TransPorticoView {
 			// 
 			// L_Nombres
 			// 
-			this->L_Nombres->BackColor = System::Drawing::Color::OldLace;
+			this->L_Nombres->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Nombres->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Nombres->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Nombres->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -428,37 +395,50 @@ namespace TransPorticoView {
 			this->TB_Contrato->TabIndex = 68;
 			this->TB_Contrato->TextChanged += gcnew System::EventHandler(this, &Editar_Empleado::TB_Contrato_TextChanged);
 			// 
-			// panel1
+			// B_Cancelar
 			// 
-			this->panel1->BackColor = System::Drawing::Color::DarkBlue;
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(100, 805);
-			this->panel1->TabIndex = 69;
+			this->B_Cancelar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Cancelar.BackgroundImage")));
+			this->B_Cancelar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Cancelar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Cancelar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Cancelar->Location = System::Drawing::Point(698, 386);
+			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4);
+			this->B_Cancelar->Name = L"B_Cancelar";
+			this->B_Cancelar->Size = System::Drawing::Size(133, 49);
+			this->B_Cancelar->TabIndex = 70;
+			this->B_Cancelar->Text = L"Cancelar";
+			this->B_Cancelar->UseVisualStyleBackColor = true;
+			this->B_Cancelar->Click += gcnew System::EventHandler(this, &Editar_Empleado::B_Cancelar_Click_1);
 			// 
-			// panel2
+			// B_Grabar
 			// 
-			this->panel2->BackColor = System::Drawing::Color::DarkBlue;
-			this->panel2->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel2->Location = System::Drawing::Point(1020, 0);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(100, 805);
-			this->panel2->TabIndex = 70;
+			this->B_Grabar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Grabar.BackgroundImage")));
+			this->B_Grabar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Grabar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Grabar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Grabar->Location = System::Drawing::Point(290, 369);
+			this->B_Grabar->Margin = System::Windows::Forms::Padding(4);
+			this->B_Grabar->Name = L"B_Grabar";
+			this->B_Grabar->Size = System::Drawing::Size(133, 49);
+			this->B_Grabar->TabIndex = 69;
+			this->B_Grabar->Text = L"Grabar";
+			this->B_Grabar->UseVisualStyleBackColor = true;
+			this->B_Grabar->Click += gcnew System::EventHandler(this, &Editar_Empleado::B_Grabar_Click);
 			// 
 			// Editar_Empleado
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1120, 805);
-			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->panel1);
+			this->Controls->Add(this->B_Cancelar);
+			this->Controls->Add(this->B_Grabar);
 			this->Controls->Add(this->TB_Contrato);
 			this->Controls->Add(this->L_Contrato);
 			this->Controls->Add(this->TB_Sueldo);
 			this->Controls->Add(this->L_Sueldo);
-			this->Controls->Add(this->B_Crear);
-			this->Controls->Add(this->B_Cancelar);
 			this->Controls->Add(this->CB_Genero);
 			this->Controls->Add(this->L_Contrasena);
 			this->Controls->Add(this->TB_Contrasena);
@@ -508,7 +488,7 @@ namespace TransPorticoView {
 			this->L_Contrato->Location = System::Drawing::Point(CentroX - 205, 530);
 			this->TB_Contrato->Location = System::Drawing::Point(CentroX + 5, 530);
 			this->B_Cancelar->Location = System::Drawing::Point(CentroX - 125, 580);
-			this->B_Crear->Location = System::Drawing::Point(CentroX + 35, 580);
+			this->B_Grabar->Location = System::Drawing::Point(CentroX + 35, 580);
 		}
 	private: System::Void B_Crear_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ Nombre = this->TB_Nombres->Text;
@@ -589,6 +569,27 @@ private: System::Void TB_ApellidoPat_TextChanged(System::Object^ sender, System:
 private: System::Void L_Nombres_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void TB_Nombres_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void B_Grabar_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ Nombre = this->TB_Nombres->Text;
+	String^ Apellido_Pat = this->TB_ApellidoPat->Text;
+	String^ Apellido_Mat = this->TB_ApellidoMat->Text;
+	String^ DNI = this->TB_DNI->Text;
+	int Edad = Convert::ToInt32(this->TB_Edad->Text);
+	String^ Genero = this->CB_Genero->Text;
+	String^ Telefono = this->TB_Telefono->Text;
+	String^ Contrasena = this->TB_Contrasena->Text;
+	String^ Tipo = "ARREGLAR, EE-522";
+	int Sueldo = Convert::ToInt32(this->TB_Sueldo->Text);
+	String^ Contrato = this->TB_Contrato->Text;
+	Empleado^ objEmpleado = gcnew Empleado(DNI, Nombre, Apellido_Pat, Apellido_Mat, Edad, Genero, Telefono, Contrasena, Tipo, Sueldo, Contrato);
+	EmpleadoController^ objEmpleadoController = gcnew EmpleadoController();
+	objEmpleadoController->ActualizarEmpleado(objEmpleado);
+	MessageBox::Show("Los datos del Empleado han sido actualizados con exito");
+	this->Close();
+}
+private: System::Void B_Cancelar_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }
