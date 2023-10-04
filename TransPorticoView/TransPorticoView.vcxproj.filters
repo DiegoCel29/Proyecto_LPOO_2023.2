@@ -90,16 +90,19 @@
     <ClCompile Include="Editar_Pasajero.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
-    <ClCompile Include="TarifarioMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="FrmAgregarAutobuses.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="FrmEditarAutobuses.cpp">
-	    <Filter>Archivos de encabezado</Filter>
-	</ClCompile>
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="TarifarioMantenimiento.cpp">
+      <Filter>Archivos de encabezado</Filter>
+    </ClCompile>
+    <ClCompile Include="Editar_Conductor.cpp">
       <Filter>Archivos de encabezado</Filter>
     </ClCompile>
     <ClCompile Include="TarifarioMantenimiento.cpp">
@@ -186,9 +189,12 @@
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="FrmEditarAutobuses.h">
-	  <Filter>Archivos de encabezado</Filter>
-	</ClInclude>
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
     <ClInclude Include="TarifarioMantenimientoAnadir.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Editar_Conductor.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>

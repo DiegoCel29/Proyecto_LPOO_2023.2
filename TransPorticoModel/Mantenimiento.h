@@ -6,19 +6,19 @@ namespace TransPorticoModel {
 	public ref class Mantenimiento {
 	private:
 		int Codigo;
-		String^ IrMantenimiento;
+		String^ FechaMantenimiento;
 		String^ TipoMantenimiento;
 		String^ DescripcionMantenimiento;
 
 	public:
 		Mantenimiento();
-		Mantenimiento(int Codigo, String^ IrMantenimiento, String^ TipoMantenimiento, String^ DescripcionMantenimiento);
+		Mantenimiento(int Codigo, String^ FechaMantenimiento, String^ TipoMantenimiento, String^ DescripcionMantenimiento);
 
 		int GetCodigo();
 		void SetCodigo(int Codigo);
 
-		String^ GetIrMantenimiento();
-		void SetIrMantenimiento(String^ IrMantenimiento);
+		String^ GetFechaMantenimiento();
+		void SetFechaMantenimiento(String^ FechaMantenimiento);
 
 		String^ GetTipoMantenimiento();
 		void SetTipoMantenimiento(String^ TipoMantenimiento);

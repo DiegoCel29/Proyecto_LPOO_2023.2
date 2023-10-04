@@ -160,6 +160,7 @@ namespace TransPorticoView {
 			});
 			this->DGV_Persona->Location = System::Drawing::Point(43, 100);
 			this->DGV_Persona->Name = L"DGV_Persona";
+			this->DGV_Persona->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->DGV_Persona->Size = System::Drawing::Size(825, 312);
 			this->DGV_Persona->TabIndex = 3;
 			// 
@@ -314,7 +315,7 @@ namespace TransPorticoView {
 	}
 	private: System::Void Boton_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
 		int FilaSeleccionada = this->DGV_Persona->SelectedRows[0]->Index;
-		int DNIPersonaEliminar = Convert::ToInt32(this->DGV_Persona->SelectedRows[FilaSeleccionada]->Cells[0]->Value->ToString());
+		int DNIPersonaEliminar = Convert::ToInt32(this->DGV_Persona->Rows[FilaSeleccionada]->Cells[0]->Value->ToString());
 
 		PersonaController^ ObjPersonaController = gcnew PersonaController();
 		ObjPersonaController->EliminarPersona(DNIPersonaEliminar);

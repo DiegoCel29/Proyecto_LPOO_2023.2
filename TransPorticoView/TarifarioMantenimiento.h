@@ -317,7 +317,6 @@ namespace TransPorticoView {
 			this->DGV_Tarifario->Name = L"DGV_Tarifario";
 			this->DGV_Tarifario->ReadOnly = true;
 			this->DGV_Tarifario->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
-			this->DGV_Tarifario->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->DGV_Tarifario->Size = System::Drawing::Size(700, 300);
 			this->DGV_Tarifario->TabIndex = 9;
 			// 
@@ -433,12 +432,14 @@ namespace TransPorticoView {
 	CentrarForm();
 }
 	private: System::Void B_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
-		int FilaSeleccionada = this->DGV_Tarifario->SelectedRows[0]->Index;
-		String^ IdentificadorTarifaEliminar = this->DGV_Tarifario->SelectedRows[FilaSeleccionada]->Cells[0]->Value->ToString();
+		if (this->DGV_Tarifario->SelectedRows->Count != 0) {
+			int FilaSeleccionada = this->DGV_Tarifario->SelectedRows[0]->Index;
+			String^ IdentificadorTarifaEliminar = this->DGV_Tarifario->Rows[FilaSeleccionada]->Cells[0]->Value->ToString();
 
-		TarifarioController^ ObjTarifarioController = gcnew TarifarioController;
-		ObjTarifarioController->EliminarTarifario(IdentificadorTarifaEliminar);
-		MessageBox::Show("La tarifa seleccionada ha sido retirada, de la base de datos, con exito.");
+			TarifarioController^ ObjTarifarioController = gcnew TarifarioController;
+			ObjTarifarioController->EliminarTarifario(IdentificadorTarifaEliminar);
+			MessageBox::Show("La tarifa seleccionada ha sido retirada, de la base de datos, con exito.");
+		}
 	}
 	private: System::Void B_Anadir_Click(System::Object^ sender, System::EventArgs^ e) {
 

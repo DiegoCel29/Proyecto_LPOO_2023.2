@@ -1,5 +1,6 @@
 #include "PantallaIngreso.h"
 #include "TarifarioMantenimiento.h"
+#include "FrmMantenimientoPersona.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -9,6 +10,6 @@ void main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	TarifarioMantenimiento Ventana;
+	FrmMantenimientoPersona Ventana;
 	Application::Run(% Ventana);
 }

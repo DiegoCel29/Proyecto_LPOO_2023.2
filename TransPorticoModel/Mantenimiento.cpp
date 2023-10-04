@@ -6,9 +6,9 @@ Mantenimiento::Mantenimiento() {
 
 };
 
-Mantenimiento::Mantenimiento(int Codigo, String^ IrMantenimiento, String^ TipoMantenimiento, String^ DescripcionMantenimiento) {
+Mantenimiento::Mantenimiento(int Codigo, String^ FechaMantenimiento, String^ TipoMantenimiento, String^ DescripcionMantenimiento) {
 	this->Codigo = Codigo;
-	this->IrMantenimiento = IrMantenimiento;
+	this->FechaMantenimiento = FechaMantenimiento;
 	this->TipoMantenimiento = TipoMantenimiento;
 	this->DescripcionMantenimiento = DescripcionMantenimiento;
 };
@@ -21,12 +21,12 @@ void Mantenimiento::SetCodigo(int Codigo) {
 	this->Codigo = Codigo;
 };
 
-String^ Mantenimiento::GetIrMantenimiento() {
-	return this->IrMantenimiento;
+String^ Mantenimiento::GetFechaMantenimiento() {
+	return this->FechaMantenimiento;
 };
 
-void Mantenimiento::SetIrMantenimiento(String^ IrMantenimiento) {
-	this->IrMantenimiento = IrMantenimiento;
+void Mantenimiento::SetFechaMantenimiento(String^ FechaMantenimiento) {
+	this->FechaMantenimiento = FechaMantenimiento;
 };
 
 String^ Mantenimiento::GetTipoMantenimiento() {
