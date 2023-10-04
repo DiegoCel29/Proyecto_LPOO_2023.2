@@ -1,6 +1,6 @@
 #pragma once
 #include "FrmMantenimientoBuzonSugerencias.h"
-#include "FrmMantenimientoPromociones.h"
+#include "PromocionesMantenimiento.h"
 #include "FrmMantenimientoTarjeta.h"
 #include "FrmMantenimientoPersona.h"
 #include "FrmMantenimientoMantenimiento.h"
@@ -341,8 +341,8 @@ namespace TransPorticoView {
 	private: System::Void rutasToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void promocionesToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		FrmMantenimientoPromociones^ VentanaMantenimientoPromociones = gcnew FrmMantenimientoPromociones();
-		VentanaMantenimientoPromociones->ShowDialog();
+		PromocionesMantenimiento^ VentanaPromocionesMantenimiento = gcnew PromocionesMantenimiento();
+		VentanaPromocionesMantenimiento->ShowDialog();
 	}
 	private: System::Void sugerenciasToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		FrmMantenimientoBuzonSugerencias^ VentanaMantenimientoBuzonSugerencias = gcnew FrmMantenimientoBuzonSugerencias();

@@ -1,4 +1,3 @@
-20213820;12/12/2000;12/12/2001;50%;Mitad
-20213719;11/11/1999;11/11/2002;75%;Casi Todo
-20213618;10/10/1998;10/10/2003;10%;Casi Nada
-20213517;09/09/1997;09/09/2004;100%;Todo
+1;Black Friday;35% de descuento en los pasajes a partir de 3.00 soles;24/11/2023;25/11/2023
+2;Navidad;25% de descuento en los pasajes en general;25/12/2023;26/12/2023
+3;Fiestas Patrias;15% de descuento en pasajes a mayores de 20 a�os;28/07/2023;30/07/2023

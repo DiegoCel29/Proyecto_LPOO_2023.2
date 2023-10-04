@@ -13,7 +13,7 @@ namespace TransPorticoModel {
 
 	public:
 		Promociones();
-		Promociones(int Codigo, String^ FechaInicio, String^ FechaFin, String^ Descripcion, String^ Titulo);
+		Promociones(int Codigo, String^ Titulo, String^ Descripcion, String^ FechaInicio, String^ FechaFin);
 
 		int GetCodigo();
 		void SetCodigo(int Codigo);

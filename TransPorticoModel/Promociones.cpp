@@ -6,7 +6,7 @@ Promociones::Promociones() {
 
 };
 
-Promociones::Promociones(int Codigo, String^ FechaInicio, String^ FechaFin, String^ Descripcion, String^ Titulo) {
+Promociones::Promociones(int Codigo, String^ Titulo, String^ Descripcion, String^ FechaInicio, String^ FechaFin) {
 	this->Codigo = Codigo;
 	this->FechaInicio = FechaInicio;
 	this->FechaFin = FechaFin;

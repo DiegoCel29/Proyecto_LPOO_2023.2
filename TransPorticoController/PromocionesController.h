@@ -9,6 +9,14 @@ namespace TransPorticoController {
 	public ref class PromocionesController {
 	public:
 		PromocionesController();
-		List<Promociones^>^ BuscarPromocion(String^ BuscarTitulo);
+		List<Promociones^>^ BuscarPromocionAll();
+		Promociones^ BuscarPromocionCodigo(int Codigo);
+		List<Promociones^>^ BuscarPromocionFechaInicio(List<Promociones^>^ ListPromocionesGeneral, String^ FechaInicio);
+		List<Promociones^>^ BuscarPromocionFechaFin(List<Promociones^>^ ListPromocionesGeneral, String^ FechaFin);
+		void EscribirPromociones(List<Promociones^>^ ListPromociones);
+		void EliminarPromocion(int Codigo);
+		void AgregarPromocion(Promociones^ ObjPromociones);
+		void ActualizarPromocion(Promociones^ ObjPromociones);
+
 	};
 };

@@ -130,7 +130,7 @@
     <ClCompile Include="frmMantenimientoMedidasEstadisticas.cpp" />
     <ClCompile Include="frmMantenimientoParadero.cpp" />
     <ClCompile Include="FrmMantenimientoPersona.cpp" />
-    <ClCompile Include="FrmMantenimientoPromociones.cpp" />
+    <ClCompile Include="PromocionesMantenimiento.cpp" />
     <ClCompile Include="frmMantenimientoRuta.cpp" />
     <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
     <ClCompile Include="FrmMatenimientoAutobus.cpp" />
@@ -145,6 +145,8 @@
     <ClCompile Include="MantenimientoSituacionRecorrido.cpp" />
     <ClCompile Include="OlvidoContrasena.cpp" />
     <ClCompile Include="PantallaPrincipalAdministrador.cpp" />
+    <ClCompile Include="PromocionesMantenimientoAnadir.cpp" />
+    <ClCompile Include="PromocionesMantenimientoEditar.cpp" />
     <ClCompile Include="TarifarioMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
     <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
@@ -205,7 +207,7 @@
     <ClInclude Include="FrmMantenimientoPersona.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FrmMantenimientoPromociones.h">
+    <ClInclude Include="PromocionesMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="frmMantenimientoRuta.h">
@@ -245,6 +247,12 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PantallaPrincipalAdministrador.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PromocionesMantenimientoAnadir.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PromocionesMantenimientoEditar.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TarifarioMantenimiento.h">
@@ -294,8 +302,8 @@
     <EmbeddedResource Include="FrmMantenimientoPersona.resx">
       <DependentUpon>FrmMantenimientoPersona.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimientoPromociones.resx">
-      <DependentUpon>FrmMantenimientoPromociones.h</DependentUpon>
+    <EmbeddedResource Include="PromocionesMantenimiento.resx">
+      <DependentUpon>PromocionesMantenimiento.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMantenimientoTarjeta.resx">
       <DependentUpon>FrmMantenimientoTarjeta.h</DependentUpon>
@@ -329,6 +337,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipalAdministrador.resx">
       <DependentUpon>PantallaPrincipalAdministrador.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromocionesMantenimientoAnadir.resx">
+      <DependentUpon>PromocionesMantenimientoAnadir.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PromocionesMantenimientoEditar.resx">
+      <DependentUpon>PromocionesMantenimientoEditar.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TarifarioMantenimiento.resx" />
     <EmbeddedResource Include="TarifarioMantenimientoAnadir.resx">
