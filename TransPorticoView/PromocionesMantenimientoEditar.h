@@ -137,7 +137,7 @@ namespace TransPorticoView {
 			this->GB_Datos->Size = System::Drawing::Size(450, 310);
 			this->GB_Datos->TabIndex = 9;
 			this->GB_Datos->TabStop = false;
-			this->GB_Datos->Text = L"Datos de la tarifa:";
+			this->GB_Datos->Text = L"Datos de la promocion:";
 			// 
 			// TB_Codigo
 			// 
@@ -268,7 +268,6 @@ namespace TransPorticoView {
 			this->DoubleBuffered = true;
 			this->Name = L"PromocionesMantenimientoEditar";
 			this->Text = L"Editar promocion";
-			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &PromocionesMantenimientoEditar::PromocionesMantenimientoEditar_Load);
 			this->SizeChanged += gcnew System::EventHandler(this, &PromocionesMantenimientoEditar::PromocionesMantenimientoEditar_SizeChanged);
 			this->GB_Datos->ResumeLayout(false);

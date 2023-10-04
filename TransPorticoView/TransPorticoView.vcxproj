@@ -129,7 +129,6 @@
     <ClCompile Include="FrmMantenimientoMantenimiento.cpp" />
     <ClCompile Include="frmMantenimientoMedidasEstadisticas.cpp" />
     <ClCompile Include="frmMantenimientoParadero.cpp" />
-    <ClCompile Include="FrmMantenimientoPersona.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
     <ClCompile Include="frmMantenimientoRuta.cpp" />
     <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
@@ -202,9 +201,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="frmMantenimientoParadero.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="FrmMantenimientoPersona.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PromocionesMantenimiento.h">
@@ -298,9 +294,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMantenimientoMedidasEstadisticas.resx">
       <DependentUpon>frmMantenimientoMedidasEstadisticas.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimientoPersona.resx">
-      <DependentUpon>FrmMantenimientoPersona.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PromocionesMantenimiento.resx">
       <DependentUpon>PromocionesMantenimiento.h</DependentUpon>

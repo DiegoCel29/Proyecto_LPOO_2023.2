@@ -41,13 +41,10 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Label^ L_Info2;
 	private: System::Windows::Forms::Label^ L_Numero;
 	private: System::Windows::Forms::TextBox^ TB_Numero;
-
-
 	private: System::Windows::Forms::Button^ B_Buscar;
 	private: System::Windows::Forms::Button^ B_Cancelar;
 	private: System::Windows::Forms::TextBox^ TB_CodigoRecup;
 	private: System::Windows::Forms::TextBox^ TB_Codigo;
-
 	private: System::Windows::Forms::Label^ L_Codigo;
 	private: System::Windows::Forms::Button^ B_Seguir;
 	private: System::Windows::Forms::TextBox^ TB_NuevaContrasena;
@@ -56,12 +53,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::TextBox^ TB_RepetirContrasena;
 	private: System::Windows::Forms::Button^ B_Seguir2;
 	private: System::Windows::Forms::Button^ B_Cancelar2;
-
-
-
-
-
-
 	protected:
 
 	private:
@@ -338,7 +329,7 @@ namespace TransPorticoView {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(880, 517);
+			this->ClientSize = System::Drawing::Size(784, 461);
 			this->Controls->Add(this->B_Cancelar2);
 			this->Controls->Add(this->B_Seguir2);
 			this->Controls->Add(this->L_NuevaContrasena);
@@ -360,7 +351,6 @@ namespace TransPorticoView {
 			this->MinimizeBox = false;
 			this->Name = L"OlvidoContrasena";
 			this->Text = L"Recuperar Contrasena";
-			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &OlvidoContrasena::OlvidoContrasena_Load);
 			this->SizeChanged += gcnew System::EventHandler(this, &OlvidoContrasena::OlvidoContrasena_SizeChanged);
 			this->ResumeLayout(false);
@@ -406,8 +396,9 @@ namespace TransPorticoView {
 		String^ TelefonoVer = this->TB_Numero->Text;
 		bool Registrado = false;
 		//Se crea un controller y se busca el numero
-		PersonaController^ ObjPersonaController = gcnew PersonaController();
-		Registrado = ObjPersonaController->ExistePersonaTelefono(TelefonoVer);
+
+		PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
+		Registrado = ObjPasajeroController->ExistePersonaTelefono(TelefonoVer);
 
 		if (Registrado == true) {
 			srand(time(NULL));

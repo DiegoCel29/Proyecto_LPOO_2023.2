@@ -2,7 +2,6 @@
 #include "FrmMantenimientoBuzonSugerencias.h"
 #include "PromocionesMantenimiento.h"
 #include "FrmMantenimientoTarjeta.h"
-#include "FrmMantenimientoPersona.h"
 #include "FrmMantenimientoMantenimiento.h"
 #include "frmMantenimientoRuta.h"
 #include "frmMantenimientoParadero.h"

@@ -273,7 +273,6 @@ namespace TransPorticoView {
 			this->DoubleBuffered = true;
 			this->Name = L"TarifarioMantenimientoEditar";
 			this->Text = L"Editar tarifa";
-			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &TarifarioMantenimientoEditar::TarifarioMantenimientoEditar_Load);
 			this->SizeChanged += gcnew System::EventHandler(this, &TarifarioMantenimientoEditar::TarifarioMantenimientoEditar_SizeChanged);
 			this->GB_Datos->ResumeLayout(false);

@@ -278,7 +278,6 @@ namespace TransPorticoView {
 			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"TarifarioMantenimientoAnadir";
 			this->Text = L"Crear nueva tarifa";
-			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &TarifarioMantenimientoAnadir::TarifarioMantenimientoAnadir_Load);
 			this->SizeChanged += gcnew System::EventHandler(this, &TarifarioMantenimientoAnadir::TarifarioMantenimientoAnadir_SizeChanged);
 			this->GB_Datos->ResumeLayout(false);

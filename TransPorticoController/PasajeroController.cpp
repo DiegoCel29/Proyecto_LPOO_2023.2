@@ -39,6 +39,7 @@ List<Pasajero^>^ PasajeroController::BuscarPasajeros(String^ pasajeros) {
 	return listaPasajerosEncontrados;
 }
 
+//Basicos
 List<Pasajero^>^ PasajeroController::BuscarAllPasajeros() {
 	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
 	List<Pasajero^>^ listaPasajerosEncontrados = gcnew List<Pasajero^>();
@@ -64,7 +65,6 @@ List<Pasajero^>^ PasajeroController::BuscarAllPasajeros() {
 	}
 	return listaPasajerosEncontrados;
 }
-
 void PasajeroController::EscribirPasajero(List<Pasajero^>^ lista) {
 	array<String^>^ lineasPasajero = gcnew array<String^>(lista->Count);
 	for (int i = 0; i < lista->Count; i++) {
@@ -73,7 +73,6 @@ void PasajeroController::EscribirPasajero(List<Pasajero^>^ lista) {
 	}
 	File::WriteAllLines("ListaPasajeros.txt", lineasPasajero);
 }
-
 void PasajeroController::EliminarPasajeroFisico(String^ DNI_Eliminar) {
 	List<Pasajero^>^ listaPasajeros = BuscarAllPasajeros();
 	for (int i = 0; i < listaPasajeros->Count; i++) {
@@ -89,16 +88,6 @@ void PasajeroController::AgregarPasajero(Pasajero^ objProyecto) {
 	listaPasajeros->Add(objProyecto);
 	EscribirPasajero(listaPasajeros);
 }
-
-Pasajero^ PasajeroController::BuscarPasajeroDNI(String^ DNI) {
-	List<Pasajero^>^ listaPasajeros = BuscarAllPasajeros();
-	for (int i = 0; i < listaPasajeros->Count; i++) {
-		if (listaPasajeros[i]->GetDNI_Pasajero() == DNI) {
-			return listaPasajeros[i];
-		}
-	}
-}
-
 void PasajeroController::ActualizarPasajero(Pasajero^ objPasajero) {
 	List<Pasajero^>^ listaPasajeros = BuscarAllPasajeros();
 	for (int i = 0; i < listaPasajeros->Count; i++) {
@@ -116,3 +105,28 @@ void PasajeroController::ActualizarPasajero(Pasajero^ objPasajero) {
 	}
 	EscribirPasajero(listaPasajeros);
 }
+
+//Busquedas especificas
+Pasajero^ PasajeroController::BuscarPasajeroDNI(String^ DNI) {
+	List<Pasajero^>^ listaPasajeros = BuscarAllPasajeros();
+	for (int i = 0; i < listaPasajeros->Count; i++) {
+		if (listaPasajeros[i]->GetDNI_Pasajero() == DNI) {
+			return listaPasajeros[i];
+		}
+	}
+}
+
+//Sirve para cambiar contraseña
+bool PasajeroController::ExistePersonaTelefono(String^ Telefono) {
+	List<Pasajero^>^ ListPasajeros = BuscarAllPasajeros();
+	for (int i = 0; i < ListPasajeros->Count; i++) {
+		if (ListPasajeros[i]->GetTelefono() == Telefono) {
+			return true;
+			break;
+		}
+		else {
+			return false;
+		}
+	}
+}
+

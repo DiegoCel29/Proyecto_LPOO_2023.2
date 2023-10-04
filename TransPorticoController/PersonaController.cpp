@@ -68,8 +68,8 @@ void PersonaController::AgregarPersona(Persona^ ObjPersona) {
 	ListPersonas->Add(ObjPersona);
 	EscribirArchivo(ListPersonas);
 };
-//Para la pantalla de ingreso
 
+//Para la pantalla de ingreso
 void PersonaController::BuscarPersonaDNI(Persona^ *ObjPersona, String^ DNI, bool *Registrado) {
 	List<Persona^>^ ListPersonas = BuscarAll();
 	for (int i = 0; i < ListPersonas->Count; i++) {
@@ -84,33 +84,6 @@ void PersonaController::BuscarPersonaDNI(Persona^ *ObjPersona, String^ DNI, bool
 
 	}
 }
-
-List<Persona^>^ PersonaController::BuscarPersona(String^ BuscarApellidoPat) {
-	List<Persona^>^ ListPersonasEncontradas = gcnew List<Persona^>();
-	array<String^>^ Lineas = File::ReadAllLines("Personas.txt");
-	String^ Separador = ";"; /*Aqui defino el caracter por el cual voy a separar la informacion de cada linea*/
-	for each (String ^ Linea in Lineas) {
-
-		array<String^>^ Datos = Linea->Split(Separador->ToCharArray());
-
-		String^ DNI = Datos[0];
-		String^ Nombre = Datos[1];
-		String^ ApellidoPat = Datos[2];
-		String^ ApellidoMat = Datos[3];
-		int Edad = Convert::ToInt32(Datos[4]);
-		String^ Genero = Datos[5];
-		String^ Telefono = Datos[6];
-		String^ Contrasena = Datos[7];
-		String^ Tipo = Datos[8];
-		
-		if (ApellidoPat->Contains(BuscarApellidoPat)) {
-			Persona^ ObjPersona = gcnew Persona(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, Tipo);
-			ListPersonasEncontradas->Add(ObjPersona);
-		}
-	}
-	return ListPersonasEncontradas;
-};
-
 void PersonaController::VerificarPersona(String^ DNI, String^* Contrasena, String^ *Tipo, bool* Registrado) {
 	List<Persona^>^ ListPersonas = BuscarAll();
 	for (int i = 0; i < ListPersonas->Count; i++) {
@@ -124,17 +97,6 @@ void PersonaController::VerificarPersona(String^ DNI, String^* Contrasena, Strin
 			*Registrado = false;
 		}
 	}
-}
-bool PersonaController::ExistePersonaTelefono(String^ Telefono) {
-	List<Persona^>^ ListPersonas = BuscarAll();
-	for (int i = 0; i < ListPersonas->Count; i++) {
-		if (ListPersonas[i]->GetTelefono() == Telefono) {
-			return true;
-		}
-		else {
-		}
-	}
-	return false;
 }
 void PersonaController::CambiarPersonaContrasenaTelefono(String^ Telefono, String^ NuevaContrasena) {
 	List<Persona^>^ ListPersonas = BuscarAll();

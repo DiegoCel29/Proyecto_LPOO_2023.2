@@ -102,6 +102,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->B_BotonIngresar->Location = System::Drawing::Point(150, 340);
 			this->B_BotonIngresar->Name = L"B_BotonIngresar";
+			this->B_BotonIngresar->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->B_BotonIngresar->Size = System::Drawing::Size(200, 40);
 			this->B_BotonIngresar->TabIndex = 0;
 			this->B_BotonIngresar->Text = L"Iniciar sesión";
@@ -188,6 +189,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->B_CrearCuenta->Location = System::Drawing::Point(150, 440);
 			this->B_CrearCuenta->Name = L"B_CrearCuenta";
+			this->B_CrearCuenta->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->B_CrearCuenta->Size = System::Drawing::Size(200, 40);
 			this->B_CrearCuenta->TabIndex = 6;
 			this->B_CrearCuenta->Text = L"Crear cuenta nueva";
