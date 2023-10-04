@@ -35,10 +35,28 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::TextBox^ TB_X_Final;
+
 	protected:
-	private: System::Windows::Forms::Button^ B_Crear;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	private: System::Windows::Forms::Button^ B_Cancelar;
+	private: System::Windows::Forms::Button^ B_Crear;
+	private: System::Windows::Forms::TextBox^ TB_X_Final;
 	private: System::Windows::Forms::Label^ L_Ruta_Asociada;
 	private: System::Windows::Forms::TextBox^ TB_Ruta_Asociada;
 	private: System::Windows::Forms::Label^ L_Y_Final;
@@ -54,8 +72,10 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::TextBox^ TB_Paradero_Inicio;
 	private: System::Windows::Forms::Label^ L_Codigo;
 	private: System::Windows::Forms::TextBox^ TB_Codigo;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Panel^ panel2;
+
+
+
+
 
 	private:
 		/// <summary>
@@ -70,9 +90,10 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->TB_X_Final = (gcnew System::Windows::Forms::TextBox());
-			this->B_Crear = (gcnew System::Windows::Forms::Button());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Nuevo_Atajos::typeid));
 			this->B_Cancelar = (gcnew System::Windows::Forms::Button());
+			this->B_Crear = (gcnew System::Windows::Forms::Button());
+			this->TB_X_Final = (gcnew System::Windows::Forms::TextBox());
 			this->L_Ruta_Asociada = (gcnew System::Windows::Forms::Label());
 			this->TB_Ruta_Asociada = (gcnew System::Windows::Forms::TextBox());
 			this->L_Y_Final = (gcnew System::Windows::Forms::Label());
@@ -88,69 +109,55 @@ namespace TransPorticoView {
 			this->TB_Paradero_Inicio = (gcnew System::Windows::Forms::TextBox());
 			this->L_Codigo = (gcnew System::Windows::Forms::Label());
 			this->TB_Codigo = (gcnew System::Windows::Forms::TextBox());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->SuspendLayout();
+			// 
+			// B_Cancelar
+			// 
+			this->B_Cancelar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Cancelar.BackgroundImage")));
+			this->B_Cancelar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->B_Cancelar->Location = System::Drawing::Point(635, 614);
+			this->B_Cancelar->Name = L"B_Cancelar";
+			this->B_Cancelar->Size = System::Drawing::Size(135, 39);
+			this->B_Cancelar->TabIndex = 106;
+			this->B_Cancelar->Text = L"Cancelar";
+			this->B_Cancelar->UseVisualStyleBackColor = true;
+			// 
+			// B_Crear
+			// 
+			this->B_Crear->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Crear.BackgroundImage")));
+			this->B_Crear->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->B_Crear->Location = System::Drawing::Point(635, 640);
+			this->B_Crear->Name = L"B_Crear";
+			this->B_Crear->Size = System::Drawing::Size(135, 39);
+			this->B_Crear->TabIndex = 107;
+			this->B_Crear->Text = L"Grabar";
+			this->B_Crear->UseVisualStyleBackColor = true;
 			// 
 			// TB_X_Final
 			// 
 			this->TB_X_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_X_Final->ForeColor = System::Drawing::Color::Black;
-			this->TB_X_Final->Location = System::Drawing::Point(440, 367);
+			this->TB_X_Final->Location = System::Drawing::Point(340, 413);
 			this->TB_X_Final->Margin = System::Windows::Forms::Padding(4);
 			this->TB_X_Final->Name = L"TB_X_Final";
 			this->TB_X_Final->Size = System::Drawing::Size(265, 41);
-			this->TB_X_Final->TabIndex = 105;
-			// 
-			// B_Crear
-			// 
-			this->B_Crear->BackColor = System::Drawing::Color::DodgerBlue;
-			this->B_Crear->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->B_Crear->FlatAppearance->BorderColor = System::Drawing::Color::DodgerBlue;
-			this->B_Crear->FlatAppearance->BorderSize = 0;
-			this->B_Crear->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->B_Crear->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->B_Crear->Location = System::Drawing::Point(593, 615);
-			this->B_Crear->Margin = System::Windows::Forms::Padding(4);
-			this->B_Crear->Name = L"B_Crear";
-			this->B_Crear->Size = System::Drawing::Size(120, 49);
-			this->B_Crear->TabIndex = 104;
-			this->B_Crear->Text = L"Grabar";
-			this->B_Crear->UseVisualStyleBackColor = false;
-			this->B_Crear->Click += gcnew System::EventHandler(this, &Nuevo_Atajos::B_Crear_Click);
-			// 
-			// B_Cancelar
-			// 
-			this->B_Cancelar->BackColor = System::Drawing::Color::DodgerBlue;
-			this->B_Cancelar->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->B_Cancelar->FlatAppearance->BorderColor = System::Drawing::Color::DodgerBlue;
-			this->B_Cancelar->FlatAppearance->BorderSize = 0;
-			this->B_Cancelar->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->B_Cancelar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->B_Cancelar->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->B_Cancelar->Location = System::Drawing::Point(392, 615);
-			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4);
-			this->B_Cancelar->Name = L"B_Cancelar";
-			this->B_Cancelar->Size = System::Drawing::Size(120, 49);
-			this->B_Cancelar->TabIndex = 103;
-			this->B_Cancelar->Text = L"Cancelar";
-			this->B_Cancelar->UseVisualStyleBackColor = false;
+			this->TB_X_Final->TabIndex = 123;
 			// 
 			// L_Ruta_Asociada
 			// 
-			this->L_Ruta_Asociada->BackColor = System::Drawing::Color::OldLace;
+			this->L_Ruta_Asociada->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Ruta_Asociada->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Ruta_Asociada->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Ruta_Asociada->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->L_Ruta_Asociada->Location = System::Drawing::Point(288, 523);
+			this->L_Ruta_Asociada->ForeColor = System::Drawing::Color::Black;
+			this->L_Ruta_Asociada->Location = System::Drawing::Point(288, 569);
 			this->L_Ruta_Asociada->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Ruta_Asociada->Name = L"L_Ruta_Asociada";
 			this->L_Ruta_Asociada->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->L_Ruta_Asociada->Size = System::Drawing::Size(267, 49);
-			this->L_Ruta_Asociada->TabIndex = 102;
+			this->L_Ruta_Asociada->TabIndex = 122;
 			this->L_Ruta_Asociada->Text = L"RutaAsociada:";
 			this->L_Ruta_Asociada->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
@@ -159,25 +166,26 @@ namespace TransPorticoView {
 			this->TB_Ruta_Asociada->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_Ruta_Asociada->ForeColor = System::Drawing::Color::Black;
-			this->TB_Ruta_Asociada->Location = System::Drawing::Point(562, 523);
+			this->TB_Ruta_Asociada->Location = System::Drawing::Point(562, 569);
 			this->TB_Ruta_Asociada->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Ruta_Asociada->Name = L"TB_Ruta_Asociada";
-			this->TB_Ruta_Asociada->PasswordChar = '*';
 			this->TB_Ruta_Asociada->Size = System::Drawing::Size(265, 41);
-			this->TB_Ruta_Asociada->TabIndex = 101;
+			this->TB_Ruta_Asociada->TabIndex = 121;
 			// 
 			// L_Y_Final
 			// 
-			this->L_Y_Final->BackColor = System::Drawing::Color::OldLace;
+			this->L_Y_Final->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Y_Final->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Y_Final->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Y_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->L_Y_Final->Location = System::Drawing::Point(288, 470);
+			this->L_Y_Final->ForeColor = System::Drawing::Color::Black;
+			this->L_Y_Final->Location = System::Drawing::Point(288, 516);
 			this->L_Y_Final->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Y_Final->Name = L"L_Y_Final";
 			this->L_Y_Final->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->L_Y_Final->Size = System::Drawing::Size(267, 49);
-			this->L_Y_Final->TabIndex = 100;
+			this->L_Y_Final->TabIndex = 120;
 			this->L_Y_Final->Text = L"Y_Final:";
 			this->L_Y_Final->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
@@ -186,39 +194,43 @@ namespace TransPorticoView {
 			this->TB_Y_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_Y_Final->ForeColor = System::Drawing::Color::Black;
-			this->TB_Y_Final->Location = System::Drawing::Point(562, 470);
+			this->TB_Y_Final->Location = System::Drawing::Point(562, 516);
 			this->TB_Y_Final->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Y_Final->Name = L"TB_Y_Final";
 			this->TB_Y_Final->Size = System::Drawing::Size(265, 41);
-			this->TB_Y_Final->TabIndex = 99;
+			this->TB_Y_Final->TabIndex = 119;
 			// 
 			// L_X_Final
 			// 
-			this->L_X_Final->BackColor = System::Drawing::Color::OldLace;
+			this->L_X_Final->BackColor = System::Drawing::Color::Moccasin;
+			this->L_X_Final->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_X_Final->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_X_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->L_X_Final->Location = System::Drawing::Point(288, 408);
+			this->L_X_Final->ForeColor = System::Drawing::Color::Black;
+			this->L_X_Final->Location = System::Drawing::Point(288, 454);
 			this->L_X_Final->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_X_Final->Name = L"L_X_Final";
 			this->L_X_Final->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->L_X_Final->Size = System::Drawing::Size(267, 49);
-			this->L_X_Final->TabIndex = 98;
+			this->L_X_Final->TabIndex = 118;
 			this->L_X_Final->Text = L"X_Final:";
 			this->L_X_Final->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// L_Paradero_Final
 			// 
-			this->L_Paradero_Final->BackColor = System::Drawing::Color::OldLace;
+			this->L_Paradero_Final->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Paradero_Final->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Paradero_Final->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Paradero_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->L_Paradero_Final->Location = System::Drawing::Point(288, 351);
+			this->L_Paradero_Final->ForeColor = System::Drawing::Color::Black;
+			this->L_Paradero_Final->Location = System::Drawing::Point(288, 397);
 			this->L_Paradero_Final->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Paradero_Final->Name = L"L_Paradero_Final";
 			this->L_Paradero_Final->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->L_Paradero_Final->Size = System::Drawing::Size(267, 49);
-			this->L_Paradero_Final->TabIndex = 97;
+			this->L_Paradero_Final->TabIndex = 117;
 			this->L_Paradero_Final->Text = L"Paradero Final:";
 			this->L_Paradero_Final->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
@@ -227,24 +239,26 @@ namespace TransPorticoView {
 			this->TB_Paradero_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_Paradero_Final->ForeColor = System::Drawing::Color::Black;
-			this->TB_Paradero_Final->Location = System::Drawing::Point(562, 351);
+			this->TB_Paradero_Final->Location = System::Drawing::Point(562, 397);
 			this->TB_Paradero_Final->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Paradero_Final->Name = L"TB_Paradero_Final";
 			this->TB_Paradero_Final->Size = System::Drawing::Size(265, 41);
-			this->TB_Paradero_Final->TabIndex = 96;
+			this->TB_Paradero_Final->TabIndex = 116;
 			// 
 			// L_Y_Inicio
 			// 
-			this->L_Y_Inicio->BackColor = System::Drawing::Color::OldLace;
+			this->L_Y_Inicio->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Y_Inicio->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Y_Inicio->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Y_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->L_Y_Inicio->Location = System::Drawing::Point(288, 295);
+			this->L_Y_Inicio->ForeColor = System::Drawing::Color::Black;
+			this->L_Y_Inicio->Location = System::Drawing::Point(288, 341);
 			this->L_Y_Inicio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Y_Inicio->Name = L"L_Y_Inicio";
 			this->L_Y_Inicio->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->L_Y_Inicio->Size = System::Drawing::Size(267, 49);
-			this->L_Y_Inicio->TabIndex = 95;
+			this->L_Y_Inicio->TabIndex = 115;
 			this->L_Y_Inicio->Text = L"Y_Inicio:";
 			this->L_Y_Inicio->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
@@ -253,24 +267,26 @@ namespace TransPorticoView {
 			this->TB_Y_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_Y_Inicio->ForeColor = System::Drawing::Color::Black;
-			this->TB_Y_Inicio->Location = System::Drawing::Point(562, 295);
+			this->TB_Y_Inicio->Location = System::Drawing::Point(562, 341);
 			this->TB_Y_Inicio->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Y_Inicio->Name = L"TB_Y_Inicio";
 			this->TB_Y_Inicio->Size = System::Drawing::Size(265, 41);
-			this->TB_Y_Inicio->TabIndex = 94;
+			this->TB_Y_Inicio->TabIndex = 114;
 			// 
 			// L_X_Inicio
 			// 
-			this->L_X_Inicio->BackColor = System::Drawing::Color::OldLace;
+			this->L_X_Inicio->BackColor = System::Drawing::Color::Moccasin;
+			this->L_X_Inicio->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_X_Inicio->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_X_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->L_X_Inicio->Location = System::Drawing::Point(288, 228);
+			this->L_X_Inicio->ForeColor = System::Drawing::Color::Black;
+			this->L_X_Inicio->Location = System::Drawing::Point(288, 274);
 			this->L_X_Inicio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_X_Inicio->Name = L"L_X_Inicio";
 			this->L_X_Inicio->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->L_X_Inicio->Size = System::Drawing::Size(267, 49);
-			this->L_X_Inicio->TabIndex = 93;
+			this->L_X_Inicio->TabIndex = 113;
 			this->L_X_Inicio->Text = L"X_Inicio:";
 			this->L_X_Inicio->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
@@ -279,24 +295,26 @@ namespace TransPorticoView {
 			this->TB_X_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_X_Inicio->ForeColor = System::Drawing::Color::Black;
-			this->TB_X_Inicio->Location = System::Drawing::Point(562, 228);
+			this->TB_X_Inicio->Location = System::Drawing::Point(562, 274);
 			this->TB_X_Inicio->Margin = System::Windows::Forms::Padding(4);
 			this->TB_X_Inicio->Name = L"TB_X_Inicio";
 			this->TB_X_Inicio->Size = System::Drawing::Size(265, 41);
-			this->TB_X_Inicio->TabIndex = 92;
+			this->TB_X_Inicio->TabIndex = 112;
 			// 
 			// L_Paradero_Inicio
 			// 
-			this->L_Paradero_Inicio->BackColor = System::Drawing::Color::OldLace;
+			this->L_Paradero_Inicio->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Paradero_Inicio->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Paradero_Inicio->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Paradero_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->L_Paradero_Inicio->Location = System::Drawing::Point(288, 168);
+			this->L_Paradero_Inicio->ForeColor = System::Drawing::Color::Black;
+			this->L_Paradero_Inicio->Location = System::Drawing::Point(288, 214);
 			this->L_Paradero_Inicio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Paradero_Inicio->Name = L"L_Paradero_Inicio";
 			this->L_Paradero_Inicio->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->L_Paradero_Inicio->Size = System::Drawing::Size(267, 49);
-			this->L_Paradero_Inicio->TabIndex = 91;
+			this->L_Paradero_Inicio->TabIndex = 111;
 			this->L_Paradero_Inicio->Text = L"Paradero de Inicio:";
 			this->L_Paradero_Inicio->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
@@ -305,24 +323,26 @@ namespace TransPorticoView {
 			this->TB_Paradero_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_Paradero_Inicio->ForeColor = System::Drawing::Color::Black;
-			this->TB_Paradero_Inicio->Location = System::Drawing::Point(562, 168);
+			this->TB_Paradero_Inicio->Location = System::Drawing::Point(562, 214);
 			this->TB_Paradero_Inicio->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Paradero_Inicio->Name = L"TB_Paradero_Inicio";
 			this->TB_Paradero_Inicio->Size = System::Drawing::Size(265, 41);
-			this->TB_Paradero_Inicio->TabIndex = 90;
+			this->TB_Paradero_Inicio->TabIndex = 110;
 			// 
 			// L_Codigo
 			// 
-			this->L_Codigo->BackColor = System::Drawing::Color::OldLace;
+			this->L_Codigo->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Codigo->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Codigo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Codigo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->L_Codigo->Location = System::Drawing::Point(288, 114);
+			this->L_Codigo->ForeColor = System::Drawing::Color::Black;
+			this->L_Codigo->Location = System::Drawing::Point(288, 160);
 			this->L_Codigo->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Codigo->Name = L"L_Codigo";
 			this->L_Codigo->RightToLeft = System::Windows::Forms::RightToLeft::No;
 			this->L_Codigo->Size = System::Drawing::Size(267, 49);
-			this->L_Codigo->TabIndex = 89;
+			this->L_Codigo->TabIndex = 109;
 			this->L_Codigo->Text = L"Codigo :";
 			this->L_Codigo->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
@@ -331,40 +351,19 @@ namespace TransPorticoView {
 			this->TB_Codigo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 18, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->TB_Codigo->ForeColor = System::Drawing::Color::Black;
-			this->TB_Codigo->Location = System::Drawing::Point(562, 111);
+			this->TB_Codigo->Location = System::Drawing::Point(562, 157);
 			this->TB_Codigo->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Codigo->Name = L"TB_Codigo";
 			this->TB_Codigo->Size = System::Drawing::Size(265, 41);
-			this->TB_Codigo->TabIndex = 88;
-			// 
-			// panel1
-			// 
-			this->panel1->BackColor = System::Drawing::Color::DarkBlue;
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(100, 775);
-			this->panel1->TabIndex = 106;
-			// 
-			// panel2
-			// 
-			this->panel2->BackColor = System::Drawing::Color::DarkBlue;
-			this->panel2->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel2->Location = System::Drawing::Point(1014, 0);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(100, 775);
-			this->panel2->TabIndex = 107;
+			this->TB_Codigo->TabIndex = 108;
 			// 
 			// Nuevo_Atajos
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1114, 775);
-			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->TB_X_Final);
-			this->Controls->Add(this->B_Crear);
-			this->Controls->Add(this->B_Cancelar);
 			this->Controls->Add(this->L_Ruta_Asociada);
 			this->Controls->Add(this->TB_Ruta_Asociada);
 			this->Controls->Add(this->L_Y_Final);
@@ -380,6 +379,9 @@ namespace TransPorticoView {
 			this->Controls->Add(this->TB_Paradero_Inicio);
 			this->Controls->Add(this->L_Codigo);
 			this->Controls->Add(this->TB_Codigo);
+			this->Controls->Add(this->B_Crear);
+			this->Controls->Add(this->B_Cancelar);
+			this->DoubleBuffered = true;
 			this->Name = L"Nuevo_Atajos";
 			this->Text = L"Nuevo_Atajos";
 			this->Load += gcnew System::EventHandler(this, &Nuevo_Atajos::Nuevo_Atajos_Load);
@@ -410,7 +412,7 @@ namespace TransPorticoView {
 			this->TB_Ruta_Asociada->Location = System::Drawing::Point(CentroX + 5, 430);
 			this->B_Cancelar->Location = System::Drawing::Point(CentroX - 125, 480);
 			this->B_Crear->Location = System::Drawing::Point(CentroX + 35, 480);
-		}
+			}
 	private: System::Void B_Crear_Click(System::Object^ sender, System::EventArgs^ e) {
 
 		int codigo = Convert::ToInt32(this->TB_Codigo->Text);
@@ -437,6 +439,10 @@ private: System::Void Nuevo_Atajos_SizeChanged(System::Object^ sender, System::E
 private: System::Void Nuevo_Atajos_Load(System::Object^ sender, System::EventArgs^ e) {
 	this->SizeChanged += (gcnew System::EventHandler(this, &Nuevo_Atajos::Nuevo_Atajos_SizeChanged));
 	CentrarForm();
+}
+private: System::Void L_Paradero_Inicio_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_Codigo_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
