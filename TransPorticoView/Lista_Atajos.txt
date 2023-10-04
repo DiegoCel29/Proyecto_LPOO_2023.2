@@ -1,1 +1,1 @@
-1;500;1000;Estacion Las Gatitas;600;1500;Estacion Puente Atocongo;Ruta A
+1;500;1000;Estacion Las Gatitas;500;500;Estacion Puente Atocongo;Ruta B

@@ -115,6 +115,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CrearCuenta.cpp" />
+    <ClCompile Include="Editar_Atajos.cpp" />
     <ClCompile Include="Editar_Conductor.cpp" />
     <ClCompile Include="Editar_Pasajero.cpp" />
     <ClCompile Include="FrmAgregarAutobuses.cpp" />
@@ -135,6 +136,7 @@
     <ClCompile Include="FrmMatenimientoAutobus.cpp" />
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
     <ClCompile Include="NuevoConductor.cpp" />
+    <ClCompile Include="Nuevo_Atajos.cpp" />
     <ClCompile Include="PantallaIngreso.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MantenimientoAtajo.cpp" />
@@ -156,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CrearCuenta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Editar_Atajos.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Editar_Conductor.h">
@@ -218,6 +223,9 @@
     <ClInclude Include="NuevoConductor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Nuevo_Atajos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PantallaIngreso.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -252,6 +260,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CrearCuenta.resx">
       <DependentUpon>CrearCuenta.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Editar_Atajos.resx">
+      <DependentUpon>Editar_Atajos.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Editar_Conductor.resx">
       <DependentUpon>Editar_Conductor.h</DependentUpon>
@@ -294,6 +305,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoConductor.resx">
       <DependentUpon>NuevoConductor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nuevo_Atajos.resx">
+      <DependentUpon>Nuevo_Atajos.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaIngreso.resx">
       <DependentUpon>PantallaIngreso.h</DependentUpon>

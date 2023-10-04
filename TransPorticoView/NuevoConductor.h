@@ -59,7 +59,7 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::TextBox^ TB_ApellidoPat;
 	private: System::Windows::Forms::Label^ L_Nombres;
 	private: System::Windows::Forms::TextBox^ TB_Nombres;
-	private: System::Windows::Forms::Panel^ panel1;
+
 	private: System::Windows::Forms::Panel^ panel2;
 	private: System::Windows::Forms::Panel^ panel3;
 
@@ -98,7 +98,6 @@ namespace TransPorticoView {
 			this->TB_ApellidoPat = (gcnew System::Windows::Forms::TextBox());
 			this->L_Nombres = (gcnew System::Windows::Forms::Label());
 			this->TB_Nombres = (gcnew System::Windows::Forms::TextBox());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->panel2 = (gcnew System::Windows::Forms::Panel());
 			this->panel3 = (gcnew System::Windows::Forms::Panel());
 			this->SuspendLayout();
@@ -403,13 +402,6 @@ namespace TransPorticoView {
 			this->TB_Nombres->Size = System::Drawing::Size(265, 41);
 			this->TB_Nombres->TabIndex = 69;
 			// 
-			// panel1
-			// 
-			this->panel1->Location = System::Drawing::Point(0, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(200, 100);
-			this->panel1->TabIndex = 91;
-			// 
 			// panel2
 			// 
 			this->panel2->BackColor = System::Drawing::Color::DarkBlue;
@@ -435,7 +427,6 @@ namespace TransPorticoView {
 			this->ClientSize = System::Drawing::Size(1043, 676);
 			this->Controls->Add(this->panel3);
 			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->TB_Contrato);
 			this->Controls->Add(this->L_Contrato);
 			this->Controls->Add(this->TB_Sueldo);

@@ -157,6 +157,7 @@ namespace TransPorticoView {
 			this->CB_Genero->Size = System::Drawing::Size(265, 44);
 			this->CB_Genero->TabIndex = 62;
 			this->CB_Genero->TabStop = false;
+			this->CB_Genero->SelectedIndexChanged += gcnew System::EventHandler(this, &Editar_Conductor::CB_Genero_SelectedIndexChanged);
 			// 
 			// L_Contrasena
 			// 
@@ -172,6 +173,7 @@ namespace TransPorticoView {
 			this->L_Contrasena->TabIndex = 61;
 			this->L_Contrasena->Text = L"Contraseña:";
 			this->L_Contrasena->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Contrasena->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_Contrasena_Click);
 			// 
 			// TB_Contrasena
 			// 
@@ -184,6 +186,7 @@ namespace TransPorticoView {
 			this->TB_Contrasena->PasswordChar = '*';
 			this->TB_Contrasena->Size = System::Drawing::Size(265, 41);
 			this->TB_Contrasena->TabIndex = 60;
+			this->TB_Contrasena->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_Contrasena_TextChanged);
 			// 
 			// L_Telefono
 			// 
@@ -199,6 +202,7 @@ namespace TransPorticoView {
 			this->L_Telefono->TabIndex = 59;
 			this->L_Telefono->Text = L"Telefono:";
 			this->L_Telefono->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Telefono->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_Telefono_Click);
 			// 
 			// TB_Telefono
 			// 
@@ -210,6 +214,7 @@ namespace TransPorticoView {
 			this->TB_Telefono->Name = L"TB_Telefono";
 			this->TB_Telefono->Size = System::Drawing::Size(265, 41);
 			this->TB_Telefono->TabIndex = 58;
+			this->TB_Telefono->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_Telefono_TextChanged);
 			// 
 			// L_Genero
 			// 
@@ -225,6 +230,7 @@ namespace TransPorticoView {
 			this->L_Genero->TabIndex = 57;
 			this->L_Genero->Text = L"Genero:";
 			this->L_Genero->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Genero->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_Genero_Click);
 			// 
 			// L_Edad
 			// 
@@ -240,6 +246,7 @@ namespace TransPorticoView {
 			this->L_Edad->TabIndex = 56;
 			this->L_Edad->Text = L"Edad:";
 			this->L_Edad->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Edad->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_Edad_Click);
 			// 
 			// TB_Edad
 			// 
@@ -251,6 +258,7 @@ namespace TransPorticoView {
 			this->TB_Edad->Name = L"TB_Edad";
 			this->TB_Edad->Size = System::Drawing::Size(265, 41);
 			this->TB_Edad->TabIndex = 55;
+			this->TB_Edad->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_Edad_TextChanged);
 			// 
 			// L_DNI
 			// 
@@ -266,6 +274,7 @@ namespace TransPorticoView {
 			this->L_DNI->TabIndex = 54;
 			this->L_DNI->Text = L"DNI:";
 			this->L_DNI->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_DNI->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_DNI_Click);
 			// 
 			// TB_DNI
 			// 
@@ -277,6 +286,7 @@ namespace TransPorticoView {
 			this->TB_DNI->Name = L"TB_DNI";
 			this->TB_DNI->Size = System::Drawing::Size(265, 41);
 			this->TB_DNI->TabIndex = 53;
+			this->TB_DNI->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_DNI_TextChanged);
 			// 
 			// L_ApellidoMat
 			// 
@@ -292,6 +302,7 @@ namespace TransPorticoView {
 			this->L_ApellidoMat->TabIndex = 52;
 			this->L_ApellidoMat->Text = L"Apellido Materno:";
 			this->L_ApellidoMat->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_ApellidoMat->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_ApellidoMat_Click);
 			// 
 			// TB_ApellidoMat
 			// 
@@ -303,6 +314,7 @@ namespace TransPorticoView {
 			this->TB_ApellidoMat->Name = L"TB_ApellidoMat";
 			this->TB_ApellidoMat->Size = System::Drawing::Size(265, 41);
 			this->TB_ApellidoMat->TabIndex = 51;
+			this->TB_ApellidoMat->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_ApellidoMat_TextChanged);
 			// 
 			// L_ApellidoPat
 			// 
@@ -318,6 +330,7 @@ namespace TransPorticoView {
 			this->L_ApellidoPat->TabIndex = 50;
 			this->L_ApellidoPat->Text = L"Apellido Paterno:";
 			this->L_ApellidoPat->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_ApellidoPat->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_ApellidoPat_Click);
 			// 
 			// TB_ApellidoPat
 			// 
@@ -329,6 +342,7 @@ namespace TransPorticoView {
 			this->TB_ApellidoPat->Name = L"TB_ApellidoPat";
 			this->TB_ApellidoPat->Size = System::Drawing::Size(265, 41);
 			this->TB_ApellidoPat->TabIndex = 49;
+			this->TB_ApellidoPat->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_ApellidoPat_TextChanged);
 			// 
 			// L_Nombres
 			// 
@@ -344,6 +358,7 @@ namespace TransPorticoView {
 			this->L_Nombres->TabIndex = 48;
 			this->L_Nombres->Text = L"Nombres:";
 			this->L_Nombres->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Nombres->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_Nombres_Click);
 			// 
 			// TB_Nombres
 			// 
@@ -355,6 +370,7 @@ namespace TransPorticoView {
 			this->TB_Nombres->Name = L"TB_Nombres";
 			this->TB_Nombres->Size = System::Drawing::Size(265, 41);
 			this->TB_Nombres->TabIndex = 47;
+			this->TB_Nombres->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_Nombres_TextChanged);
 			// 
 			// L_Sueldo
 			// 
@@ -370,6 +386,7 @@ namespace TransPorticoView {
 			this->L_Sueldo->TabIndex = 65;
 			this->L_Sueldo->Text = L"Sueldo";
 			this->L_Sueldo->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Sueldo->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_Sueldo_Click);
 			// 
 			// TB_Sueldo
 			// 
@@ -381,6 +398,7 @@ namespace TransPorticoView {
 			this->TB_Sueldo->Name = L"TB_Sueldo";
 			this->TB_Sueldo->Size = System::Drawing::Size(265, 41);
 			this->TB_Sueldo->TabIndex = 66;
+			this->TB_Sueldo->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_Sueldo_TextChanged);
 			// 
 			// L_Contrato
 			// 
@@ -396,6 +414,7 @@ namespace TransPorticoView {
 			this->L_Contrato->TabIndex = 67;
 			this->L_Contrato->Text = L"Contrato:";
 			this->L_Contrato->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Contrato->Click += gcnew System::EventHandler(this, &Editar_Conductor::L_Contrato_Click);
 			// 
 			// TB_Contrato
 			// 
@@ -407,6 +426,7 @@ namespace TransPorticoView {
 			this->TB_Contrato->Name = L"TB_Contrato";
 			this->TB_Contrato->Size = System::Drawing::Size(265, 41);
 			this->TB_Contrato->TabIndex = 68;
+			this->TB_Contrato->TextChanged += gcnew System::EventHandler(this, &Editar_Conductor::TB_Contrato_TextChanged);
 			// 
 			// panel1
 			// 
@@ -528,6 +548,46 @@ private: System::Void Editar_Conductor_Load(System::Object^ sender, System::Even
 }
 private: System::Void Editar_Conductor_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
 	CentrarForm();
+}
+private: System::Void L_Contrato_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_Sueldo_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_Sueldo_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_ApellidoMat_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void CB_Genero_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_Contrasena_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_Contrasena_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_Telefono_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_Telefono_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_Genero_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_Edad_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_Edad_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_DNI_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_DNI_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_ApellidoMat_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_Contrato_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_ApellidoPat_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_ApellidoPat_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void L_Nombres_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void TB_Nombres_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }
