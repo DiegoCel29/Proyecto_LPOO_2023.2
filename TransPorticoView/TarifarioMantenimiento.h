@@ -149,7 +149,7 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
 			this->B_Buscar->Location = System::Drawing::Point(587, 92);
-			this->B_Buscar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Buscar->Margin = System::Windows::Forms::Padding(4);
 			this->B_Buscar->Name = L"B_Buscar";
 			this->B_Buscar->Size = System::Drawing::Size(133, 49);
 			this->B_Buscar->TabIndex = 1;
@@ -165,7 +165,7 @@ namespace TransPorticoView {
 			this->B_Anadir->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Anadir->Location = System::Drawing::Point(0, 640);
-			this->B_Anadir->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Anadir->Margin = System::Windows::Forms::Padding(4);
 			this->B_Anadir->Name = L"B_Anadir";
 			this->B_Anadir->Size = System::Drawing::Size(133, 49);
 			this->B_Anadir->TabIndex = 2;
@@ -181,7 +181,7 @@ namespace TransPorticoView {
 			this->B_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Borrar->Location = System::Drawing::Point(427, 640);
-			this->B_Borrar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Borrar->Margin = System::Windows::Forms::Padding(4);
 			this->B_Borrar->Name = L"B_Borrar";
 			this->B_Borrar->Size = System::Drawing::Size(133, 49);
 			this->B_Borrar->TabIndex = 3;
@@ -197,7 +197,7 @@ namespace TransPorticoView {
 			this->B_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Editar->Location = System::Drawing::Point(800, 640);
-			this->B_Editar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Editar->Margin = System::Windows::Forms::Padding(4);
 			this->B_Editar->Name = L"B_Editar";
 			this->B_Editar->Size = System::Drawing::Size(133, 49);
 			this->B_Editar->TabIndex = 4;
@@ -233,10 +233,10 @@ namespace TransPorticoView {
 			this->GB_Busqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
-			this->GB_Busqueda->Location = System::Drawing::Point(349, 0);
-			this->GB_Busqueda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->GB_Busqueda->Location = System::Drawing::Point(375, 32);
+			this->GB_Busqueda->Margin = System::Windows::Forms::Padding(4);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->GB_Busqueda->Padding = System::Windows::Forms::Padding(4);
 			this->GB_Busqueda->Size = System::Drawing::Size(733, 222);
 			this->GB_Busqueda->TabIndex = 8;
 			this->GB_Busqueda->TabStop = false;
@@ -247,7 +247,7 @@ namespace TransPorticoView {
 			this->CB_ParaderoInicial->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->CB_ParaderoInicial->FormattingEnabled = true;
 			this->CB_ParaderoInicial->Location = System::Drawing::Point(233, 98);
-			this->CB_ParaderoInicial->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CB_ParaderoInicial->Margin = System::Windows::Forms::Padding(4);
 			this->CB_ParaderoInicial->Name = L"CB_ParaderoInicial";
 			this->CB_ParaderoInicial->Size = System::Drawing::Size(332, 37);
 			this->CB_ParaderoInicial->TabIndex = 11;
@@ -271,7 +271,7 @@ namespace TransPorticoView {
 			// 
 			this->TB_Ruta->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->TB_Ruta->Location = System::Drawing::Point(233, 37);
-			this->TB_Ruta->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_Ruta->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Ruta->Name = L"TB_Ruta";
 			this->TB_Ruta->Size = System::Drawing::Size(333, 34);
 			this->TB_Ruta->TabIndex = 10;
@@ -295,7 +295,7 @@ namespace TransPorticoView {
 			// 
 			this->TB_Tarifa->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->TB_Tarifa->Location = System::Drawing::Point(233, 160);
-			this->TB_Tarifa->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_Tarifa->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Tarifa->Name = L"TB_Tarifa";
 			this->TB_Tarifa->Size = System::Drawing::Size(333, 34);
 			this->TB_Tarifa->TabIndex = 8;
@@ -332,7 +332,7 @@ namespace TransPorticoView {
 			this->DGV_Tarifario->DefaultCellStyle = dataGridViewCellStyle2;
 			this->DGV_Tarifario->EnableHeadersVisualStyles = false;
 			this->DGV_Tarifario->Location = System::Drawing::Point(0, 246);
-			this->DGV_Tarifario->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->DGV_Tarifario->Margin = System::Windows::Forms::Padding(4);
 			this->DGV_Tarifario->Name = L"DGV_Tarifario";
 			this->DGV_Tarifario->ReadOnly = true;
 			this->DGV_Tarifario->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
@@ -390,7 +390,7 @@ namespace TransPorticoView {
 			this->Controls->Add(this->B_Anadir);
 			this->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->DoubleBuffered = true;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"TarifarioMantenimiento";
 			this->Text = L"TarifarioMantenimiento";
 			this->Load += gcnew System::EventHandler(this, &TarifarioMantenimiento::TarifarioMantenimiento_Load);
@@ -447,6 +447,7 @@ namespace TransPorticoView {
 		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Tarifario + 320, 545);
 		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Tarifario + 600, 545);
 	};
+
 	private: System::Void TarifarioMantenimiento_Load(System::Object^ sender, System::EventArgs^ e) {
 	this->SizeChanged += (gcnew System::EventHandler(this, &TarifarioMantenimiento::TarifarioMantenimiento_SizeChanged));
 	CentrarForm();

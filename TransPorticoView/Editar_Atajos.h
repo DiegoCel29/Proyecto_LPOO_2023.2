@@ -369,7 +369,7 @@ namespace TransPorticoView {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(949, 609);
+			this->ClientSize = System::Drawing::Size(1009, 674);
 			this->Controls->Add(this->B_Crear);
 			this->Controls->Add(this->B_Cancelar);
 			this->Controls->Add(this->TB_X_Final);
