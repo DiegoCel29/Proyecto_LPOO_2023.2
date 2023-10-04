@@ -1,5 +1,6 @@
 #pragma once
 #include "Editar_Conductor.h"
+#include "NuevoConductor.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -229,6 +230,7 @@ namespace TransPorticoView {
 			this->button2->TabIndex = 5;
 			this->button2->Text = L"Añadir";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MantenimientoConductor::button2_Click);
 			// 
 			// button3
 			// 
@@ -357,6 +359,10 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	Empleado^ objConductor = objConductorController->buscarConductorxDNI(DNI_Editar_Conductor);
 	Editar_Conductor^ ventanaEditarConductor = gcnew Editar_Conductor(objConductor);
 	ventanaEditarConductor->ShowDialog();
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	NuevoConductor^ ventanaNuevoConductor = gcnew NuevoConductor( );
+	ventanaNuevoConductor->ShowDialog();
 }
 };
 }

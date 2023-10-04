@@ -134,6 +134,7 @@
     <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
     <ClCompile Include="FrmMatenimientoAutobus.cpp" />
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
+    <ClCompile Include="NuevoConductor.cpp" />
     <ClCompile Include="PantallaIngreso.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MantenimientoAtajo.cpp" />
@@ -213,6 +214,9 @@
     <ClInclude Include="FrmPantallaAdministrador.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="NuevoConductor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PantallaIngreso.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -283,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPantallaAdministrador.resx">
       <DependentUpon>FrmPantallaAdministrador.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NuevoConductor.resx">
+      <DependentUpon>NuevoConductor.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PantallaIngreso.resx">
       <DependentUpon>PantallaIngreso.h</DependentUpon>
