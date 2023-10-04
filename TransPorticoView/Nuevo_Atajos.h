@@ -121,6 +121,7 @@ namespace TransPorticoView {
 			this->B_Cancelar->TabIndex = 106;
 			this->B_Cancelar->Text = L"Cancelar";
 			this->B_Cancelar->UseVisualStyleBackColor = true;
+			this->B_Cancelar->Click += gcnew System::EventHandler(this, &Nuevo_Atajos::B_Cancelar_Click);
 			// 
 			// B_Crear
 			// 
@@ -132,6 +133,7 @@ namespace TransPorticoView {
 			this->B_Crear->TabIndex = 107;
 			this->B_Crear->Text = L"Grabar";
 			this->B_Crear->UseVisualStyleBackColor = true;
+			this->B_Crear->Click += gcnew System::EventHandler(this, &Nuevo_Atajos::B_Crear_Click_1);
 			// 
 			// TB_X_Final
 			// 
@@ -413,25 +415,6 @@ namespace TransPorticoView {
 			this->B_Cancelar->Location = System::Drawing::Point(CentroX - 125, 480);
 			this->B_Crear->Location = System::Drawing::Point(CentroX + 35, 480);
 			}
-	private: System::Void B_Crear_Click(System::Object^ sender, System::EventArgs^ e) {
-
-		int codigo = Convert::ToInt32(this->TB_Codigo->Text);
-		int X_Inicio = Convert::ToInt32(this->TB_X_Inicio->Text);
-		int Y_Inicio = Convert::ToInt32(this->TB_Y_Inicio->Text);
-		String^ Paradero_Inicio = this->TB_Paradero_Inicio->Text;
-		int X_Final = Convert::ToInt32(this->TB_X_Inicio->Text);
-		int Y_Final = Convert::ToInt32(this->TB_Y_Inicio->Text);
-		String^ Paradero_Final = this->TB_Paradero_Final->Text;
-		String^ RutaAsociada = this->TB_Ruta_Asociada->Text;
-
-		AtajosController^ ObjAtajosController = gcnew AtajosController();
-		Atajo^ ObjAtajos = gcnew Atajo(codigo,X_Inicio,Y_Inicio,Paradero_Inicio,X_Final,Y_Final,Paradero_Final,RutaAsociada);
-		ObjAtajosController->agregarAtajos(ObjAtajos);
-
-		MessageBox::Show("Atajo creada con exito.");
-		this->Close();
-	}
-
 private: System::Void Nuevo_Atajos_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
 	CentrarForm();
 }
@@ -443,6 +426,28 @@ private: System::Void Nuevo_Atajos_Load(System::Object^ sender, System::EventArg
 private: System::Void L_Paradero_Inicio_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void L_Codigo_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void B_Crear_Click_1(System::Object^ sender, System::EventArgs^ e) {
+
+	int codigo = Convert::ToInt32(this->TB_Codigo->Text);
+	int X_Inicio = Convert::ToInt32(this->TB_X_Inicio->Text);
+	int Y_Inicio = Convert::ToInt32(this->TB_Y_Inicio->Text);
+	String^ Paradero_Inicio = this->TB_Paradero_Inicio->Text;
+	int X_Final = Convert::ToInt32(this->TB_X_Inicio->Text);
+	int Y_Final = Convert::ToInt32(this->TB_Y_Inicio->Text);
+	String^ Paradero_Final = this->TB_Paradero_Final->Text;
+	String^ RutaAsociada = this->TB_Ruta_Asociada->Text;
+
+	AtajosController^ ObjAtajosController = gcnew AtajosController();
+	Atajo^ ObjAtajos = gcnew Atajo(codigo, X_Inicio, Y_Inicio, Paradero_Inicio, X_Final, Y_Final, Paradero_Final, RutaAsociada);
+	ObjAtajosController->agregarAtajos(ObjAtajos);
+
+	MessageBox::Show("Atajo creada con exito.");
+	this->Close();
+
+}
+private: System::Void B_Cancelar_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }

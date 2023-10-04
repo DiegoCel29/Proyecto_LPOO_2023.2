@@ -44,9 +44,9 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ B_Crear;
+
 	protected:
-	private: System::Windows::Forms::Button^ B_Cancelar;
+
 	private: System::Windows::Forms::Label^ L_Ruta_Asociada;
 	private: System::Windows::Forms::TextBox^ TB_Ruta_Asociada;
 
@@ -70,9 +70,11 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Label^ L_Codigo;
 	private: System::Windows::Forms::TextBox^ TB_Codigo;
 	private: System::Windows::Forms::TextBox^ TB_X_Final;
-	private: System::Windows::Forms::Panel^ panel1;
-	private: System::Windows::Forms::Panel^ panel2;
+
+
 	private: Atajo^ objAtajos; /*Este atributo lo agregamos porque necesitamos manejar la informacion de los pasajeros*/
+	private: System::Windows::Forms::Button^ B_Crear;
+	private: System::Windows::Forms::Button^ B_Cancelar;
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -86,8 +88,7 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->B_Crear = (gcnew System::Windows::Forms::Button());
-			this->B_Cancelar = (gcnew System::Windows::Forms::Button());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Editar_Atajos::typeid));
 			this->L_Ruta_Asociada = (gcnew System::Windows::Forms::Label());
 			this->TB_Ruta_Asociada = (gcnew System::Windows::Forms::TextBox());
 			this->L_Y_Final = (gcnew System::Windows::Forms::Label());
@@ -104,50 +105,14 @@ namespace TransPorticoView {
 			this->L_Codigo = (gcnew System::Windows::Forms::Label());
 			this->TB_Codigo = (gcnew System::Windows::Forms::TextBox());
 			this->TB_X_Final = (gcnew System::Windows::Forms::TextBox());
-			this->panel1 = (gcnew System::Windows::Forms::Panel());
-			this->panel2 = (gcnew System::Windows::Forms::Panel());
+			this->B_Crear = (gcnew System::Windows::Forms::Button());
+			this->B_Cancelar = (gcnew System::Windows::Forms::Button());
 			this->SuspendLayout();
-			// 
-			// B_Crear
-			// 
-			this->B_Crear->BackColor = System::Drawing::Color::DodgerBlue;
-			this->B_Crear->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->B_Crear->FlatAppearance->BorderColor = System::Drawing::Color::DodgerBlue;
-			this->B_Crear->FlatAppearance->BorderSize = 0;
-			this->B_Crear->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->B_Crear->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->B_Crear->Location = System::Drawing::Point(495, 532);
-			this->B_Crear->Margin = System::Windows::Forms::Padding(4);
-			this->B_Crear->Name = L"B_Crear";
-			this->B_Crear->Size = System::Drawing::Size(120, 49);
-			this->B_Crear->TabIndex = 86;
-			this->B_Crear->Text = L"Grabar";
-			this->B_Crear->UseVisualStyleBackColor = false;
-			this->B_Crear->Click += gcnew System::EventHandler(this, &Editar_Atajos::B_Crear_Click);
-			// 
-			// B_Cancelar
-			// 
-			this->B_Cancelar->BackColor = System::Drawing::Color::DodgerBlue;
-			this->B_Cancelar->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->B_Cancelar->FlatAppearance->BorderColor = System::Drawing::Color::DodgerBlue;
-			this->B_Cancelar->FlatAppearance->BorderSize = 0;
-			this->B_Cancelar->FlatStyle = System::Windows::Forms::FlatStyle::System;
-			this->B_Cancelar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->B_Cancelar->ForeColor = System::Drawing::Color::WhiteSmoke;
-			this->B_Cancelar->Location = System::Drawing::Point(294, 532);
-			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4);
-			this->B_Cancelar->Name = L"B_Cancelar";
-			this->B_Cancelar->Size = System::Drawing::Size(120, 49);
-			this->B_Cancelar->TabIndex = 85;
-			this->B_Cancelar->Text = L"Cancelar";
-			this->B_Cancelar->UseVisualStyleBackColor = false;
-			this->B_Cancelar->Click += gcnew System::EventHandler(this, &Editar_Atajos::B_Cancelar_Click);
 			// 
 			// L_Ruta_Asociada
 			// 
-			this->L_Ruta_Asociada->BackColor = System::Drawing::Color::OldLace;
+			this->L_Ruta_Asociada->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Ruta_Asociada->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Ruta_Asociada->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Ruta_Asociada->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -169,14 +134,14 @@ namespace TransPorticoView {
 			this->TB_Ruta_Asociada->Location = System::Drawing::Point(464, 440);
 			this->TB_Ruta_Asociada->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Ruta_Asociada->Name = L"TB_Ruta_Asociada";
-			this->TB_Ruta_Asociada->PasswordChar = '*';
 			this->TB_Ruta_Asociada->Size = System::Drawing::Size(265, 41);
 			this->TB_Ruta_Asociada->TabIndex = 82;
 			this->TB_Ruta_Asociada->TextChanged += gcnew System::EventHandler(this, &Editar_Atajos::TB_Ruta_Asociada_TextChanged);
 			// 
 			// L_Y_Final
 			// 
-			this->L_Y_Final->BackColor = System::Drawing::Color::OldLace;
+			this->L_Y_Final->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Y_Final->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Y_Final->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Y_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -204,7 +169,7 @@ namespace TransPorticoView {
 			// 
 			// L_X_Final
 			// 
-			this->L_X_Final->BackColor = System::Drawing::Color::OldLace;
+			this->L_X_Final->BackColor = System::Drawing::Color::Moccasin;
 			this->L_X_Final->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_X_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -220,7 +185,8 @@ namespace TransPorticoView {
 			// 
 			// L_Paradero_Final
 			// 
-			this->L_Paradero_Final->BackColor = System::Drawing::Color::OldLace;
+			this->L_Paradero_Final->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Paradero_Final->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Paradero_Final->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Paradero_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -248,7 +214,8 @@ namespace TransPorticoView {
 			// 
 			// L_Y_Inicio
 			// 
-			this->L_Y_Inicio->BackColor = System::Drawing::Color::OldLace;
+			this->L_Y_Inicio->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Y_Inicio->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Y_Inicio->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Y_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -276,7 +243,8 @@ namespace TransPorticoView {
 			// 
 			// L_X_Inicio
 			// 
-			this->L_X_Inicio->BackColor = System::Drawing::Color::OldLace;
+			this->L_X_Inicio->BackColor = System::Drawing::Color::Moccasin;
+			this->L_X_Inicio->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_X_Inicio->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_X_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -304,7 +272,8 @@ namespace TransPorticoView {
 			// 
 			// L_Paradero_Inicio
 			// 
-			this->L_Paradero_Inicio->BackColor = System::Drawing::Color::OldLace;
+			this->L_Paradero_Inicio->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Paradero_Inicio->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Paradero_Inicio->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Paradero_Inicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
@@ -332,7 +301,8 @@ namespace TransPorticoView {
 			// 
 			// L_Codigo
 			// 
-			this->L_Codigo->BackColor = System::Drawing::Color::OldLace;
+			this->L_Codigo->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Codigo->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
 			this->L_Codigo->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
 			this->L_Codigo->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
@@ -370,34 +340,39 @@ namespace TransPorticoView {
 			this->TB_X_Final->TabIndex = 87;
 			this->TB_X_Final->TextChanged += gcnew System::EventHandler(this, &Editar_Atajos::TB_X_Final_TextChanged);
 			// 
-			// panel1
+			// B_Crear
 			// 
-			this->panel1->BackColor = System::Drawing::Color::DarkBlue;
-			this->panel1->Dock = System::Windows::Forms::DockStyle::Right;
-			this->panel1->Location = System::Drawing::Point(849, 0);
-			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(100, 609);
-			this->panel1->TabIndex = 88;
+			this->B_Crear->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Crear.BackgroundImage")));
+			this->B_Crear->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->B_Crear->Location = System::Drawing::Point(407, 298);
+			this->B_Crear->Name = L"B_Crear";
+			this->B_Crear->Size = System::Drawing::Size(135, 39);
+			this->B_Crear->TabIndex = 109;
+			this->B_Crear->Text = L"Grabar";
+			this->B_Crear->UseVisualStyleBackColor = true;
+			this->B_Crear->Click += gcnew System::EventHandler(this, &Editar_Atajos::B_Crear_Click_1);
 			// 
-			// panel2
+			// B_Cancelar
 			// 
-			this->panel2->BackColor = System::Drawing::Color::DarkBlue;
-			this->panel2->Dock = System::Windows::Forms::DockStyle::Left;
-			this->panel2->Location = System::Drawing::Point(0, 0);
-			this->panel2->Name = L"panel2";
-			this->panel2->Size = System::Drawing::Size(100, 609);
-			this->panel2->TabIndex = 89;
+			this->B_Cancelar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Cancelar.BackgroundImage")));
+			this->B_Cancelar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Zoom;
+			this->B_Cancelar->Location = System::Drawing::Point(407, 272);
+			this->B_Cancelar->Name = L"B_Cancelar";
+			this->B_Cancelar->Size = System::Drawing::Size(135, 39);
+			this->B_Cancelar->TabIndex = 108;
+			this->B_Cancelar->Text = L"Cancelar";
+			this->B_Cancelar->UseVisualStyleBackColor = true;
+			this->B_Cancelar->Click += gcnew System::EventHandler(this, &Editar_Atajos::B_Cancelar_Click_1);
 			// 
 			// Editar_Atajos
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(949, 609);
-			this->Controls->Add(this->panel2);
-			this->Controls->Add(this->panel1);
-			this->Controls->Add(this->TB_X_Final);
 			this->Controls->Add(this->B_Crear);
 			this->Controls->Add(this->B_Cancelar);
+			this->Controls->Add(this->TB_X_Final);
 			this->Controls->Add(this->L_Ruta_Asociada);
 			this->Controls->Add(this->TB_Ruta_Asociada);
 			this->Controls->Add(this->L_Y_Final);
@@ -444,21 +419,7 @@ namespace TransPorticoView {
 			this->B_Cancelar->Location = System::Drawing::Point(CentroX - 125, 480);
 			this->B_Crear->Location = System::Drawing::Point(CentroX + 35, 480);
 		}
-	private: System::Void B_Crear_Click(System::Object^ sender, System::EventArgs^ e) {
-		int codigo = Convert::ToInt32(this->TB_Codigo->Text);
-		int X_Inicio = Convert::ToInt32(this->TB_X_Inicio->Text);
-		int Y_Inicio = Convert::ToInt32(this->TB_Y_Inicio->Text);
-		String^ Paradero_Inicio = this->TB_Paradero_Inicio->Text;
-		int X_Final = Convert::ToInt32(this->TB_X_Inicio->Text);
-		int Y_Final = Convert::ToInt32(this->TB_Y_Inicio->Text);
-		String^ Paradero_Final = this->TB_Paradero_Final->Text;
-		String^ RutaAsociada = this->TB_Ruta_Asociada->Text;
-		Atajo^ objAtajo = gcnew Atajo(codigo,X_Inicio, Y_Inicio, Paradero_Inicio,X_Final,Y_Final,Paradero_Final,RutaAsociada);
-		AtajosController^ objAtajosController = gcnew AtajosController();
-		objAtajosController->actualizarAtajos(objAtajo);
-		MessageBox::Show("Los atajos han sido actualizados con exito");
-		this->Close();
-	}
+
 private: System::Void B_Cancelar_Click(System::Object^ sender, System::EventArgs^ e) {
 	this->Close();
 }
@@ -508,6 +469,25 @@ private: System::Void TB_Paradero_Inicio_TextChanged(System::Object^ sender, Sys
 private: System::Void L_Codigo_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void TB_Codigo_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void B_Crear_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	int codigo = Convert::ToInt32(this->TB_Codigo->Text);
+	int X_Inicio = Convert::ToInt32(this->TB_X_Inicio->Text);
+	int Y_Inicio = Convert::ToInt32(this->TB_Y_Inicio->Text);
+	String^ Paradero_Inicio = this->TB_Paradero_Inicio->Text;
+	int X_Final = Convert::ToInt32(this->TB_X_Inicio->Text);
+	int Y_Final = Convert::ToInt32(this->TB_Y_Inicio->Text);
+	String^ Paradero_Final = this->TB_Paradero_Final->Text;
+	String^ RutaAsociada = this->TB_Ruta_Asociada->Text;
+	Atajo^ objAtajo = gcnew Atajo(codigo, X_Inicio, Y_Inicio, Paradero_Inicio, X_Final, Y_Final, Paradero_Final, RutaAsociada);
+	AtajosController^ objAtajosController = gcnew AtajosController();
+	objAtajosController->actualizarAtajos(objAtajo);
+	MessageBox::Show("Los atajos han sido actualizados con exito");
+	this->Close();
+}
+
+private: System::Void B_Cancelar_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
 }
 };
 }
