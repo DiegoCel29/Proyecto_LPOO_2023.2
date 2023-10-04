@@ -270,19 +270,20 @@ namespace TransPorticoView {
 		String^ DNI_Ver = TB_DNI->Text;
 		String^ ContrasenaVer = TB_Contrasena->Text;
 		//Se define la variable que guardara a la contrasena correcta
-		String^ ContrasenaCorrec;
+		String^ ContrasenaCorrecta;
 		String^ Tipo;
 		//Empezaremos a ver si el usuario existe, se creara un controller de persona
-		PersonaController^ ObjPersonaController = gcnew PersonaController();
+		PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
+		EmpleadoController^ ObjEmpleadoController = gcnew EmpleadoController();
 
-		ObjPersonaController->VerificarPersona(DNI_Ver, &ContrasenaCorrec, &Tipo, &Registrado);
+		ObjPasajeroController->BuscarPasajeroDNI(DNI_Ver);
 
 		if (Registrado == false) {
 			TB_DNI->Text = "";
 			MessageBox::Show("El DNI ingresado no está conectado a una cuenta.");
 		}
 		else {
-			if (ContrasenaVer == ContrasenaCorrec) {
+			if (ContrasenaVer == ContrasenaCorrecta) {
 				if (Tipo == "Pasajero") {
 
 				}
