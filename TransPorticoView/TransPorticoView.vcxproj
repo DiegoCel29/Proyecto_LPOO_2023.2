@@ -330,8 +330,8 @@
     <EmbeddedResource Include="Historial_Ruta.resx">
       <DependentUpon>Historial_Ruta.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoMantenimientoEditar.resx">
-      <DependentUpon>MantenimientoMantenimientoEditar.h</DependentUpon>
+    <EmbeddedResource Include="HorarioMantenimientoAnadir.resx">
+      <DependentUpon>HorarioMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuTarjeta.resx">
       <DependentUpon>MenuTarjeta.h</DependentUpon>
@@ -429,11 +429,8 @@
     <EmbeddedResource Include="RecargarTarjeta.resx">
       <DependentUpon>RecargarTarjeta.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RutaMantenimientoAnadir.resx">
-      <DependentUpon>RutaMantenimientoAnadir.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="RutaMantenimientoEditar.resx">
-      <DependentUpon>RutaMantenimientoEditar.h</DependentUpon>
+    <EmbeddedResource Include="RutaMantenimiento.resx">
+      <DependentUpon>RutaMantenimiento.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaldoPasajero.resx">
       <DependentUpon>SaldoPasajero.h</DependentUpon>

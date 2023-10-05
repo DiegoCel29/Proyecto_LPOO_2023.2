@@ -83,7 +83,6 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RutaMantenimiento::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -105,15 +104,13 @@ namespace TransPorticoView {
 			// 
 			// button2
 			// 
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(139, 626);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
+			this->button2->Location = System::Drawing::Point(104, 509);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(133, 49);
+			this->button2->Size = System::Drawing::Size(100, 40);
 			this->button2->TabIndex = 11;
 			this->button2->Text = L"Añadir";
 			this->button2->UseVisualStyleBackColor = true;
@@ -121,15 +118,13 @@ namespace TransPorticoView {
 			// 
 			// button3
 			// 
-			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
 			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(739, 626);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
+			this->button3->Location = System::Drawing::Point(554, 509);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(133, 49);
+			this->button3->Size = System::Drawing::Size(100, 40);
 			this->button3->TabIndex = 13;
 			this->button3->Text = L"Editar";
 			this->button3->UseVisualStyleBackColor = true;
@@ -137,15 +132,13 @@ namespace TransPorticoView {
 			// 
 			// button4
 			// 
-			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
 			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(446, 626);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
+			this->button4->Location = System::Drawing::Point(334, 509);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(133, 49);
+			this->button4->Size = System::Drawing::Size(100, 40);
 			this->button4->TabIndex = 12;
 			this->button4->Text = L"Borrar";
 			this->button4->UseVisualStyleBackColor = true;
@@ -182,13 +175,12 @@ namespace TransPorticoView {
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
 			this->dataGridView1->EnableHeadersVisualStyles = false;
-			this->dataGridView1->Location = System::Drawing::Point(43, 201);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
+			this->dataGridView1->Location = System::Drawing::Point(32, 163);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->ReadOnly = true;
 			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
 			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->dataGridView1->Size = System::Drawing::Size(933, 369);
+			this->dataGridView1->Size = System::Drawing::Size(700, 300);
 			this->dataGridView1->TabIndex = 15;
 			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &RutaMantenimiento::dataGridView1_CellContentClick_1);
 			// 
@@ -236,11 +228,9 @@ namespace TransPorticoView {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBox1->ForeColor = System::Drawing::Color::White;
-			this->groupBox1->Location = System::Drawing::Point(139, 58);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
+			this->groupBox1->Location = System::Drawing::Point(104, 47);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
-			this->groupBox1->Size = System::Drawing::Size(733, 124);
+			this->groupBox1->Size = System::Drawing::Size(550, 101);
 			this->groupBox1->TabIndex = 14;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Criterios de busqueda:";
@@ -249,10 +239,9 @@ namespace TransPorticoView {
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Location = System::Drawing::Point(199, 60);
-			this->comboBox1->Margin = System::Windows::Forms::Padding(4);
+			this->comboBox1->Location = System::Drawing::Point(149, 49);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(302, 37);
+			this->comboBox1->Size = System::Drawing::Size(228, 32);
 			this->comboBox1->TabIndex = 11;
 			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &RutaMantenimiento::comboBox1_SelectedIndexChanged);
 			// 
@@ -263,10 +252,9 @@ namespace TransPorticoView {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::Color::Black;
-			this->label1->Location = System::Drawing::Point(66, 60);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(50, 49);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(90, 37);
+			this->label1->Size = System::Drawing::Size(68, 30);
 			this->label1->TabIndex = 5;
 			this->label1->Text = L"Linea: ";
 			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -274,16 +262,14 @@ namespace TransPorticoView {
 			// 
 			// button1
 			// 
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->button1->ForeColor = System::Drawing::Color::Black;
-			this->button1->Location = System::Drawing::Point(582, 53);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
+			this->button1->Location = System::Drawing::Point(436, 43);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(133, 49);
+			this->button1->Size = System::Drawing::Size(100, 40);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
@@ -291,16 +277,14 @@ namespace TransPorticoView {
 			// 
 			// RutaMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1018, 733);
+			this->ClientSize = System::Drawing::Size(764, 596);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->groupBox1);
-			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"RutaMantenimiento";
 			this->Text = L"RutaMantenimiento";
 			this->Load += gcnew System::EventHandler(this, &RutaMantenimiento::RutaMantenimiento_Load);

@@ -69,7 +69,7 @@ void PasajeroController::EscribirPasajero(List<Pasajero^>^ lista) {
 	array<String^>^ lineasPasajero = gcnew array<String^>(lista->Count);
 	for (int i = 0; i < lista->Count; i++) {
 		Pasajero^ objeto = lista[i];
-		lineasPasajero[i] = objeto->GetDNI_Pasajero() + ";" + objeto->GetNombre_Pasajero() + ";" + objeto->GetApellidoPat_Pasajero() + ";" + objeto->GetApellidoMat_Pasajero() + ";" + objeto->GetEdad_Pasajero() + ";" + objeto->GetGenero_Pasajero() + ";" + objeto->GetTelefono_Pasajero() + ";" + objeto->GetContrasena_Pasajero() + ";" + objeto->GetFechaNacimiento_Pasajero();
+		lineasPasajero[i] = objeto->GetDNI_Pasajero() + ";" + objeto->GetNombre_Pasajero() + ";" + objeto->GetApellidoPat_Pasajero() + ";" + objeto->GetApellidoMat_Pasajero() + ";" + objeto->GetEdad_Pasajero() + ";" + objeto->GetGenero_Pasajero() + ";" + objeto->GetTelefono_Pasajero() + ";" + objeto->GetContrasena_Pasajero() + ";", objeto->GetTipo_Pasajero() + ";" + objeto->GetFechaNacimiento_Pasajero();
 	}
 	File::WriteAllLines("ListaPasajeros.txt", lineasPasajero);
 }

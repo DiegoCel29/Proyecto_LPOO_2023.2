@@ -169,7 +169,7 @@ namespace TransPorticoView {
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
 			this->GB_Busqueda->Location = System::Drawing::Point(136, 12);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Size = System::Drawing::Size(580, 80);
+			this->GB_Busqueda->Size = System::Drawing::Size(570, 80);
 			this->GB_Busqueda->TabIndex = 13;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";

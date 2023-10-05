@@ -303,13 +303,14 @@ namespace TransPorticoView {
 		CentrarForm();
 	}
 	private: System::Void B_Grabar_Click(System::Object^ sender, System::EventArgs^ e) {
+		if(this->TB_Tarifa->Text != "") {
+			this->ObjTarifario->SetTarifa(Convert::ToDouble(this->TB_Tarifa->Text));
 
-		this->ObjTarifario->SetTarifa(Convert::ToDouble(this->TB_Tarifa->Text));
-
-		TarifarioController^ ObjTarifarioController = gcnew TarifarioController();
-		ObjTarifarioController->ActualizarTarifario(ObjTarifario);
-		MessageBox::Show("La tarifa se ha actualizado con éxito");
-		this->Close();
+			TarifarioController^ ObjTarifarioController = gcnew TarifarioController();
+			ObjTarifarioController->ActualizarTarifario(ObjTarifario);
+			MessageBox::Show("La tarifa se ha actualizado con éxito");
+			this->Close();
+		}
 	}
 	private: System::Void B_Cancelar_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();

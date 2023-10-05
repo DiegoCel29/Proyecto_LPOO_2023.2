@@ -1,2 +1,2 @@
-78954631;Milen;Toribio;Alva;19;Femenino;991593244;Alasha26;Conductor;0;Contratado(4 meses)
+78954631;Milen;Toribio;Alva;19;Femenino;991593244;Alasha26;Conductor;1;Contratado(4 meses)
 78456235;Carlos Enrique;Díaz;Palma;23;Masculino;943225017;Rocotin36;Administrador;1500;Contratado(6 meses)
