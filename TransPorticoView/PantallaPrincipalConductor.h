@@ -100,21 +100,23 @@ namespace TransPorticoView {
 			this->GB_OPCIONES->Controls->Add(this->pictureBox2);
 			this->GB_OPCIONES->Controls->Add(this->B_TARJETA);
 			this->GB_OPCIONES->Controls->Add(this->pictureBox1);
+			this->GB_OPCIONES->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->GB_OPCIONES->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->GB_OPCIONES->Location = System::Drawing::Point(13, 13);
+			this->GB_OPCIONES->Location = System::Drawing::Point(22, 17);
 			this->GB_OPCIONES->Margin = System::Windows::Forms::Padding(4);
 			this->GB_OPCIONES->Name = L"GB_OPCIONES";
 			this->GB_OPCIONES->Padding = System::Windows::Forms::Padding(4);
-			this->GB_OPCIONES->Size = System::Drawing::Size(1257, 647);
+			this->GB_OPCIONES->Size = System::Drawing::Size(1062, 567);
 			this->GB_OPCIONES->TabIndex = 0;
 			this->GB_OPCIONES->TabStop = false;
-			this->GB_OPCIONES->Text = L"Menu de Opciones";
+			this->GB_OPCIONES->Text = L"Menú de Opciones";
 			this->GB_OPCIONES->Enter += gcnew System::EventHandler(this, &PantallaPrincipalConductor::groupBox1_Enter);
 			// 
 			// pictureBox5
 			// 
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(808, 129);
+			this->pictureBox5->Location = System::Drawing::Point(662, 140);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(336, 305);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -221,7 +223,7 @@ namespace TransPorticoView {
 			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1279, 677);
+			this->ClientSize = System::Drawing::Size(1113, 636);
 			this->Controls->Add(this->GB_OPCIONES);
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));

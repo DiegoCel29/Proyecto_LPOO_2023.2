@@ -114,6 +114,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BusesCercanos.cpp" />
+    <ClCompile Include="CrearReporte.cpp" />
+    <ClCompile Include="Historial_Ruta.cpp" />
+    <ClCompile Include="MenuTarjeta.cpp" />
     <ClCompile Include="PantallaPrincipalConductor.cpp" />
     <ClCompile Include="CrearCuenta.cpp" />
     <ClCompile Include="AtajosMantenimientoEditar.cpp" />
@@ -131,7 +135,10 @@
     <ClCompile Include="HorarioMantenimiento.cpp" />
     <ClCompile Include="MantenimientoMantenimiento.cpp" />
     <ClCompile Include="MantenimientoParadero.cpp" />
+    <ClCompile Include="PasajeroPrincipal.cpp" />
+    <ClCompile Include="Promociones.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
+    <ClCompile Include="RecargarTarjeta.cpp" />
     <ClCompile Include="RutaMantenimiento.cpp" />
     <ClCompile Include="AutobusMantenimiento.cpp" />
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
@@ -151,6 +158,7 @@
     <ClCompile Include="TarifarioMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
     <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
+    <ClCompile Include="VerBuses.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -160,6 +168,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BusesCercanos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CrearReporte.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Historial_Ruta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MenuTarjeta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PantallaPrincipalConductor.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -211,7 +231,13 @@
     <ClInclude Include="ParaderoMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Promociones.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PromocionesMantenimiento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="RecargarTarjeta.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="RutaMantenimiento.h">
@@ -268,8 +294,23 @@
     <ClInclude Include="TarifarioMantenimientoEditar.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="VerBuses.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BusesCercanos.resx">
+      <DependentUpon>BusesCercanos.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrearReporte.resx">
+      <DependentUpon>CrearReporte.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Historial_Ruta.resx">
+      <DependentUpon>Historial_Ruta.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuTarjeta.resx">
+      <DependentUpon>MenuTarjeta.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantallaPrincipalConductor.resx">
       <DependentUpon>PantallaPrincipalConductor.h</DependentUpon>
     </EmbeddedResource>
@@ -291,6 +332,9 @@
     <EmbeddedResource Include="MantenimientoMantenimientoAnadir.resx">
       <DependentUpon>MantenimientoMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PantallaPrincipalPasajero.resx">
+      <DependentUpon>PantallaPrincipalPasajero.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParaderoMantenimientoAnadir.resx">
       <DependentUpon>ParaderoMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
@@ -308,6 +352,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoMantenimiento.resx">
       <DependentUpon>MantenimientoMantenimiento.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Promociones.resx">
+      <DependentUpon>Promociones.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PromocionesMantenimiento.resx">
       <DependentUpon>PromocionesMantenimiento.h</DependentUpon>
@@ -345,12 +392,18 @@
     <EmbeddedResource Include="PromocionesMantenimientoEditar.resx">
       <DependentUpon>PromocionesMantenimientoEditar.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecargarTarjeta.resx">
+      <DependentUpon>RecargarTarjeta.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TarifarioMantenimiento.resx" />
     <EmbeddedResource Include="TarifarioMantenimientoAnadir.resx">
       <DependentUpon>TarifarioMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TarifarioMantenimientoEditar.resx">
       <DependentUpon>TarifarioMantenimientoEditar.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VerBuses.resx">
+      <DependentUpon>VerBuses.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
