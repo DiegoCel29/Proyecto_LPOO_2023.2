@@ -86,7 +86,7 @@ namespace TransPorticoView {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::HighlightText;
-			this->groupBox1->Location = System::Drawing::Point(40, 42);
+			this->groupBox1->Location = System::Drawing::Point(46, 45);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(752, 452);
 			this->groupBox1->TabIndex = 3;
@@ -128,7 +128,7 @@ namespace TransPorticoView {
 			this->button4->ForeColor = System::Drawing::Color::White;
 			this->button4->Location = System::Drawing::Point(62, 124);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(218, 39);
+			this->button4->Size = System::Drawing::Size(250, 39);
 			this->button4->TabIndex = 27;
 			this->button4->Text = L"ESCOGER RUTA: ";
 			this->button4->UseVisualStyleBackColor = false;
@@ -165,9 +165,9 @@ namespace TransPorticoView {
 			// 
 			this->B_TARJETA->BackColor = System::Drawing::Color::DarkBlue;
 			this->B_TARJETA->ForeColor = System::Drawing::Color::White;
-			this->B_TARJETA->Location = System::Drawing::Point(90, 213);
+			this->B_TARJETA->Location = System::Drawing::Point(62, 213);
 			this->B_TARJETA->Name = L"B_TARJETA";
-			this->B_TARJETA->Size = System::Drawing::Size(190, 41);
+			this->B_TARJETA->Size = System::Drawing::Size(250, 39);
 			this->B_TARJETA->TabIndex = 11;
 			this->B_TARJETA->Text = L"PARADERO";
 			this->B_TARJETA->UseVisualStyleBackColor = false;
@@ -177,10 +177,13 @@ namespace TransPorticoView {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(829, 542);
 			this->Controls->Add(this->groupBox1);
+			this->DoubleBuffered = true;
 			this->Name = L"VerBuses";
 			this->Text = L"VerBuses";
+			this->Load += gcnew System::EventHandler(this, &VerBuses::VerBuses_Load);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
@@ -193,6 +196,8 @@ namespace TransPorticoView {
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
 	BusesCercanos^ VentanaBusesCercanos = gcnew BusesCercanos();
 	VentanaBusesCercanos->ShowDialog();
+}
+private: System::Void VerBuses_Load(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 }

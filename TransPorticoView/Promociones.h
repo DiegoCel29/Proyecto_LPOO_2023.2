@@ -135,7 +135,7 @@ namespace TransPorticoView {
 			// 
 			this->button3->BackColor = System::Drawing::Color::DarkBlue;
 			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(116, 190);
+			this->button3->Location = System::Drawing::Point(116, 202);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(143, 39);
 			this->button3->TabIndex = 25;
@@ -145,7 +145,7 @@ namespace TransPorticoView {
 			// dateTimePicker1
 			// 
 			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->dateTimePicker1->Location = System::Drawing::Point(311, 190);
+			this->dateTimePicker1->Location = System::Drawing::Point(311, 202);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
 			this->dateTimePicker1->Size = System::Drawing::Size(211, 34);
 			this->dateTimePicker1->TabIndex = 26;
@@ -237,8 +237,10 @@ namespace TransPorticoView {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(787, 614);
 			this->Controls->Add(this->groupBox1);
+			this->DoubleBuffered = true;
 			this->Name = L"Promociones";
 			this->Text = L"Promociones";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();

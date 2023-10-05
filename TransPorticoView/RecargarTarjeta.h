@@ -66,13 +66,13 @@ namespace TransPorticoView {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(RecargarTarjeta::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->button6 = (gcnew System::Windows::Forms::Button());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->Logo = (gcnew System::Windows::Forms::PictureBox());
 			this->B_TARJETA = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->BeginInit();
 			this->SuspendLayout();
@@ -97,6 +97,14 @@ namespace TransPorticoView {
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Recarga tu tarjeta";
 			this->groupBox1->Enter += gcnew System::EventHandler(this, &RecargarTarjeta::groupBox1_Enter);
+			// 
+			// textBox1
+			// 
+			this->textBox1->Enabled = false;
+			this->textBox1->Location = System::Drawing::Point(332, 213);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(211, 34);
+			this->textBox1->TabIndex = 32;
 			// 
 			// button6
 			// 
@@ -123,9 +131,9 @@ namespace TransPorticoView {
 			// 
 			this->button4->BackColor = System::Drawing::Color::DarkBlue;
 			this->button4->ForeColor = System::Drawing::Color::White;
-			this->button4->Location = System::Drawing::Point(137, 124);
+			this->button4->Location = System::Drawing::Point(56, 129);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(143, 39);
+			this->button4->Size = System::Drawing::Size(250, 39);
 			this->button4->TabIndex = 27;
 			this->button4->Text = L"MONTO";
 			this->button4->UseVisualStyleBackColor = false;
@@ -161,28 +169,22 @@ namespace TransPorticoView {
 			// 
 			this->B_TARJETA->BackColor = System::Drawing::Color::DarkBlue;
 			this->B_TARJETA->ForeColor = System::Drawing::Color::White;
-			this->B_TARJETA->Location = System::Drawing::Point(90, 213);
+			this->B_TARJETA->Location = System::Drawing::Point(56, 213);
 			this->B_TARJETA->Name = L"B_TARJETA";
-			this->B_TARJETA->Size = System::Drawing::Size(190, 41);
+			this->B_TARJETA->Size = System::Drawing::Size(250, 39);
 			this->B_TARJETA->TabIndex = 11;
 			this->B_TARJETA->Text = L"CONTRASEÑA";
 			this->B_TARJETA->UseVisualStyleBackColor = false;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Enabled = false;
-			this->textBox1->Location = System::Drawing::Point(332, 213);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(211, 34);
-			this->textBox1->TabIndex = 32;
 			// 
 			// RecargarTarjeta
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(842, 553);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(813, 528);
 			this->Controls->Add(this->groupBox1);
+			this->DoubleBuffered = true;
 			this->Name = L"RecargarTarjeta";
 			this->Text = L"RecargarTarjeta";
 			this->groupBox1->ResumeLayout(false);

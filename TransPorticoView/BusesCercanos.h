@@ -67,6 +67,8 @@ namespace TransPorticoView {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(BusesCercanos::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
@@ -75,8 +77,6 @@ namespace TransPorticoView {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->Logo = (gcnew System::Windows::Forms::PictureBox());
 			this->B_TARJETA = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->BeginInit();
 			this->SuspendLayout();
@@ -99,9 +99,28 @@ namespace TransPorticoView {
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::HighlightText;
 			this->groupBox1->Location = System::Drawing::Point(30, 29);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(767, 564);
+			this->groupBox1->Size = System::Drawing::Size(694, 522);
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Enabled = false;
+			this->textBox3->Location = System::Drawing::Point(340, 365);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(211, 34);
+			this->textBox3->TabIndex = 30;
+			// 
+			// button3
+			// 
+			this->button3->BackColor = System::Drawing::Color::DarkBlue;
+			this->button3->ForeColor = System::Drawing::Color::White;
+			this->button3->Location = System::Drawing::Point(51, 365);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(250, 39);
+			this->button3->TabIndex = 29;
+			this->button3->Text = L"Cantidad Pasajeros";
+			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// textBox2
 			// 
@@ -117,7 +136,7 @@ namespace TransPorticoView {
 			this->button4->ForeColor = System::Drawing::Color::White;
 			this->button4->Location = System::Drawing::Point(51, 276);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(237, 39);
+			this->button4->Size = System::Drawing::Size(250, 39);
 			this->button4->TabIndex = 27;
 			this->button4->Text = L"Cantidad Pasajeros";
 			this->button4->UseVisualStyleBackColor = false;
@@ -142,9 +161,9 @@ namespace TransPorticoView {
 			// 
 			this->button1->BackColor = System::Drawing::Color::DarkBlue;
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(145, 197);
+			this->button1->Location = System::Drawing::Point(51, 199);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(143, 39);
+			this->button1->Size = System::Drawing::Size(250, 39);
 			this->button1->TabIndex = 22;
 			this->button1->Text = L"Proximidad";
 			this->button1->UseVisualStyleBackColor = false;
@@ -169,7 +188,7 @@ namespace TransPorticoView {
 			this->Logo->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->Logo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->Logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Logo.Image")));
-			this->Logo->Location = System::Drawing::Point(625, 11);
+			this->Logo->Location = System::Drawing::Point(561, 9);
 			this->Logo->Margin = System::Windows::Forms::Padding(1);
 			this->Logo->Name = L"Logo";
 			this->Logo->Size = System::Drawing::Size(137, 90);
@@ -181,39 +200,22 @@ namespace TransPorticoView {
 			// 
 			this->B_TARJETA->BackColor = System::Drawing::Color::DarkBlue;
 			this->B_TARJETA->ForeColor = System::Drawing::Color::White;
-			this->B_TARJETA->Location = System::Drawing::Point(145, 117);
+			this->B_TARJETA->Location = System::Drawing::Point(51, 121);
 			this->B_TARJETA->Name = L"B_TARJETA";
-			this->B_TARJETA->Size = System::Drawing::Size(143, 41);
+			this->B_TARJETA->Size = System::Drawing::Size(250, 39);
 			this->B_TARJETA->TabIndex = 11;
-			this->B_TARJETA->Text = L"BUS";
+			this->B_TARJETA->Text = L"Bus";
 			this->B_TARJETA->UseVisualStyleBackColor = false;
-			// 
-			// button3
-			// 
-			this->button3->BackColor = System::Drawing::Color::DarkBlue;
-			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(51, 365);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(237, 39);
-			this->button3->TabIndex = 29;
-			this->button3->Text = L"Cantidad Pasajeros";
-			this->button3->UseVisualStyleBackColor = false;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Enabled = false;
-			this->textBox3->Location = System::Drawing::Point(340, 365);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(211, 34);
-			this->textBox3->TabIndex = 30;
 			// 
 			// BusesCercanos
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(824, 633);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(746, 588);
 			this->Controls->Add(this->groupBox1);
+			this->DoubleBuffered = true;
 			this->Name = L"BusesCercanos";
 			this->Text = L"BusesCercanos";
 			this->groupBox1->ResumeLayout(false);

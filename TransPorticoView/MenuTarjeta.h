@@ -208,8 +208,10 @@ namespace TransPorticoView {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(739, 576);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(696, 541);
 			this->Controls->Add(this->groupBox1);
+			this->DoubleBuffered = true;
 			this->Name = L"MenuTarjeta";
 			this->Text = L"MenuTarjeta";
 			this->Load += gcnew System::EventHandler(this, &MenuTarjeta::MenuTarjeta_Load);
