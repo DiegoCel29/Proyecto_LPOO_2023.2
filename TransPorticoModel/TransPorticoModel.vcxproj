@@ -125,7 +125,7 @@
     <ClInclude Include="InformeEconomico.h" />
     <ClInclude Include="Tarifario.h" />
     <ClInclude Include="Horario.h" />
-    <ClInclude Include="SituacionRecorrido.h" />
+    <ClInclude Include="Situacion.h" />
     <ClInclude Include="Tarjeta.h" />
     <ClInclude Include="Ruta.h" />
     <ClInclude Include="Mantenimiento.h" />
@@ -143,7 +143,7 @@
     <ClCompile Include="Autobus.cpp" />
     <ClCompile Include="Ruta.cpp" />
     <ClCompile Include="Empleado.cpp" />
-    <ClCompile Include="SituacionRecorrido.cpp" />
+    <ClCompile Include="Situacion.cpp" />
     <ClCompile Include="Horario.cpp" />
     <ClCompile Include="Calificacion.cpp" />
     <ClCompile Include="Tarifario.cpp" />

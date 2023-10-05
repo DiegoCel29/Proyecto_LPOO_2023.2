@@ -1,42 +1,42 @@
 #include <iostream>
-#include "SituacionRecorridoController.h"
+#include "SituacionController.h"
 
 using namespace TransPorticoController;
 using namespace System::IO; /*Este espacio de nombres sirve para manejar los archivos de texto*/
 
 
-SituacionRecorridoController::SituacionRecorridoController() {
+SituacionController::SituacionController() {
 
 }
 
-List<SituacionRecorrido^>^ SituacionRecorridoController::buscarSituacionesRecorridos(String^ situaciones) {
+List<Situacion^>^ SituacionController::buscarSituacionesRecorridos(String^ situaciones) {
 	/*En esta lista vamos a colocar la información de los proyectos que encontremos en el archivo de texto*/
-	List<SituacionRecorrido^>^ listaSituacionRecorridoEncontradas = gcnew List<SituacionRecorrido^>();
-	array<String^>^ lineas = File::ReadAllLines("Lista_SituacionRecorrido.txt");
+	List<Situacion^>^ listaSituacionEncontradas = gcnew List<Situacion^>();
+	array<String^>^ lineas = File::ReadAllLines("Lista_Situacion.txt");
 
 	String^ separadores = ";"; /*Aqui defino el caracter por el cual voy a separar la informacion de cada linea*/
 	/*Esta instruccion for each nos permite ir elemento por elemento de un array*/
-	for each (String ^ lineaSituacionRecorrido in lineas) {
+	for each (String ^ lineaSituacion in lineas) {
 		/*Voy a separar cada elemento del String por ; con el split*/
-		array<String^>^ datos = lineaSituacionRecorrido->Split(separadores->ToCharArray());
+		array<String^>^ datos = lineaSituacion->Split(separadores->ToCharArray());
 		int Codigo = Convert::ToInt32(datos[0]);
 		bool HayTrafico = Convert::ToBoolean(datos[1]);
 		bool HayChoque = Convert::ToBoolean(datos[2]);
 	    bool ExcVelocidad = Convert::ToBoolean(datos[3]);
 		String^ Paradero = datos[4];
 		if (Paradero->Contains(situaciones)) {
-			SituacionRecorrido^ objSituacionRecorrido = gcnew SituacionRecorrido(Codigo,HayTrafico,HayChoque,ExcVelocidad,Paradero);
-			listaSituacionRecorridoEncontradas->Add(objSituacionRecorrido);
+			Situacion^ objSituacion = gcnew Situacion(Codigo,HayTrafico,HayChoque,ExcVelocidad,Paradero);
+			listaSituacionEncontradas->Add(objSituacion);
 		}
 	}
-	return listaSituacionRecorridoEncontradas;
+	return listaSituacionEncontradas;
 }
 
 //Para Editar
-SituacionRecorrido^ SituacionRecorridoController::buscarRecorrido(int codigo) {
-	SituacionRecorrido^ objSRecorrido = gcnew SituacionRecorrido;
+Situacion^ SituacionController::buscarRecorrido(int codigo) {
+	Situacion^ objSRecorrido = gcnew Situacion;
 	//Traemos todas carreras a una lista
-	List<SituacionRecorrido^>^ ListSRecorrido = buscarRecorridoall();
+	List<Situacion^>^ ListSRecorrido = buscarRecorridoall();
 	for (int i = 0; i < ListSRecorrido->Count; i++) {
 		if ((ListSRecorrido[i]->getCodigo()) == codigo) {
 
@@ -53,14 +53,14 @@ SituacionRecorrido^ SituacionRecorridoController::buscarRecorrido(int codigo) {
 }        
 
 
-int SituacionRecorridoController::ExisteRecorrido(int codigo) {
+int SituacionController::ExisteRecorrido(int codigo) {
 
 	int existe = 0;
 
-	List<SituacionRecorrido^>^ listaSRecorrido = buscarRecorridoall();
+	List<Situacion^>^ listaSRecorrido = buscarRecorridoall();
 
 	for (int i = 0; i < listaSRecorrido->Count; i++) {
-		SituacionRecorrido^ objSRecorrido = listaSRecorrido[i];
+		Situacion^ objSRecorrido = listaSRecorrido[i];
 		if ((codigo) == (objSRecorrido->getCodigo())) {
 			existe = 1;
 			break;
@@ -70,10 +70,10 @@ int SituacionRecorridoController::ExisteRecorrido(int codigo) {
 
 	return existe;
 }
-void SituacionRecorridoController::EliminarRecorrido(int codigo) {
-	List<SituacionRecorrido^>^ ListaSRecorrido = buscarRecorridoall();
+void SituacionController::EliminarRecorrido(int codigo) {
+	List<Situacion^>^ ListaSRecorrido = buscarRecorridoall();
 	for (int i = 0; i < ListaSRecorrido->Count; i++) {
-		SituacionRecorrido^ objSRecorrido = ListaSRecorrido[i];
+		Situacion^ objSRecorrido = ListaSRecorrido[i];
 		if ((objSRecorrido->getCodigo()) == (codigo)) {
 			ListaSRecorrido->RemoveAt(i);
 			break;
@@ -81,33 +81,33 @@ void SituacionRecorridoController::EliminarRecorrido(int codigo) {
 	}
 	escribirArchivo(ListaSRecorrido);
 }
-void SituacionRecorridoController::escribirArchivo(List<SituacionRecorrido^>^ ListaSitucionRecorrido) {
+void SituacionController::escribirArchivo(List<Situacion^>^ ListaSitucionRecorrido) {
 	array<String^>^ lineasArchivo = gcnew array<String^>(ListaSitucionRecorrido->Count);
 	for (int i = 0; i < ListaSitucionRecorrido->Count; i++) {
-		SituacionRecorrido^ objSRecorrido = ListaSitucionRecorrido[i];
+		Situacion^ objSRecorrido = ListaSitucionRecorrido[i];
 		lineasArchivo[i] = objSRecorrido->getCodigo() + ";" + objSRecorrido->getHayTrafico() + ";" +
 			objSRecorrido->getHayChoque() + ";" + objSRecorrido->getExcVelocidad() + ";" + objSRecorrido->getParadero() + ";";
 
 	}
-	File::WriteAllLines("Lista_SituacionRecorrido.txt", lineasArchivo);
+	File::WriteAllLines("Lista_Situacion.txt", lineasArchivo);
 }
-void SituacionRecorridoController::agregarRecorrido(int codigo, bool HayTrafico, bool HayChoque, bool ExcVelocidad, String^ Paradero) {
+void SituacionController::agregarRecorrido(int codigo, bool HayTrafico, bool HayChoque, bool ExcVelocidad, String^ Paradero) {
 	
-	List<SituacionRecorrido^>^ listaSRecorrido = buscarRecorridoall();
-	SituacionRecorrido^ obSRecorrido = gcnew SituacionRecorrido(codigo,HayTrafico, HayChoque, ExcVelocidad,  Paradero);
+	List<Situacion^>^ listaSRecorrido = buscarRecorridoall();
+	Situacion^ obSRecorrido = gcnew Situacion(codigo,HayTrafico, HayChoque, ExcVelocidad,  Paradero);
 	listaSRecorrido->Add(obSRecorrido);
 	escribirArchivo(listaSRecorrido);
 }
 
 //Almacenar todos los objetos SR en una lista.
-List<SituacionRecorrido^>^ SituacionRecorridoController::buscarRecorridoall() {
+List<Situacion^>^ SituacionController::buscarRecorridoall() {
 
-	List<SituacionRecorrido^>^ listaSituacionesEncontradas = gcnew List<SituacionRecorrido^>();
-	array<String^>^ lineas = File::ReadAllLines("Lista_SituacionRecorrido.txt");
+	List<Situacion^>^ listaSituacionesEncontradas = gcnew List<Situacion^>();
+	array<String^>^ lineas = File::ReadAllLines("Lista_Situacion.txt");
 
 	String^ separadores = ";";
-	for each (String ^ lineaSituacionRecorrido in lineas) {
-		array<String^>^ datos = lineaSituacionRecorrido->Split(separadores->ToCharArray());
+	for each (String ^ lineaSituacion in lineas) {
+		array<String^>^ datos = lineaSituacion->Split(separadores->ToCharArray());
 		int Codigo = Convert::ToInt32(datos[0]);
 		bool HayTrafico = Convert::ToBoolean(datos[1]);
 		bool HayChoque = Convert::ToBoolean(datos[2]);
@@ -115,15 +115,15 @@ List<SituacionRecorrido^>^ SituacionRecorridoController::buscarRecorridoall() {
 		String^ Paradero = datos[4];
 
 
-		SituacionRecorrido^ objSituacionRecorrido = gcnew SituacionRecorrido(Codigo, HayTrafico, HayChoque, ExcVelocidad, Paradero);
-		listaSituacionesEncontradas->Add(objSituacionRecorrido);
+		Situacion^ objSituacion = gcnew Situacion(Codigo, HayTrafico, HayChoque, ExcVelocidad, Paradero);
+		listaSituacionesEncontradas->Add(objSituacion);
 
 	}
 	return listaSituacionesEncontradas;
 }
 
-void SituacionRecorridoController::ActualizarRecorrido(int codigo, bool HayTrafico, bool HayChoque, bool ExcVelocidad, String^ Paradero) {
-	List<SituacionRecorrido^>^ ListaSRecorrido = buscarRecorridoall();
+void SituacionController::ActualizarRecorrido(int codigo, bool HayTrafico, bool HayChoque, bool ExcVelocidad, String^ Paradero) {
+	List<Situacion^>^ ListaSRecorrido = buscarRecorridoall();
 	for (int i = 0; i < ListaSRecorrido->Count; i++) {
 		if ((ListaSRecorrido[i]->getCodigo()) == codigo) {
 			ListaSRecorrido[i]->setHayTrafico(HayTrafico);

@@ -3,7 +3,7 @@
 using namespace System;
 
 namespace TransPorticoModel {
-	public ref class SituacionRecorrido {
+	public ref class Situacion {
 	private:
 		int Codigo;
 		bool HayTrafico;
@@ -12,8 +12,8 @@ namespace TransPorticoModel {
 		String^ Paradero;
 
 	public:
-		SituacionRecorrido();
-		SituacionRecorrido(int Codigo, bool HayTrafico, bool HayChoque, bool ExcVelocidad, String^ Paradero);
+		Situacion();
+		Situacion(int Codigo, bool HayTrafico, bool HayChoque, bool ExcVelocidad, String^ Paradero);
 		int getCodigo();
 		void setCodigo(int DNI);
 

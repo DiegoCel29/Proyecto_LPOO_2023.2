@@ -13,12 +13,12 @@ namespace TransPorticoView {
 	using namespace TransPorticoModel;
 
 	/// <summary>
-	/// Resumen de MantenimientoSituacionRecorrido
+	/// Resumen de MantenimientoSituacion
 	/// </summary>
-	public ref class MantenimientoSituacionRecorrido : public System::Windows::Forms::Form
+	public ref class MantenimientoSituacion : public System::Windows::Forms::Form
 	{
 	public:
-		MantenimientoSituacionRecorrido(void)
+		MantenimientoSituacion(void)
 		{
 			InitializeComponent();
 			//
@@ -30,7 +30,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~MantenimientoSituacionRecorrido()
+		~MantenimientoSituacion()
 		{
 			if (components)
 			{
@@ -88,7 +88,7 @@ namespace TransPorticoView {
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Buscar ";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &MantenimientoSituacionRecorrido::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &MantenimientoSituacion::button1_Click);
 			// 
 			// button2
 			// 
@@ -171,7 +171,7 @@ namespace TransPorticoView {
 			this->Column5->HeaderText = L"Paradero";
 			this->Column5->Name = L"Column5";
 			// 
-			// MantenimientoSituacionRecorrido
+			// MantenimientoSituacion
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -183,8 +183,8 @@ namespace TransPorticoView {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
-			this->Name = L"MantenimientoSituacionRecorrido";
-			this->Text = L"MantenimientoSituacionRecorrido";
+			this->Name = L"MantenimientoSituacion";
+			this->Text = L"MantenimientoSituacion";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -192,23 +192,23 @@ namespace TransPorticoView {
 		}
 #pragma endregion
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ SituacionRecorridoBuscar = this->textBox1->Text;
-		SituacionRecorridoController^ objSituacionRecorridoController = gcnew SituacionRecorridoController();
-		List<SituacionRecorrido^>^ listaSITUACIONESRECORRIDOS = objSituacionRecorridoController->buscarSituacionesRecorridos(SituacionRecorridoBuscar);
+		String^ SituacionBuscar = this->textBox1->Text;
+		SituacionController^ objSituacionController = gcnew SituacionController();
+		List<Situacion^>^ listaSITUACIONESRECORRIDOS = objSituacionController->buscarSituacionesRecorridos(SituacionBuscar);
 		// Ahora voy a mostrar las carreras encontradas en la grilla
 		mostrarGrilla(listaSITUACIONESRECORRIDOS);
 	}
-	private: void mostrarGrilla(List<SituacionRecorrido^>^ listaSITUACIONESRECORRIDOS) {
+	private: void mostrarGrilla(List<Situacion^>^ listaSITUACIONESRECORRIDOS) {
 		this->dataGridView1->Rows->Clear(); /*Elimino toda la informacion del datagrid*/
 		for (int i = 0; i < listaSITUACIONESRECORRIDOS->Count; i++) {
-			SituacionRecorrido^ objSituacionRecorrido = listaSITUACIONESRECORRIDOS[i];
+			Situacion^ objSituacion = listaSITUACIONESRECORRIDOS[i];
 			/*Esta filaGrilla representa una fila del data grid de la pantalla*/
 			array<String^>^ filaGrilla = gcnew array<String^>(5);
-			filaGrilla[0] = Convert::ToString(objSituacionRecorrido->getCodigo());
-			filaGrilla[1] = Convert::ToString(objSituacionRecorrido->getHayTrafico());
-			filaGrilla[2] = Convert::ToString(objSituacionRecorrido->getHayChoque());
-			filaGrilla[3] = Convert::ToString(objSituacionRecorrido->getExcVelocidad());
-			filaGrilla[4] = objSituacionRecorrido->getParadero();
+			filaGrilla[0] = Convert::ToString(objSituacion->getCodigo());
+			filaGrilla[1] = Convert::ToString(objSituacion->getHayTrafico());
+			filaGrilla[2] = Convert::ToString(objSituacion->getHayChoque());
+			filaGrilla[3] = Convert::ToString(objSituacion->getExcVelocidad());
+			filaGrilla[4] = objSituacion->getParadero();
 			this->dataGridView1->Rows->Add(filaGrilla);
 		}
 	}

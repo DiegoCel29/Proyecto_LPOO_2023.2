@@ -8,7 +8,7 @@
 #include "EmpleadoMantenimiento.h"
 #include "TarifarioMantenimiento.h"
 #include "PasajeroMantenimiento.h"
-#include "mantenimientoSituacionRecorrido.h"
+#include "mantenimientoSituacion.h"
 #include "AutobusMantenimiento.h"
 
 namespace TransPorticoView {

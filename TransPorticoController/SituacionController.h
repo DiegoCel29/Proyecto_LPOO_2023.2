@@ -6,18 +6,18 @@ using namespace TransPorticoModel;
 
 namespace TransPorticoController {
 
-	public ref class SituacionRecorridoController {
+	public ref class SituacionController {
 	public:
-		SituacionRecorridoController();
-		List<SituacionRecorrido^>^ buscarSituacionesRecorridos(String^ situacionesrecorridos);
+		SituacionController();
+		List<Situacion^>^ buscarSituacionesRecorridos(String^ situacionesrecorridos);
 
-		SituacionRecorrido^ buscarRecorrido(int codigo);
+		Situacion^ buscarRecorrido(int codigo);
 
 		int ExisteRecorrido(int codigo);
 		void EliminarRecorrido(int codigo);
-		void escribirArchivo(List<SituacionRecorrido^>^ ListaSitucionRecorrido);
+		void escribirArchivo(List<Situacion^>^ ListaSitucionRecorrido);
 		void agregarRecorrido(int codigo, bool HayTrafico, bool HayChoque, bool ExcVelocidad, String^ Paradero);
-		List<SituacionRecorrido^>^ buscarRecorridoall();
+		List<Situacion^>^ buscarRecorridoall();
 		void ActualizarRecorrido(int codigo, bool HayTrafico, bool HayChoque, bool ExcVelocidad, String^ Paradero);
 	};
 }

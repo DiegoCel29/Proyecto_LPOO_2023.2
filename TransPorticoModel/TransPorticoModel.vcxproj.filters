@@ -42,7 +42,7 @@
     <ClInclude Include="Empleado.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="SituacionRecorrido.h">
+    <ClInclude Include="Situacion.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="Horario.h">
@@ -104,7 +104,7 @@
     <ClCompile Include="Empleado.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="SituacionRecorrido.cpp">
+    <ClCompile Include="Situacion.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Horario.cpp">

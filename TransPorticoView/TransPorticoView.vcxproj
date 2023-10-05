@@ -148,7 +148,6 @@
     <ClCompile Include="PromocionesMantenimientoEditar.cpp" />
     <ClCompile Include="RutaMantenimientoAnadir.cpp" />
     <ClCompile Include="RutaMantenimientoEditar.cpp" />
-    <ClCompile Include="SituacionRecorridoMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
     <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
@@ -258,9 +257,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="RutaMantenimientoEditar.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="SituacionRecorridoMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TarifarioMantenimiento.h">

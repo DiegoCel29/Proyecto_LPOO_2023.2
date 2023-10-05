@@ -129,7 +129,7 @@
     <ClInclude Include="PersonaController.h" />
     <ClInclude Include="PromocionesController.h" />
     <ClInclude Include="RutaController.h" />
-    <ClInclude Include="SituacionRecorridoController.h" />
+    <ClInclude Include="SituacionController.h" />
     <ClInclude Include="TarjetaController.h" />
   </ItemGroup>
   <ItemGroup>
@@ -150,7 +150,7 @@
     <ClCompile Include="PersonaController.cpp" />
     <ClCompile Include="PromocionesController.cpp" />
     <ClCompile Include="RutaController.cpp" />
-    <ClCompile Include="SituacionRecorridoController.cpp" />
+    <ClCompile Include="SituacionController.cpp" />
     <ClCompile Include="TarjetaController.cpp" />
   </ItemGroup>
   <ItemGroup>
