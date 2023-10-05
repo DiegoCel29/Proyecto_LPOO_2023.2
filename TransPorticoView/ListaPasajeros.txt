@@ -1,5 +1,5 @@
-76849076;Milen Margaret;Toribio;Alva;19;Masculino;991593244;Alasha26;Pasajero
-72457071;Cesar Edú;Peña;Rengifo;19;Masculino;936893016;Sultan29;Pasajero
-71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;Pasajero
-71744136;Diego;Cel;Cco;21;Masculino;980152637;C0ntr4s;Pasajero
-71744137;Diego;Cel;Cel;22;Masculino;980152871;C0ntr41;Pasajero
+76849076;Milen Margaret;Toribio;Alva;19;Masculino;991593244;Alasha26;26/01/2004
+72457071;Cesar Edú;Peña;Rengifo;19;Masculino;936893016;Sultan29;29/01/2004
+71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;11/01/2000
+71744136;Diego;Cel;Cco;21;Masculino;980152637;C0ntr4s;12/03/2002
+71744137;Diego;Cel;Cel;22;Masculino;980152871;C0ntr41;13/05/2002
