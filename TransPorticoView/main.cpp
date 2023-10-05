@@ -1,4 +1,4 @@
-#include "Pantalla_Horario_Conductor.h"
+#include "Pantalla_Ver_Ruta.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -8,6 +8,6 @@ void main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	Pantalla_Horario_Conductor Ventana;
+	Pantalla_Ver_Ruta Ventana;
 	Application::Run(% Ventana);
 }
