@@ -2,21 +2,17 @@
 #include "FrmMantenimientoBuzonSugerencias.h"
 #include "PromocionesMantenimiento.h"
 #include "FrmMantenimientoTarjeta.h"
-#include "FrmMantenimientoMantenimiento.h"
-#include "frmMantenimientoRuta.h"
-#include "frmMantenimientoParadero.h"
+#include "MantenimientoMantenimiento.h"
+#include "RutaMantenimiento.h"
+#include "ParaderoMantenimiento.h"
 #include "frmMantenimientoHorario.h"
-#include "frmMantenimientoEmergencia.h"
 #include "frmMantenimientoCalificacion.h"
-#include "MantenimientoAtajo.h"
-#include "MantenimientoEmpleado.h"
+#include "AtajoMantenimiento.h"
+#include "EmpleadoMantenimiento.h"
 #include "TarifarioMantenimiento.h"
-#include "MantenimientoPasajero.h"
+#include "PasajeroMantenimiento.h"
 #include "mantenimientoSituacionRecorrido.h"
-#include "frmMantenimientoMedidasEstadisticas.h"
 #include "FrmMatenimientoAutobus.h"
-#include "FrmMantenimientoInformeEconomico.h"
-#include "FrmMantenimientoGestion.h"
 
 namespace TransPorticoView {
 
@@ -280,15 +276,15 @@ namespace TransPorticoView {
 		VentanaMantenimientoTarjeta->ShowDialog();
 	}
 	private: System::Void mantenimientosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		FrmMantenimientoMantenimiento^ VentanaMantenimientoMantenimiento = gcnew FrmMantenimientoMantenimiento();
+		MantenimientoMantenimiento^ VentanaMantenimientoMantenimiento = gcnew MantenimientoMantenimiento();
 		VentanaMantenimientoMantenimiento->ShowDialog();
 	}
 	private: System::Void rutasToolStripMenuItem_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		frmMantenimientoRuta^ VentanaMantenimientoRuta = gcnew frmMantenimientoRuta();
+		RutaMantenimiento^ VentanaMantenimientoRuta = gcnew RutaMantenimiento();
 		VentanaMantenimientoRuta->ShowDialog();
 	}
 	private: System::Void paraderosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		frmMantenimientoParadero^ VentanaMantenimientoParadero = gcnew frmMantenimientoParadero();
+		ParaderoMantenimiento^ VentanaMantenimientoParadero = gcnew ParaderoMantenimiento();
 		VentanaMantenimientoParadero->ShowDialog();
 	}
 	private: System::Void horariosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -300,16 +296,16 @@ namespace TransPorticoView {
 		VentanaMantenimientoCalificacion->ShowDialog();
 	}
 	private: System::Void atajosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		MantenimientoAtajo^ VentanaMantenimientoAtajo = gcnew MantenimientoAtajo();
-		VentanaMantenimientoAtajo->ShowDialog();
+		AtajoMantenimiento^ VentanaAtajoMantenimiento = gcnew AtajoMantenimiento();
+		VentanaAtajoMantenimiento->ShowDialog();
 	}
 	private: System::Void empleadoToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		MantenimientoEmpleado^ VentanaMantenimientoEmpleado = gcnew MantenimientoEmpleado();
-		VentanaMantenimientoEmpleado->ShowDialog();
+		EmpleadoMantenimiento^ VentanaEmpleadoMantenimiento = gcnew EmpleadoMantenimiento();
+		VentanaEmpleadoMantenimiento->ShowDialog();
 	}
 	private: System::Void pasajerosToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
-		MantenimientoPasajero^ VentanaMantenimientoPasajeros = gcnew MantenimientoPasajero();
-		VentanaMantenimientoPasajeros->ShowDialog();
+		PasajeroMantenimiento^ VentanaPasajeroMantenimientos = gcnew PasajeroMantenimiento();
+		VentanaPasajeroMantenimientos->ShowDialog();
 	}
 	private: System::Void autobusesToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
 		FrmMatenimientoAutobus^ VentanaMantenimientoAutobus = gcnew FrmMatenimientoAutobus();
