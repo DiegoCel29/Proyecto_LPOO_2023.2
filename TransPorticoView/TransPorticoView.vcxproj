@@ -318,6 +318,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AutobusMantenimiento.resx">
+      <DependentUpon>AutobusMantenimiento.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BusesCercanos.resx">
       <DependentUpon>BusesCercanos.h</DependentUpon>
     </EmbeddedResource>
