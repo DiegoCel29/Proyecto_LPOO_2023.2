@@ -100,23 +100,22 @@ namespace TransPorticoView {
 			this->GB_OPCIONES->Controls->Add(this->pictureBox2);
 			this->GB_OPCIONES->Controls->Add(this->B_TARJETA);
 			this->GB_OPCIONES->Controls->Add(this->pictureBox1);
-			this->GB_OPCIONES->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
 			this->GB_OPCIONES->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
-			this->GB_OPCIONES->Location = System::Drawing::Point(22, 17);
+			this->GB_OPCIONES->Location = System::Drawing::Point(13, 13);
 			this->GB_OPCIONES->Margin = System::Windows::Forms::Padding(4);
 			this->GB_OPCIONES->Name = L"GB_OPCIONES";
 			this->GB_OPCIONES->Padding = System::Windows::Forms::Padding(4);
-			this->GB_OPCIONES->Size = System::Drawing::Size(1062, 567);
+			this->GB_OPCIONES->Size = System::Drawing::Size(1257, 647);
 			this->GB_OPCIONES->TabIndex = 0;
 			this->GB_OPCIONES->TabStop = false;
-			this->GB_OPCIONES->Text = L"Menú de Opciones";
+			this->GB_OPCIONES->Text = L"Menu de Opciones";
 			this->GB_OPCIONES->Enter += gcnew System::EventHandler(this, &PantallaPrincipalConductor::groupBox1_Enter);
 			// 
 			// pictureBox5
 			// 
+			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(662, 140);
+			this->pictureBox5->Location = System::Drawing::Point(808, 129);
 			this->pictureBox5->Name = L"pictureBox5";
 			this->pictureBox5->Size = System::Drawing::Size(336, 305);
 			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
@@ -126,6 +125,8 @@ namespace TransPorticoView {
 			// B_ATAJOS
 			// 
 			this->B_ATAJOS->BackColor = System::Drawing::Color::DarkBlue;
+			this->B_ATAJOS->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->B_ATAJOS->ForeColor = System::Drawing::Color::White;
 			this->B_ATAJOS->Location = System::Drawing::Point(196, 389);
 			this->B_ATAJOS->Name = L"B_ATAJOS";
@@ -138,6 +139,8 @@ namespace TransPorticoView {
 			// B_RUTA
 			// 
 			this->B_RUTA->BackColor = System::Drawing::Color::DarkBlue;
+			this->B_RUTA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->B_RUTA->ForeColor = System::Drawing::Color::White;
 			this->B_RUTA->Location = System::Drawing::Point(196, 300);
 			this->B_RUTA->Name = L"B_RUTA";
@@ -150,6 +153,8 @@ namespace TransPorticoView {
 			// B_HORARIO_SEMANAL
 			// 
 			this->B_HORARIO_SEMANAL->BackColor = System::Drawing::Color::DarkBlue;
+			this->B_HORARIO_SEMANAL->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->B_HORARIO_SEMANAL->ForeColor = System::Drawing::Color::White;
 			this->B_HORARIO_SEMANAL->Location = System::Drawing::Point(196, 207);
 			this->B_HORARIO_SEMANAL->Name = L"B_HORARIO_SEMANAL";
@@ -161,6 +166,7 @@ namespace TransPorticoView {
 			// pictureBox4
 			// 
 			this->pictureBox4->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox4->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->pictureBox4->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox4.Image")));
 			this->pictureBox4->Location = System::Drawing::Point(92, 389);
@@ -173,6 +179,7 @@ namespace TransPorticoView {
 			// pictureBox3
 			// 
 			this->pictureBox3->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox3->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->pictureBox3->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox3.Image")));
 			this->pictureBox3->Location = System::Drawing::Point(92, 300);
@@ -185,6 +192,7 @@ namespace TransPorticoView {
 			// pictureBox2
 			// 
 			this->pictureBox2->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox2->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->pictureBox2->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox2.Image")));
 			this->pictureBox2->Location = System::Drawing::Point(92, 207);
@@ -197,6 +205,8 @@ namespace TransPorticoView {
 			// B_TARJETA
 			// 
 			this->B_TARJETA->BackColor = System::Drawing::Color::DarkBlue;
+			this->B_TARJETA->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
 			this->B_TARJETA->ForeColor = System::Drawing::Color::White;
 			this->B_TARJETA->Location = System::Drawing::Point(196, 114);
 			this->B_TARJETA->Name = L"B_TARJETA";
@@ -209,6 +219,7 @@ namespace TransPorticoView {
 			// pictureBox1
 			// 
 			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
 			this->pictureBox1->Location = System::Drawing::Point(92, 114);
@@ -220,11 +231,13 @@ namespace TransPorticoView {
 			// 
 			// PantallaPrincipalConductor
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 17);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1113, 636);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1279, 677);
 			this->Controls->Add(this->GB_OPCIONES);
+			this->DoubleBuffered = true;
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Margin = System::Windows::Forms::Padding(4);

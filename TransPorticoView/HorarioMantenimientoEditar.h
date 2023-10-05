@@ -39,19 +39,43 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::GroupBox^ groupBox1;
-	private: System::Windows::Forms::TextBox^ textBox4;
-	private: System::Windows::Forms::TextBox^ textBox3;
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Label^ label4;
-	private: System::Windows::Forms::Label^ label3;
-	private: System::Windows::Forms::Label^ label2;
-	private: System::Windows::Forms::Label^ label1;
-	
+
+
+
+
+
+
+
+
+
+
+
+
 	private: Horario^ objetoHorario;
+	private: System::Windows::Forms::GroupBox^ GB_Datos;
+	private: System::Windows::Forms::TextBox^ TB_ParaderoFinal;
+	private: System::Windows::Forms::TextBox^ TB_ParaderoInicial;
+	private: System::Windows::Forms::TextBox^ TB_RutaAsociada;
+
+	private: System::Windows::Forms::Label^ L_ParaderoFinal;
+
+	private: System::Windows::Forms::Label^ L_Identificador;
+	private: System::Windows::Forms::TextBox^ TB_Identificador;
+	private: System::Windows::Forms::Label^ L_ParaderoInicial;
+	private: System::Windows::Forms::Label^ L_RutaAsociada;
+	private: System::Windows::Forms::Button^ B_Cancelar;
+	private: System::Windows::Forms::Button^ B_Grabar;
+
+
+
+
+
+
+
+
+
+
+
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -65,164 +89,227 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox4 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->label4 = (gcnew System::Windows::Forms::Label());
-			this->label3 = (gcnew System::Windows::Forms::Label());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->groupBox1->SuspendLayout();
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(HorarioMantenimientoEditar::typeid));
+			this->GB_Datos = (gcnew System::Windows::Forms::GroupBox());
+			this->TB_ParaderoFinal = (gcnew System::Windows::Forms::TextBox());
+			this->TB_ParaderoInicial = (gcnew System::Windows::Forms::TextBox());
+			this->TB_RutaAsociada = (gcnew System::Windows::Forms::TextBox());
+			this->L_ParaderoFinal = (gcnew System::Windows::Forms::Label());
+			this->L_Identificador = (gcnew System::Windows::Forms::Label());
+			this->TB_Identificador = (gcnew System::Windows::Forms::TextBox());
+			this->L_ParaderoInicial = (gcnew System::Windows::Forms::Label());
+			this->L_RutaAsociada = (gcnew System::Windows::Forms::Label());
+			this->B_Cancelar = (gcnew System::Windows::Forms::Button());
+			this->B_Grabar = (gcnew System::Windows::Forms::Button());
+			this->GB_Datos->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// groupBox1
+			// GB_Datos
 			// 
-			this->groupBox1->Controls->Add(this->textBox4);
-			this->groupBox1->Controls->Add(this->textBox3);
-			this->groupBox1->Controls->Add(this->textBox2);
-			this->groupBox1->Controls->Add(this->textBox1);
-			this->groupBox1->Controls->Add(this->button2);
-			this->groupBox1->Controls->Add(this->button1);
-			this->groupBox1->Controls->Add(this->label4);
-			this->groupBox1->Controls->Add(this->label3);
-			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->GB_Datos->BackColor = System::Drawing::Color::Transparent;
+			this->GB_Datos->Controls->Add(this->TB_ParaderoFinal);
+			this->GB_Datos->Controls->Add(this->TB_ParaderoInicial);
+			this->GB_Datos->Controls->Add(this->TB_RutaAsociada);
+			this->GB_Datos->Controls->Add(this->L_ParaderoFinal);
+			this->GB_Datos->Controls->Add(this->L_Identificador);
+			this->GB_Datos->Controls->Add(this->TB_Identificador);
+			this->GB_Datos->Controls->Add(this->L_ParaderoInicial);
+			this->GB_Datos->Controls->Add(this->L_RutaAsociada);
+			this->GB_Datos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox1->Location = System::Drawing::Point(37, 48);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(309, 306);
-			this->groupBox1->TabIndex = 0;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Editar Horario";
-			this->groupBox1->Enter += gcnew System::EventHandler(this, &HorarioMantenimientoEditar::groupBox1_Enter);
+			this->GB_Datos->ForeColor = System::Drawing::Color::White;
+			this->GB_Datos->Location = System::Drawing::Point(40, 40);
+			this->GB_Datos->Name = L"GB_Datos";
+			this->GB_Datos->Size = System::Drawing::Size(450, 256);
+			this->GB_Datos->TabIndex = 11;
+			this->GB_Datos->TabStop = false;
+			this->GB_Datos->Text = L"Datos del Horario:";
 			// 
-			// textBox4
+			// TB_ParaderoFinal
 			// 
-			this->textBox4->Location = System::Drawing::Point(155, 158);
-			this->textBox4->Name = L"textBox4";
-			this->textBox4->Size = System::Drawing::Size(100, 22);
-			this->textBox4->TabIndex = 9;
+			this->TB_ParaderoFinal->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_ParaderoFinal->Enabled = false;
+			this->TB_ParaderoFinal->Location = System::Drawing::Point(175, 180);
+			this->TB_ParaderoFinal->Name = L"TB_ParaderoFinal";
+			this->TB_ParaderoFinal->Size = System::Drawing::Size(250, 29);
+			this->TB_ParaderoFinal->TabIndex = 22;
 			// 
-			// textBox3
+			// TB_ParaderoInicial
 			// 
-			this->textBox3->Location = System::Drawing::Point(155, 119);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(100, 22);
-			this->textBox3->TabIndex = 8;
+			this->TB_ParaderoInicial->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_ParaderoInicial->Enabled = false;
+			this->TB_ParaderoInicial->Location = System::Drawing::Point(175, 130);
+			this->TB_ParaderoInicial->Name = L"TB_ParaderoInicial";
+			this->TB_ParaderoInicial->Size = System::Drawing::Size(250, 29);
+			this->TB_ParaderoInicial->TabIndex = 21;
 			// 
-			// textBox2
+			// TB_RutaAsociada
 			// 
-			this->textBox2->Location = System::Drawing::Point(155, 86);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(100, 22);
-			this->textBox2->TabIndex = 7;
+			this->TB_RutaAsociada->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_RutaAsociada->Enabled = false;
+			this->TB_RutaAsociada->Location = System::Drawing::Point(175, 80);
+			this->TB_RutaAsociada->Name = L"TB_RutaAsociada";
+			this->TB_RutaAsociada->Size = System::Drawing::Size(250, 29);
+			this->TB_RutaAsociada->TabIndex = 20;
 			// 
-			// textBox1
+			// L_ParaderoFinal
 			// 
-			this->textBox1->Location = System::Drawing::Point(155, 48);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(100, 22);
-			this->textBox1->TabIndex = 6;
+			this->L_ParaderoFinal->BackColor = System::Drawing::Color::Moccasin;
+			this->L_ParaderoFinal->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_ParaderoFinal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->L_ParaderoFinal->ForeColor = System::Drawing::Color::Black;
+			this->L_ParaderoFinal->Location = System::Drawing::Point(10, 180);
+			this->L_ParaderoFinal->Name = L"L_ParaderoFinal";
+			this->L_ParaderoFinal->Size = System::Drawing::Size(150, 30);
+			this->L_ParaderoFinal->TabIndex = 15;
+			this->L_ParaderoFinal->Text = L"Turno:";
+			this->L_ParaderoFinal->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// button2
+			// L_Identificador
 			// 
-			this->button2->Location = System::Drawing::Point(174, 216);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(96, 43);
-			this->button2->TabIndex = 5;
-			this->button2->Text = L"Cancelar";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &HorarioMantenimientoEditar::button2_Click);
+			this->L_Identificador->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Identificador->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_Identificador->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->L_Identificador->ForeColor = System::Drawing::Color::Black;
+			this->L_Identificador->Location = System::Drawing::Point(10, 30);
+			this->L_Identificador->Name = L"L_Identificador";
+			this->L_Identificador->Size = System::Drawing::Size(150, 30);
+			this->L_Identificador->TabIndex = 9;
+			this->L_Identificador->Text = L"Código:";
+			this->L_Identificador->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// button1
+			// TB_Identificador
 			// 
-			this->button1->Location = System::Drawing::Point(25, 216);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(123, 43);
-			this->button1->TabIndex = 4;
-			this->button1->Text = L"Aplicar Cambios";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &HorarioMantenimientoEditar::button1_Click);
+			this->TB_Identificador->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_Identificador->Enabled = false;
+			this->TB_Identificador->Location = System::Drawing::Point(175, 30);
+			this->TB_Identificador->Name = L"TB_Identificador";
+			this->TB_Identificador->Size = System::Drawing::Size(250, 29);
+			this->TB_Identificador->TabIndex = 10;
 			// 
-			// label4
+			// L_ParaderoInicial
 			// 
-			this->label4->AutoSize = true;
-			this->label4->Location = System::Drawing::Point(44, 158);
-			this->label4->Name = L"label4";
-			this->label4->Size = System::Drawing::Size(42, 16);
-			this->label4->TabIndex = 3;
-			this->label4->Text = L"Turno";
+			this->L_ParaderoInicial->BackColor = System::Drawing::Color::Moccasin;
+			this->L_ParaderoInicial->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_ParaderoInicial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->L_ParaderoInicial->ForeColor = System::Drawing::Color::Black;
+			this->L_ParaderoInicial->Location = System::Drawing::Point(10, 130);
+			this->L_ParaderoInicial->Name = L"L_ParaderoInicial";
+			this->L_ParaderoInicial->Size = System::Drawing::Size(150, 30);
+			this->L_ParaderoInicial->TabIndex = 7;
+			this->L_ParaderoInicial->Text = L"Hora fin:";
+			this->L_ParaderoInicial->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// label3
+			// L_RutaAsociada
 			// 
-			this->label3->AutoSize = true;
-			this->label3->Location = System::Drawing::Point(44, 119);
-			this->label3->Name = L"label3";
-			this->label3->Size = System::Drawing::Size(53, 16);
-			this->label3->TabIndex = 2;
-			this->label3->Text = L"Hora fin";
+			this->L_RutaAsociada->BackColor = System::Drawing::Color::Moccasin;
+			this->L_RutaAsociada->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_RutaAsociada->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->L_RutaAsociada->ForeColor = System::Drawing::Color::Black;
+			this->L_RutaAsociada->Location = System::Drawing::Point(10, 80);
+			this->L_RutaAsociada->Name = L"L_RutaAsociada";
+			this->L_RutaAsociada->Size = System::Drawing::Size(150, 30);
+			this->L_RutaAsociada->TabIndex = 5;
+			this->L_RutaAsociada->Text = L"Hora de inicio:";
+			this->L_RutaAsociada->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// label2
+			// B_Cancelar
 			// 
-			this->label2->AutoSize = true;
-			this->label2->Location = System::Drawing::Point(44, 86);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(90, 16);
-			this->label2->TabIndex = 1;
-			this->label2->Text = L"Hora de inicio";
+			this->B_Cancelar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Cancelar.BackgroundImage")));
+			this->B_Cancelar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Cancelar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Cancelar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Cancelar->Location = System::Drawing::Point(305, 338);
+			this->B_Cancelar->Name = L"B_Cancelar";
+			this->B_Cancelar->Size = System::Drawing::Size(100, 40);
+			this->B_Cancelar->TabIndex = 10;
+			this->B_Cancelar->Text = L"Cancelar";
+			this->B_Cancelar->UseVisualStyleBackColor = true;
+			this->B_Cancelar->Click += gcnew System::EventHandler(this, &HorarioMantenimientoEditar::B_Cancelar_Click);
 			// 
-			// label1
+			// B_Grabar
 			// 
-			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(44, 48);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(51, 16);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"Código";
+			this->B_Grabar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Grabar.BackgroundImage")));
+			this->B_Grabar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Grabar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Grabar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Grabar->Location = System::Drawing::Point(103, 338);
+			this->B_Grabar->Name = L"B_Grabar";
+			this->B_Grabar->Size = System::Drawing::Size(170, 40);
+			this->B_Grabar->TabIndex = 9;
+			this->B_Grabar->Text = L"Aplicar Cambios";
+			this->B_Grabar->UseVisualStyleBackColor = true;
+			this->B_Grabar->Click += gcnew System::EventHandler(this, &HorarioMantenimientoEditar::B_Grabar_Click);
 			// 
 			// HorarioMantenimientoEditar
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(384, 397);
-			this->Controls->Add(this->groupBox1);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(535, 445);
+			this->Controls->Add(this->GB_Datos);
+			this->Controls->Add(this->B_Cancelar);
+			this->Controls->Add(this->B_Grabar);
+			this->DoubleBuffered = true;
 			this->Name = L"HorarioMantenimientoEditar";
 			this->Text = L"Editar";
 			this->Load += gcnew System::EventHandler(this, &HorarioMantenimientoEditar::HorarioMantenimientoEditar_Load);
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
+			this->SizeChanged += gcnew System::EventHandler(this, &HorarioMantenimientoEditar::HorarioMantenimientoEditar_SizeChanged);
+			this->GB_Datos->ResumeLayout(false);
+			this->GB_Datos->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: void CentrarForm() {
+		int PosXGB_Datos = ((this->ClientSize.Width) - (this->GB_Datos->Width)) / 2;
+
+		this->GB_Datos->Location = System::Drawing::Point(PosXGB_Datos, 25);
+		this->B_Grabar->Location = System::Drawing::Point(PosXGB_Datos, 340);
+		this->B_Cancelar->Location = System::Drawing::Point(PosXGB_Datos + 350, 340);
+	};
+
+
+
 	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		this->Close();
-	}
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		
 
-		int Codigo = Convert::ToInt32(this->textBox1->Text);
-		String^ HoraInicio = this->textBox2->Text;
-		String^ HoraSalida = this->textBox3->Text;
-		String^ Turno = this->textBox4->Text;
+
+	private: System::Void HorarioMantenimientoEditar_Load(System::Object^ sender, System::EventArgs^ e) {
+
+		this->SizeChanged += (gcnew System::EventHandler(this, &HorarioMantenimientoEditar::HorarioMantenimientoEditar_SizeChanged));
+		CentrarForm();
+		this->TB_Identificador->Text = Convert::ToString(this->objetoHorario->getCodigo());
+		this->TB_RutaAsociada->Text = this->objetoHorario->getHoraInicio();
+		this->TB_ParaderoInicial->Text = (this->objetoHorario->getHoraSalida());
+		this->TB_ParaderoFinal->Text = (this->objetoHorario->getTurno());
+	}
+
+	private: System::Void B_Grabar_Click(System::Object^ sender, System::EventArgs^ e) {
+		int Codigo = Convert::ToInt32(this->TB_Identificador->Text);
+		String^ HoraInicio = this->TB_RutaAsociada->Text;
+		String^ HoraSalida = this->TB_ParaderoInicial->Text;
+		String^ Turno = this->TB_ParaderoFinal->Text;
 
 		HorarioController^ objHorarioController = gcnew HorarioController();
 		objHorarioController->ActualizarHorario(Codigo, HoraInicio, HoraSalida, Turno);
 		MessageBox::Show("El Horario ha sido Actualizado con exito");
 		this->Close();
+
 	}
-	private: System::Void HorarioMantenimientoEditar_Load(System::Object^ sender, System::EventArgs^ e) {
-		this->textBox1->Text = Convert::ToString(this->objetoHorario->getCodigo());
-		this->textBox2->Text = this->objetoHorario->getHoraInicio();
-		this->textBox3->Text = (this->objetoHorario->getHoraSalida());
-		this->textBox4->Text = (this->objetoHorario->getTurno());
+	private: System::Void B_Cancelar_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		this->Close();
 	}
-};
+	private: System::Void HorarioMantenimientoEditar_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
+	};
 }

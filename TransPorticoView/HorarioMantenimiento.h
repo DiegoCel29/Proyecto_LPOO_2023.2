@@ -38,22 +38,47 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
+	private: System::Windows::Forms::GroupBox^ GB_Busqueda;
+	private: System::Windows::Forms::TextBox^ TB_Turno;
 	protected:
 
 
 
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::GroupBox^ groupBox1;
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::Label^ label1;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column1;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column2;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
+
+
+	private: System::Windows::Forms::Label^ L_ParaderoInicial;
+	private: System::Windows::Forms::Button^ B_Buscar;
+	private: System::Windows::Forms::DataGridView^ DGV_Horario;
+
+
+
+
+
+
+
+	private: System::Windows::Forms::Button^ B_Anadir;
+	private: System::Windows::Forms::Button^ B_Borrar;
+	private: System::Windows::Forms::Button^ B_Editar;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Identificador;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_RutaAsociada;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGCV_ParaderoInicial;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_ParaderoFinal;
+
+	protected:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -73,165 +98,248 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
-			this->Column1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->groupBox1->SuspendLayout();
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(HorarioMantenimiento::typeid));
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			this->GB_Busqueda = (gcnew System::Windows::Forms::GroupBox());
+			this->TB_Turno = (gcnew System::Windows::Forms::TextBox());
+			this->L_ParaderoInicial = (gcnew System::Windows::Forms::Label());
+			this->B_Buscar = (gcnew System::Windows::Forms::Button());
+			this->DGV_Horario = (gcnew System::Windows::Forms::DataGridView());
+			this->DGVC_Identificador = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC_RutaAsociada = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGCV_ParaderoInicial = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC_ParaderoFinal = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->B_Anadir = (gcnew System::Windows::Forms::Button());
+			this->B_Borrar = (gcnew System::Windows::Forms::Button());
+			this->B_Editar = (gcnew System::Windows::Forms::Button());
+			this->GB_Busqueda->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Horario))->BeginInit();
 			this->SuspendLayout();
 			// 
-			// dataGridView1
+			// GB_Busqueda
 			// 
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
-				this->Column1,
-					this->Column2, this->Column3, this->Column4
-			});
-			this->dataGridView1->Location = System::Drawing::Point(23, 76);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->Size = System::Drawing::Size(530, 256);
-			this->dataGridView1->TabIndex = 21;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &HorarioMantenimiento::dataGridView1_CellContentClick);
-			// 
-			// Column1
-			// 
-			this->Column1->HeaderText = L"Código";
-			this->Column1->MinimumWidth = 6;
-			this->Column1->Name = L"Column1";
-			this->Column1->Width = 125;
-			// 
-			// Column2
-			// 
-			this->Column2->HeaderText = L"Hora de Inicio";
-			this->Column2->MinimumWidth = 6;
-			this->Column2->Name = L"Column2";
-			this->Column2->Width = 125;
-			// 
-			// Column3
-			// 
-			this->Column3->HeaderText = L"Hora Fin";
-			this->Column3->MinimumWidth = 6;
-			this->Column3->Name = L"Column3";
-			this->Column3->Width = 125;
-			// 
-			// Column4
-			// 
-			this->Column4->HeaderText = L"Turno";
-			this->Column4->MinimumWidth = 6;
-			this->Column4->Name = L"Column4";
-			this->Column4->Width = 125;
-			// 
-			// button4
-			// 
-			this->button4->Location = System::Drawing::Point(428, 357);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(75, 23);
-			this->button4->TabIndex = 20;
-			this->button4->Text = L"Eliminar";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::button4_Click);
-			// 
-			// groupBox1
-			// 
-			this->groupBox1->Controls->Add(this->textBox1);
-			this->groupBox1->Controls->Add(this->button1);
-			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Location = System::Drawing::Point(-29, -21);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(582, 91);
-			this->groupBox1->TabIndex = 17;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Criterio de Búsqueda";
-			this->groupBox1->Enter += gcnew System::EventHandler(this, &HorarioMantenimiento::groupBox1_Enter);
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(192, 53);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(132, 20);
-			this->textBox1->TabIndex = 5;
-			// 
-			// button1
-			// 
-			this->button1->Location = System::Drawing::Point(385, 50);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(75, 23);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Buscar";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::button1_Click);
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->GB_Busqueda->BackColor = System::Drawing::Color::Transparent;
+			this->GB_Busqueda->Controls->Add(this->TB_Turno);
+			this->GB_Busqueda->Controls->Add(this->L_ParaderoInicial);
+			this->GB_Busqueda->Controls->Add(this->B_Buscar);
+			this->GB_Busqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(130, 57);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(48, 16);
-			this->label1->TabIndex = 0;
-			this->label1->Text = L"Turno: ";
-			this->label1->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::label1_Click);
+			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
+			this->GB_Busqueda->Location = System::Drawing::Point(196, 46);
+			this->GB_Busqueda->Name = L"GB_Busqueda";
+			this->GB_Busqueda->Size = System::Drawing::Size(550, 98);
+			this->GB_Busqueda->TabIndex = 9;
+			this->GB_Busqueda->TabStop = false;
+			this->GB_Busqueda->Text = L"Criterios de busqueda:";
 			// 
-			// button3
+			// TB_Turno
 			// 
-			this->button3->Location = System::Drawing::Point(242, 357);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(75, 23);
-			this->button3->TabIndex = 19;
-			this->button3->Text = L"Editar";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::button3_Click);
+			this->TB_Turno->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_Turno->Location = System::Drawing::Point(141, 46);
+			this->TB_Turno->Name = L"TB_Turno";
+			this->TB_Turno->Size = System::Drawing::Size(250, 29);
+			this->TB_Turno->TabIndex = 10;
 			// 
-			// button2
+			// L_ParaderoInicial
 			// 
-			this->button2->Location = System::Drawing::Point(56, 357);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(75, 23);
-			this->button2->TabIndex = 18;
-			this->button2->Text = L"Nuevo";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::button2_Click);
+			this->L_ParaderoInicial->BackColor = System::Drawing::Color::Moccasin;
+			this->L_ParaderoInicial->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_ParaderoInicial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->L_ParaderoInicial->ForeColor = System::Drawing::Color::Black;
+			this->L_ParaderoInicial->Location = System::Drawing::Point(40, 45);
+			this->L_ParaderoInicial->Name = L"L_ParaderoInicial";
+			this->L_ParaderoInicial->Size = System::Drawing::Size(74, 30);
+			this->L_ParaderoInicial->TabIndex = 5;
+			this->L_ParaderoInicial->Text = L"Turno";
+			this->L_ParaderoInicial->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_ParaderoInicial->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::L_ParaderoInicial_Click);
+			// 
+			// B_Buscar
+			// 
+			this->B_Buscar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Buscar.BackgroundImage")));
+			this->B_Buscar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Buscar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
+			this->B_Buscar->Location = System::Drawing::Point(432, 40);
+			this->B_Buscar->Name = L"B_Buscar";
+			this->B_Buscar->Size = System::Drawing::Size(100, 40);
+			this->B_Buscar->TabIndex = 1;
+			this->B_Buscar->Text = L"Buscar";
+			this->B_Buscar->UseVisualStyleBackColor = true;
+			this->B_Buscar->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::B_Buscar_Click);
+			// 
+			// DGV_Horario
+			// 
+			this->DGV_Horario->AllowUserToDeleteRows = false;
+			this->DGV_Horario->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->DGV_Horario->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
+			this->DGV_Horario->BackgroundColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->DGV_Horario->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::Wheat;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::Color::OliveDrab;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->DGV_Horario->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			this->DGV_Horario->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DGV_Horario->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(4) {
+				this->DGVC_Identificador,
+					this->DGVC_RutaAsociada, this->DGCV_ParaderoInicial, this->DGVC_ParaderoFinal
+			});
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->DGV_Horario->DefaultCellStyle = dataGridViewCellStyle2;
+			this->DGV_Horario->EnableHeadersVisualStyles = false;
+			this->DGV_Horario->Location = System::Drawing::Point(122, 164);
+			this->DGV_Horario->Name = L"DGV_Horario";
+			this->DGV_Horario->ReadOnly = true;
+			this->DGV_Horario->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
+			this->DGV_Horario->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->DGV_Horario->Size = System::Drawing::Size(700, 300);
+			this->DGV_Horario->TabIndex = 10;
+			this->DGV_Horario->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &HorarioMantenimiento::DGV_Tarifario_CellContentClick);
+			// 
+			// DGVC_Identificador
+			// 
+			this->DGVC_Identificador->HeaderText = L"Código";
+			this->DGVC_Identificador->MinimumWidth = 6;
+			this->DGVC_Identificador->Name = L"DGVC_Identificador";
+			this->DGVC_Identificador->ReadOnly = true;
+			// 
+			// DGVC_RutaAsociada
+			// 
+			this->DGVC_RutaAsociada->HeaderText = L"Hora de Inicio";
+			this->DGVC_RutaAsociada->MinimumWidth = 6;
+			this->DGVC_RutaAsociada->Name = L"DGVC_RutaAsociada";
+			this->DGVC_RutaAsociada->ReadOnly = true;
+			// 
+			// DGCV_ParaderoInicial
+			// 
+			this->DGCV_ParaderoInicial->HeaderText = L"Hora fin";
+			this->DGCV_ParaderoInicial->MinimumWidth = 6;
+			this->DGCV_ParaderoInicial->Name = L"DGCV_ParaderoInicial";
+			this->DGCV_ParaderoInicial->ReadOnly = true;
+			// 
+			// DGVC_ParaderoFinal
+			// 
+			this->DGVC_ParaderoFinal->HeaderText = L"Turno";
+			this->DGVC_ParaderoFinal->MinimumWidth = 6;
+			this->DGVC_ParaderoFinal->Name = L"DGVC_ParaderoFinal";
+			this->DGVC_ParaderoFinal->ReadOnly = true;
+			// 
+			// B_Anadir
+			// 
+			this->B_Anadir->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Anadir.BackgroundImage")));
+			this->B_Anadir->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Anadir->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Anadir->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Anadir->Location = System::Drawing::Point(220, 511);
+			this->B_Anadir->Name = L"B_Anadir";
+			this->B_Anadir->Size = System::Drawing::Size(100, 40);
+			this->B_Anadir->TabIndex = 12;
+			this->B_Anadir->Text = L"Añadir";
+			this->B_Anadir->UseVisualStyleBackColor = true;
+			this->B_Anadir->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::B_Anadir_Click);
+			// 
+			// B_Borrar
+			// 
+			this->B_Borrar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Borrar.BackgroundImage")));
+			this->B_Borrar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Borrar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Borrar->Location = System::Drawing::Point(628, 511);
+			this->B_Borrar->Name = L"B_Borrar";
+			this->B_Borrar->Size = System::Drawing::Size(100, 40);
+			this->B_Borrar->TabIndex = 13;
+			this->B_Borrar->Text = L"Borrar";
+			this->B_Borrar->UseVisualStyleBackColor = true;
+			this->B_Borrar->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::B_Borrar_Click);
+			// 
+			// B_Editar
+			// 
+			this->B_Editar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Editar.BackgroundImage")));
+			this->B_Editar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Editar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Editar->Location = System::Drawing::Point(421, 511);
+			this->B_Editar->Name = L"B_Editar";
+			this->B_Editar->Size = System::Drawing::Size(100, 40);
+			this->B_Editar->TabIndex = 14;
+			this->B_Editar->Text = L"Editar";
+			this->B_Editar->UseVisualStyleBackColor = true;
+			this->B_Editar->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::B_Editar_Click);
 			// 
 			// HorarioMantenimiento
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(583, 405);
-			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->button4);
-			this->Controls->Add(this->groupBox1);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button2);
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(980, 610);
+			this->Controls->Add(this->B_Anadir);
+			this->Controls->Add(this->B_Borrar);
+			this->Controls->Add(this->B_Editar);
+			this->Controls->Add(this->DGV_Horario);
+			this->Controls->Add(this->GB_Busqueda);
+			this->DoubleBuffered = true;
 			this->Name = L"HorarioMantenimiento";
 			this->Text = L"HorarioMantenimiento";
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
+			this->Load += gcnew System::EventHandler(this, &HorarioMantenimiento::HorarioMantenimiento_Load);
+			this->SizeChanged += gcnew System::EventHandler(this, &HorarioMantenimiento::HorarioMantenimiento_SizeChanged);
+			this->GB_Busqueda->ResumeLayout(false);
+			this->GB_Busqueda->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Horario))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ Turno = this->textBox1->Text;
+
+
+
+
+	private: System::Void DGV_Tarifario_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
+	private: System::Void L_ParaderoInicial_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: void CentrarForm() {
+		int PosXGB_Busqueda = ((this->ClientSize.Width) - (this->GB_Busqueda->Width)) / 2;
+		int PosXDGV_Tarifario = ((this->ClientSize.Width) - (this->DGV_Horario->Width)) / 2;
+
+		this->GB_Busqueda->Location = System::Drawing::Point(PosXGB_Busqueda, 25);
+		this->DGV_Horario->Location = System::Drawing::Point(PosXDGV_Tarifario, 225);
+		this->B_Anadir->Location = System::Drawing::Point(PosXDGV_Tarifario, 545);
+		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Tarifario + 320, 545);
+		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Tarifario + 600, 545);
+	};
+
+
+
+	private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ Turno = this->TB_Turno->Text;
 		HorarioController^ objHorarioController = gcnew HorarioController();
 		objHorarioController->buscarHorarios(Turno);
 		List<Horario^>^ listaHorarios = objHorarioController->buscarHorarios(Turno);
 		mostrarGrilla(listaHorarios);
+
 	}
 	private: void mostrarGrilla(List<Horario^>^ listaHorarios) {
-		this->dataGridView1->Rows->Clear();
+		this->DGV_Horario->Rows->Clear();
 		for (int i = 0; i < listaHorarios->Count; i++) {
 			Horario^ objHorario = listaHorarios[i];
 			array<String^>^ filaGrilla = gcnew array<String^>(4);
@@ -239,41 +347,44 @@ namespace TransPorticoView {
 			filaGrilla[1] = objHorario->getHoraInicio();
 			filaGrilla[2] = objHorario->getHoraSalida();
 			filaGrilla[3] = objHorario->getTurno();
-			this->dataGridView1->Rows->Add(filaGrilla);
+			this->DGV_Horario->Rows->Add(filaGrilla);
 		}
 	}
 
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	private: System::Void B_Anadir_Click(System::Object^ sender, System::EventArgs^ e) {
 		HorarioMantenimientoAnadir^ VentanaAgregarHorario = gcnew HorarioMantenimientoAnadir;
 		VentanaAgregarHorario->ShowDialog();
+
 	}
-	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void B_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
 		//¿Como se cual es la fila uqe he seleccionado para eliminarla?
-		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
+		int filaSeleccionada = this->DGV_Horario->SelectedRows[0]->Index;
 		//Si quiero eliminar 2 seria SelectedRows[1] , 3 SelectedRows[2]
 		//Ya tengo la fila que selecioné en la variable
-		int codigoAeliminar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+		int codigoAeliminar = Convert::ToInt32(this->DGV_Horario->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
 		//Ya tengo el codigo a eliminar
 		HorarioController^ objetoHorarioController = gcnew HorarioController;
 		objetoHorarioController->EliminarHorario(codigoAeliminar);
 		List<Horario^>^ listaHorario = objetoHorarioController->buscarHorariosall();
 		mostrarGrilla(listaHorario);
-	}
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
 
-		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
-		int codigoAeditar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+	}
+	private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ e) {
+		int filaSeleccionada = this->DGV_Horario->SelectedRows[0]->Index;
+		int codigoAeditar = Convert::ToInt32(this->DGV_Horario->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
 		HorarioController^ objetocontroller = gcnew HorarioController;
 		Horario^ objetoHorario = objetocontroller->buscarHorarios(codigoAeditar);
 
 		HorarioMantenimientoEditar^ ventanaEditar = gcnew HorarioMantenimientoEditar(objetoHorario);
 		ventanaEditar->ShowDialog();
 	}
-};
+	private: System::Void HorarioMantenimiento_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this, &HorarioMantenimiento::HorarioMantenimiento_SizeChanged));
+		CentrarForm();
+	}
+	private: System::Void HorarioMantenimiento_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
+	};
 }

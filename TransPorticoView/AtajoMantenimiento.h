@@ -43,6 +43,8 @@ namespace TransPorticoView {
 
 	private: System::Windows::Forms::Button^ B_Buscar;
 	private: System::Windows::Forms::DataGridView^ DGV_Atajos;
+
+
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Identificador;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_RutaAsociada;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGCV_ParaderoInicial;
@@ -70,9 +72,10 @@ namespace TransPorticoView {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AtajoMantenimiento::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle7 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle8 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->GB_Busqueda = (gcnew System::Windows::Forms::GroupBox());
+			this->CB_ParaderoInicial = (gcnew System::Windows::Forms::ComboBox());
 			this->L_Paradero_Inicio = (gcnew System::Windows::Forms::Label());
 			this->B_Buscar = (gcnew System::Windows::Forms::Button());
 			this->DGV_Atajos = (gcnew System::Windows::Forms::DataGridView());
@@ -87,7 +90,6 @@ namespace TransPorticoView {
 			this->B_Editar = (gcnew System::Windows::Forms::Button());
 			this->B_Borrar = (gcnew System::Windows::Forms::Button());
 			this->B_Anadir = (gcnew System::Windows::Forms::Button());
-			this->CB_ParaderoInicial = (gcnew System::Windows::Forms::ComboBox());
 			this->GB_Busqueda->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Atajos))->BeginInit();
 			this->SuspendLayout();
@@ -107,6 +109,15 @@ namespace TransPorticoView {
 			this->GB_Busqueda->TabIndex = 9;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
+			// 
+			// CB_ParaderoInicial
+			// 
+			this->CB_ParaderoInicial->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
+			this->CB_ParaderoInicial->FormattingEnabled = true;
+			this->CB_ParaderoInicial->Location = System::Drawing::Point(205, 29);
+			this->CB_ParaderoInicial->Name = L"CB_ParaderoInicial";
+			this->CB_ParaderoInicial->Size = System::Drawing::Size(250, 32);
+			this->CB_ParaderoInicial->TabIndex = 19;
 			// 
 			// L_Paradero_Inicio
 			// 
@@ -145,30 +156,30 @@ namespace TransPorticoView {
 			this->DGV_Atajos->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->DGV_Atajos->BackgroundColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->DGV_Atajos->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
-			dataGridViewCellStyle7->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle7->BackColor = System::Drawing::Color::Wheat;
-			dataGridViewCellStyle7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle1->BackColor = System::Drawing::Color::Wheat;
+			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle7->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle7->SelectionBackColor = System::Drawing::Color::OliveDrab;
-			dataGridViewCellStyle7->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle7->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->DGV_Atajos->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::Color::OliveDrab;
+			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->DGV_Atajos->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->DGV_Atajos->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DGV_Atajos->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
 				this->DGVC_Identificador,
 					this->DGVC_RutaAsociada, this->DGCV_ParaderoInicial, this->DGVC_ParaderoFinal, this->DGVC_Tarifa, this->Column1, this->Column2,
 					this->Column3
 			});
-			dataGridViewCellStyle8->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle8->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle8->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle8->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle8->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle8->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->DGV_Atajos->DefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->DGV_Atajos->DefaultCellStyle = dataGridViewCellStyle2;
 			this->DGV_Atajos->EnableHeadersVisualStyles = false;
 			this->DGV_Atajos->Location = System::Drawing::Point(12, 322);
 			this->DGV_Atajos->Name = L"DGV_Atajos";
@@ -285,15 +296,6 @@ namespace TransPorticoView {
 			this->B_Anadir->Text = L"Añadir";
 			this->B_Anadir->UseVisualStyleBackColor = true;
 			this->B_Anadir->Click += gcnew System::EventHandler(this, &AtajoMantenimiento::B_Anadir_Click);
-			// 
-			// CB_ParaderoInicial
-			// 
-			this->CB_ParaderoInicial->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
-			this->CB_ParaderoInicial->FormattingEnabled = true;
-			this->CB_ParaderoInicial->Location = System::Drawing::Point(205, 29);
-			this->CB_ParaderoInicial->Name = L"CB_ParaderoInicial";
-			this->CB_ParaderoInicial->Size = System::Drawing::Size(250, 32);
-			this->CB_ParaderoInicial->TabIndex = 19;
 			// 
 			// AtajoMantenimiento
 			// 
