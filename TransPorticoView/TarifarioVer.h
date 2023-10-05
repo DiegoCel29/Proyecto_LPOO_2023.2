@@ -8,14 +8,17 @@ namespace TransPorticoView {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Collections::Generic;
+	using namespace TransPorticoModel;
+	using namespace TransPorticoController;
 
 	/// <summary>
-	/// Resumen de Tarifario
+	/// Resumen de TarifarioVer
 	/// </summary>
-	public ref class Tarifario : public System::Windows::Forms::Form
+	public ref class TarifarioVer : public System::Windows::Forms::Form
 	{
 	public:
-		Tarifario(void)
+		TarifarioVer(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +30,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~Tarifario()
+		~TarifarioVer()
 		{
 			if (components)
 			{
@@ -64,8 +67,10 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Tarifario::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(TarifarioVer::typeid));
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
+			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
 			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
@@ -75,8 +80,6 @@ namespace TransPorticoView {
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->Logo = (gcnew System::Windows::Forms::PictureBox());
 			this->B_TARJETA = (gcnew System::Windows::Forms::Button());
-			this->comboBox2 = (gcnew System::Windows::Forms::ComboBox());
-			this->comboBox3 = (gcnew System::Windows::Forms::ComboBox());
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->BeginInit();
 			this->SuspendLayout();
@@ -103,6 +106,23 @@ namespace TransPorticoView {
 			this->groupBox1->Size = System::Drawing::Size(752, 521);
 			this->groupBox1->TabIndex = 4;
 			this->groupBox1->TabStop = false;
+			this->groupBox1->Enter += gcnew System::EventHandler(this, &TarifarioVer::groupBox1_Enter);
+			// 
+			// comboBox3
+			// 
+			this->comboBox3->FormattingEnabled = true;
+			this->comboBox3->Location = System::Drawing::Point(345, 221);
+			this->comboBox3->Name = L"comboBox3";
+			this->comboBox3->Size = System::Drawing::Size(211, 37);
+			this->comboBox3->TabIndex = 39;
+			// 
+			// comboBox2
+			// 
+			this->comboBox2->FormattingEnabled = true;
+			this->comboBox2->Location = System::Drawing::Point(345, 143);
+			this->comboBox2->Name = L"comboBox2";
+			this->comboBox2->Size = System::Drawing::Size(211, 37);
+			this->comboBox2->TabIndex = 38;
 			// 
 			// textBox3
 			// 
@@ -135,7 +155,7 @@ namespace TransPorticoView {
 			this->button2->TabIndex = 21;
 			this->button2->Text = L"SALIR";
 			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &Tarifario::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &TarifarioVer::button2_Click);
 			// 
 			// button1
 			// 
@@ -145,7 +165,7 @@ namespace TransPorticoView {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(250, 39);
 			this->button1->TabIndex = 34;
-			this->button1->Text = L"PARADERO INICIAL";
+			this->button1->Text = L"PARADERO FINAL";
 			this->button1->UseVisualStyleBackColor = false;
 			// 
 			// comboBox1
@@ -168,6 +188,7 @@ namespace TransPorticoView {
 			this->button6->TabIndex = 31;
 			this->button6->Text = L"BUSCAR";
 			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &TarifarioVer::button6_Click);
 			// 
 			// button4
 			// 
@@ -205,23 +226,7 @@ namespace TransPorticoView {
 			this->B_TARJETA->Text = L"PARADERO INICIAL";
 			this->B_TARJETA->UseVisualStyleBackColor = false;
 			// 
-			// comboBox2
-			// 
-			this->comboBox2->FormattingEnabled = true;
-			this->comboBox2->Location = System::Drawing::Point(345, 219);
-			this->comboBox2->Name = L"comboBox2";
-			this->comboBox2->Size = System::Drawing::Size(211, 37);
-			this->comboBox2->TabIndex = 38;
-			// 
-			// comboBox3
-			// 
-			this->comboBox3->FormattingEnabled = true;
-			this->comboBox3->Location = System::Drawing::Point(345, 141);
-			this->comboBox3->Name = L"comboBox3";
-			this->comboBox3->Size = System::Drawing::Size(211, 37);
-			this->comboBox3->TabIndex = 39;
-			// 
-			// Tarifario
+			// TarifarioVer
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -230,8 +235,10 @@ namespace TransPorticoView {
 			this->ClientSize = System::Drawing::Size(827, 545);
 			this->Controls->Add(this->groupBox1);
 			this->DoubleBuffered = true;
-			this->Name = L"Tarifario";
-			this->Text = L"Tarifario";
+			this->Name = L"TarifarioVer";
+			this->Text = L"TarifarioVer";
+			this->Load += gcnew System::EventHandler(this, &TarifarioVer::Tarifario_Load);
+			this->SizeChanged += gcnew System::EventHandler(this, &TarifarioVer::Tarifario_SizeChanged);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
@@ -242,5 +249,55 @@ namespace TransPorticoView {
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	String^ BuscarRuta = this->comboBox1->Text;
+	String^ BuscarParaderoInicial = this->comboBox2->Text;
+	String^ BuscarParaderoFinal = this->comboBox3->Text;
+
+	TarifarioController^ ObjTarifarioController = gcnew TarifarioController();
+	List<Tarifario^>^ ListTarifarioGeneral = ObjTarifarioController->BuscarTarifarioAll();
+	List<Tarifario^>^ ListTarifarioBuscado = gcnew List<Tarifario^>();
+
+	ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosRuta(ListTarifarioGeneral, BuscarRuta);
+	ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosParaderoInicial(ListTarifarioBuscado, BuscarParaderoInicial);
+	ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosParaderoFinal(ListTarifarioBuscado, BuscarParaderoFinal);
+
+	this->textBox3->Text = Convert::ToString(ListTarifarioBuscado[0]->GetTarifa());
+
+}
+	   private: System::Void MostrarGrilla(List<Tarifario^>^ ListTarifario) {
+
+
+	   }
+private: System::Void Tarifario_Load(System::Object^ sender, System::EventArgs^ e) {
+	this->SizeChanged += (gcnew System::EventHandler(this, &TarifarioVer::Tarifario_SizeChanged));
+	CentrarForm();
+	// Poner paraderos en los ComboBox
+	ParaderoController^ ObjParaderoController = gcnew ParaderoController;
+	List<Paradero^>^ ListParaderos = ObjParaderoController->buscarAll();
+	this->comboBox2->Items->Clear();
+	this->comboBox3->Items->Clear();
+	for (int i = 0; i < ListParaderos->Count; i++) {
+		this->comboBox2->Items->Add(ListParaderos[i]->getNombre());
+		this->comboBox3->Items->Add(ListParaderos[i]->getNombre());
+	}
+	RutaController^ ObjRutaController = gcnew RutaController;
+	List<Ruta^>^ ListRutas = ObjRutaController->buscarAll();
+	this->comboBox1->Items->Clear();
+	for (int i = 0; i < ListRutas->Count; i++) {
+		this->comboBox1->Items->Add(ListRutas[i]->getLinea());
+	}
+
+}
+private: System::Void Tarifario_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+	CentrarForm();
+}
+	   private: System::Void CentrarForm() {
+		   int CentroX = (this->ClientSize.Width - this->groupBox1->Width) / 2;
+		   int CentroY = (this->ClientSize.Height - this->groupBox1->Height) / 2;
+		   this->groupBox1->Location = System::Drawing::Point(CentroX, CentroY);
+	   }
+private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
+}
 };
 }

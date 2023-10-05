@@ -158,7 +158,7 @@
     <ClCompile Include="RutaMantenimientoAnadir.cpp" />
     <ClCompile Include="RutaMantenimientoEditar.cpp" />
     <ClCompile Include="SaldoPasajero.cpp" />
-    <ClCompile Include="Tarifario.cpp" />
+    <ClCompile Include="TarifarioVer.cpp" />
     <ClCompile Include="TarifarioMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
     <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
@@ -301,7 +301,7 @@
     <ClInclude Include="SaldoPasajero.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Tarifario.h">
+    <ClInclude Include="TarifarioVer.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="TarifarioMantenimiento.h">
@@ -429,8 +429,8 @@
     <EmbeddedResource Include="SaldoPasajero.resx">
       <DependentUpon>SaldoPasajero.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tarifario.resx">
-      <DependentUpon>Tarifario.h</DependentUpon>
+    <EmbeddedResource Include="TarifarioVer.resx">
+      <DependentUpon>TarifarioVer.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TarifarioMantenimiento.resx" />
     <EmbeddedResource Include="TarifarioMantenimientoAnadir.resx">

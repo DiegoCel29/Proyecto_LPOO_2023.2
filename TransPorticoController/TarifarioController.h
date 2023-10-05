@@ -13,6 +13,7 @@ namespace TransPorticoController {
 		Tarifario^ BuscarTarifarioIdentificador(String^ Identificador);
 		List<Tarifario^>^ BuscarTarifariosRuta(List<Tarifario^>^ ListTarifarioGeneral, String^ Ruta);
 		List<Tarifario^>^ BuscarTarifariosParaderoInicial(List<Tarifario^>^ ListTarifarioGeneral, String^ ParaderoInicial);
+		List<Tarifario^>^ BuscarTarifariosParaderoFinal(List<Tarifario^>^ ListTarifarioGeneral, String^ ParaderoFinal);
 		List<Tarifario^>^ BuscarTarifariosTarifa(List<Tarifario^>^ ListTarifarioGeneral, String^ Tarifa);
 		void EscribirTarifario(List<Tarifario^>^);
 		void EliminarTarifario(String^ Identificador);

@@ -61,6 +61,16 @@ List<Tarifario^>^ TarifarioController::BuscarTarifariosParaderoInicial(List<Tari
 	return ListTarifarioEspecifico;
 };
 
+List<Tarifario^>^ TarifarioController::BuscarTarifariosParaderoFinal(List<Tarifario^>^ ListTarifarioGeneral, String^ ParaderoFinal) {
+	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
+	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {
+		if (ListTarifarioGeneral[i]->GetParaderoFinal()->Contains(ParaderoFinal)) {
+			ListTarifarioEspecifico->Add(ListTarifarioGeneral[i]);
+		}
+	}
+	return ListTarifarioEspecifico;
+};
+
 List<Tarifario^>^ TarifarioController::BuscarTarifariosTarifa(List<Tarifario^>^ ListTarifarioGeneral, String^ Tarifa) {
 	List<Tarifario^>^ ListTarifarioEspecifico = gcnew List<Tarifario^>();
 	for (int i = 0; i < ListTarifarioGeneral->Count; i++) {

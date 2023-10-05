@@ -1,6 +1,6 @@
 #pragma once
 #include "RecargarTarjeta.h"
-#include "Tarifario.h"
+#include "TarifarioVer.h"
 #include "SaldoPasajero.h"
 
 namespace TransPorticoView {
@@ -234,7 +234,7 @@ private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e
 	this->Close();
 }
 private: System::Void B_RUTA_Click(System::Object^ sender, System::EventArgs^ e) {
-	Tarifario^ VentanaTarifario = gcnew Tarifario();
+	TarifarioVer^ VentanaTarifario = gcnew TarifarioVer();
 	VentanaTarifario->ShowDialog();
 }
 private: System::Void B_HORARIO_SEMANAL_Click(System::Object^ sender, System::EventArgs^ e) {
