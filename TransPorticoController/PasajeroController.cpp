@@ -117,16 +117,23 @@ Pasajero^ PasajeroController::BuscarPasajeroDNI(String^ DNI) {
 }
 
 //Sirve para cambiar contraseña
-bool PasajeroController::ExistePersonaTelefono(String^ Telefono) {
+bool PasajeroController::ExistePasajeroTelefono(String^ Telefono) {
 	List<Pasajero^>^ ListPasajeros = BuscarAllPasajeros();
 	for (int i = 0; i < ListPasajeros->Count; i++) {
 		if (ListPasajeros[i]->GetTelefono() == Telefono) {
 			return true;
 			break;
 		}
-		else {
-			return false;
+	}
+}
+void PasajeroController::CambiarPasajeroContrasena(String^ Telefono, String^ NuevaContrasena) {
+	List<Pasajero^>^ ListPasajeros = BuscarAllPasajeros();
+	for (int i = 0; i < ListPasajeros->Count; i++) {
+		if (ListPasajeros[i]->GetTelefono() == Telefono) {
+			ListPasajeros[i]->SetContrasena(NuevaContrasena);
+			break;
 		}
 	}
+	EscribirPasajero(ListPasajeros);
 }
 

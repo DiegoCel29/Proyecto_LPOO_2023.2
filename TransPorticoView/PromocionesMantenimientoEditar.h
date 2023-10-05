@@ -297,10 +297,12 @@ namespace TransPorticoView {
 		CentrarForm();
 	}
 	private: System::Void B_Grabar_Click(System::Object^ sender, System::EventArgs^ e) {
+
 		this->ObjPromociones->SetTitulo(this->TB_Titulo->Text);
 		this->ObjPromociones->SetDescripcion(this->TB_Descripcion->Text);
 		this->ObjPromociones->SetFechaInicio(this->DTP_FechaInicio->Text);
 		this->ObjPromociones->SetFechaFin(this->DTP_FechaFin->Text);
+
 		PromocionesController^ ObjPromocionesController = gcnew PromocionesController();
 		ObjPromocionesController->ActualizarPromocion(ObjPromociones);
 		MessageBox::Show("La promocion se ha actualizado con éxito");

@@ -47,19 +47,15 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Button^ B_Cancelar;
 	private: System::Windows::Forms::Label^ L_RutaAsociada;
 	private: System::Windows::Forms::GroupBox^ GB_Datos;
-
 	private: System::Windows::Forms::Label^ L_Identificador;
 	private: System::Windows::Forms::TextBox^ TB_Identificador;
 	private: System::Windows::Forms::Label^ L_ParaderoInicial;
-
 	private: System::Windows::Forms::Label^ L_ParaderoFinal;
 	private: System::Windows::Forms::Label^ L_Tarifa;
-
 	private: System::Windows::Forms::TextBox^ TB_Tarifa;
 	private: System::Windows::Forms::TextBox^ TB_ParaderoFinal;
 	private: System::Windows::Forms::TextBox^ TB_ParaderoInicial;
 	private: System::Windows::Forms::TextBox^ TB_RutaAsociada;
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -307,7 +303,9 @@ namespace TransPorticoView {
 		CentrarForm();
 	}
 	private: System::Void B_Grabar_Click(System::Object^ sender, System::EventArgs^ e) {
+
 		this->ObjTarifario->SetTarifa(Convert::ToDouble(this->TB_Tarifa->Text));
+
 		TarifarioController^ ObjTarifarioController = gcnew TarifarioController();
 		ObjTarifarioController->ActualizarTarifario(ObjTarifario);
 		MessageBox::Show("La tarifa se ha actualizado con éxito");

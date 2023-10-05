@@ -46,12 +46,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Label^ L_ParaderoInicial;
 	private: System::Windows::Forms::GroupBox^ GB_Busqueda;
 	private: System::Windows::Forms::DataGridView^ DGV_Promociones;
-
-
-
-
-
-
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Codigo;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Titulo;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGCV_Descripcion;
@@ -60,11 +54,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::DateTimePicker^ DTP_FechaInicio;
 	private: System::Windows::Forms::DateTimePicker^ DTP_FechaFin;
 	private: System::Windows::Forms::Label^ L_FechaInicio;
-
-
-
-
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.

@@ -398,7 +398,7 @@ namespace TransPorticoView {
 		//Se crea un controller y se busca el numero
 
 		PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
-		Registrado = ObjPasajeroController->ExistePersonaTelefono(TelefonoVer);
+		Registrado = ObjPasajeroController->ExistePasajeroTelefono(TelefonoVer);
 
 		if (Registrado == true) {
 			srand(time(NULL));
@@ -441,10 +441,12 @@ namespace TransPorticoView {
 	private: System::Void B_Seguir2_Click(System::Object^ sender, System::EventArgs^ e) {
 		if (this->TB_NuevaContrasena->Text == this->TB_RepetirContrasena->Text) {
 			if ((this->TB_NuevaContrasena->Text->Length) >= 6) {
-				PersonaController^ ObjPersonaController = gcnew PersonaController();
-				ObjPersonaController->CambiarPersonaContrasenaTelefono(this->TB_Numero->Text, this->TB_NuevaContrasena->Text);
+
+				PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
+				ObjPasajeroController->CambiarPasajeroContrasena(this->TB_Numero->Text, this->TB_NuevaContrasena->Text);
 				MessageBox::Show("La contraseña ha sido cambiada correctamente.");
 				this->Close();
+
 			}
 			else {
 				MessageBox::Show("La contraseña debe ser de al menos 6 caracteres");

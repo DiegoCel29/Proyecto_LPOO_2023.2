@@ -98,13 +98,3 @@ void PersonaController::VerificarPersona(String^ DNI, String^* Contrasena, Strin
 		}
 	}
 }
-void PersonaController::CambiarPersonaContrasenaTelefono(String^ Telefono, String^ NuevaContrasena) {
-	List<Persona^>^ ListPersonas = BuscarAll();
-	for (int i = 0; i < ListPersonas->Count; i++) {
-		if (ListPersonas[i]->GetTelefono() == Telefono) {
-			ListPersonas[i]->SetContrasena(NuevaContrasena);
-			break;
-		}
-	}
-	EscribirArchivo(ListPersonas);
-}

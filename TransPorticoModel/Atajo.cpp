@@ -53,7 +53,7 @@ void Atajo::setX_Final(int X_Final) {
 }
 
 int Atajo::getY_Final() {
-	return this->X_Final;
+	return this->Y_Final;
 }
 void Atajo::setY_Final(int Y_Final) {
 	this->Y_Final = Y_Final;

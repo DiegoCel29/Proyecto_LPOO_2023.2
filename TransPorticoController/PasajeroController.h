@@ -22,6 +22,7 @@ namespace TransPorticoController {
 		Pasajero^ BuscarPasajeroDNI(String^ DNI);
 		
 		//Sirve para cambiar contraseña
-		bool ExistePersonaTelefono(String^ Telefono);
+		bool ExistePasajeroTelefono(String^ Telefono);
+		void CambiarPasajeroContrasena(String^ Telefono, String^ NuevaContrasena);
 	};
 }

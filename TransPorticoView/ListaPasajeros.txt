@@ -2,4 +2,4 @@
 72457071;Cesar Edú;Peña;Rengifo;19;Masculino;936893016;Sultan29;Pasajero
 71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;Pasajero
 71744136;Diego;Cel;Cco;21;Masculino;980152637;C0ntr4s;Pasajero
-71744137;Diego;Cel;Cel;22;Masculino;980152871;C0ntr4;Pasajero
+71744137;Diego;Cel;Cel;22;Masculino;980152871;C0ntr41;Pasajero

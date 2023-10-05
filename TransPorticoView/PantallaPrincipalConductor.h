@@ -10,12 +10,12 @@ namespace TransPorticoView {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Resumen de Conductor_Principal
+	/// Resumen de PantallaPrincipalConductor
 	/// </summary>
-	public ref class Conductor_Principal : public System::Windows::Forms::Form
+	public ref class PantallaPrincipalConductor : public System::Windows::Forms::Form
 	{
 	public:
-		Conductor_Principal(void)
+		PantallaPrincipalConductor(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~Conductor_Principal()
+		~PantallaPrincipalConductor()
 		{
 			if (components)
 			{
@@ -69,7 +69,7 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Conductor_Principal::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PantallaPrincipalConductor::typeid));
 			this->GB_OPCIONES = (gcnew System::Windows::Forms::GroupBox());
 			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
 			this->B_ATAJOS = (gcnew System::Windows::Forms::Button());
@@ -109,7 +109,7 @@ namespace TransPorticoView {
 			this->GB_OPCIONES->TabIndex = 0;
 			this->GB_OPCIONES->TabStop = false;
 			this->GB_OPCIONES->Text = L"Menu de Opciones";
-			this->GB_OPCIONES->Enter += gcnew System::EventHandler(this, &Conductor_Principal::groupBox1_Enter);
+			this->GB_OPCIONES->Enter += gcnew System::EventHandler(this, &PantallaPrincipalConductor::groupBox1_Enter);
 			// 
 			// pictureBox5
 			// 
@@ -131,7 +131,7 @@ namespace TransPorticoView {
 			this->B_ATAJOS->TabIndex = 9;
 			this->B_ATAJOS->Text = L"ATAJOS";
 			this->B_ATAJOS->UseVisualStyleBackColor = false;
-			this->B_ATAJOS->Click += gcnew System::EventHandler(this, &Conductor_Principal::button4_Click);
+			this->B_ATAJOS->Click += gcnew System::EventHandler(this, &PantallaPrincipalConductor::button4_Click);
 			// 
 			// B_RUTA
 			// 
@@ -143,7 +143,7 @@ namespace TransPorticoView {
 			this->B_RUTA->TabIndex = 8;
 			this->B_RUTA->Text = L"RUTAS";
 			this->B_RUTA->UseVisualStyleBackColor = false;
-			this->B_RUTA->Click += gcnew System::EventHandler(this, &Conductor_Principal::B_RUTA_Click);
+			this->B_RUTA->Click += gcnew System::EventHandler(this, &PantallaPrincipalConductor::B_RUTA_Click);
 			// 
 			// B_HORARIO_SEMANAL
 			// 
@@ -202,7 +202,7 @@ namespace TransPorticoView {
 			this->B_TARJETA->TabIndex = 1;
 			this->B_TARJETA->Text = L"TARJETA";
 			this->B_TARJETA->UseVisualStyleBackColor = false;
-			this->B_TARJETA->Click += gcnew System::EventHandler(this, &Conductor_Principal::button1_Click);
+			this->B_TARJETA->Click += gcnew System::EventHandler(this, &PantallaPrincipalConductor::button1_Click);
 			// 
 			// pictureBox1
 			// 
@@ -216,7 +216,7 @@ namespace TransPorticoView {
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
-			// Conductor_Principal
+			// PantallaPrincipalConductor
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -226,10 +226,10 @@ namespace TransPorticoView {
 			this->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Margin = System::Windows::Forms::Padding(4);
-			this->Name = L"Conductor_Principal";
-			this->Text = L"Conductor_Principal";
-			this->Load += gcnew System::EventHandler(this, &Conductor_Principal::Conductor_Principal_Load);
-			this->SizeChanged += gcnew System::EventHandler(this, &Conductor_Principal::Conductor_Principal_SizeChanged);
+			this->Name = L"PantallaPrincipalConductor";
+			this->Text = L"PantallaPrincipalConductor";
+			this->Load += gcnew System::EventHandler(this, &PantallaPrincipalConductor::PantallaPrincipalConductor_Load);
+			this->SizeChanged += gcnew System::EventHandler(this, &PantallaPrincipalConductor::PantallaPrincipalConductor_SizeChanged);
 			this->GB_OPCIONES->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
@@ -256,11 +256,11 @@ private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^
 private: System::Void B_RUTA_Click(System::Object^ sender, System::EventArgs^ e) {
 
 }
-private: System::Void Conductor_Principal_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->SizeChanged += (gcnew System::EventHandler(this, &Conductor_Principal::Conductor_Principal_SizeChanged));
+private: System::Void PantallaPrincipalConductor_Load(System::Object^ sender, System::EventArgs^ e) {
+	this->SizeChanged += (gcnew System::EventHandler(this, &PantallaPrincipalConductor::PantallaPrincipalConductor_SizeChanged));
 	CentrarForm();
 }
-private: System::Void Conductor_Principal_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void PantallaPrincipalConductor_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
 	CentrarForm();
 }
 };

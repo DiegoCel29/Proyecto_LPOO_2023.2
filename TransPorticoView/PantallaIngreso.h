@@ -1,5 +1,7 @@
 #pragma once
-#include "FrmPantallaAdministrador.h"
+#include "PantallaPrincipalAdministrador.h"
+#include "PantallaPrincipalConductor.h"
+#include "PantallaPrincipalPasajero.h"
 #include "OlvidoContrasena.h"
 #include "CrearCuenta.h"
 
@@ -40,30 +42,15 @@ namespace TransPorticoView {
 			}
 		}
 	private: System::Windows::Forms::Button^ B_BotonIngresar;
-	protected:
-
 	private: System::Windows::Forms::Label^ L_OlvidoContrasena;
 	private: System::Windows::Forms::TextBox^ TB_DNI;
 	private: System::Windows::Forms::TextBox^ TB_Contrasena;
 	private: System::Windows::Forms::Label^ L_DNI;
 	private: System::Windows::Forms::Label^ L_Contrasena;
 	private: System::Windows::Forms::Button^ B_CrearCuenta;
-
 	private: System::Windows::Forms::Label^ Bienvenido;
-
-
 	private: System::Windows::Forms::PictureBox^ Logo;
 	private: System::Windows::Forms::GroupBox^ GB_Datos;
-
-
-
-
-
-
-	protected:
-
-	protected:
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -262,7 +249,6 @@ namespace TransPorticoView {
 			this->GB_Datos->ResumeLayout(false);
 			this->GB_Datos->PerformLayout();
 			this->ResumeLayout(false);
-
 		}
 #pragma endregion
 	//Aqui se debe de 
@@ -289,17 +275,28 @@ namespace TransPorticoView {
 			Tipo = ObjPersona->GetTipo();
 			if (ContrasenaVer == ContrasenaCorrecta) {
 				if (Tipo == "Pasajero") {
-
+					this->TB_DNI->Text = "";
+					this->TB_Contrasena->Text = "";
+					PantallaPrincipalPasajero^ VentanaPasajero = gcnew PantallaPrincipalPasajero();
+					this->Hide();
+					VentanaPasajero->ShowDialog();
+					this->Show();
 				}
 				else if (Tipo == "Conductor") {
-
+					this->TB_DNI->Text = "";
+					this->TB_Contrasena->Text = "";
+					PantallaPrincipalConductor^ VentanaConductor = gcnew PantallaPrincipalConductor();
+					this->Hide();
+					VentanaConductor->ShowDialog();
+					this->Show();
 				}
 				else if (Tipo == "Administrador") {
 					this->TB_DNI->Text = "";
 					this->TB_Contrasena->Text = "";
-					FrmPantallaAdministrador^ VentanaAdministrador = gcnew FrmPantallaAdministrador();
-					VentanaAdministrador->Show();
+					PantallaPrincipalAdministrador^ VentanaAdministrador = gcnew PantallaPrincipalAdministrador();
 					this->Hide();
+					VentanaAdministrador->ShowDialog();
+					this->Show();
 				}
 				else {
 					MessageBox::Show("Su cuenta presenta un error, comunicarse con atencion al cliente.\n Error 401");
@@ -341,6 +338,5 @@ namespace TransPorticoView {
 		VentanaCrearCuenta->ShowDialog();
 		this->Show();
 	}
-
 };
 }

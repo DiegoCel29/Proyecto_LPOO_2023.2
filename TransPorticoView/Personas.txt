@@ -1,6 +1,8 @@
-1;Milen Margaret;Toribio;Alva;76849076;19;Femenino;991593244;Alasha26;Administrador
-2;Cesar Edú;Peña;Rengifo;72457071;19;Masculino;936893016;Sultan29;Pasajero
-4;Diego;Celis;Ccoricasa;71744136;20;Fluido;980152878;aaaaaa;Pasajero
-5;Jessica;Rengifo;Molina;40760776;42;Femenino;936893016;Jessy26;Pasajero
-7;Maria;Torres;Rengifo;71809234;23;Femenino;978543120;Asado;Pasajero
-8;Juan Antonio;Meza;Paredes;71452345;19;Masculino;934286170;musica;Pasajero
+Milen Margaret;Toribio;Alva;76849076;19;Masculino;991593244;Alasha26;Pasajero
+Cesar Edú;Peña;Rengifo;72457071;19;Masculino;936893016;Sultan29;Pasajero
+Maria;Torres;Rengifo;71809234;23;Femenino;978543120;Asado;Pasajero
+Diego;Cel;Cco;71744136;21;Masculino;980152637;C0ntr4s;Pasajero
+Diego;Cel;Cel;71744137;22;Masculino;980152871;C0ntr41;Pasajero
+Milen Margaret;Toribio;Alva;78954631;19;Femenino;991593244;Alasha26;5000
+Cesar Edú;Peña;Rengifo;74512663;19;Masculino;936893016;Sultan29;3000
+Carlos Enrique;Díaz;Palma;78456235;23;Masculino;943225017;Rocotin36;1500

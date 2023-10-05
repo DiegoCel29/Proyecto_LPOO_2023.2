@@ -39,11 +39,13 @@ namespace TransPorticoView {
 			}
 		}
 	private: System::Windows::Forms::GroupBox^ GB_Busqueda;
-	protected:
 	private: System::Windows::Forms::Label^ L_Nombre;
 	private: System::Windows::Forms::TextBox^ TB_Nombre;
 	private: System::Windows::Forms::Button^ B_Buscar;
 	private: System::Windows::Forms::DataGridView^ DGV_Empleado;
+	private: System::Windows::Forms::Button^ B_Editar;
+	private: System::Windows::Forms::Button^ B_Borrar;
+	private: System::Windows::Forms::Button^ B_Anadir;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Identificador;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_RutaAsociada;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGCV_ParaderoInicial;
@@ -54,67 +56,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
-	private: System::Windows::Forms::Button^ B_Editar;
-	private: System::Windows::Forms::Button^ B_Borrar;
-	private: System::Windows::Forms::Button^ B_Anadir;
-
-
-
-
-
-
-	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	protected:
-
-	protected:
-
-	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
@@ -161,11 +102,9 @@ namespace TransPorticoView {
 			this->GB_Busqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
-			this->GB_Busqueda->Location = System::Drawing::Point(369, 208);
-			this->GB_Busqueda->Margin = System::Windows::Forms::Padding(4);
+			this->GB_Busqueda->Location = System::Drawing::Point(0, 0);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Padding = System::Windows::Forms::Padding(4);
-			this->GB_Busqueda->Size = System::Drawing::Size(733, 104);
+			this->GB_Busqueda->Size = System::Drawing::Size(550, 80);
 			this->GB_Busqueda->TabIndex = 9;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
@@ -177,10 +116,9 @@ namespace TransPorticoView {
 			this->L_Nombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->L_Nombre->ForeColor = System::Drawing::Color::Black;
-			this->L_Nombre->Location = System::Drawing::Point(13, 37);
-			this->L_Nombre->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->L_Nombre->Location = System::Drawing::Point(10, 30);
 			this->L_Nombre->Name = L"L_Nombre";
-			this->L_Nombre->Size = System::Drawing::Size(200, 37);
+			this->L_Nombre->Size = System::Drawing::Size(150, 30);
 			this->L_Nombre->TabIndex = 9;
 			this->L_Nombre->Text = L"Nombre :";
 			this->L_Nombre->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -188,10 +126,9 @@ namespace TransPorticoView {
 			// TB_Nombre
 			// 
 			this->TB_Nombre->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Nombre->Location = System::Drawing::Point(233, 37);
-			this->TB_Nombre->Margin = System::Windows::Forms::Padding(4);
+			this->TB_Nombre->Location = System::Drawing::Point(175, 30);
 			this->TB_Nombre->Name = L"TB_Nombre";
-			this->TB_Nombre->Size = System::Drawing::Size(333, 34);
+			this->TB_Nombre->Size = System::Drawing::Size(250, 29);
 			this->TB_Nombre->TabIndex = 10;
 			// 
 			// B_Buscar
@@ -202,10 +139,9 @@ namespace TransPorticoView {
 			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->B_Buscar->Location = System::Drawing::Point(592, 31);
-			this->B_Buscar->Margin = System::Windows::Forms::Padding(4);
+			this->B_Buscar->Location = System::Drawing::Point(440, 25);
 			this->B_Buscar->Name = L"B_Buscar";
-			this->B_Buscar->Size = System::Drawing::Size(133, 49);
+			this->B_Buscar->Size = System::Drawing::Size(100, 40);
 			this->B_Buscar->TabIndex = 1;
 			this->B_Buscar->Text = L"Buscar";
 			this->B_Buscar->UseVisualStyleBackColor = true;
@@ -214,7 +150,7 @@ namespace TransPorticoView {
 			// DGV_Empleado
 			// 
 			this->DGV_Empleado->AllowUserToDeleteRows = false;
-			this->DGV_Empleado->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->DGV_Empleado->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::AllCells;
 			this->DGV_Empleado->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->DGV_Empleado->BackgroundColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->DGV_Empleado->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
@@ -243,13 +179,12 @@ namespace TransPorticoView {
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->DGV_Empleado->DefaultCellStyle = dataGridViewCellStyle2;
 			this->DGV_Empleado->EnableHeadersVisualStyles = false;
-			this->DGV_Empleado->Location = System::Drawing::Point(44, 352);
-			this->DGV_Empleado->Margin = System::Windows::Forms::Padding(4);
+			this->DGV_Empleado->Location = System::Drawing::Point(33, 286);
 			this->DGV_Empleado->Name = L"DGV_Empleado";
 			this->DGV_Empleado->ReadOnly = true;
-			this->DGV_Empleado->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
+			this->DGV_Empleado->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToDisplayedHeaders;
 			this->DGV_Empleado->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->DGV_Empleado->Size = System::Drawing::Size(1385, 369);
+			this->DGV_Empleado->Size = System::Drawing::Size(1000, 300);
 			this->DGV_Empleado->TabIndex = 10;
 			// 
 			// DGVC_Identificador
@@ -258,6 +193,7 @@ namespace TransPorticoView {
 			this->DGVC_Identificador->MinimumWidth = 6;
 			this->DGVC_Identificador->Name = L"DGVC_Identificador";
 			this->DGVC_Identificador->ReadOnly = true;
+			this->DGVC_Identificador->Width = 65;
 			// 
 			// DGVC_RutaAsociada
 			// 
@@ -265,6 +201,7 @@ namespace TransPorticoView {
 			this->DGVC_RutaAsociada->MinimumWidth = 6;
 			this->DGVC_RutaAsociada->Name = L"DGVC_RutaAsociada";
 			this->DGVC_RutaAsociada->ReadOnly = true;
+			this->DGVC_RutaAsociada->Width = 103;
 			// 
 			// DGCV_ParaderoInicial
 			// 
@@ -272,6 +209,7 @@ namespace TransPorticoView {
 			this->DGCV_ParaderoInicial->MinimumWidth = 6;
 			this->DGCV_ParaderoInicial->Name = L"DGCV_ParaderoInicial";
 			this->DGCV_ParaderoInicial->ReadOnly = true;
+			this->DGCV_ParaderoInicial->Width = 158;
 			// 
 			// DGVC_ParaderoFinal
 			// 
@@ -279,6 +217,7 @@ namespace TransPorticoView {
 			this->DGVC_ParaderoFinal->MinimumWidth = 6;
 			this->DGVC_ParaderoFinal->Name = L"DGVC_ParaderoFinal";
 			this->DGVC_ParaderoFinal->ReadOnly = true;
+			this->DGVC_ParaderoFinal->Width = 161;
 			// 
 			// DGVC_Tarifa
 			// 
@@ -286,6 +225,7 @@ namespace TransPorticoView {
 			this->DGVC_Tarifa->MinimumWidth = 6;
 			this->DGVC_Tarifa->Name = L"DGVC_Tarifa";
 			this->DGVC_Tarifa->ReadOnly = true;
+			this->DGVC_Tarifa->Width = 79;
 			// 
 			// Column1
 			// 
@@ -293,6 +233,7 @@ namespace TransPorticoView {
 			this->Column1->MinimumWidth = 6;
 			this->Column1->Name = L"Column1";
 			this->Column1->ReadOnly = true;
+			this->Column1->Width = 98;
 			// 
 			// Column2
 			// 
@@ -300,13 +241,15 @@ namespace TransPorticoView {
 			this->Column2->MinimumWidth = 6;
 			this->Column2->Name = L"Column2";
 			this->Column2->ReadOnly = true;
+			this->Column2->Width = 109;
 			// 
 			// Column3
 			// 
-			this->Column3->HeaderText = L"Contraseña";
+			this->Column3->HeaderText = L"Tipo";
 			this->Column3->MinimumWidth = 6;
 			this->Column3->Name = L"Column3";
 			this->Column3->ReadOnly = true;
+			this->Column3->Width = 72;
 			// 
 			// Column4
 			// 
@@ -314,6 +257,7 @@ namespace TransPorticoView {
 			this->Column4->MinimumWidth = 6;
 			this->Column4->Name = L"Column4";
 			this->Column4->ReadOnly = true;
+			this->Column4->Width = 94;
 			// 
 			// Column5
 			// 
@@ -321,6 +265,7 @@ namespace TransPorticoView {
 			this->Column5->MinimumWidth = 6;
 			this->Column5->Name = L"Column5";
 			this->Column5->ReadOnly = true;
+			this->Column5->Width = 177;
 			// 
 			// B_Editar
 			// 
@@ -329,10 +274,9 @@ namespace TransPorticoView {
 			this->B_Editar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Editar->Location = System::Drawing::Point(1069, 295);
-			this->B_Editar->Margin = System::Windows::Forms::Padding(4);
+			this->B_Editar->Location = System::Drawing::Point(802, 240);
 			this->B_Editar->Name = L"B_Editar";
-			this->B_Editar->Size = System::Drawing::Size(133, 49);
+			this->B_Editar->Size = System::Drawing::Size(100, 40);
 			this->B_Editar->TabIndex = 13;
 			this->B_Editar->Text = L"Editar";
 			this->B_Editar->UseVisualStyleBackColor = true;
@@ -345,10 +289,9 @@ namespace TransPorticoView {
 			this->B_Borrar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Borrar->Location = System::Drawing::Point(696, 295);
-			this->B_Borrar->Margin = System::Windows::Forms::Padding(4);
+			this->B_Borrar->Location = System::Drawing::Point(522, 240);
 			this->B_Borrar->Name = L"B_Borrar";
-			this->B_Borrar->Size = System::Drawing::Size(133, 49);
+			this->B_Borrar->Size = System::Drawing::Size(100, 40);
 			this->B_Borrar->TabIndex = 12;
 			this->B_Borrar->Text = L"Borrar";
 			this->B_Borrar->UseVisualStyleBackColor = true;
@@ -361,28 +304,28 @@ namespace TransPorticoView {
 			this->B_Anadir->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Anadir->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Anadir->Location = System::Drawing::Point(269, 295);
-			this->B_Anadir->Margin = System::Windows::Forms::Padding(4);
+			this->B_Anadir->Location = System::Drawing::Point(202, 240);
 			this->B_Anadir->Name = L"B_Anadir";
-			this->B_Anadir->Size = System::Drawing::Size(133, 49);
+			this->B_Anadir->Size = System::Drawing::Size(100, 40);
 			this->B_Anadir->TabIndex = 11;
 			this->B_Anadir->Text = L"Añadir";
 			this->B_Anadir->UseVisualStyleBackColor = true;
-			this->B_Anadir->Click += gcnew System::EventHandler(this, &EmpleadoMantenimiento::B_Anadir_Click_1);
+			this->B_Anadir->Click += gcnew System::EventHandler(this, &EmpleadoMantenimiento::B_Anadir_Click);
 			// 
 			// EmpleadoMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1471, 638);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1175, 715);
 			this->Controls->Add(this->B_Editar);
 			this->Controls->Add(this->B_Borrar);
 			this->Controls->Add(this->B_Anadir);
 			this->Controls->Add(this->DGV_Empleado);
 			this->Controls->Add(this->GB_Busqueda);
-			this->Margin = System::Windows::Forms::Padding(4);
+			this->DoubleBuffered = true;
 			this->Name = L"EmpleadoMantenimiento";
 			this->Text = L"EmpleadoMantenimiento";
 			this->Load += gcnew System::EventHandler(this, &EmpleadoMantenimiento::EmpleadoMantenimiento_Load);
@@ -394,29 +337,22 @@ namespace TransPorticoView {
 
 		}
 #pragma endregion
-	private: void CentrarForm() {
-		int PosXGB_Busqueda = ((this->ClientSize.Width) - (this->GB_Busqueda->Width)) / 2;
-		int PosXDGV_Tarifario = ((this->ClientSize.Width) - (this->DGV_Empleado->Width)) / 2;
-
-		this->GB_Busqueda->Location = System::Drawing::Point(PosXGB_Busqueda, 25);
-		this->DGV_Empleado->Location = System::Drawing::Point(PosXDGV_Tarifario, 225);
-		this->B_Anadir->Location = System::Drawing::Point(PosXDGV_Tarifario, 545);
-		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Tarifario + 320, 545);
-		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Tarifario + 600, 545);
-	};
-	private: System::Void B_Buscar_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		String^ EmpleadoesBuscar = this->TB_Nombre->Text;
-		EmpleadoController^ objEmpleadoController = gcnew EmpleadoController();
-		List<Empleado^>^ listaEmpleadoES = objEmpleadoController->BuscarEmpleados(EmpleadoesBuscar);
-		// Ahora voy a mostrar las carreras encontradas en la grilla
-		mostrarGrilla(listaEmpleadoES);
-	}
-	private: void mostrarGrilla(List<Empleado^>^ listaEmpleadoES) {
+private: void CentrarForm() {
+	int PosXGB_Busqueda = ((this->ClientSize.Width) - (this->GB_Busqueda->Width)) / 2;
+	int PosXDGV_Empleado = ((this->ClientSize.Width) - (this->DGV_Empleado->Width)) / 2;
+	this->GB_Busqueda->Location = System::Drawing::Point(PosXGB_Busqueda, 25);
+	this->DGV_Empleado->Location = System::Drawing::Point(PosXDGV_Empleado, 130);
+	this->B_Anadir->Location = System::Drawing::Point(PosXDGV_Empleado, 455);
+	this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Empleado + 480, 455);
+	this->B_Editar->Location = System::Drawing::Point(PosXDGV_Empleado + 900, 455);
+};
+private: void mostrarGrilla(List<Empleado^>^ listaEmpleadoES) {
 		this->DGV_Empleado->Rows->Clear(); /*Elimino toda la informacion del datagrid*/
 		for (int i = 0; i < listaEmpleadoES->Count; i++) {
 			Empleado^ objEmpleado = listaEmpleadoES[i];
 			/*Esta filaGrilla representa una fila del data grid de la pantalla*/
 			array<String^>^ filaGrilla = gcnew array<String^>(10);
+
 			filaGrilla[0] = objEmpleado->GetDNI_Empleado();
 			filaGrilla[1] = objEmpleado->GetNombre_Empleado();
 			filaGrilla[2] = objEmpleado->GetApellidoPat_Empleado();
@@ -424,31 +360,13 @@ namespace TransPorticoView {
 			filaGrilla[4] = Convert::ToString(objEmpleado->GetEdad_Empleado());
 			filaGrilla[5] = objEmpleado->GetGenero_Empleado();
 			filaGrilla[6] = objEmpleado->GetTelefono_Empleado();
-			filaGrilla[7] = objEmpleado->GetContrasena_Empleado();
+			filaGrilla[7] = objEmpleado->GetTipo_Empleado();
 			filaGrilla[8] = Convert::ToString(objEmpleado->GetSueldo_Empleado());
 			filaGrilla[9] = objEmpleado->GetEstadoContrato_Empleado();
+
 			this->DGV_Empleado->Rows->Add(filaGrilla);
 		}
 	}
-	private: System::Void pictureBox1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-private: System::Void B_Borrar_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	EmpleadoController^ objetoEmpleado;
-	int filaSeleccionada = this->DGV_Empleado->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-	String^ DNI_Eliminar_Empleado = this->DGV_Empleado->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-	objetoEmpleado->EliminarEmpleado(DNI_Eliminar_Empleado);
-	MessageBox::Show("El Empleado ha sido eliminado con éxito");
-}
-
-private: System::Void B_Editar_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	int filaSeleccionada = this->DGV_Empleado->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-	String^ DNI_EmpleadoMantenimientoEditar = this->DGV_Empleado->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-	EmpleadoController^ objEmpleadoController = gcnew EmpleadoController();
-	Empleado^ objEmpleado = objEmpleadoController->BuscarEmpleadoDNI(DNI_EmpleadoMantenimientoEditar);
-	EmpleadoMantenimientoEditar^ ventanaEditarEmpleado = gcnew EmpleadoMantenimientoEditar(objEmpleado);
-	ventanaEditarEmpleado->ShowDialog();
-}
-
 private: System::Void EmpleadoMantenimiento_Load(System::Object^ sender, System::EventArgs^ e) {
 	this->SizeChanged += (gcnew System::EventHandler(this, &EmpleadoMantenimiento::EmpleadoMantenimiento_SizeChanged));
 	CentrarForm();
@@ -456,7 +374,7 @@ private: System::Void EmpleadoMantenimiento_Load(System::Object^ sender, System:
 private: System::Void EmpleadoMantenimiento_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
 	CentrarForm();
 }
-private: System::Void B_Anadir_Click_1(System::Object^ sender, System::EventArgs^ e) {
+private: System::Void B_Anadir_Click(System::Object^ sender, System::EventArgs^ e) {
 	EmpleadoMantenimientoNuevo^ ventanaEmpleadoMantenimientoNuevo = gcnew EmpleadoMantenimientoNuevo();
 	ventanaEmpleadoMantenimientoNuevo->ShowDialog();
 }
@@ -468,19 +386,25 @@ private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ 
 	mostrarGrilla(listaEmpleadoES);
 }
 private: System::Void B_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
-	EmpleadoController^ objetoEmpleado;
-	int filaSeleccionada = this->DGV_Empleado->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-	String^ DNI_Eliminar_Empleado = this->DGV_Empleado->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-	objetoEmpleado->EliminarEmpleado(DNI_Eliminar_Empleado);
-	MessageBox::Show("El Empleado ha sido eliminado con éxito");
+	if (this->DGV_Empleado->SelectedRows->Count != 0) {
+		EmpleadoController^ objetoEmpleado;
+		int filaSeleccionada = this->DGV_Empleado->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
+		String^ DNI_Eliminar_Empleado = this->DGV_Empleado->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+		objetoEmpleado->EliminarEmpleado(DNI_Eliminar_Empleado);
+		MessageBox::Show("El Empleado ha sido eliminado con éxito");
+	}
 }
 private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ e) {
-	int filaSeleccionada = this->DGV_Empleado->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-	String^ DNI_EmpleadoMantenimientoEditar = this->DGV_Empleado->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
-	EmpleadoController^ objEmpleadoController = gcnew EmpleadoController();
-	Empleado^ objEmpleado = objEmpleadoController->BuscarEmpleadoDNI(DNI_EmpleadoMantenimientoEditar);
-	EmpleadoMantenimientoEditar^ ventanaEditarEmpleado = gcnew EmpleadoMantenimientoEditar(objEmpleado);
-	ventanaEditarEmpleado->ShowDialog();
+	if (this->DGV_Empleado->SelectedRows->Count != 0) {
+		int filaSeleccionada = this->DGV_Empleado->SelectedRows[0]->Index;
+
+		String^ DNI_EmpleadoMantenimientoEditar = this->DGV_Empleado->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+
+		EmpleadoController^ objEmpleadoController = gcnew EmpleadoController();
+		Empleado^ objEmpleado = objEmpleadoController->BuscarEmpleadoDNI(DNI_EmpleadoMantenimientoEditar);
+		EmpleadoMantenimientoEditar^ ventanaEditarEmpleado = gcnew EmpleadoMantenimientoEditar(objEmpleado);
+		ventanaEditarEmpleado->ShowDialog();
+	}
 }
 };
 }

@@ -9,12 +9,12 @@ namespace TransPorticoController {
 	public ref class EmpleadoController {
 	public:
 		EmpleadoController();
-		List<Empleado^>^ BuscarEmpleados(String^ Empleados);
+		List<Empleado^>^ BuscarEmpleados(String^ NombreEmpleado);
 		List<Empleado^>^ BuscarEmpleadosAll( );
-		void EscribirEmpleado(List<Empleado^>^ listaEmpleados);
-		void EliminarEmpleado(String^ DNI_Eliminar_Empleado);
-		void AgregarEmpleado(Empleado^ objEmpleado);
+		void EscribirEmpleado(List<Empleado^>^ ListaEmpleados);
+		void EliminarEmpleado(String^ DNI);
+		void AgregarEmpleado(Empleado^ ObjEmpleado);
 		Empleado^ BuscarEmpleadoDNI(String^ DNI);
-		void ActualizarEmpleado(Empleado^ objEmpleado);
+		void ActualizarEmpleado(Empleado^ ObjEmpleado);
 	};
 }

@@ -22,6 +22,6 @@ namespace TransPorticoController {
 		//Este metodo verifica que haya una persona en la base de datos con el DNI, entrega el valor de verdad dependiendo del resultado.
 		void VerificarPersona(String^ DNI, String^* Contrasena, String^* Tipo, bool* Registrado);
 		//Este metodo cambiara la contrasena de una persona, tras entregar un numero telefonico que ya ha sido verificado
-		void CambiarPersonaContrasenaTelefono(String^ Telefono, String^ NuevaContrasena);
+		
 	};
 };
