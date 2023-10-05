@@ -1,4 +1,4 @@
-#include "MantenimientoPasajero.h"
+#include "Conductor_Principal.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -8,6 +8,6 @@ void main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	MantenimientoPasajero Ventana;
+	Conductor_Principal Ventana;
 	Application::Run(% Ventana);
 }

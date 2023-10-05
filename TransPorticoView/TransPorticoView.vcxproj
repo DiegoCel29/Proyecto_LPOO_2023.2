@@ -114,6 +114,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Conductor_Principal.cpp" />
     <ClCompile Include="CrearCuenta.cpp" />
     <ClCompile Include="Editar_Atajos.cpp" />
     <ClCompile Include="Editar_Empleado.cpp" />
@@ -158,6 +159,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Conductor_Principal.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="CrearCuenta.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -262,6 +266,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Conductor_Principal.resx">
+      <DependentUpon>Conductor_Principal.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CrearCuenta.resx">
       <DependentUpon>CrearCuenta.h</DependentUpon>
     </EmbeddedResource>
