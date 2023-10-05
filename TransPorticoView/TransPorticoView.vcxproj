@@ -141,7 +141,6 @@
     <ClCompile Include="AtajoMantenimiento.cpp" />
     <ClCompile Include="EmpleadoMantenimiento.cpp" />
     <ClCompile Include="PasajeroMantenimiento.cpp" />
-    <ClCompile Include="MantenimientoSituacionRecorrido.cpp" />
     <ClCompile Include="OlvidoContrasena.cpp" />
     <ClCompile Include="PantallaPrincipalAdministrador.cpp" />
     <ClCompile Include="PromocionesMantenimientoAnadir.cpp" />
@@ -238,9 +237,6 @@
     <ClInclude Include="PasajeroMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="MantenimientoSituacionRecorrido.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="OlvidoContrasena.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -326,9 +322,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PasajeroMantenimiento.resx">
       <DependentUpon>PasajeroMantenimiento.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoSituacionRecorrido.resx">
-      <DependentUpon>MantenimientoSituacionRecorrido.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OlvidoContrasena.resx">
       <DependentUpon>OlvidoContrasena.h</DependentUpon>
