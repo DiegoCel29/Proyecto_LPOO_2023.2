@@ -1,5 +1,8 @@
 #pragma once
-
+#include "MenuTarjeta.h"
+#include "Pantalla_Ver_Atajo.h"
+#include "Pantalla_Ver_Ruta.h"
+#include "Pantalla_Horario_Conductor.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -8,6 +11,8 @@ namespace TransPorticoView {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace TransPorticoModel;
+
 
 	/// <summary>
 	/// Resumen de PantallaPrincipalConductor
@@ -162,6 +167,7 @@ namespace TransPorticoView {
 			this->B_HORARIO_SEMANAL->TabIndex = 7;
 			this->B_HORARIO_SEMANAL->Text = L"HORARIO SEMANAL";
 			this->B_HORARIO_SEMANAL->UseVisualStyleBackColor = false;
+			this->B_HORARIO_SEMANAL->Click += gcnew System::EventHandler(this, &PantallaPrincipalConductor::B_HORARIO_SEMANAL_Click);
 			// 
 			// pictureBox4
 			// 
@@ -231,7 +237,7 @@ namespace TransPorticoView {
 			// 
 			// PantallaPrincipalConductor
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(10, 20);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 17);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
@@ -262,14 +268,21 @@ namespace TransPorticoView {
 
 	};
 	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-
+		MenuTarjeta^ VentanaCrearCuenta = gcnew MenuTarjeta();
+		VentanaCrearCuenta->ShowDialog();
+		this->Show();
 	}
 private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	Pantalla_Ver_Atajo^ VentanaCrearCuenta = gcnew	Pantalla_Ver_Atajo();
+	VentanaCrearCuenta->ShowDialog();
+	this->Show();
 }
 private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
 }
 private: System::Void B_RUTA_Click(System::Object^ sender, System::EventArgs^ e) {
-
+	Pantalla_Ver_Ruta^ VentanaCrearCuenta = gcnew	Pantalla_Ver_Ruta();
+	VentanaCrearCuenta->ShowDialog();
+	this->Show();
 }
 private: System::Void PantallaPrincipalConductor_Load(System::Object^ sender, System::EventArgs^ e) {
 	this->SizeChanged += (gcnew System::EventHandler(this, &PantallaPrincipalConductor::PantallaPrincipalConductor_SizeChanged));
@@ -278,5 +291,11 @@ private: System::Void PantallaPrincipalConductor_Load(System::Object^ sender, Sy
 private: System::Void PantallaPrincipalConductor_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
 	CentrarForm();
 }
+private: System::Void B_HORARIO_SEMANAL_Click(System::Object^ sender, System::EventArgs^ e) {
+	Pantalla_Horario_Conductor^ VentanaCrearCuenta = gcnew	Pantalla_Horario_Conductor();
+	VentanaCrearCuenta->ShowDialog();
+	this->Show();
+}
+
 };
 }
