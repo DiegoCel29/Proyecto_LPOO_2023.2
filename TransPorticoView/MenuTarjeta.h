@@ -1,5 +1,7 @@
 #pragma once
 #include "RecargarTarjeta.h"
+#include "Tarifario.h"
+#include "SaldoPasajero.h"
 
 namespace TransPorticoView {
 
@@ -113,6 +115,7 @@ namespace TransPorticoView {
 			this->button2->TabIndex = 20;
 			this->button2->Text = L"SALIR";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &MenuTarjeta::button2_Click);
 			// 
 			// Logo
 			// 
@@ -150,6 +153,7 @@ namespace TransPorticoView {
 			this->B_RUTA->TabIndex = 16;
 			this->B_RUTA->Text = L"TARIFA";
 			this->B_RUTA->UseVisualStyleBackColor = false;
+			this->B_RUTA->Click += gcnew System::EventHandler(this, &MenuTarjeta::B_RUTA_Click);
 			// 
 			// pictureBox1
 			// 
@@ -173,6 +177,7 @@ namespace TransPorticoView {
 			this->B_HORARIO_SEMANAL->TabIndex = 15;
 			this->B_HORARIO_SEMANAL->Text = L"SALDO";
 			this->B_HORARIO_SEMANAL->UseVisualStyleBackColor = false;
+			this->B_HORARIO_SEMANAL->Click += gcnew System::EventHandler(this, &MenuTarjeta::B_HORARIO_SEMANAL_Click);
 			// 
 			// pictureBox2
 			// 
@@ -222,6 +227,17 @@ namespace TransPorticoView {
 private: System::Void B_TARJETA_Click(System::Object^ sender, System::EventArgs^ e) {
 	RecargarTarjeta^ VentanaRecargarTarjeta = gcnew RecargarTarjeta();
 	VentanaRecargarTarjeta->ShowDialog();
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	this->Close();
+}
+private: System::Void B_RUTA_Click(System::Object^ sender, System::EventArgs^ e) {
+	Tarifario^ VentanaTarifario = gcnew Tarifario();
+	VentanaTarifario->ShowDialog();
+}
+private: System::Void B_HORARIO_SEMANAL_Click(System::Object^ sender, System::EventArgs^ e) {
+	SaldoPasajero^ VentanaSaldoPasajero = gcnew SaldoPasajero();
+	VentanaSaldoPasajero->ShowDialog();
 }
 };
 }

@@ -135,7 +135,6 @@
     <ClCompile Include="HorarioMantenimiento.cpp" />
     <ClCompile Include="MantenimientoMantenimiento.cpp" />
     <ClCompile Include="MantenimientoParadero.cpp" />
-    <ClCompile Include="PasajeroPrincipal.cpp" />
     <ClCompile Include="Promociones.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
     <ClCompile Include="RecargarTarjeta.cpp" />
@@ -155,6 +154,8 @@
     <ClCompile Include="PromocionesMantenimientoEditar.cpp" />
     <ClCompile Include="RutaMantenimientoAnadir.cpp" />
     <ClCompile Include="RutaMantenimientoEditar.cpp" />
+    <ClCompile Include="SaldoPasajero.cpp" />
+    <ClCompile Include="Tarifario.cpp" />
     <ClCompile Include="TarifarioMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
     <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
@@ -285,6 +286,12 @@
     <ClInclude Include="RutaMantenimientoEditar.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="SaldoPasajero.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Tarifario.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="TarifarioMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -394,6 +401,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecargarTarjeta.resx">
       <DependentUpon>RecargarTarjeta.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SaldoPasajero.resx">
+      <DependentUpon>SaldoPasajero.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tarifario.resx">
+      <DependentUpon>Tarifario.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TarifarioMantenimiento.resx" />
     <EmbeddedResource Include="TarifarioMantenimientoAnadir.resx">
