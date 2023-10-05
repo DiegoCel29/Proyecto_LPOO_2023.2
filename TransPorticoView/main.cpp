@@ -1,4 +1,4 @@
-#include "PromocionesMantenimiento.h"
+#include "Pantalla_Horario_Conductor.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -8,6 +8,6 @@ void main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	PromocionesMantenimiento Ventana;
+	Pantalla_Horario_Conductor Ventana;
 	Application::Run(% Ventana);
 }
