@@ -77,26 +77,26 @@ namespace TransPorticoView {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Pantalla_Ver_Ruta::typeid));
 			this->GB_VER_RUTA = (gcnew System::Windows::Forms::GroupBox());
-			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->L_ParaderoInicial = (gcnew System::Windows::Forms::Label());
-			this->TB_SIGUIENTE_PARADERO = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->TB_BUS_1 = (gcnew System::Windows::Forms::TextBox());
-			this->TB_PASAJERO_1 = (gcnew System::Windows::Forms::TextBox());
-			this->label2 = (gcnew System::Windows::Forms::Label());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->B_Regresar = (gcnew System::Windows::Forms::Button());
+			this->B_Actualizar = (gcnew System::Windows::Forms::Button());
+			this->TB_NIVEL_TRAFICO = (gcnew System::Windows::Forms::TextBox());
+			this->L_Nivel_Trafico = (gcnew System::Windows::Forms::Label());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
 			this->label3 = (gcnew System::Windows::Forms::Label());
 			this->TB_PASAJERO_2 = (gcnew System::Windows::Forms::TextBox());
 			this->TB_BUS_2 = (gcnew System::Windows::Forms::TextBox());
-			this->L_Nivel_Trafico = (gcnew System::Windows::Forms::Label());
-			this->TB_NIVEL_TRAFICO = (gcnew System::Windows::Forms::TextBox());
-			this->B_Actualizar = (gcnew System::Windows::Forms::Button());
-			this->B_Regresar = (gcnew System::Windows::Forms::Button());
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->TB_PASAJERO_1 = (gcnew System::Windows::Forms::TextBox());
+			this->TB_BUS_1 = (gcnew System::Windows::Forms::TextBox());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->TB_SIGUIENTE_PARADERO = (gcnew System::Windows::Forms::TextBox());
+			this->L_ParaderoInicial = (gcnew System::Windows::Forms::Label());
+			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->GB_VER_RUTA->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
-			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
+			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// GB_VER_RUTA
@@ -118,106 +118,62 @@ namespace TransPorticoView {
 			this->GB_VER_RUTA->TabIndex = 0;
 			this->GB_VER_RUTA->TabStop = false;
 			// 
-			// pictureBox1
+			// B_Regresar
 			// 
-			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
-			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
-			this->pictureBox1->Location = System::Drawing::Point(40, 61);
-			this->pictureBox1->Name = L"pictureBox1";
-			this->pictureBox1->Size = System::Drawing::Size(69, 45);
-			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox1->TabIndex = 1;
-			this->pictureBox1->TabStop = false;
+			this->B_Regresar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Regresar.BackgroundImage")));
+			this->B_Regresar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Regresar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Regresar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Regresar->Location = System::Drawing::Point(703, 700);
+			this->B_Regresar->Margin = System::Windows::Forms::Padding(4);
+			this->B_Regresar->Name = L"B_Regresar";
+			this->B_Regresar->Size = System::Drawing::Size(133, 49);
+			this->B_Regresar->TabIndex = 21;
+			this->B_Regresar->Text = L"Regresar";
+			this->B_Regresar->UseVisualStyleBackColor = true;
+			this->B_Regresar->Click += gcnew System::EventHandler(this, &Pantalla_Ver_Ruta::B_Regresar_Click);
 			// 
-			// L_ParaderoInicial
+			// B_Actualizar
 			// 
-			this->L_ParaderoInicial->BackColor = System::Drawing::Color::Moccasin;
-			this->L_ParaderoInicial->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->L_ParaderoInicial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+			this->B_Actualizar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Actualizar.BackgroundImage")));
+			this->B_Actualizar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Actualizar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Actualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_Actualizar->Location = System::Drawing::Point(172, 700);
+			this->B_Actualizar->Margin = System::Windows::Forms::Padding(4);
+			this->B_Actualizar->Name = L"B_Actualizar";
+			this->B_Actualizar->Size = System::Drawing::Size(133, 49);
+			this->B_Actualizar->TabIndex = 20;
+			this->B_Actualizar->Text = L"Actualizar";
+			this->B_Actualizar->UseVisualStyleBackColor = true;
+			// 
+			// TB_NIVEL_TRAFICO
+			// 
+			this->TB_NIVEL_TRAFICO->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_NIVEL_TRAFICO->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->L_ParaderoInicial->ForeColor = System::Drawing::Color::Black;
-			this->L_ParaderoInicial->Location = System::Drawing::Point(147, 61);
-			this->L_ParaderoInicial->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->L_ParaderoInicial->Name = L"L_ParaderoInicial";
-			this->L_ParaderoInicial->Size = System::Drawing::Size(238, 45);
-			this->L_ParaderoInicial->TabIndex = 6;
-			this->L_ParaderoInicial->Text = L"Siguiente Paradero :";
-			this->L_ParaderoInicial->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->TB_NIVEL_TRAFICO->Location = System::Drawing::Point(445, 599);
+			this->TB_NIVEL_TRAFICO->Margin = System::Windows::Forms::Padding(4);
+			this->TB_NIVEL_TRAFICO->Name = L"TB_NIVEL_TRAFICO";
+			this->TB_NIVEL_TRAFICO->Size = System::Drawing::Size(86, 38);
+			this->TB_NIVEL_TRAFICO->TabIndex = 19;
 			// 
-			// TB_SIGUIENTE_PARADERO
+			// L_Nivel_Trafico
 			// 
-			this->TB_SIGUIENTE_PARADERO->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_SIGUIENTE_PARADERO->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular,
+			this->L_Nivel_Trafico->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Nivel_Trafico->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_Nivel_Trafico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->TB_SIGUIENTE_PARADERO->Location = System::Drawing::Point(420, 64);
-			this->TB_SIGUIENTE_PARADERO->Margin = System::Windows::Forms::Padding(4);
-			this->TB_SIGUIENTE_PARADERO->Name = L"TB_SIGUIENTE_PARADERO";
-			this->TB_SIGUIENTE_PARADERO->Size = System::Drawing::Size(333, 38);
-			this->TB_SIGUIENTE_PARADERO->TabIndex = 11;
-			// 
-			// label1
-			// 
-			this->label1->BackColor = System::Drawing::Color::Moccasin;
-			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::Color::Black;
-			this->label1->Location = System::Drawing::Point(147, 164);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(238, 45);
-			this->label1->TabIndex = 12;
-			this->label1->Text = L"Buses Cercanos :";
-			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// TB_BUS_1
-			// 
-			this->TB_BUS_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_BUS_1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->TB_BUS_1->Location = System::Drawing::Point(31, 13);
-			this->TB_BUS_1->Margin = System::Windows::Forms::Padding(4);
-			this->TB_BUS_1->Name = L"TB_BUS_1";
-			this->TB_BUS_1->Size = System::Drawing::Size(124, 38);
-			this->TB_BUS_1->TabIndex = 13;
-			// 
-			// TB_PASAJERO_1
-			// 
-			this->TB_PASAJERO_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_PASAJERO_1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->TB_PASAJERO_1->Location = System::Drawing::Point(329, 67);
-			this->TB_PASAJERO_1->Margin = System::Windows::Forms::Padding(4);
-			this->TB_PASAJERO_1->Name = L"TB_PASAJERO_1";
-			this->TB_PASAJERO_1->Size = System::Drawing::Size(86, 38);
-			this->TB_PASAJERO_1->TabIndex = 14;
-			// 
-			// label2
-			// 
-			this->label2->BackColor = System::Drawing::Color::Moccasin;
-			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->label2->ForeColor = System::Drawing::Color::Black;
-			this->label2->Location = System::Drawing::Point(31, 67);
-			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(279, 37);
-			this->label2->TabIndex = 15;
-			this->label2->Text = L"Cantidad de Pasajeros :";
-			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
-			// groupBox1
-			// 
-			this->groupBox1->Controls->Add(this->label2);
-			this->groupBox1->Controls->Add(this->TB_PASAJERO_1);
-			this->groupBox1->Controls->Add(this->TB_BUS_1);
-			this->groupBox1->Location = System::Drawing::Point(116, 225);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(455, 163);
-			this->groupBox1->TabIndex = 16;
-			this->groupBox1->TabStop = false;
+			this->L_Nivel_Trafico->ForeColor = System::Drawing::Color::Black;
+			this->L_Nivel_Trafico->Location = System::Drawing::Point(147, 591);
+			this->L_Nivel_Trafico->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->L_Nivel_Trafico->Name = L"L_Nivel_Trafico";
+			this->L_Nivel_Trafico->Size = System::Drawing::Size(238, 46);
+			this->L_Nivel_Trafico->TabIndex = 18;
+			this->L_Nivel_Trafico->Text = L"Nivel de Trafico :";
+			this->L_Nivel_Trafico->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// groupBox2
 			// 
@@ -267,61 +223,106 @@ namespace TransPorticoView {
 			this->TB_BUS_2->Size = System::Drawing::Size(124, 38);
 			this->TB_BUS_2->TabIndex = 13;
 			// 
-			// L_Nivel_Trafico
+			// groupBox1
 			// 
-			this->L_Nivel_Trafico->BackColor = System::Drawing::Color::Moccasin;
-			this->L_Nivel_Trafico->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->L_Nivel_Trafico->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->L_Nivel_Trafico->ForeColor = System::Drawing::Color::Black;
-			this->L_Nivel_Trafico->Location = System::Drawing::Point(147, 591);
-			this->L_Nivel_Trafico->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->L_Nivel_Trafico->Name = L"L_Nivel_Trafico";
-			this->L_Nivel_Trafico->Size = System::Drawing::Size(238, 46);
-			this->L_Nivel_Trafico->TabIndex = 18;
-			this->L_Nivel_Trafico->Text = L"Nivel de Trafico :";
-			this->L_Nivel_Trafico->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->groupBox1->Controls->Add(this->label2);
+			this->groupBox1->Controls->Add(this->TB_PASAJERO_1);
+			this->groupBox1->Controls->Add(this->TB_BUS_1);
+			this->groupBox1->Location = System::Drawing::Point(116, 225);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(455, 163);
+			this->groupBox1->TabIndex = 16;
+			this->groupBox1->TabStop = false;
 			// 
-			// TB_NIVEL_TRAFICO
+			// label2
 			// 
-			this->TB_NIVEL_TRAFICO->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_NIVEL_TRAFICO->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->TB_NIVEL_TRAFICO->Location = System::Drawing::Point(445, 599);
-			this->TB_NIVEL_TRAFICO->Margin = System::Windows::Forms::Padding(4);
-			this->TB_NIVEL_TRAFICO->Name = L"TB_NIVEL_TRAFICO";
-			this->TB_NIVEL_TRAFICO->Size = System::Drawing::Size(86, 38);
-			this->TB_NIVEL_TRAFICO->TabIndex = 19;
-			// 
-			// B_Actualizar
-			// 
-			this->B_Actualizar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Actualizar.BackgroundImage")));
-			this->B_Actualizar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->B_Actualizar->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->B_Actualizar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->label2->BackColor = System::Drawing::Color::Moccasin;
+			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Actualizar->Location = System::Drawing::Point(172, 700);
-			this->B_Actualizar->Margin = System::Windows::Forms::Padding(4);
-			this->B_Actualizar->Name = L"B_Actualizar";
-			this->B_Actualizar->Size = System::Drawing::Size(133, 49);
-			this->B_Actualizar->TabIndex = 20;
-			this->B_Actualizar->Text = L"Actualizar";
-			this->B_Actualizar->UseVisualStyleBackColor = true;
+			this->label2->ForeColor = System::Drawing::Color::Black;
+			this->label2->Location = System::Drawing::Point(31, 67);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(279, 37);
+			this->label2->TabIndex = 15;
+			this->label2->Text = L"Cantidad de Pasajeros :";
+			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// B_Regresar
+			// TB_PASAJERO_1
 			// 
-			this->B_Regresar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Regresar.BackgroundImage")));
-			this->B_Regresar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->B_Regresar->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->B_Regresar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->TB_PASAJERO_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_PASAJERO_1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Regresar->Location = System::Drawing::Point(703, 700);
-			this->B_Regresar->Margin = System::Windows::Forms::Padding(4);
-			this->B_Regresar->Name = L"B_Regresar";
-			this->B_Regresar->Size = System::Drawing::Size(133, 49);
-			this->B_Regresar->TabIndex = 21;
-			this->B_Regresar->Text = L"Regresar";
-			this->B_Regresar->UseVisualStyleBackColor = true;
+			this->TB_PASAJERO_1->Location = System::Drawing::Point(329, 67);
+			this->TB_PASAJERO_1->Margin = System::Windows::Forms::Padding(4);
+			this->TB_PASAJERO_1->Name = L"TB_PASAJERO_1";
+			this->TB_PASAJERO_1->Size = System::Drawing::Size(86, 38);
+			this->TB_PASAJERO_1->TabIndex = 14;
+			// 
+			// TB_BUS_1
+			// 
+			this->TB_BUS_1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_BUS_1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->TB_BUS_1->Location = System::Drawing::Point(31, 13);
+			this->TB_BUS_1->Margin = System::Windows::Forms::Padding(4);
+			this->TB_BUS_1->Name = L"TB_BUS_1";
+			this->TB_BUS_1->Size = System::Drawing::Size(124, 38);
+			this->TB_BUS_1->TabIndex = 13;
+			// 
+			// label1
+			// 
+			this->label1->BackColor = System::Drawing::Color::Moccasin;
+			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::Black;
+			this->label1->Location = System::Drawing::Point(147, 164);
+			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(238, 45);
+			this->label1->TabIndex = 12;
+			this->label1->Text = L"Buses Cercanos :";
+			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// TB_SIGUIENTE_PARADERO
+			// 
+			this->TB_SIGUIENTE_PARADERO->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->TB_SIGUIENTE_PARADERO->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->TB_SIGUIENTE_PARADERO->Location = System::Drawing::Point(420, 64);
+			this->TB_SIGUIENTE_PARADERO->Margin = System::Windows::Forms::Padding(4);
+			this->TB_SIGUIENTE_PARADERO->Name = L"TB_SIGUIENTE_PARADERO";
+			this->TB_SIGUIENTE_PARADERO->Size = System::Drawing::Size(333, 38);
+			this->TB_SIGUIENTE_PARADERO->TabIndex = 11;
+			// 
+			// L_ParaderoInicial
+			// 
+			this->L_ParaderoInicial->BackColor = System::Drawing::Color::Moccasin;
+			this->L_ParaderoInicial->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_ParaderoInicial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->L_ParaderoInicial->ForeColor = System::Drawing::Color::Black;
+			this->L_ParaderoInicial->Location = System::Drawing::Point(147, 61);
+			this->L_ParaderoInicial->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->L_ParaderoInicial->Name = L"L_ParaderoInicial";
+			this->L_ParaderoInicial->Size = System::Drawing::Size(238, 45);
+			this->L_ParaderoInicial->TabIndex = 6;
+			this->L_ParaderoInicial->Text = L"Siguiente Paradero :";
+			this->L_ParaderoInicial->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			// 
+			// pictureBox1
+			// 
+			this->pictureBox1->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox1->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->pictureBox1->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox1.Image")));
+			this->pictureBox1->Location = System::Drawing::Point(40, 61);
+			this->pictureBox1->Name = L"pictureBox1";
+			this->pictureBox1->Size = System::Drawing::Size(69, 45);
+			this->pictureBox1->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox1->TabIndex = 1;
+			this->pictureBox1->TabStop = false;
 			// 
 			// Pantalla_Ver_Ruta
 			// 
@@ -332,16 +333,32 @@ namespace TransPorticoView {
 			this->Controls->Add(this->GB_VER_RUTA);
 			this->Name = L"Pantalla_Ver_Ruta";
 			this->Text = L"Pantalla_Ver_Ruta";
+			this->Load += gcnew System::EventHandler(this, &Pantalla_Ver_Ruta::Pantalla_Ver_Ruta_Load);
+			this->SizeChanged += gcnew System::EventHandler(this, &Pantalla_Ver_Ruta::Pantalla_Ver_Ruta_SizeChanged);
 			this->GB_VER_RUTA->ResumeLayout(false);
 			this->GB_VER_RUTA->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
 			this->groupBox2->ResumeLayout(false);
 			this->groupBox2->PerformLayout();
+			this->groupBox1->ResumeLayout(false);
+			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
+	private: void CentrarForm() {
+		int PosXGB_Busqueda = ((this->ClientSize.Width) - (this->GB_VER_RUTA->Width)) / 2;
+		this->GB_VER_RUTA->Location = System::Drawing::Point(PosXGB_Busqueda, 25);
 	};
+	private: System::Void B_Regresar_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+private: System::Void Pantalla_Ver_Ruta_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+	CentrarForm();
+}
+
+private: System::Void Pantalla_Ver_Ruta_Load(System::Object^ sender, System::EventArgs^ e) {
+	this->SizeChanged += (gcnew System::EventHandler(this, &Pantalla_Ver_Ruta::Pantalla_Ver_Ruta_SizeChanged));
+	CentrarForm();
+}
+};
 }

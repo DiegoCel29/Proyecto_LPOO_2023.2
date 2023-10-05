@@ -128,6 +128,7 @@
     <ClCompile Include="MantenimientoMantenimientoEditar.cpp" />
     <ClCompile Include="PantallaPrincipalPasajero.cpp" />
     <ClCompile Include="Pantalla_Horario_Conductor.cpp" />
+    <ClCompile Include="Pantalla_Ver_Atajo.cpp" />
     <ClCompile Include="Pantalla_Ver_Ruta.cpp" />
     <ClCompile Include="ParaderoMantenimientoAnadir.cpp" />
     <ClCompile Include="ParaderoMantenimientoEditar.cpp" />
@@ -211,6 +212,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Pantalla_Horario_Conductor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Pantalla_Ver_Atajo.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Pantalla_Ver_Ruta.h">
@@ -352,6 +356,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Horario_Conductor.resx">
       <DependentUpon>Pantalla_Horario_Conductor.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantalla_Ver_Atajo.resx">
+      <DependentUpon>Pantalla_Ver_Atajo.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantalla_Ver_Ruta.resx">
       <DependentUpon>Pantalla_Ver_Ruta.h</DependentUpon>

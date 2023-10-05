@@ -1,4 +1,4 @@
-#include "Pantalla_Ver_Ruta.h"
+#include "Pantalla_Ver_Atajo.h"
 
 using namespace System;
 using namespace System::Windows::Forms;
@@ -8,6 +8,6 @@ void main(array <String^>^ args) {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
 
-	Pantalla_Ver_Ruta Ventana;
+	Pantalla_Ver_Atajo Ventana;
 	Application::Run(% Ventana);
 }
