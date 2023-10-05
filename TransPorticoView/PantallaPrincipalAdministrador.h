@@ -82,6 +82,11 @@ namespace TransPorticoView {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PantallaPrincipalAdministrador::typeid));
 			this->GB_OPCIONES = (gcnew System::Windows::Forms::GroupBox());
+			this->Logo = (gcnew System::Windows::Forms::PictureBox());
+			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
+			this->B_CONTRATO_CONDUCTOR = (gcnew System::Windows::Forms::Button());
+			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
+			this->B_MATENIMIENTO_BUSES = (gcnew System::Windows::Forms::Button());
 			this->B_GESTION_REPORTES_PARADEROS = (gcnew System::Windows::Forms::Button());
 			this->B_REPORTES_ECONOMICOS = (gcnew System::Windows::Forms::Button());
 			this->B_ESTADISTICAS = (gcnew System::Windows::Forms::Button());
@@ -90,21 +95,16 @@ namespace TransPorticoView {
 			this->pictureBox2 = (gcnew System::Windows::Forms::PictureBox());
 			this->B_TARJETA = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
-			this->B_MATENIMIENTO_BUSES = (gcnew System::Windows::Forms::Button());
-			this->pictureBox5 = (gcnew System::Windows::Forms::PictureBox());
-			this->B_CONTRATO_CONDUCTOR = (gcnew System::Windows::Forms::Button());
-			this->pictureBox6 = (gcnew System::Windows::Forms::PictureBox());
 			this->TB_BIENVENIDA = (gcnew System::Windows::Forms::TextBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->Logo = (gcnew System::Windows::Forms::PictureBox());
 			this->GB_OPCIONES->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// GB_OPCIONES
@@ -132,6 +132,70 @@ namespace TransPorticoView {
 			this->GB_OPCIONES->TabIndex = 1;
 			this->GB_OPCIONES->TabStop = false;
 			this->GB_OPCIONES->Text = L"Menu de Opciones";
+			// 
+			// Logo
+			// 
+			this->Logo->BackColor = System::Drawing::SystemColors::Control;
+			this->Logo->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->Logo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->Logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Logo.Image")));
+			this->Logo->Location = System::Drawing::Point(664, 159);
+			this->Logo->Margin = System::Windows::Forms::Padding(1);
+			this->Logo->Name = L"Logo";
+			this->Logo->Size = System::Drawing::Size(320, 276);
+			this->Logo->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->Logo->TabIndex = 14;
+			this->Logo->TabStop = false;
+			// 
+			// pictureBox6
+			// 
+			this->pictureBox6->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
+			this->pictureBox6->Location = System::Drawing::Point(92, 515);
+			this->pictureBox6->Name = L"pictureBox6";
+			this->pictureBox6->Size = System::Drawing::Size(69, 45);
+			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox6->TabIndex = 13;
+			this->pictureBox6->TabStop = false;
+			// 
+			// B_CONTRATO_CONDUCTOR
+			// 
+			this->B_CONTRATO_CONDUCTOR->BackColor = System::Drawing::Color::DarkBlue;
+			this->B_CONTRATO_CONDUCTOR->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->B_CONTRATO_CONDUCTOR->Location = System::Drawing::Point(196, 515);
+			this->B_CONTRATO_CONDUCTOR->Name = L"B_CONTRATO_CONDUCTOR";
+			this->B_CONTRATO_CONDUCTOR->Size = System::Drawing::Size(396, 45);
+			this->B_CONTRATO_CONDUCTOR->TabIndex = 12;
+			this->B_CONTRATO_CONDUCTOR->Text = L"CONTRATO DE CONDUCTOR";
+			this->B_CONTRATO_CONDUCTOR->UseVisualStyleBackColor = false;
+			// 
+			// pictureBox5
+			// 
+			this->pictureBox5->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
+			this->pictureBox5->Location = System::Drawing::Point(92, 433);
+			this->pictureBox5->Name = L"pictureBox5";
+			this->pictureBox5->Size = System::Drawing::Size(69, 45);
+			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox5->TabIndex = 11;
+			this->pictureBox5->TabStop = false;
+			// 
+			// B_MATENIMIENTO_BUSES
+			// 
+			this->B_MATENIMIENTO_BUSES->BackColor = System::Drawing::Color::DarkBlue;
+			this->B_MATENIMIENTO_BUSES->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->B_MATENIMIENTO_BUSES->Location = System::Drawing::Point(196, 433);
+			this->B_MATENIMIENTO_BUSES->Name = L"B_MATENIMIENTO_BUSES";
+			this->B_MATENIMIENTO_BUSES->Size = System::Drawing::Size(387, 45);
+			this->B_MATENIMIENTO_BUSES->TabIndex = 10;
+			this->B_MATENIMIENTO_BUSES->Text = L"MANTENIMIENTO DE BUSES";
+			this->B_MATENIMIENTO_BUSES->UseVisualStyleBackColor = false;
 			// 
 			// B_GESTION_REPORTES_PARADEROS
 			// 
@@ -237,56 +301,6 @@ namespace TransPorticoView {
 			this->pictureBox1->TabIndex = 0;
 			this->pictureBox1->TabStop = false;
 			// 
-			// B_MATENIMIENTO_BUSES
-			// 
-			this->B_MATENIMIENTO_BUSES->BackColor = System::Drawing::Color::DarkBlue;
-			this->B_MATENIMIENTO_BUSES->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->B_MATENIMIENTO_BUSES->Location = System::Drawing::Point(196, 433);
-			this->B_MATENIMIENTO_BUSES->Name = L"B_MATENIMIENTO_BUSES";
-			this->B_MATENIMIENTO_BUSES->Size = System::Drawing::Size(387, 45);
-			this->B_MATENIMIENTO_BUSES->TabIndex = 10;
-			this->B_MATENIMIENTO_BUSES->Text = L"MANTENIMIENTO DE BUSES";
-			this->B_MATENIMIENTO_BUSES->UseVisualStyleBackColor = false;
-			// 
-			// pictureBox5
-			// 
-			this->pictureBox5->BackColor = System::Drawing::Color::Transparent;
-			this->pictureBox5->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox5->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox5->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox5.Image")));
-			this->pictureBox5->Location = System::Drawing::Point(92, 433);
-			this->pictureBox5->Name = L"pictureBox5";
-			this->pictureBox5->Size = System::Drawing::Size(69, 45);
-			this->pictureBox5->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox5->TabIndex = 11;
-			this->pictureBox5->TabStop = false;
-			// 
-			// B_CONTRATO_CONDUCTOR
-			// 
-			this->B_CONTRATO_CONDUCTOR->BackColor = System::Drawing::Color::DarkBlue;
-			this->B_CONTRATO_CONDUCTOR->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->B_CONTRATO_CONDUCTOR->Location = System::Drawing::Point(196, 515);
-			this->B_CONTRATO_CONDUCTOR->Name = L"B_CONTRATO_CONDUCTOR";
-			this->B_CONTRATO_CONDUCTOR->Size = System::Drawing::Size(396, 45);
-			this->B_CONTRATO_CONDUCTOR->TabIndex = 12;
-			this->B_CONTRATO_CONDUCTOR->Text = L"CONTRATO DE CONDUCTOR";
-			this->B_CONTRATO_CONDUCTOR->UseVisualStyleBackColor = false;
-			// 
-			// pictureBox6
-			// 
-			this->pictureBox6->BackColor = System::Drawing::Color::Transparent;
-			this->pictureBox6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->pictureBox6->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->pictureBox6->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox6.Image")));
-			this->pictureBox6->Location = System::Drawing::Point(92, 515);
-			this->pictureBox6->Name = L"pictureBox6";
-			this->pictureBox6->Size = System::Drawing::Size(69, 45);
-			this->pictureBox6->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->pictureBox6->TabIndex = 13;
-			this->pictureBox6->TabStop = false;
-			// 
 			// TB_BIENVENIDA
 			// 
 			this->TB_BIENVENIDA->BackColor = System::Drawing::Color::DarkBlue;
@@ -312,44 +326,30 @@ namespace TransPorticoView {
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"BIENVENIDO !";
 			// 
-			// Logo
-			// 
-			this->Logo->BackColor = System::Drawing::SystemColors::Control;
-			this->Logo->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Logo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->Logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Logo.Image")));
-			this->Logo->Location = System::Drawing::Point(664, 159);
-			this->Logo->Margin = System::Windows::Forms::Padding(1);
-			this->Logo->Name = L"Logo";
-			this->Logo->Size = System::Drawing::Size(320, 276);
-			this->Logo->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->Logo->TabIndex = 14;
-			this->Logo->TabStop = false;
-			// 
 			// PantallaPrincipalAdministrador
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1180, 701);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->TB_BIENVENIDA);
 			this->Controls->Add(this->GB_OPCIONES);
 			this->DoubleBuffered = true;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"PantallaPrincipalAdministrador";
 			this->Text = L"PantallaPrincipalAdministrador";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &PantallaPrincipalAdministrador::PantallaPrincipalAdministrador_Load);
 			this->GB_OPCIONES->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox4))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox5))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

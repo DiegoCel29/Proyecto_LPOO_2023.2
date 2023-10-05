@@ -138,6 +138,9 @@
     <ClCompile Include="HorarioMantenimiento.cpp" />
     <ClCompile Include="MantenimientoMantenimiento.cpp" />
     <ClCompile Include="MantenimientoParadero.cpp" />
+    <ClCompile Include="PPAdministrador_Estadistica.cpp" />
+    <ClCompile Include="PPAdministrador_GestionReportesPasajeros.cpp" />
+    <ClCompile Include="PPAdministrador_InformesEconomicos_.cpp" />
     <ClCompile Include="Promociones.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
     <ClCompile Include="RecargarTarjeta.cpp" />
@@ -242,6 +245,15 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ParaderoMantenimiento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PPAdministrador_Estadistica.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PPAdministrador_GestionReportesPasajeros.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PPAdministrador_InformesEconomicos_.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Promociones.h">
@@ -386,6 +398,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoMantenimiento.resx">
       <DependentUpon>MantenimientoMantenimiento.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPAdministrador_Estadistica.resx">
+      <DependentUpon>PPAdministrador_Estadistica.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPAdministrador_InformesEconomicos_.resx">
+      <DependentUpon>PPAdministrador_InformesEconomicos_.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Promociones.resx">
       <DependentUpon>Promociones.h</DependentUpon>
