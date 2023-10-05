@@ -43,8 +43,6 @@ namespace TransPorticoView {
 
 	private: System::Windows::Forms::Button^ B_Buscar;
 	private: System::Windows::Forms::DataGridView^ DGV_Atajos;
-
-
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Identificador;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_RutaAsociada;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGCV_ParaderoInicial;
@@ -57,7 +55,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Button^ B_Borrar;
 	private: System::Windows::Forms::Button^ B_Anadir;
 	private: System::Windows::Forms::ComboBox^ CB_ParaderoInicial;
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.

@@ -40,22 +40,9 @@ namespace TransPorticoView {
 		}
 	private: System::Windows::Forms::GroupBox^ GB_Busqueda;
 	private: System::Windows::Forms::TextBox^ TB_Turno;
-	protected:
-
-
-
-
-
 	private: System::Windows::Forms::Label^ L_ParaderoInicial;
 	private: System::Windows::Forms::Button^ B_Buscar;
 	private: System::Windows::Forms::DataGridView^ DGV_Horario;
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Button^ B_Anadir;
 	private: System::Windows::Forms::Button^ B_Borrar;
 	private: System::Windows::Forms::Button^ B_Editar;
@@ -63,28 +50,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_RutaAsociada;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGCV_ParaderoInicial;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_ParaderoFinal;
-
-	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -126,9 +91,9 @@ namespace TransPorticoView {
 			this->GB_Busqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
-			this->GB_Busqueda->Location = System::Drawing::Point(196, 46);
+			this->GB_Busqueda->Location = System::Drawing::Point(0, 0);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Size = System::Drawing::Size(550, 98);
+			this->GB_Busqueda->Size = System::Drawing::Size(580, 80);
 			this->GB_Busqueda->TabIndex = 9;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
@@ -136,7 +101,7 @@ namespace TransPorticoView {
 			// TB_Turno
 			// 
 			this->TB_Turno->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Turno->Location = System::Drawing::Point(141, 46);
+			this->TB_Turno->Location = System::Drawing::Point(175, 30);
 			this->TB_Turno->Name = L"TB_Turno";
 			this->TB_Turno->Size = System::Drawing::Size(250, 29);
 			this->TB_Turno->TabIndex = 10;
@@ -148,13 +113,12 @@ namespace TransPorticoView {
 			this->L_ParaderoInicial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->L_ParaderoInicial->ForeColor = System::Drawing::Color::Black;
-			this->L_ParaderoInicial->Location = System::Drawing::Point(40, 45);
+			this->L_ParaderoInicial->Location = System::Drawing::Point(10, 30);
 			this->L_ParaderoInicial->Name = L"L_ParaderoInicial";
-			this->L_ParaderoInicial->Size = System::Drawing::Size(74, 30);
+			this->L_ParaderoInicial->Size = System::Drawing::Size(150, 30);
 			this->L_ParaderoInicial->TabIndex = 5;
 			this->L_ParaderoInicial->Text = L"Turno";
 			this->L_ParaderoInicial->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->L_ParaderoInicial->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::L_ParaderoInicial_Click);
 			// 
 			// B_Buscar
 			// 
@@ -164,7 +128,7 @@ namespace TransPorticoView {
 			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->B_Buscar->Location = System::Drawing::Point(432, 40);
+			this->B_Buscar->Location = System::Drawing::Point(450, 25);
 			this->B_Buscar->Name = L"B_Buscar";
 			this->B_Buscar->Size = System::Drawing::Size(100, 40);
 			this->B_Buscar->TabIndex = 1;
@@ -210,7 +174,6 @@ namespace TransPorticoView {
 			this->DGV_Horario->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
 			this->DGV_Horario->Size = System::Drawing::Size(700, 300);
 			this->DGV_Horario->TabIndex = 10;
-			this->DGV_Horario->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &HorarioMantenimiento::DGV_Tarifario_CellContentClick);
 			// 
 			// DGVC_Identificador
 			// 
@@ -309,27 +272,15 @@ namespace TransPorticoView {
 
 		}
 #pragma endregion
-
-
-
-
-	private: System::Void DGV_Tarifario_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	}
-	private: System::Void L_ParaderoInicial_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
 	private: void CentrarForm() {
 		int PosXGB_Busqueda = ((this->ClientSize.Width) - (this->GB_Busqueda->Width)) / 2;
-		int PosXDGV_Tarifario = ((this->ClientSize.Width) - (this->DGV_Horario->Width)) / 2;
-
+		int PosXDGV_Empleado = ((this->ClientSize.Width) - (this->DGV_Horario->Width)) / 2;
 		this->GB_Busqueda->Location = System::Drawing::Point(PosXGB_Busqueda, 25);
-		this->DGV_Horario->Location = System::Drawing::Point(PosXDGV_Tarifario, 225);
-		this->B_Anadir->Location = System::Drawing::Point(PosXDGV_Tarifario, 545);
-		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Tarifario + 320, 545);
-		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Tarifario + 600, 545);
+		this->DGV_Horario->Location = System::Drawing::Point(PosXDGV_Empleado, 130);
+		this->B_Anadir->Location = System::Drawing::Point(PosXDGV_Empleado, 455);
+		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Empleado + 330, 455);
+		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Empleado + 600, 455);
 	};
-
-
-
 	private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
 		String^ Turno = this->TB_Turno->Text;
 		HorarioController^ objHorarioController = gcnew HorarioController();
@@ -350,34 +301,31 @@ namespace TransPorticoView {
 			this->DGV_Horario->Rows->Add(filaGrilla);
 		}
 	}
-
-
 	private: System::Void B_Anadir_Click(System::Object^ sender, System::EventArgs^ e) {
 		HorarioMantenimientoAnadir^ VentanaAgregarHorario = gcnew HorarioMantenimientoAnadir;
 		VentanaAgregarHorario->ShowDialog();
-
 	}
 	private: System::Void B_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
-		//¿Como se cual es la fila uqe he seleccionado para eliminarla?
-		int filaSeleccionada = this->DGV_Horario->SelectedRows[0]->Index;
-		//Si quiero eliminar 2 seria SelectedRows[1] , 3 SelectedRows[2]
-		//Ya tengo la fila que selecioné en la variable
-		int codigoAeliminar = Convert::ToInt32(this->DGV_Horario->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
-		//Ya tengo el codigo a eliminar
-		HorarioController^ objetoHorarioController = gcnew HorarioController;
-		objetoHorarioController->EliminarHorario(codigoAeliminar);
-		List<Horario^>^ listaHorario = objetoHorarioController->buscarHorariosall();
-		mostrarGrilla(listaHorario);
+		if(this->DGV_Horario->SelectedRows->Count != 0) {
+			int filaSeleccionada = this->DGV_Horario->SelectedRows[0]->Index;
+			int codigoAeliminar = Convert::ToInt32(this->DGV_Horario->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+			HorarioController^ objetoHorarioController = gcnew HorarioController;
+			objetoHorarioController->EliminarHorario(codigoAeliminar);
+			List<Horario^>^ listaHorario = objetoHorarioController->buscarHorariosall();
+			mostrarGrilla(listaHorario);
+		}
 
 	}
 	private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ e) {
-		int filaSeleccionada = this->DGV_Horario->SelectedRows[0]->Index;
-		int codigoAeditar = Convert::ToInt32(this->DGV_Horario->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
-		HorarioController^ objetocontroller = gcnew HorarioController;
-		Horario^ objetoHorario = objetocontroller->buscarHorarios(codigoAeditar);
+		if (this->DGV_Horario->SelectedRows->Count != 0) {
+			int filaSeleccionada = this->DGV_Horario->SelectedRows[0]->Index;
+			int codigoAeditar = Convert::ToInt32(this->DGV_Horario->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+			HorarioController^ objetocontroller = gcnew HorarioController;
+			Horario^ objetoHorario = objetocontroller->buscarHorarios(codigoAeditar);
 
-		HorarioMantenimientoEditar^ ventanaEditar = gcnew HorarioMantenimientoEditar(objetoHorario);
-		ventanaEditar->ShowDialog();
+			HorarioMantenimientoEditar^ ventanaEditar = gcnew HorarioMantenimientoEditar(objetoHorario);
+			ventanaEditar->ShowDialog();
+		}
 	}
 	private: System::Void HorarioMantenimiento_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->SizeChanged += (gcnew System::EventHandler(this, &HorarioMantenimiento::HorarioMantenimiento_SizeChanged));

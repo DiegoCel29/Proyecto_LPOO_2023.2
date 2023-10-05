@@ -39,13 +39,13 @@ namespace TransPorticoView {
 			}
 		}
 	private: System::Windows::Forms::DataGridView^ DGV_Autobus;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Identificador;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_RutaAsociada;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGCV_ParaderoInicial;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_ParaderoFinal;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Tarifa;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC0;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC1;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC2;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC3;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC4;
 	private: System::Windows::Forms::GroupBox^ GB_Busqueda;
-	private: System::Windows::Forms::Label^ L_Ruta;
+	private: System::Windows::Forms::Label^ L_Placa;
 	private: System::Windows::Forms::TextBox^ TB_Ruta;
 	private: System::Windows::Forms::Button^ B_Buscar;
 	private: System::Windows::Forms::Button^ B_Editar;
@@ -68,13 +68,13 @@ namespace TransPorticoView {
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AutobusMantenimiento::typeid));
 			this->DGV_Autobus = (gcnew System::Windows::Forms::DataGridView());
-			this->DGVC_Identificador = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->DGVC_RutaAsociada = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->DGCV_ParaderoInicial = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->DGVC_ParaderoFinal = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->DGVC_Tarifa = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC0 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC2 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC3 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->GB_Busqueda = (gcnew System::Windows::Forms::GroupBox());
-			this->L_Ruta = (gcnew System::Windows::Forms::Label());
+			this->L_Placa = (gcnew System::Windows::Forms::Label());
 			this->TB_Ruta = (gcnew System::Windows::Forms::TextBox());
 			this->B_Buscar = (gcnew System::Windows::Forms::Button());
 			this->B_Editar = (gcnew System::Windows::Forms::Button());
@@ -102,8 +102,8 @@ namespace TransPorticoView {
 			this->DGV_Autobus->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->DGV_Autobus->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DGV_Autobus->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
-				this->DGVC_Identificador,
-					this->DGVC_RutaAsociada, this->DGCV_ParaderoInicial, this->DGVC_ParaderoFinal, this->DGVC_Tarifa
+				this->DGVC0, this->DGVC1,
+					this->DGVC2, this->DGVC3, this->DGVC4
 			});
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
@@ -115,103 +115,98 @@ namespace TransPorticoView {
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->DGV_Autobus->DefaultCellStyle = dataGridViewCellStyle2;
 			this->DGV_Autobus->EnableHeadersVisualStyles = false;
-			this->DGV_Autobus->Location = System::Drawing::Point(101, 145);
-			this->DGV_Autobus->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->DGV_Autobus->Location = System::Drawing::Point(76, 118);
 			this->DGV_Autobus->Name = L"DGV_Autobus";
 			this->DGV_Autobus->ReadOnly = true;
 			this->DGV_Autobus->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
 			this->DGV_Autobus->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->DGV_Autobus->Size = System::Drawing::Size(1044, 369);
+			this->DGV_Autobus->Size = System::Drawing::Size(783, 300);
 			this->DGV_Autobus->TabIndex = 14;
 			// 
-			// DGVC_Identificador
+			// DGVC0
 			// 
-			this->DGVC_Identificador->HeaderText = L"Código";
-			this->DGVC_Identificador->MinimumWidth = 6;
-			this->DGVC_Identificador->Name = L"DGVC_Identificador";
-			this->DGVC_Identificador->ReadOnly = true;
+			this->DGVC0->HeaderText = L"Código";
+			this->DGVC0->MinimumWidth = 6;
+			this->DGVC0->Name = L"DGVC0";
+			this->DGVC0->ReadOnly = true;
 			// 
-			// DGVC_RutaAsociada
+			// DGVC1
 			// 
-			this->DGVC_RutaAsociada->HeaderText = L"Placa";
-			this->DGVC_RutaAsociada->MinimumWidth = 6;
-			this->DGVC_RutaAsociada->Name = L"DGVC_RutaAsociada";
-			this->DGVC_RutaAsociada->ReadOnly = true;
+			this->DGVC1->HeaderText = L"Placa";
+			this->DGVC1->MinimumWidth = 6;
+			this->DGVC1->Name = L"DGVC1";
+			this->DGVC1->ReadOnly = true;
 			// 
-			// DGCV_ParaderoInicial
+			// DGVC2
 			// 
-			this->DGCV_ParaderoInicial->HeaderText = L"Cantidad de asientos disponibles";
-			this->DGCV_ParaderoInicial->MinimumWidth = 6;
-			this->DGCV_ParaderoInicial->Name = L"DGCV_ParaderoInicial";
-			this->DGCV_ParaderoInicial->ReadOnly = true;
+			this->DGVC2->HeaderText = L"Cantidad de asientos disponibles";
+			this->DGVC2->MinimumWidth = 6;
+			this->DGVC2->Name = L"DGVC2";
+			this->DGVC2->ReadOnly = true;
 			// 
-			// DGVC_ParaderoFinal
+			// DGVC3
 			// 
-			this->DGVC_ParaderoFinal->HeaderText = L"Cantidad de pasajeros";
-			this->DGVC_ParaderoFinal->MinimumWidth = 6;
-			this->DGVC_ParaderoFinal->Name = L"DGVC_ParaderoFinal";
-			this->DGVC_ParaderoFinal->ReadOnly = true;
+			this->DGVC3->HeaderText = L"Cantidad de pasajeros";
+			this->DGVC3->MinimumWidth = 6;
+			this->DGVC3->Name = L"DGVC3";
+			this->DGVC3->ReadOnly = true;
 			// 
-			// DGVC_Tarifa
+			// DGVC4
 			// 
-			this->DGVC_Tarifa->HeaderText = L"Capacidad";
-			this->DGVC_Tarifa->MinimumWidth = 6;
-			this->DGVC_Tarifa->Name = L"DGVC_Tarifa";
-			this->DGVC_Tarifa->ReadOnly = true;
+			this->DGVC4->HeaderText = L"Capacidad";
+			this->DGVC4->MinimumWidth = 6;
+			this->DGVC4->Name = L"DGVC4";
+			this->DGVC4->ReadOnly = true;
 			// 
 			// GB_Busqueda
 			// 
 			this->GB_Busqueda->BackColor = System::Drawing::Color::Transparent;
-			this->GB_Busqueda->Controls->Add(this->L_Ruta);
+			this->GB_Busqueda->Controls->Add(this->L_Placa);
 			this->GB_Busqueda->Controls->Add(this->TB_Ruta);
 			this->GB_Busqueda->Controls->Add(this->B_Buscar);
 			this->GB_Busqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
-			this->GB_Busqueda->Location = System::Drawing::Point(181, 15);
-			this->GB_Busqueda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->GB_Busqueda->Location = System::Drawing::Point(136, 12);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->GB_Busqueda->Size = System::Drawing::Size(779, 112);
+			this->GB_Busqueda->Size = System::Drawing::Size(580, 80);
 			this->GB_Busqueda->TabIndex = 13;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
 			// 
-			// L_Ruta
+			// L_Placa
 			// 
-			this->L_Ruta->BackColor = System::Drawing::Color::Moccasin;
-			this->L_Ruta->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->L_Ruta->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->L_Placa->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Placa->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_Placa->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->L_Ruta->ForeColor = System::Drawing::Color::Black;
-			this->L_Ruta->Location = System::Drawing::Point(8, 37);
-			this->L_Ruta->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->L_Ruta->Name = L"L_Ruta";
-			this->L_Ruta->Size = System::Drawing::Size(200, 37);
-			this->L_Ruta->TabIndex = 9;
-			this->L_Ruta->Text = L"Placa:";
-			this->L_Ruta->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_Placa->ForeColor = System::Drawing::Color::Black;
+			this->L_Placa->Location = System::Drawing::Point(10, 30);
+			this->L_Placa->Name = L"L_Placa";
+			this->L_Placa->Size = System::Drawing::Size(150, 30);
+			this->L_Placa->TabIndex = 9;
+			this->L_Placa->Text = L"Placa:";
+			this->L_Placa->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// TB_Ruta
 			// 
 			this->TB_Ruta->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Ruta->Location = System::Drawing::Point(233, 37);
-			this->TB_Ruta->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->TB_Ruta->Location = System::Drawing::Point(175, 30);
 			this->TB_Ruta->Name = L"TB_Ruta";
-			this->TB_Ruta->Size = System::Drawing::Size(333, 34);
+			this->TB_Ruta->Size = System::Drawing::Size(250, 29);
 			this->TB_Ruta->TabIndex = 10;
 			// 
 			// B_Buscar
 			// 
+			this->B_Buscar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Buscar.BackgroundImage")));
 			this->B_Buscar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->B_Buscar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->B_Buscar->Location = System::Drawing::Point(601, 31);
-			this->B_Buscar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Buscar->Location = System::Drawing::Point(450, 25);
 			this->B_Buscar->Name = L"B_Buscar";
-			this->B_Buscar->Size = System::Drawing::Size(133, 49);
+			this->B_Buscar->Size = System::Drawing::Size(100, 40);
 			this->B_Buscar->TabIndex = 1;
 			this->B_Buscar->Text = L"Buscar";
 			this->B_Buscar->UseVisualStyleBackColor = true;
@@ -219,14 +214,14 @@ namespace TransPorticoView {
 			// 
 			// B_Editar
 			// 
+			this->B_Editar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Editar.BackgroundImage")));
 			this->B_Editar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->B_Editar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Editar->Location = System::Drawing::Point(749, 542);
-			this->B_Editar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Editar->Location = System::Drawing::Point(562, 440);
 			this->B_Editar->Name = L"B_Editar";
-			this->B_Editar->Size = System::Drawing::Size(133, 49);
+			this->B_Editar->Size = System::Drawing::Size(100, 40);
 			this->B_Editar->TabIndex = 12;
 			this->B_Editar->Text = L"Editar";
 			this->B_Editar->UseVisualStyleBackColor = true;
@@ -234,14 +229,14 @@ namespace TransPorticoView {
 			// 
 			// B_Borrar
 			// 
+			this->B_Borrar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Borrar.BackgroundImage")));
 			this->B_Borrar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->B_Borrar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Borrar->Location = System::Drawing::Point(523, 542);
-			this->B_Borrar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Borrar->Location = System::Drawing::Point(392, 440);
 			this->B_Borrar->Name = L"B_Borrar";
-			this->B_Borrar->Size = System::Drawing::Size(133, 49);
+			this->B_Borrar->Size = System::Drawing::Size(100, 40);
 			this->B_Borrar->TabIndex = 11;
 			this->B_Borrar->Text = L"Borrar";
 			this->B_Borrar->UseVisualStyleBackColor = true;
@@ -249,14 +244,14 @@ namespace TransPorticoView {
 			// 
 			// B_Anadir
 			// 
+			this->B_Anadir->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Anadir.BackgroundImage")));
 			this->B_Anadir->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->B_Anadir->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Anadir->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Anadir->Location = System::Drawing::Point(301, 542);
-			this->B_Anadir->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Anadir->Location = System::Drawing::Point(226, 440);
 			this->B_Anadir->Name = L"B_Anadir";
-			this->B_Anadir->Size = System::Drawing::Size(133, 49);
+			this->B_Anadir->Size = System::Drawing::Size(100, 40);
 			this->B_Anadir->TabIndex = 10;
 			this->B_Anadir->Text = L"Añadir";
 			this->B_Anadir->UseVisualStyleBackColor = true;
@@ -264,18 +259,18 @@ namespace TransPorticoView {
 			// 
 			// AutobusMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1200, 606);
+			this->ClientSize = System::Drawing::Size(900, 492);
 			this->Controls->Add(this->DGV_Autobus);
 			this->Controls->Add(this->GB_Busqueda);
 			this->Controls->Add(this->B_Editar);
 			this->Controls->Add(this->B_Borrar);
 			this->Controls->Add(this->B_Anadir);
 			this->DoubleBuffered = true;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2);
 			this->Name = L"AutobusMantenimiento";
 			this->Text = L"AutobusMantenimiento";
 			this->Load += gcnew System::EventHandler(this, &AutobusMantenimiento::AutobusMantenimiento_Load);
@@ -315,56 +310,44 @@ namespace TransPorticoView {
 			this->DGV_Autobus->Rows->Add(filaGrilla);
 		}
 	}
-	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ AutobusBuscar = this->TB_Ruta->Text;
+		AutobusController^ objAutobus = gcnew AutobusController();
+		List<Autobus^>^ listaBuses = objAutobus->buscarAutobus(AutobusBuscar);
+		// Ahora voy a mostrar las carreras encontradas en la grilla
+		mostrarGrilla(listaBuses);
 	}
-	
-	
-	
-	
+	private: System::Void B_Anadir_Click(System::Object^ sender, System::EventArgs^ e) {
+		AutobusMantenimientoAnadir^ VentanaAgregarAutobuses = gcnew AutobusMantenimientoAnadir;
+		VentanaAgregarAutobuses->ShowDialog();
+	}
+	private: System::Void B_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
 
-
-
-//Nuevo Buscar
-private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ AutobusBuscar = this->TB_Ruta->Text;
-	AutobusController^ objAutobus = gcnew AutobusController();
-	List<Autobus^>^ listaBuses = objAutobus->buscarAutobus(AutobusBuscar);
-	// Ahora voy a mostrar las carreras encontradas en la grilla
-	mostrarGrilla(listaBuses);
-
-}
-//Boton para ir a la ventana agregar
-private: System::Void B_Anadir_Click(System::Object^ sender, System::EventArgs^ e) {
-	AutobusMantenimientoAnadir^ VentanaAgregarAutobuses = gcnew AutobusMantenimientoAnadir;
-	VentanaAgregarAutobuses->ShowDialog();
-}
- //Botn para eliminar
-private: System::Void B_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
-	//¿Como se cual es la fila uqe he seleccionado para eliminarla?
-	int filaSeleccionada = this->DGV_Autobus->SelectedRows[0]->Index;
-	//Si quiero eliminar 2 seria SelectedRows[1] , 3 SelectedRows[2]
-	//Ya tengo la fila que selecioné en la variable
-	int codigoAeliminar = Convert::ToInt32(this->DGV_Autobus->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
-	//Ya tengo el codigo a eliminar
-	AutobusController^ objetoAutobusController = gcnew AutobusController;
-	objetoAutobusController->EliminarAutobus(codigoAeliminar);
-	List<Autobus^>^ listaAutobuses = objetoAutobusController->buscarAutobusall();
-	mostrarGrilla(listaAutobuses);
-}
-private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ e) {
-	int filaSeleccionada = this->DGV_Autobus->SelectedRows[0]->Index;
-	int codigoAeditar = Convert::ToInt32(this->DGV_Autobus->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
-	AutobusController^ objetocontroller = gcnew AutobusController;
-	Autobus^ objetoBus = objetocontroller->buscarBus(codigoAeditar);
-	AutobusMantenimientoEditar^ ventanaEditar = gcnew AutobusMantenimientoEditar(objetoBus);
-	ventanaEditar->ShowDialog();
-}
-private: System::Void AutobusMantenimiento_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->SizeChanged += (gcnew System::EventHandler(this, &AutobusMantenimiento::AutobusMantenimiento_SizeChanged));
-	CentrarForm();
-}
-private: System::Void AutobusMantenimiento_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
-	CentrarForm();
-}
+		if (this->DGV_Autobus->SelectedRows->Count != 0) {
+			int filaSeleccionada = this->DGV_Autobus->SelectedRows[0]->Index;
+			int codigoAeliminar = Convert::ToInt32(this->DGV_Autobus->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+			AutobusController^ objetoAutobusController = gcnew AutobusController;
+			objetoAutobusController->EliminarAutobus(codigoAeliminar);
+			List<Autobus^>^ listaAutobuses = objetoAutobusController->buscarAutobusall();
+			mostrarGrilla(listaAutobuses);
+		}
+	}
+	private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->DGV_Autobus->SelectedRows->Count != 0) {
+			int filaSeleccionada = this->DGV_Autobus->SelectedRows[0]->Index;
+			int codigoAeditar = Convert::ToInt32(this->DGV_Autobus->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+			AutobusController^ objetocontroller = gcnew AutobusController;
+			Autobus^ objetoBus = objetocontroller->buscarBus(codigoAeditar);
+			AutobusMantenimientoEditar^ ventanaEditar = gcnew AutobusMantenimientoEditar(objetoBus);
+			ventanaEditar->ShowDialog();
+		}
+	}
+	private: System::Void AutobusMantenimiento_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this, &AutobusMantenimiento::AutobusMantenimiento_SizeChanged));
+		CentrarForm();
+	}
+	private: System::Void AutobusMantenimiento_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
 };
 }

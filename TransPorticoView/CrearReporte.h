@@ -113,9 +113,11 @@ namespace TransPorticoView {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::HighlightText;
-			this->groupBox1->Location = System::Drawing::Point(56, 31);
+			this->groupBox1->Location = System::Drawing::Point(42, 25);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(869, 686);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox1->Size = System::Drawing::Size(652, 557);
 			this->groupBox1->TabIndex = 1;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Escribe tu reporte";
@@ -126,18 +128,20 @@ namespace TransPorticoView {
 			this->button6->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button6.BackgroundImage")));
 			this->button6->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button6->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button6->Location = System::Drawing::Point(311, 621);
+			this->button6->Location = System::Drawing::Point(233, 505);
+			this->button6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button6->Name = L"button6";
-			this->button6->Size = System::Drawing::Size(133, 45);
+			this->button6->Size = System::Drawing::Size(100, 37);
 			this->button6->TabIndex = 31;
 			this->button6->Text = L"ENVIAR";
 			this->button6->UseVisualStyleBackColor = false;
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Location = System::Drawing::Point(243, 359);
+			this->richTextBox1->Location = System::Drawing::Point(182, 292);
+			this->richTextBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->richTextBox1->Name = L"richTextBox1";
-			this->richTextBox1->Size = System::Drawing::Size(484, 234);
+			this->richTextBox1->Size = System::Drawing::Size(364, 191);
 			this->richTextBox1->TabIndex = 30;
 			this->richTextBox1->Text = L"";
 			// 
@@ -145,9 +149,10 @@ namespace TransPorticoView {
 			// 
 			this->button5->BackColor = System::Drawing::Color::DarkBlue;
 			this->button5->ForeColor = System::Drawing::Color::White;
-			this->button5->Location = System::Drawing::Point(116, 311);
+			this->button5->Location = System::Drawing::Point(87, 253);
+			this->button5->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button5->Name = L"button5";
-			this->button5->Size = System::Drawing::Size(196, 42);
+			this->button5->Size = System::Drawing::Size(147, 34);
 			this->button5->TabIndex = 29;
 			this->button5->Text = L"COMENTARIO:";
 			this->button5->UseVisualStyleBackColor = false;
@@ -156,18 +161,20 @@ namespace TransPorticoView {
 			// textBox2
 			// 
 			this->textBox2->Enabled = false;
-			this->textBox2->Location = System::Drawing::Point(311, 55);
+			this->textBox2->Location = System::Drawing::Point(233, 45);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(211, 34);
+			this->textBox2->Size = System::Drawing::Size(159, 28);
 			this->textBox2->TabIndex = 28;
 			// 
 			// button4
 			// 
 			this->button4->BackColor = System::Drawing::Color::DarkBlue;
 			this->button4->ForeColor = System::Drawing::Color::White;
-			this->button4->Location = System::Drawing::Point(116, 50);
+			this->button4->Location = System::Drawing::Point(87, 41);
+			this->button4->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(143, 39);
+			this->button4->Size = System::Drawing::Size(107, 32);
 			this->button4->TabIndex = 27;
 			this->button4->Text = L"PLACA";
 			this->button4->UseVisualStyleBackColor = false;
@@ -175,45 +182,50 @@ namespace TransPorticoView {
 			// dateTimePicker1
 			// 
 			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->dateTimePicker1->Location = System::Drawing::Point(311, 246);
+			this->dateTimePicker1->Location = System::Drawing::Point(233, 200);
+			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(211, 34);
+			this->dateTimePicker1->Size = System::Drawing::Size(159, 28);
 			this->dateTimePicker1->TabIndex = 26;
 			// 
 			// button3
 			// 
 			this->button3->BackColor = System::Drawing::Color::DarkBlue;
 			this->button3->ForeColor = System::Drawing::Color::White;
-			this->button3->Location = System::Drawing::Point(116, 246);
+			this->button3->Location = System::Drawing::Point(87, 200);
+			this->button3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(143, 39);
+			this->button3->Size = System::Drawing::Size(107, 32);
 			this->button3->TabIndex = 25;
 			this->button3->Text = L"DÍA";
 			this->button3->UseVisualStyleBackColor = false;
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(311, 182);
+			this->textBox1->Location = System::Drawing::Point(233, 148);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(211, 34);
+			this->textBox1->Size = System::Drawing::Size(159, 28);
 			this->textBox1->TabIndex = 24;
 			// 
 			// comboBox1
 			// 
 			this->comboBox1->FormattingEnabled = true;
 			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(3) { L"Consulta", L"Reclamo", L"Sugerencia" });
-			this->comboBox1->Location = System::Drawing::Point(311, 117);
+			this->comboBox1->Location = System::Drawing::Point(233, 95);
+			this->comboBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(211, 37);
+			this->comboBox1->Size = System::Drawing::Size(159, 30);
 			this->comboBox1->TabIndex = 23;
 			// 
 			// button1
 			// 
 			this->button1->BackColor = System::Drawing::Color::DarkBlue;
 			this->button1->ForeColor = System::Drawing::Color::White;
-			this->button1->Location = System::Drawing::Point(116, 177);
+			this->button1->Location = System::Drawing::Point(87, 144);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(143, 39);
+			this->button1->Size = System::Drawing::Size(107, 32);
 			this->button1->TabIndex = 22;
 			this->button1->Text = L"HORA";
 			this->button1->UseVisualStyleBackColor = false;
@@ -224,9 +236,10 @@ namespace TransPorticoView {
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button2->Location = System::Drawing::Point(544, 621);
+			this->button2->Location = System::Drawing::Point(408, 505);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(133, 45);
+			this->button2->Size = System::Drawing::Size(100, 37);
 			this->button2->TabIndex = 21;
 			this->button2->Text = L"SALIR";
 			this->button2->UseVisualStyleBackColor = false;
@@ -238,10 +251,10 @@ namespace TransPorticoView {
 			this->Logo->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->Logo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->Logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Logo.Image")));
-			this->Logo->Location = System::Drawing::Point(729, 10);
+			this->Logo->Location = System::Drawing::Point(547, 8);
 			this->Logo->Margin = System::Windows::Forms::Padding(1);
 			this->Logo->Name = L"Logo";
-			this->Logo->Size = System::Drawing::Size(137, 90);
+			this->Logo->Size = System::Drawing::Size(103, 74);
 			this->Logo->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Logo->TabIndex = 10;
 			this->Logo->TabStop = false;
@@ -250,9 +263,10 @@ namespace TransPorticoView {
 			// 
 			this->B_TARJETA->BackColor = System::Drawing::Color::DarkBlue;
 			this->B_TARJETA->ForeColor = System::Drawing::Color::White;
-			this->B_TARJETA->Location = System::Drawing::Point(116, 113);
+			this->B_TARJETA->Location = System::Drawing::Point(87, 92);
+			this->B_TARJETA->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->B_TARJETA->Name = L"B_TARJETA";
-			this->B_TARJETA->Size = System::Drawing::Size(143, 41);
+			this->B_TARJETA->Size = System::Drawing::Size(107, 33);
 			this->B_TARJETA->TabIndex = 11;
 			this->B_TARJETA->Text = L"TIPO";
 			this->B_TARJETA->UseVisualStyleBackColor = false;
@@ -260,11 +274,14 @@ namespace TransPorticoView {
 			// 
 			// CrearReporte
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(979, 744);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(734, 604);
 			this->Controls->Add(this->groupBox1);
+			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"CrearReporte";
 			this->Text = L"CrearReporte";
 			this->groupBox1->ResumeLayout(false);

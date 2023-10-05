@@ -439,19 +439,21 @@ namespace TransPorticoView {
 	}
 	private: System::Void B_Crear_Click(System::Object^ sender, System::EventArgs^ e) {
 
-	objAtajos->setParadero_Inicio(this->CB_ParaderoInicial->Text);
-	objAtajos->setX_Inicio(Convert::ToInt32(this->TB_X_Inicio->Text));
-	objAtajos->setY_Inicio(Convert::ToInt32(this->TB_Y_Inicio->Text));
-	objAtajos->setParadero_Final(this->CB_ParaderoFinal->Text);
-	objAtajos->setX_Final(Convert::ToInt32(this->TB_X_Final->Text));
-	objAtajos->setY_Final(Convert::ToInt32(this->TB_Y_Final->Text));
-	objAtajos->setRutaAsociada(this->CB_RutaAsociada->Text);
+	if ((this->CB_ParaderoInicial->Text != "") && (this->CB_ParaderoFinal->Text != "") && (this->CB_RutaAsociada->Text != "") && (this->TB_Codigo->Text != "") && (this->TB_X_Inicio->Text != "") && (this->TB_Y_Inicio->Text != "") && (this->TB_X_Final->Text != "") && (this->TB_Y_Final->Text != "")) {
+			objAtajos->setParadero_Inicio(this->CB_ParaderoInicial->Text);
+			objAtajos->setX_Inicio(Convert::ToInt32(this->TB_X_Inicio->Text));
+			objAtajos->setY_Inicio(Convert::ToInt32(this->TB_Y_Inicio->Text));
+			objAtajos->setParadero_Final(this->CB_ParaderoFinal->Text);
+			objAtajos->setX_Final(Convert::ToInt32(this->TB_X_Final->Text));
+			objAtajos->setY_Final(Convert::ToInt32(this->TB_Y_Final->Text));
+			objAtajos->setRutaAsociada(this->CB_RutaAsociada->Text);
 
-	AtajosController^ objAtajosController = gcnew AtajosController();
-	objAtajosController->actualizarAtajos(objAtajos);
+			AtajosController^ objAtajosController = gcnew AtajosController();
+			objAtajosController->actualizarAtajos(objAtajos);
 
-	MessageBox::Show("Los atajos han sido actualizados con exito");
-	this->Close();
+			MessageBox::Show("Los atajos han sido actualizados con exito");
+			this->Close();
+		}
 }
 };
 }

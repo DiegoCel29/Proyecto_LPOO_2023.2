@@ -24,10 +24,10 @@ namespace TransPorticoView {
 			//TODO: agregar código de constructor aquí
 			//
 		}
-		AutobusMantenimientoEditar(Autobus^ objetobus) {
+		AutobusMantenimientoEditar(Autobus^ ObjetoAutobus) {
 			InitializeComponent();
 
-			this->objetobus = objetobus;
+			this->ObjetoAutobus = ObjetoAutobus;
 		}
 	protected:
 		/// <summary>
@@ -42,30 +42,16 @@ namespace TransPorticoView {
 		}
 
 	protected:
-
-
-
-
-
-
-
-
-		/*Se va a crear un atributo de tipo carre*/
-	private: Autobus^ objetobus;
+	private: Autobus^ ObjetoAutobus;
 	private: System::Windows::Forms::GroupBox^ GB_Datos;
-
 	private: System::Windows::Forms::TextBox^ TB_ParaderoInicial;
 	private: System::Windows::Forms::TextBox^ TB_RutaAsociada;
-
-
-
 	private: System::Windows::Forms::Label^ L_Identificador;
 	private: System::Windows::Forms::TextBox^ TB_Identificador;
 	private: System::Windows::Forms::Label^ L_ParaderoInicial;
 	private: System::Windows::Forms::Label^ L_RutaAsociada;
 	private: System::Windows::Forms::Button^ B_Cancelar;
 	private: System::Windows::Forms::Button^ B_Grabar;
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -114,7 +100,6 @@ namespace TransPorticoView {
 			// TB_ParaderoInicial
 			// 
 			this->TB_ParaderoInicial->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_ParaderoInicial->Enabled = false;
 			this->TB_ParaderoInicial->Location = System::Drawing::Point(175, 130);
 			this->TB_ParaderoInicial->Name = L"TB_ParaderoInicial";
 			this->TB_ParaderoInicial->Size = System::Drawing::Size(250, 29);
@@ -123,7 +108,6 @@ namespace TransPorticoView {
 			// TB_RutaAsociada
 			// 
 			this->TB_RutaAsociada->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_RutaAsociada->Enabled = false;
 			this->TB_RutaAsociada->Location = System::Drawing::Point(175, 80);
 			this->TB_RutaAsociada->Name = L"TB_RutaAsociada";
 			this->TB_RutaAsociada->Size = System::Drawing::Size(250, 29);
@@ -215,10 +199,12 @@ namespace TransPorticoView {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(618, 520);
 			this->Controls->Add(this->GB_Datos);
 			this->Controls->Add(this->B_Cancelar);
 			this->Controls->Add(this->B_Grabar);
+			this->DoubleBuffered = true;
 			this->Name = L"AutobusMantenimientoEditar";
 			this->Text = L"Editar";
 			this->Load += gcnew System::EventHandler(this, &AutobusMantenimientoEditar::AutobusMantenimientoEditar_Load);
@@ -231,33 +217,31 @@ namespace TransPorticoView {
 #pragma endregion
 	private: void CentrarForm() {
 		int PosXGB_Datos = ((this->ClientSize.Width) - (this->GB_Datos->Width)) / 2;
-
 		this->GB_Datos->Location = System::Drawing::Point(PosXGB_Datos, 25);
-		this->B_Grabar->Location = System::Drawing::Point(PosXGB_Datos, 340);
-		this->B_Cancelar->Location = System::Drawing::Point(PosXGB_Datos + 350, 340);
+		this->B_Grabar->Location = System::Drawing::Point(PosXGB_Datos, 230);
+		this->B_Cancelar->Location = System::Drawing::Point(PosXGB_Datos + 350, 230);
 	};
-
-		   //PAra pasar los datos del bus selecionado a la nueva ventana editar
 	private: System::Void AutobusMantenimientoEditar_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->SizeChanged += (gcnew System::EventHandler(this, &AutobusMantenimientoEditar::AutobusMantenimientoEditar_SizeChanged));
 		CentrarForm();
-
-		this->TB_Identificador->Text = Convert::ToString(this->objetobus->GetCodigo());
-		this->TB_RutaAsociada->Text = this->objetobus->GetPlaca();
-		this->TB_ParaderoInicial->Text = Convert::ToString(this->objetobus->GetCapacidad());
+		this->TB_Identificador->Text = Convert::ToString(this->ObjetoAutobus->GetCodigo());
+		this->TB_RutaAsociada->Text = this->ObjetoAutobus->GetPlaca();
+		this->TB_ParaderoInicial->Text = Convert::ToString(this->ObjetoAutobus->GetCapacidad());
 	}
 
 
 	//Boton para aplicar cambios del editado
 	private: System::Void B_Grabar_Click(System::Object^ sender, System::EventArgs^ e) {
-		int codigo = Convert::ToInt32(this->TB_Identificador->Text);
-		String^ Placa = this->TB_RutaAsociada->Text;
-		int Capacidad = Convert::ToInt32(this->TB_ParaderoInicial->Text);
+			String^ Placa = this->TB_RutaAsociada->Text;
+		if((Placa!="")&&(this->TB_ParaderoInicial->Text!="") && (this->TB_Identificador->Text != "")) {
+			int codigo = Convert::ToInt32(this->TB_Identificador->Text);
+			int Capacidad = Convert::ToInt32(this->TB_ParaderoInicial->Text);
 
-		AutobusController^ objAutobusController = gcnew AutobusController();
-		objAutobusController->ActualizarAutobus(codigo, Placa, Capacidad);
-		MessageBox::Show("El autobus ha sido Actualizado con exito");
-		this->Close();
+			AutobusController^ objAutobusController = gcnew AutobusController();
+			objAutobusController->ActualizarAutobus(codigo, Placa, Capacidad);
+			MessageBox::Show("El autobus ha sido Actualizado con exito");
+			this->Close();
+		}
 	}//Boton Cancelar
 	private: System::Void B_Cancelar_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();

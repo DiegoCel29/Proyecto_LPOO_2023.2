@@ -36,41 +36,17 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-
-	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	private: System::Windows::Forms::TextBox^ TB_X_Final;
+	protected:private: System::Windows::Forms::TextBox^ TB_X_Final;
 	private: System::Windows::Forms::Label^ L_Ruta_Asociada;
-
 	private: System::Windows::Forms::Label^ L_Y_Final;
 	private: System::Windows::Forms::TextBox^ TB_Y_Final;
 	private: System::Windows::Forms::Label^ L_X_Final;
 	private: System::Windows::Forms::Label^ L_Paradero_Final;
-
 	private: System::Windows::Forms::Label^ L_Y_Inicio;
 	private: System::Windows::Forms::TextBox^ TB_Y_Inicio;
 	private: System::Windows::Forms::Label^ L_X_Inicio;
 	private: System::Windows::Forms::TextBox^ TB_X_Inicio;
 	private: System::Windows::Forms::Label^ L_Paradero_Inicio;
-
 	private: System::Windows::Forms::Label^ L_Codigo;
 	private: System::Windows::Forms::TextBox^ TB_Codigo;
 	private: System::Windows::Forms::GroupBox^ GB_Datos;
@@ -79,11 +55,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::ComboBox^ CB_ParaderoInicial;
 	private: System::Windows::Forms::Button^ B_Cancelar;
 	private: System::Windows::Forms::Button^ B_Crear;
-
-
-
-
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.

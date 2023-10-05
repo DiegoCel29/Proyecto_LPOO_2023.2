@@ -35,26 +35,14 @@ namespace TransPorticoView {
 			}
 		}
 	private: System::Windows::Forms::GroupBox^ GB_Datos;
-	protected:
-	private: System::Windows::Forms::TextBox^ textBox2;
-	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::TextBox^ TB_Capacidad;
+	private: System::Windows::Forms::TextBox^ TB_Placa;
 	private: System::Windows::Forms::Label^ L_Identificador;
 	private: System::Windows::Forms::TextBox^ TB_Identificador;
-	private: System::Windows::Forms::Label^ L_ParaderoInicial;
 	private: System::Windows::Forms::Label^ L_RutaAsociada;
 	private: System::Windows::Forms::Button^ B_Cancelar;
 	private: System::Windows::Forms::Button^ B_Grabar;
-
-	protected:
-
-
-
-
-
-
-
-
-
+	private: System::Windows::Forms::Label^ L_ParaderoInicial;
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -70,8 +58,8 @@ namespace TransPorticoView {
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AutobusMantenimientoAnadir::typeid));
 			this->GB_Datos = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+			this->TB_Capacidad = (gcnew System::Windows::Forms::TextBox());
+			this->TB_Placa = (gcnew System::Windows::Forms::TextBox());
 			this->L_Identificador = (gcnew System::Windows::Forms::Label());
 			this->TB_Identificador = (gcnew System::Windows::Forms::TextBox());
 			this->L_ParaderoInicial = (gcnew System::Windows::Forms::Label());
@@ -84,8 +72,8 @@ namespace TransPorticoView {
 			// GB_Datos
 			// 
 			this->GB_Datos->BackColor = System::Drawing::Color::Transparent;
-			this->GB_Datos->Controls->Add(this->textBox2);
-			this->GB_Datos->Controls->Add(this->textBox1);
+			this->GB_Datos->Controls->Add(this->TB_Capacidad);
+			this->GB_Datos->Controls->Add(this->TB_Placa);
 			this->GB_Datos->Controls->Add(this->L_Identificador);
 			this->GB_Datos->Controls->Add(this->TB_Identificador);
 			this->GB_Datos->Controls->Add(this->L_ParaderoInicial);
@@ -93,26 +81,26 @@ namespace TransPorticoView {
 			this->GB_Datos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GB_Datos->ForeColor = System::Drawing::Color::White;
-			this->GB_Datos->Location = System::Drawing::Point(78, 91);
+			this->GB_Datos->Location = System::Drawing::Point(0, 0);
 			this->GB_Datos->Name = L"GB_Datos";
-			this->GB_Datos->Size = System::Drawing::Size(520, 208);
+			this->GB_Datos->Size = System::Drawing::Size(460, 190);
 			this->GB_Datos->TabIndex = 11;
 			this->GB_Datos->TabStop = false;
 			this->GB_Datos->Text = L"Datos del autobus:";
 			// 
-			// textBox2
+			// TB_Capacidad
 			// 
-			this->textBox2->Location = System::Drawing::Point(217, 135);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(250, 29);
-			this->textBox2->TabIndex = 21;
+			this->TB_Capacidad->Location = System::Drawing::Point(185, 130);
+			this->TB_Capacidad->Name = L"TB_Capacidad";
+			this->TB_Capacidad->Size = System::Drawing::Size(250, 29);
+			this->TB_Capacidad->TabIndex = 21;
 			// 
-			// textBox1
+			// TB_Placa
 			// 
-			this->textBox1->Location = System::Drawing::Point(217, 85);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(250, 29);
-			this->textBox1->TabIndex = 20;
+			this->TB_Placa->Location = System::Drawing::Point(185, 80);
+			this->TB_Placa->Name = L"TB_Placa";
+			this->TB_Placa->Size = System::Drawing::Size(250, 29);
+			this->TB_Placa->TabIndex = 20;
 			// 
 			// L_Identificador
 			// 
@@ -121,7 +109,7 @@ namespace TransPorticoView {
 			this->L_Identificador->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->L_Identificador->ForeColor = System::Drawing::Color::Black;
-			this->L_Identificador->Location = System::Drawing::Point(52, 35);
+			this->L_Identificador->Location = System::Drawing::Point(10, 30);
 			this->L_Identificador->Name = L"L_Identificador";
 			this->L_Identificador->Size = System::Drawing::Size(150, 30);
 			this->L_Identificador->TabIndex = 9;
@@ -131,7 +119,7 @@ namespace TransPorticoView {
 			// TB_Identificador
 			// 
 			this->TB_Identificador->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Identificador->Location = System::Drawing::Point(217, 35);
+			this->TB_Identificador->Location = System::Drawing::Point(185, 30);
 			this->TB_Identificador->Name = L"TB_Identificador";
 			this->TB_Identificador->Size = System::Drawing::Size(250, 29);
 			this->TB_Identificador->TabIndex = 10;
@@ -143,7 +131,7 @@ namespace TransPorticoView {
 			this->L_ParaderoInicial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->L_ParaderoInicial->ForeColor = System::Drawing::Color::Black;
-			this->L_ParaderoInicial->Location = System::Drawing::Point(52, 135);
+			this->L_ParaderoInicial->Location = System::Drawing::Point(10, 130);
 			this->L_ParaderoInicial->Name = L"L_ParaderoInicial";
 			this->L_ParaderoInicial->Size = System::Drawing::Size(150, 30);
 			this->L_ParaderoInicial->TabIndex = 7;
@@ -157,7 +145,7 @@ namespace TransPorticoView {
 			this->L_RutaAsociada->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->L_RutaAsociada->ForeColor = System::Drawing::Color::Black;
-			this->L_RutaAsociada->Location = System::Drawing::Point(52, 85);
+			this->L_RutaAsociada->Location = System::Drawing::Point(10, 80);
 			this->L_RutaAsociada->Name = L"L_RutaAsociada";
 			this->L_RutaAsociada->Size = System::Drawing::Size(150, 30);
 			this->L_RutaAsociada->TabIndex = 5;
@@ -218,26 +206,30 @@ namespace TransPorticoView {
 
 	private: void CentrarForm() {
 		int PosXGB_Datos = ((this->ClientSize.Width) - (this->GB_Datos->Width)) / 2;
-
 		this->GB_Datos->Location = System::Drawing::Point(PosXGB_Datos, 25);
-		this->B_Grabar->Location = System::Drawing::Point(PosXGB_Datos, 340);
-		this->B_Cancelar->Location = System::Drawing::Point(PosXGB_Datos + 350, 340);
+		this->B_Grabar->Location = System::Drawing::Point(PosXGB_Datos, 230);
+		this->B_Cancelar->Location = System::Drawing::Point(PosXGB_Datos + 350, 230);
 	};
 
 	private: System::Void B_Grabar_Click(System::Object^ sender, System::EventArgs^ e) {
-		int codigo = Convert::ToInt32(this->TB_Identificador->Text);
-		String^ Placa = this->textBox1->Text;
-		int Capacidad = Convert::ToInt32(this->textBox2->Text);
-		AutobusController^ objAutobusController = gcnew AutobusController();
-		int existe = objAutobusController->ExisteAutobus(codigo);
-		if (existe) {
-			MessageBox::Show("Ya existe un autobus con ese codigo");
 
-		}
-		else {
-			objAutobusController->agregarAutobus(codigo, Placa, Capacidad);
-			MessageBox::Show("La carrera ha sido registrada con exito");
-			this->Close();
+		String^ Placa = this->TB_Placa->Text;
+
+		if((Placa != "")&&(this->TB_Identificador->Text != "") && (this->TB_Capacidad->Text != "")) {
+			int codigo = Convert::ToInt32(this->TB_Identificador->Text);
+			int Capacidad = Convert::ToInt32(this->TB_Capacidad->Text);
+
+			AutobusController^ objAutobusController = gcnew AutobusController();
+			int existe = objAutobusController->ExisteAutobus(codigo);
+
+			if (existe) {
+				MessageBox::Show("Ya existe un autobus con ese codigo");
+			}
+			else {
+				objAutobusController->agregarAutobus(codigo, Placa, Capacidad);
+				MessageBox::Show("El autobus ha sido registrada con exito");
+				this->Close();
+			}
 		}
 
 	}
