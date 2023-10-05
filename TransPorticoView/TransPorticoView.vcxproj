@@ -139,8 +139,13 @@
     <ClCompile Include="HorarioMantenimiento.cpp" />
     <ClCompile Include="MantenimientoMantenimiento.cpp" />
     <ClCompile Include="MantenimientoParadero.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="PPAdministradorEstadistica.cpp" />
     <ClCompile Include="PPAdministradorInformesEconomicos.cpp" />
+=======
+    <ClCompile Include="PPAdministrador_GestionReportesPasajeros1.cpp" />
+    <ClCompile Include="PPAdministrador_MantenimientoBuses.cpp" />
+>>>>>>> hola aqui estoy
     <ClCompile Include="Promociones.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
     <ClCompile Include="RecargarTarjeta.cpp" />
@@ -247,10 +252,17 @@
     <ClInclude Include="ParaderoMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="PPAdministradorEstadistica.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PPAdministradorInformesEconomicos.h">
+=======
+    <ClInclude Include="PPAdministrador_GestionReportesPasajeros1.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PPAdministrador_MantenimientoBuses.h">
+>>>>>>> hola aqui estoy
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Promociones.h">
@@ -396,11 +408,19 @@
     <EmbeddedResource Include="MantenimientoMantenimiento.resx">
       <DependentUpon>MantenimientoMantenimiento.h</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="PPAdministradorEstadistica.resx">
       <DependentUpon>PPAdministradorEstadistica.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPAdministradorInformesEconomicos.resx">
       <DependentUpon>PPAdministradorInformesEconomicos.h</DependentUpon>
+=======
+    <EmbeddedResource Include="PPAdministrador_GestionReportesPasajeros1.resx">
+      <DependentUpon>PPAdministrador_GestionReportesPasajeros1.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPAdministrador_MantenimientoBuses.resx">
+      <DependentUpon>PPAdministrador_MantenimientoBuses.h</DependentUpon>
+>>>>>>> hola aqui estoy
     </EmbeddedResource>
     <EmbeddedResource Include="Promociones.resx">
       <DependentUpon>Promociones.h</DependentUpon>
