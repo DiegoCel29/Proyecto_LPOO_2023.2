@@ -118,21 +118,21 @@
     <ClCompile Include="CrearCuenta.cpp" />
     <ClCompile Include="AtajosMantenimientoEditar.cpp" />
     <ClCompile Include="EmpleadoMantenimientoEditar.cpp" />
+    <ClCompile Include="HorarioMantenimientoAnadir.cpp" />
+    <ClCompile Include="HorarioMantenimientoEditar.cpp" />
     <ClCompile Include="MantenimientoMantenimientoAnadir.cpp" />
     <ClCompile Include="MantenimientoMantenimientoEditar.cpp" />
     <ClCompile Include="ParaderoMantenimientoAnadir.cpp" />
     <ClCompile Include="ParaderoMantenimientoEditar.cpp" />
     <ClCompile Include="PasajeroMantenimientoEditar.cpp" />
-    <ClCompile Include="FrmAgregarAutobuses.cpp" />
-    <ClCompile Include="FrmEditarAutobuses.cpp" />
-    <ClCompile Include="FrmMantenimientoBuzonSugerencias.cpp" />
-    <ClCompile Include="frmMantenimientoHorario.cpp" />
+    <ClCompile Include="AutobusMantenimientoAnadir.cpp" />
+    <ClCompile Include="AutobusMantenimientoEditar.cpp" />
+    <ClCompile Include="HorarioMantenimiento.cpp" />
     <ClCompile Include="MantenimientoMantenimiento.cpp" />
     <ClCompile Include="MantenimientoParadero.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
     <ClCompile Include="RutaMantenimiento.cpp" />
-    <ClCompile Include="FrmMantenimientoTarjeta.cpp" />
-    <ClCompile Include="FrmMatenimientoAutobus.cpp" />
+    <ClCompile Include="AutobusMantenimiento.cpp" />
     <ClCompile Include="FrmPantallaAdministrador.cpp" />
     <ClCompile Include="EmpleadoMantenimientoNuevo.cpp" />
     <ClCompile Include="AtajosMantenimientoAnadir.cpp" />
@@ -148,6 +148,7 @@
     <ClCompile Include="PromocionesMantenimientoEditar.cpp" />
     <ClCompile Include="RutaMantenimientoAnadir.cpp" />
     <ClCompile Include="RutaMantenimientoEditar.cpp" />
+    <ClCompile Include="SituacionRecorridoMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimiento.cpp" />
     <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
     <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
@@ -172,6 +173,12 @@
     <ClInclude Include="EmpleadoMantenimientoEditar.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="HorarioMantenimientoAnadir.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="HorarioMantenimientoEditar.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="MantenimientoMantenimientoAnadir.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -187,19 +194,13 @@
     <ClInclude Include="PasajeroMantenimientoEditar.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FrmAgregarAutobuses.h">
+    <ClInclude Include="AutobusMantenimientoAnadir.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FrmEditarAutobuses.h">
+    <ClInclude Include="AutobusMantenimientoEditar.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FrmMantenimientoBuzonSugerencias.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="frmMantenimientoCalificacion.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="frmMantenimientoHorario.h">
+    <ClInclude Include="HorarioMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MantenimientoMantenimiento.h">
@@ -214,10 +215,7 @@
     <ClInclude Include="RutaMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="FrmMantenimientoTarjeta.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="FrmMatenimientoAutobus.h">
+    <ClInclude Include="AutobusMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="FrmPantallaAdministrador.h">
@@ -262,6 +260,9 @@
     <ClInclude Include="RutaMantenimientoEditar.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="SituacionRecorridoMantenimiento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="TarifarioMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -297,23 +298,17 @@
     <EmbeddedResource Include="PasajeroMantenimientoEditar.resx">
       <DependentUpon>PasajeroMantenimientoEditar.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAgregarAutobuses.resx">
-      <DependentUpon>FrmAgregarAutobuses.h</DependentUpon>
+    <EmbeddedResource Include="AutobusMantenimientoAnadir.resx">
+      <DependentUpon>AutobusMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmEditarAutobuses.resx">
-      <DependentUpon>FrmEditarAutobuses.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimientoBuzonSugerencias.resx">
-      <DependentUpon>FrmMantenimientoBuzonSugerencias.h</DependentUpon>
+    <EmbeddedResource Include="AutobusMantenimientoEditar.resx">
+      <DependentUpon>AutobusMantenimientoEditar.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoMantenimiento.resx">
       <DependentUpon>MantenimientoMantenimiento.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PromocionesMantenimiento.resx">
       <DependentUpon>PromocionesMantenimiento.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmMantenimientoTarjeta.resx">
-      <DependentUpon>FrmMantenimientoTarjeta.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPantallaAdministrador.resx">
       <DependentUpon>FrmPantallaAdministrador.h</DependentUpon>

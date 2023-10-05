@@ -1,7 +1,6 @@
 #pragma once
-#pragma once
-#include "FrmAgregarAutobuses.h"
-#include "FrmEditarAutobuses.h"
+#include "AutobusMantenimientoAnadir.h"
+#include "AutobusMantenimientoEditar.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -15,12 +14,12 @@ namespace TransPorticoView {
 	using namespace TransPorticoModel;
 	using namespace TransPorticoController;
 	/// <summary>
-	/// Resumen de FrmMatenimientoAutobus
+	/// Resumen de AutobusMantenimiento
 	/// </summary>
-	public ref class FrmMatenimientoAutobus : public System::Windows::Forms::Form
+	public ref class AutobusMantenimiento : public System::Windows::Forms::Form
 	{
 	public:
-		FrmMatenimientoAutobus(void)
+		AutobusMantenimiento(void)
 		{
 			InitializeComponent();
 			//
@@ -32,7 +31,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~FrmMatenimientoAutobus()
+		~AutobusMantenimiento()
 		{
 			if (components)
 			{
@@ -140,7 +139,7 @@ namespace TransPorticoView {
 			this->label1->Size = System::Drawing::Size(47, 17);
 			this->label1->TabIndex = 1;
 			this->label1->Text = L"Placa:";
-			this->label1->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::label1_Click_1);
+			this->label1->Click += gcnew System::EventHandler(this, &AutobusMantenimiento::label1_Click_1);
 			// 
 			// button1
 			// 
@@ -153,7 +152,7 @@ namespace TransPorticoView {
 			this->button1->TabIndex = 3;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &AutobusMantenimiento::button1_Click);
 			// 
 			// textBox1
 			// 
@@ -177,7 +176,7 @@ namespace TransPorticoView {
 			this->dataGridView1->RowTemplate->Height = 24;
 			this->dataGridView1->Size = System::Drawing::Size(602, 238);
 			this->dataGridView1->TabIndex = 5;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &FrmMatenimientoAutobus::dataGridView1_CellContentClick);
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &AutobusMantenimiento::dataGridView1_CellContentClick);
 			// 
 			// Column8
 			// 
@@ -246,7 +245,7 @@ namespace TransPorticoView {
 			this->button2->TabIndex = 6;
 			this->button2->Text = L"Eliminar";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &AutobusMantenimiento::button2_Click);
 			// 
 			// button3
 			// 
@@ -259,7 +258,7 @@ namespace TransPorticoView {
 			this->button3->TabIndex = 7;
 			this->button3->Text = L"Editar";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::button3_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &AutobusMantenimiento::button3_Click);
 			// 
 			// button4
 			// 
@@ -272,9 +271,9 @@ namespace TransPorticoView {
 			this->button4->TabIndex = 8;
 			this->button4->Text = L"Nuevo";
 			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &FrmMatenimientoAutobus::button4_Click);
+			this->button4->Click += gcnew System::EventHandler(this, &AutobusMantenimiento::button4_Click);
 			// 
-			// FrmMatenimientoAutobus
+			// AutobusMantenimiento
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
@@ -287,8 +286,8 @@ namespace TransPorticoView {
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->label1);
 			this->Margin = System::Windows::Forms::Padding(2);
-			this->Name = L"FrmMatenimientoAutobus";
-			this->Text = L"FrmMatenimientoAutobus";
+			this->Name = L"AutobusMantenimiento";
+			this->Text = L"AutobusMantenimiento";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -334,7 +333,7 @@ namespace TransPorticoView {
 	}
 	//Boton para ir a la ventana agregar
 	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
-		FrmAgregarAutobuses^ VentanaAgregarAutobuses = gcnew FrmAgregarAutobuses;
+		AutobusMantenimientoAnadir^ VentanaAgregarAutobuses = gcnew AutobusMantenimientoAnadir;
 		VentanaAgregarAutobuses->ShowDialog();
 
 	}
@@ -358,7 +357,7 @@ namespace TransPorticoView {
 		int codigoAeditar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());		
 		AutobusController^ objetocontroller = gcnew AutobusController;
 		Autobus^ objetoBus = objetocontroller->buscarBus(codigoAeditar);
-		FrmEditarAutobuses^ ventanaEditar = gcnew FrmEditarAutobuses(objetoBus);
+		AutobusMantenimientoEditar^ ventanaEditar = gcnew AutobusMantenimientoEditar(objetoBus);
 		ventanaEditar->ShowDialog();
 
 	

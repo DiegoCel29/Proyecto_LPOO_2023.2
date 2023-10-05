@@ -1,5 +1,6 @@
 #pragma once
-
+#include "HorarioMantenimientoAnadir.h"
+#include "HorarioMantenimientoEditar.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -13,12 +14,12 @@ namespace TransPorticoView {
 	using namespace TransPorticoModel;
 
 	/// <summary>
-	/// Resumen de frmMantenimientoHorario
+	/// Resumen de HorarioMantenimiento
 	/// </summary>
-	public ref class frmMantenimientoHorario : public System::Windows::Forms::Form
+	public ref class HorarioMantenimiento : public System::Windows::Forms::Form
 	{
 	public:
-		frmMantenimientoHorario(void)
+		HorarioMantenimiento(void)
 		{
 			InitializeComponent();
 			//
@@ -30,7 +31,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~frmMantenimientoHorario()
+		~HorarioMantenimiento()
 		{
 			if (components)
 			{
@@ -95,13 +96,12 @@ namespace TransPorticoView {
 				this->Column1,
 					this->Column2, this->Column3, this->Column4
 			});
-			this->dataGridView1->Location = System::Drawing::Point(31, 94);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->dataGridView1->Location = System::Drawing::Point(23, 76);
 			this->dataGridView1->Name = L"dataGridView1";
 			this->dataGridView1->RowHeadersWidth = 51;
-			this->dataGridView1->Size = System::Drawing::Size(707, 315);
+			this->dataGridView1->Size = System::Drawing::Size(530, 256);
 			this->dataGridView1->TabIndex = 21;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &frmMantenimientoHorario::dataGridView1_CellContentClick);
+			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &HorarioMantenimiento::dataGridView1_CellContentClick);
 			// 
 			// Column1
 			// 
@@ -133,47 +133,43 @@ namespace TransPorticoView {
 			// 
 			// button4
 			// 
-			this->button4->Location = System::Drawing::Point(571, 439);
-			this->button4->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button4->Location = System::Drawing::Point(428, 357);
 			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(100, 28);
+			this->button4->Size = System::Drawing::Size(75, 23);
 			this->button4->TabIndex = 20;
 			this->button4->Text = L"Eliminar";
 			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::button4_Click);
 			// 
 			// groupBox1
 			// 
 			this->groupBox1->Controls->Add(this->textBox1);
 			this->groupBox1->Controls->Add(this->button1);
 			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Location = System::Drawing::Point(-39, -26);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->groupBox1->Location = System::Drawing::Point(-29, -21);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->groupBox1->Size = System::Drawing::Size(776, 112);
+			this->groupBox1->Size = System::Drawing::Size(582, 91);
 			this->groupBox1->TabIndex = 17;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Criterio de Búsqueda";
-			this->groupBox1->Enter += gcnew System::EventHandler(this, &frmMantenimientoHorario::groupBox1_Enter);
+			this->groupBox1->Enter += gcnew System::EventHandler(this, &HorarioMantenimiento::groupBox1_Enter);
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(256, 65);
-			this->textBox1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->textBox1->Location = System::Drawing::Point(192, 53);
 			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(175, 22);
+			this->textBox1->Size = System::Drawing::Size(132, 20);
 			this->textBox1->TabIndex = 5;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(513, 62);
-			this->button1->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button1->Location = System::Drawing::Point(385, 50);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(100, 28);
+			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 1;
 			this->button1->Text = L"Buscar";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &frmMantenimientoHorario::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::button1_Click);
 			// 
 			// label1
 			// 
@@ -181,47 +177,44 @@ namespace TransPorticoView {
 			this->label1->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 9.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->Location = System::Drawing::Point(173, 70);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label1->Location = System::Drawing::Point(130, 57);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(62, 20);
+			this->label1->Size = System::Drawing::Size(48, 16);
 			this->label1->TabIndex = 0;
 			this->label1->Text = L"Turno: ";
-			this->label1->Click += gcnew System::EventHandler(this, &frmMantenimientoHorario::label1_Click);
+			this->label1->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::label1_Click);
 			// 
 			// button3
 			// 
-			this->button3->Location = System::Drawing::Point(323, 439);
-			this->button3->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button3->Location = System::Drawing::Point(242, 357);
 			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(100, 28);
+			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 19;
 			this->button3->Text = L"Editar";
 			this->button3->UseVisualStyleBackColor = true;
 			// 
 			// button2
 			// 
-			this->button2->Location = System::Drawing::Point(75, 439);
-			this->button2->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->button2->Location = System::Drawing::Point(56, 357);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(100, 28);
+			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 18;
 			this->button2->Text = L"Nuevo";
 			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::button2_Click);
 			// 
-			// frmMantenimientoHorario
+			// HorarioMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(777, 498);
+			this->ClientSize = System::Drawing::Size(583, 405);
 			this->Controls->Add(this->dataGridView1);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->groupBox1);
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->Name = L"frmMantenimientoHorario";
-			this->Text = L"frmMantenimientoHorario";
+			this->Name = L"HorarioMantenimiento";
+			this->Text = L"HorarioMantenimiento";
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -254,6 +247,22 @@ namespace TransPorticoView {
 	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
 	private: System::Void dataGridView1_CellContentClick(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		HorarioMantenimientoAnadir^ VentanaAgregarHorario = gcnew HorarioMantenimientoAnadir;
+		VentanaAgregarHorario->ShowDialog();
+	}
+	private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+		//¿Como se cual es la fila uqe he seleccionado para eliminarla?
+		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
+		//Si quiero eliminar 2 seria SelectedRows[1] , 3 SelectedRows[2]
+		//Ya tengo la fila que selecioné en la variable
+		int codigoAeliminar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+		//Ya tengo el codigo a eliminar
+		HorarioController^ objetoHorarioController = gcnew HorarioController;
+		objetoHorarioController->EliminarHorario(codigoAeliminar);
+		List<Horario^>^ listaHorario = objetoHorarioController->buscarHorariosall();
+		mostrarGrilla(listaHorario);
 	}
 	};
 }

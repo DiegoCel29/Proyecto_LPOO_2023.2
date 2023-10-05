@@ -45,10 +45,10 @@ List<Horario^>^ HorarioController::buscarHorariosall() {
 		String^ HorarioInicio = datos[1];
 		String^ HorarioSalida = datos[2];
 		String^ TurnoHorario = datos[3];
-		
+
 		Horario^ objHorario = gcnew Horario(CodigoHorario, HorarioInicio, HorarioSalida, TurnoHorario);
 		listaHorariosEncontradas->Add(objHorario);
-		
+
 	}
 	return listaHorariosEncontradas;
 }
@@ -115,7 +115,7 @@ void HorarioController::EliminarHorario(int codigo) {
 
 }
 void HorarioController::agregarHorario(int Codigo, String^ HoraInicio, String^ HoraSalida, String^ Turno) {
-	
+
 	List<Horario^>^ listaHorario = buscarHorariosall();
 	Horario^ objHorario = gcnew Horario(Codigo, HoraInicio, HoraSalida, Turno);
 	listaHorario->Add(objHorario);
