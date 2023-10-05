@@ -192,6 +192,7 @@ namespace TransPorticoView {
 			this->button3->TabIndex = 19;
 			this->button3->Text = L"Editar";
 			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &HorarioMantenimiento::button3_Click);
 			// 
 			// button2
 			// 
@@ -264,5 +265,15 @@ namespace TransPorticoView {
 		List<Horario^>^ listaHorario = objetoHorarioController->buscarHorariosall();
 		mostrarGrilla(listaHorario);
 	}
-	};
+	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
+		int codigoAeditar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+		HorarioController^ objetocontroller = gcnew HorarioController;
+		Horario^ objetoHorario = objetocontroller->buscarHorarios(codigoAeditar);
+
+		HorarioMantenimientoEditar^ ventanaEditar = gcnew HorarioMantenimientoEditar(objetoHorario);
+		ventanaEditar->ShowDialog();
+	}
+};
 }

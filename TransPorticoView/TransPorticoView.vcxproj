@@ -278,6 +278,12 @@
     <EmbeddedResource Include="EmpleadoMantenimientoEditar.resx">
       <DependentUpon>EmpleadoMantenimientoEditar.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="HorarioMantenimiento.resx">
+      <DependentUpon>HorarioMantenimiento.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HorarioMantenimientoEditar.resx">
+      <DependentUpon>HorarioMantenimientoEditar.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoMantenimientoAnadir.resx">
       <DependentUpon>MantenimientoMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
