@@ -516,19 +516,23 @@ namespace TransPorticoView {
 		String^ ApellidoPat = this->TB_ApellidoPat->Text;
 		String^ ApellidoMat = this->TB_ApellidoMat->Text;
 		String^ DNI = this->TB_DNI->Text;
-		int Edad = Convert::ToInt32(this->TB_Edad->Text);
 		String^ Genero = this->CB_Genero->Text;
 		String^ Telefono = this->TB_Telefono->Text;
 		String^ Contrasena = this->TB_Contrasena->Text;
 		String^ FechaCumpleanos = this->Tiempo_Cumpleanos->Text;
 
-		PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
-		Pasajero^ ObjPasajero = gcnew Pasajero(DNI, Nombres, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, "Pasajero");
+		if ((Nombres != "") && (ApellidoPat != "") && (ApellidoMat != "") && (DNI != "") && (Genero != "") && (Telefono != "") && (Contrasena != "") && (FechaCumpleanos != "") && (this->TB_Edad->Text != "")) {
 
-		ObjPasajeroController->AgregarPasajero(ObjPasajero);
+			int Edad = Convert::ToInt32(this->TB_Edad->Text);
 
-		MessageBox::Show("Cuenta creada con exito.");
-		this->Close();
+			PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
+			Pasajero^ ObjPasajero = gcnew Pasajero(DNI, Nombres, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, "Pasajero");
+			ObjPasajeroController->AgregarPasajero(ObjPasajero);
+			MessageBox::Show("Cuenta creada con exito.");
+			this->Close();
+
+		}
+		
 	}
 };
 }
