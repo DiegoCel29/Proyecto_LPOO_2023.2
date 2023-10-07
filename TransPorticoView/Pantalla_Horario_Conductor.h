@@ -54,7 +54,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -91,11 +91,9 @@ namespace TransPorticoView {
 			this->GB_HORARIO->Controls->Add(this->L_FechaInicio);
 			this->GB_HORARIO->Controls->Add(this->B_REGRESAR);
 			this->GB_HORARIO->Controls->Add(this->DGV_Promociones);
-			this->GB_HORARIO->Location = System::Drawing::Point(31, 32);
-			this->GB_HORARIO->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->GB_HORARIO->Location = System::Drawing::Point(41, 39);
 			this->GB_HORARIO->Name = L"GB_HORARIO";
-			this->GB_HORARIO->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
-			this->GB_HORARIO->Size = System::Drawing::Size(868, 522);
+			this->GB_HORARIO->Size = System::Drawing::Size(1158, 643);
 			this->GB_HORARIO->TabIndex = 0;
 			this->GB_HORARIO->TabStop = false;
 			// 
@@ -107,22 +105,23 @@ namespace TransPorticoView {
 			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->B_Buscar->Location = System::Drawing::Point(563, 28);
+			this->B_Buscar->Location = System::Drawing::Point(751, 35);
+			this->B_Buscar->Margin = System::Windows::Forms::Padding(4);
 			this->B_Buscar->Name = L"B_Buscar";
-			this->B_Buscar->Size = System::Drawing::Size(100, 40);
+			this->B_Buscar->Size = System::Drawing::Size(133, 49);
 			this->B_Buscar->TabIndex = 14;
 			this->B_Buscar->Text = L"Buscar";
 			this->B_Buscar->UseVisualStyleBackColor = true;
-			this->B_Buscar->Click += gcnew System::EventHandler(this, &Pantalla_Horario_Conductor::B_Buscar_Click);
 			// 
 			// DTP_FechaFin
 			// 
 			this->DTP_FechaFin->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->DTP_FechaFin->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->DTP_FechaFin->Location = System::Drawing::Point(281, 32);
+			this->DTP_FechaFin->Location = System::Drawing::Point(375, 40);
+			this->DTP_FechaFin->Margin = System::Windows::Forms::Padding(4);
 			this->DTP_FechaFin->Name = L"DTP_FechaFin";
-			this->DTP_FechaFin->Size = System::Drawing::Size(250, 28);
+			this->DTP_FechaFin->Size = System::Drawing::Size(332, 34);
 			this->DTP_FechaFin->TabIndex = 13;
 			// 
 			// L_FechaInicio
@@ -132,9 +131,10 @@ namespace TransPorticoView {
 			this->L_FechaInicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->L_FechaInicio->ForeColor = System::Drawing::Color::Black;
-			this->L_FechaInicio->Location = System::Drawing::Point(76, 30);
+			this->L_FechaInicio->Location = System::Drawing::Point(102, 37);
+			this->L_FechaInicio->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_FechaInicio->Name = L"L_FechaInicio";
-			this->L_FechaInicio->Size = System::Drawing::Size(150, 30);
+			this->L_FechaInicio->Size = System::Drawing::Size(200, 37);
 			this->L_FechaInicio->TabIndex = 12;
 			this->L_FechaInicio->Text = L"Fecha inicio:";
 			this->L_FechaInicio->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -146,9 +146,10 @@ namespace TransPorticoView {
 			this->B_REGRESAR->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_REGRESAR->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_REGRESAR->Location = System::Drawing::Point(398, 421);
+			this->B_REGRESAR->Location = System::Drawing::Point(531, 518);
+			this->B_REGRESAR->Margin = System::Windows::Forms::Padding(4);
 			this->B_REGRESAR->Name = L"B_REGRESAR";
-			this->B_REGRESAR->Size = System::Drawing::Size(100, 40);
+			this->B_REGRESAR->Size = System::Drawing::Size(133, 49);
 			this->B_REGRESAR->TabIndex = 11;
 			this->B_REGRESAR->Text = L"Regresar";
 			this->B_REGRESAR->UseVisualStyleBackColor = true;
@@ -185,12 +186,13 @@ namespace TransPorticoView {
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->DGV_Promociones->DefaultCellStyle = dataGridViewCellStyle2;
 			this->DGV_Promociones->EnableHeadersVisualStyles = false;
-			this->DGV_Promociones->Location = System::Drawing::Point(34, 101);
+			this->DGV_Promociones->Location = System::Drawing::Point(45, 124);
+			this->DGV_Promociones->Margin = System::Windows::Forms::Padding(4);
 			this->DGV_Promociones->Name = L"DGV_Promociones";
 			this->DGV_Promociones->ReadOnly = true;
 			this->DGV_Promociones->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
 			this->DGV_Promociones->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->DGV_Promociones->Size = System::Drawing::Size(794, 300);
+			this->DGV_Promociones->Size = System::Drawing::Size(1058, 369);
 			this->DGV_Promociones->TabIndex = 10;
 			// 
 			// Column1
@@ -244,12 +246,13 @@ namespace TransPorticoView {
 			// 
 			// Pantalla_Horario_Conductor
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(912, 591);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1232, 727);
 			this->Controls->Add(this->GB_HORARIO);
-			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->DoubleBuffered = true;
 			this->Name = L"Pantalla_Horario_Conductor";
 			this->Text = L"Pantalla_Horario_Conductor";
 			this->Load += gcnew System::EventHandler(this, &Pantalla_Horario_Conductor::Pantalla_Horario_Conductor_Load);
@@ -266,15 +269,13 @@ namespace TransPorticoView {
 	};
 	private: System::Void B_REGRESAR_Click(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void Pantalla_Horario_Conductor_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->SizeChanged += (gcnew System::EventHandler(this, &Pantalla_Horario_Conductor::Pantalla_Horario_Conductor_SizeChanged));
-	CentrarForm();
-}
+	private: System::Void Pantalla_Horario_Conductor_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this, &Pantalla_Horario_Conductor::Pantalla_Horario_Conductor_SizeChanged));
+		CentrarForm();
+	}
 
-private: System::Void Pantalla_Horario_Conductor_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
-	CentrarForm();
-}
-private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void Pantalla_Horario_Conductor_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
+	};
 }

@@ -118,7 +118,6 @@
     <ClCompile Include="CrearReporte.cpp" />
     <ClCompile Include="Historial_Ruta.cpp" />
     <ClCompile Include="MenuTarjeta.cpp" />
-    <ClCompile Include="PantallaPrincipalAdministrador1.cpp" />
     <ClCompile Include="PantallaPrincipalConductor.cpp" />
     <ClCompile Include="CrearCuenta.cpp" />
     <ClCompile Include="AtajosMantenimientoEditar.cpp" />
@@ -139,14 +138,12 @@
     <ClCompile Include="HorarioMantenimiento.cpp" />
     <ClCompile Include="MantenimientoMantenimiento.cpp" />
     <ClCompile Include="MantenimientoParadero.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="PPAdministradorEstadistica.cpp" />
     <ClCompile Include="PPAdministradorInformesEconomicos.cpp" />
-=======
-    <ClCompile Include="PPAdministrador_GestionReportesPasajeros1.cpp" />
-    <ClCompile Include="PPAdministrador_MantenimientoBuses.cpp" />
->>>>>>> hola aqui estoy
-    <ClCompile Include="Promociones.cpp" />
+    <ClCompile Include="PPAdministradorGestionReportesPasajeros.cpp" />
+    <ClCompile Include="PPAdministradorMantenimientoBuses.cpp" />
+    <ClCompile Include="PPPasajeroBusesCercanos.cpp" />
+    <ClCompile Include="PPasajeroPromociones.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
     <ClCompile Include="RecargarTarjeta.cpp" />
     <ClCompile Include="RutaMantenimiento.cpp" />
@@ -252,20 +249,22 @@
     <ClInclude Include="ParaderoMantenimiento.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="PPAdministradorEstadistica.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PPAdministradorInformesEconomicos.h">
-=======
-    <ClInclude Include="PPAdministrador_GestionReportesPasajeros1.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="PPAdministrador_MantenimientoBuses.h">
->>>>>>> hola aqui estoy
+    <ClInclude Include="PPAdministradorGestionReportesPasajeros.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="Promociones.h">
+    <ClInclude Include="PPAdministradorMantenimientoBuses.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PPPasajeroBusesCercanos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PPasajeroPromociones.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PromocionesMantenimiento.h">
@@ -354,6 +353,9 @@
     <EmbeddedResource Include="HorarioMantenimientoAnadir.resx">
       <DependentUpon>HorarioMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoMantenimientoEditar.resx">
+      <DependentUpon>MantenimientoMantenimientoEditar.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuTarjeta.resx">
       <DependentUpon>MenuTarjeta.h</DependentUpon>
     </EmbeddedResource>
@@ -390,6 +392,9 @@
     <EmbeddedResource Include="Pantalla_Ver_Ruta.resx">
       <DependentUpon>Pantalla_Ver_Ruta.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ParaderoMantenimiento.resx">
+      <DependentUpon>ParaderoMantenimiento.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParaderoMantenimientoAnadir.resx">
       <DependentUpon>ParaderoMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
@@ -408,22 +413,20 @@
     <EmbeddedResource Include="MantenimientoMantenimiento.resx">
       <DependentUpon>MantenimientoMantenimiento.h</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="PPAdministradorEstadistica.resx">
       <DependentUpon>PPAdministradorEstadistica.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PPAdministradorGestionReportesPasajeros.resx">
+      <DependentUpon>PPAdministradorGestionReportesPasajeros.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PPAdministradorInformesEconomicos.resx">
       <DependentUpon>PPAdministradorInformesEconomicos.h</DependentUpon>
-=======
-    <EmbeddedResource Include="PPAdministrador_GestionReportesPasajeros1.resx">
-      <DependentUpon>PPAdministrador_GestionReportesPasajeros1.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PPAdministrador_MantenimientoBuses.resx">
-      <DependentUpon>PPAdministrador_MantenimientoBuses.h</DependentUpon>
->>>>>>> hola aqui estoy
+    <EmbeddedResource Include="PPAdministradorMantenimientoBuses.resx">
+      <DependentUpon>PPAdministradorMantenimientoBuses.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Promociones.resx">
-      <DependentUpon>Promociones.h</DependentUpon>
+    <EmbeddedResource Include="PPasajeroPromociones.resx">
+      <DependentUpon>PPasajeroPromociones.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PromocionesMantenimiento.resx">
       <DependentUpon>PromocionesMantenimiento.h</DependentUpon>
@@ -466,6 +469,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RutaMantenimiento.resx">
       <DependentUpon>RutaMantenimiento.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RutaMantenimientoAnadir.resx">
+      <DependentUpon>RutaMantenimientoAnadir.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RutaMantenimientoEditar.resx">
+      <DependentUpon>RutaMantenimientoEditar.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SaldoPasajero.resx">
       <DependentUpon>SaldoPasajero.h</DependentUpon>

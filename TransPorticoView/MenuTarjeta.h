@@ -56,7 +56,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -215,6 +215,7 @@ namespace TransPorticoView {
 			this->Name = L"MenuTarjeta";
 			this->Text = L"MenuTarjeta";
 			this->Load += gcnew System::EventHandler(this, &MenuTarjeta::MenuTarjeta_Load);
+			this->SizeChanged += gcnew System::EventHandler(this, &MenuTarjeta::MenuTarjeta_SizeChanged);
 			this->groupBox1->ResumeLayout(false);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
@@ -225,21 +226,32 @@ namespace TransPorticoView {
 		}
 #pragma endregion
 	private: System::Void MenuTarjeta_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this, &MenuTarjeta::MenuTarjeta_SizeChanged));
+		CentrarForm();
 	}
-private: System::Void B_TARJETA_Click(System::Object^ sender, System::EventArgs^ e) {
-	RecargarTarjeta^ VentanaRecargarTarjeta = gcnew RecargarTarjeta();
-	VentanaRecargarTarjeta->ShowDialog();
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
-}
-private: System::Void B_RUTA_Click(System::Object^ sender, System::EventArgs^ e) {
-	TarifarioVer^ VentanaTarifario = gcnew TarifarioVer();
-	VentanaTarifario->ShowDialog();
-}
-private: System::Void B_HORARIO_SEMANAL_Click(System::Object^ sender, System::EventArgs^ e) {
-	SaldoPasajero^ VentanaSaldoPasajero = gcnew SaldoPasajero();
-	VentanaSaldoPasajero->ShowDialog();
-}
-};
+
+	private: System::Void B_TARJETA_Click(System::Object^ sender, System::EventArgs^ e) {
+		RecargarTarjeta^ VentanaRecargarTarjeta = gcnew RecargarTarjeta();
+		VentanaRecargarTarjeta->ShowDialog();
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+	private: System::Void B_RUTA_Click(System::Object^ sender, System::EventArgs^ e) {
+		TarifarioVer^ VentanaTarifario = gcnew TarifarioVer();
+		VentanaTarifario->ShowDialog();
+	}
+	private: System::Void B_HORARIO_SEMANAL_Click(System::Object^ sender, System::EventArgs^ e) {
+		SaldoPasajero^ VentanaSaldoPasajero = gcnew SaldoPasajero();
+		VentanaSaldoPasajero->ShowDialog();
+	}
+	private: System::Void MenuTarjeta_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
+	private: System::Void CentrarForm() {
+		int CentroX = (this->ClientSize.Width - this->groupBox1->Width) / 2;
+		int CentroY = (this->ClientSize.Height - this->groupBox1->Height) / 2;
+		this->groupBox1->Location = System::Drawing::Point(CentroX, CentroY);
+	}
+	};
 }

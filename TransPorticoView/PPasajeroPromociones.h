@@ -10,12 +10,12 @@ namespace TransPorticoView {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Resumen de Promociones
+	/// Resumen de PPasajeroPromociones
 	/// </summary>
-	public ref class Promociones : public System::Windows::Forms::Form
+	public ref class PPasajeroPromociones : public System::Windows::Forms::Form
 	{
 	public:
-		Promociones(void)
+		PPasajeroPromociones(void)
 		{
 			InitializeComponent();
 			//
@@ -27,7 +27,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~Promociones()
+		~PPasajeroPromociones()
 		{
 			if (components)
 			{
@@ -78,7 +78,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -87,7 +87,7 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Promociones::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PPasajeroPromociones::typeid));
 			this->Logo = (gcnew System::Windows::Forms::PictureBox());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -123,13 +123,13 @@ namespace TransPorticoView {
 			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->ForeColor = System::Drawing::SystemColors::ControlText;
-			this->button2->Location = System::Drawing::Point(590, 514);
+			this->button2->Location = System::Drawing::Point(560, 481);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(133, 45);
 			this->button2->TabIndex = 21;
 			this->button2->Text = L"SALIR";
 			this->button2->UseVisualStyleBackColor = false;
-			this->button2->Click += gcnew System::EventHandler(this, &Promociones::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &PPasajeroPromociones::button2_Click);
 			// 
 			// button3
 			// 
@@ -163,7 +163,6 @@ namespace TransPorticoView {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Enabled = false;
 			this->textBox2->Location = System::Drawing::Point(311, 55);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(211, 34);
@@ -198,7 +197,7 @@ namespace TransPorticoView {
 			this->button7->TabIndex = 32;
 			this->button7->Text = L"INICIO";
 			this->button7->UseVisualStyleBackColor = false;
-			this->button7->Click += gcnew System::EventHandler(this, &Promociones::button7_Click);
+			this->button7->Click += gcnew System::EventHandler(this, &PPasajeroPromociones::button7_Click);
 			// 
 			// dateTimePicker2
 			// 
@@ -207,7 +206,7 @@ namespace TransPorticoView {
 			this->dateTimePicker2->Name = L"dateTimePicker2";
 			this->dateTimePicker2->Size = System::Drawing::Size(211, 34);
 			this->dateTimePicker2->TabIndex = 33;
-			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &Promociones::dateTimePicker2_ValueChanged);
+			this->dateTimePicker2->ValueChanged += gcnew System::EventHandler(this, &PPasajeroPromociones::dateTimePicker2_ValueChanged);
 			// 
 			// groupBox1
 			// 
@@ -227,22 +226,24 @@ namespace TransPorticoView {
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::HighlightText;
 			this->groupBox1->Location = System::Drawing::Point(27, 12);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(740, 588);
+			this->groupBox1->Size = System::Drawing::Size(740, 544);
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Promoción del día";
 			// 
-			// Promociones
+			// PPasajeroPromociones
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(787, 614);
+			this->ClientSize = System::Drawing::Size(787, 583);
 			this->Controls->Add(this->groupBox1);
 			this->DoubleBuffered = true;
-			this->Name = L"Promociones";
-			this->Text = L"Promociones";
+			this->Name = L"PPasajeroPromociones";
+			this->Text = L"PPasajeroPromociones";
+			this->Load += gcnew System::EventHandler(this, &PPasajeroPromociones::PPasajeroPromociones_Load);
+			this->SizeChanged += gcnew System::EventHandler(this, &PPasajeroPromociones::PPasajeroPromociones_SizeChanged);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
@@ -252,12 +253,25 @@ namespace TransPorticoView {
 #pragma endregion
 	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void dateTimePicker2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-	this->Close();
-}
-};
+	private: System::Void button7_Click(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void dateTimePicker2_ValueChanged(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+	private: System::Void PPasajeroPromociones_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this, &PPasajeroPromociones::PPasajeroPromociones_SizeChanged));
+		CentrarForm();
+	}
+
+	private: System::Void PPasajeroPromociones_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
+	private: System::Void CentrarForm() {
+		int CentroX = (this->ClientSize.Width - this->groupBox1->Width) / 2;
+		int CentroY = (this->ClientSize.Height - this->groupBox1->Height) / 2;
+		this->groupBox1->Location = System::Drawing::Point(CentroX, CentroY);
+	}
+	};
 }

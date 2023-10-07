@@ -1,4 +1,4 @@
-1;Si;Rutina;Rutinario
-2;No;Choque;Choco
+1;5/10/2023;Llanta;La llanta se poncho
+2;5/10/2023;Motor;Motor se malogro
 3;Si;Accidente;Choco
 4;No;A;a

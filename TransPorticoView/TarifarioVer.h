@@ -58,7 +58,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -249,55 +249,55 @@ namespace TransPorticoView {
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		this->Close();
 	}
-private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
-	String^ BuscarRuta = this->comboBox1->Text;
-	String^ BuscarParaderoInicial = this->comboBox2->Text;
-	String^ BuscarParaderoFinal = this->comboBox3->Text;
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ BuscarRuta = this->comboBox1->Text;
+		String^ BuscarParaderoInicial = this->comboBox2->Text;
+		String^ BuscarParaderoFinal = this->comboBox3->Text;
 
-	TarifarioController^ ObjTarifarioController = gcnew TarifarioController();
-	List<Tarifario^>^ ListTarifarioGeneral = ObjTarifarioController->BuscarTarifarioAll();
-	List<Tarifario^>^ ListTarifarioBuscado = gcnew List<Tarifario^>();
+		TarifarioController^ ObjTarifarioController = gcnew TarifarioController();
+		List<Tarifario^>^ ListTarifarioGeneral = ObjTarifarioController->BuscarTarifarioAll();
+		List<Tarifario^>^ ListTarifarioBuscado = gcnew List<Tarifario^>();
 
-	ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosRuta(ListTarifarioGeneral, BuscarRuta);
-	ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosParaderoInicial(ListTarifarioBuscado, BuscarParaderoInicial);
-	ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosParaderoFinal(ListTarifarioBuscado, BuscarParaderoFinal);
+		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosRuta(ListTarifarioGeneral, BuscarRuta);
+		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosParaderoInicial(ListTarifarioBuscado, BuscarParaderoInicial);
+		ListTarifarioBuscado = ObjTarifarioController->BuscarTarifariosParaderoFinal(ListTarifarioBuscado, BuscarParaderoFinal);
 
-	this->textBox3->Text = Convert::ToString(ListTarifarioBuscado[0]->GetTarifa());
+		this->textBox3->Text = Convert::ToString(ListTarifarioBuscado[0]->GetTarifa());
 
-}
-	   private: System::Void MostrarGrilla(List<Tarifario^>^ ListTarifario) {
-
-
-	   }
-private: System::Void Tarifario_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->SizeChanged += (gcnew System::EventHandler(this, &TarifarioVer::Tarifario_SizeChanged));
-	CentrarForm();
-	// Poner paraderos en los ComboBox
-	ParaderoController^ ObjParaderoController = gcnew ParaderoController;
-	List<Paradero^>^ ListParaderos = ObjParaderoController->buscarAll();
-	this->comboBox2->Items->Clear();
-	this->comboBox3->Items->Clear();
-	for (int i = 0; i < ListParaderos->Count; i++) {
-		this->comboBox2->Items->Add(ListParaderos[i]->getNombre());
-		this->comboBox3->Items->Add(ListParaderos[i]->getNombre());
 	}
-	RutaController^ ObjRutaController = gcnew RutaController;
-	List<Ruta^>^ ListRutas = ObjRutaController->buscarAll();
-	this->comboBox1->Items->Clear();
-	for (int i = 0; i < ListRutas->Count; i++) {
-		this->comboBox1->Items->Add(ListRutas[i]->getLinea());
-	}
+	private: System::Void MostrarGrilla(List<Tarifario^>^ ListTarifario) {
 
-}
-private: System::Void Tarifario_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
-	CentrarForm();
-}
-	   private: System::Void CentrarForm() {
-		   int CentroX = (this->ClientSize.Width - this->groupBox1->Width) / 2;
-		   int CentroY = (this->ClientSize.Height - this->groupBox1->Height) / 2;
-		   this->groupBox1->Location = System::Drawing::Point(CentroX, CentroY);
-	   }
-private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+
+	}
+	private: System::Void Tarifario_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this, &TarifarioVer::Tarifario_SizeChanged));
+		CentrarForm();
+		// Poner paraderos en los ComboBox
+		ParaderoController^ ObjParaderoController = gcnew ParaderoController;
+		List<Paradero^>^ ListParaderos = ObjParaderoController->buscarAll();
+		this->comboBox2->Items->Clear();
+		this->comboBox3->Items->Clear();
+		for (int i = 0; i < ListParaderos->Count; i++) {
+			this->comboBox2->Items->Add(ListParaderos[i]->getNombre());
+			this->comboBox3->Items->Add(ListParaderos[i]->getNombre());
+		}
+		RutaController^ ObjRutaController = gcnew RutaController;
+		List<Ruta^>^ ListRutas = ObjRutaController->buscarAll();
+		this->comboBox1->Items->Clear();
+		for (int i = 0; i < ListRutas->Count; i++) {
+			this->comboBox1->Items->Add(ListRutas[i]->getLinea());
+		}
+
+	}
+	private: System::Void Tarifario_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
+	private: System::Void CentrarForm() {
+		int CentroX = (this->ClientSize.Width - this->groupBox1->Width) / 2;
+		int CentroY = (this->ClientSize.Height - this->groupBox1->Height) / 2;
+		this->groupBox1->Location = System::Drawing::Point(CentroX, CentroY);
+	}
+	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
+	}
+	};
 }

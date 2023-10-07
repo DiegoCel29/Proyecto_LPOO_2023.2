@@ -76,30 +76,30 @@ namespace TransPorticoView {
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
-			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->label10 = (gcnew System::Windows::Forms::Label());
 			this->label9 = (gcnew System::Windows::Forms::Label());
 			this->label8 = (gcnew System::Windows::Forms::Label());
 			this->label7 = (gcnew System::Windows::Forms::Label());
 			this->L_Identificador = (gcnew System::Windows::Forms::Label());
+			this->dateTimePicker2 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->dateTimePicker1 = (gcnew System::Windows::Forms::DateTimePicker());
+			this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button2
 			// 
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(344, 516);
+			this->button2->Location = System::Drawing::Point(258, 419);
+			this->button2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(105, 42);
+			this->button2->Size = System::Drawing::Size(79, 34);
 			this->button2->TabIndex = 14;
 			this->button2->Text = L"Cancelar";
 			this->button2->UseVisualStyleBackColor = true;
@@ -107,13 +107,13 @@ namespace TransPorticoView {
 			// 
 			// button1
 			// 
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
 			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(165, 516);
+			this->button1->Location = System::Drawing::Point(124, 419);
+			this->button1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(99, 42);
+			this->button1->Size = System::Drawing::Size(74, 34);
 			this->button1->TabIndex = 13;
 			this->button1->Text = L"Grabar";
 			this->button1->UseVisualStyleBackColor = true;
@@ -122,6 +122,7 @@ namespace TransPorticoView {
 			// groupBox1
 			// 
 			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
+			this->groupBox1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->groupBox1->Controls->Add(this->label11);
 			this->groupBox1->Controls->Add(this->label10);
 			this->groupBox1->Controls->Add(this->label9);
@@ -137,60 +138,14 @@ namespace TransPorticoView {
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBox1->ForeColor = System::Drawing::Color::White;
-			this->groupBox1->Location = System::Drawing::Point(18, 43);
+			this->groupBox1->Location = System::Drawing::Point(14, 35);
+			this->groupBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(600, 446);
+			this->groupBox1->Padding = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->groupBox1->Size = System::Drawing::Size(450, 362);
 			this->groupBox1->TabIndex = 12;
 			this->groupBox1->TabStop = false;
 			this->groupBox1->Text = L"Datos de la Ruta";
-			// 
-			// dateTimePicker2
-			// 
-			this->dateTimePicker2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->dateTimePicker2->Location = System::Drawing::Point(281, 321);
-			this->dateTimePicker2->Name = L"dateTimePicker2";
-			this->dateTimePicker2->Size = System::Drawing::Size(170, 27);
-			this->dateTimePicker2->TabIndex = 13;
-			// 
-			// dateTimePicker1
-			// 
-			this->dateTimePicker1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->dateTimePicker1->Location = System::Drawing::Point(279, 254);
-			this->dateTimePicker1->Name = L"dateTimePicker1";
-			this->dateTimePicker1->Size = System::Drawing::Size(170, 27);
-			this->dateTimePicker1->TabIndex = 12;
-			// 
-			// textBox6
-			// 
-			this->textBox6->Location = System::Drawing::Point(281, 387);
-			this->textBox6->Name = L"textBox6";
-			this->textBox6->Size = System::Drawing::Size(170, 30);
-			this->textBox6->TabIndex = 11;
-			// 
-			// textBox3
-			// 
-			this->textBox3->Location = System::Drawing::Point(281, 189);
-			this->textBox3->Name = L"textBox3";
-			this->textBox3->Size = System::Drawing::Size(170, 30);
-			this->textBox3->TabIndex = 8;
-			// 
-			// textBox2
-			// 
-			this->textBox2->Location = System::Drawing::Point(281, 128);
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->Size = System::Drawing::Size(170, 30);
-			this->textBox2->TabIndex = 7;
-			// 
-			// textBox1
-			// 
-			this->textBox1->Location = System::Drawing::Point(281, 61);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(170, 30);
-			this->textBox1->TabIndex = 6;
 			// 
 			// label11
 			// 
@@ -199,10 +154,9 @@ namespace TransPorticoView {
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label11->ForeColor = System::Drawing::Color::Black;
-			this->label11->Location = System::Drawing::Point(30, 383);
-			this->label11->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label11->Location = System::Drawing::Point(22, 311);
 			this->label11->Name = L"label11";
-			this->label11->Size = System::Drawing::Size(225, 39);
+			this->label11->Size = System::Drawing::Size(169, 32);
 			this->label11->TabIndex = 29;
 			this->label11->Text = L"Zona:";
 			this->label11->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -214,10 +168,9 @@ namespace TransPorticoView {
 			this->label10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label10->ForeColor = System::Drawing::Color::Black;
-			this->label10->Location = System::Drawing::Point(30, 315);
-			this->label10->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label10->Location = System::Drawing::Point(22, 256);
 			this->label10->Name = L"label10";
-			this->label10->Size = System::Drawing::Size(225, 39);
+			this->label10->Size = System::Drawing::Size(169, 32);
 			this->label10->TabIndex = 28;
 			this->label10->Text = L"Hora Final:";
 			this->label10->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -229,10 +182,9 @@ namespace TransPorticoView {
 			this->label9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label9->ForeColor = System::Drawing::Color::Black;
-			this->label9->Location = System::Drawing::Point(30, 256);
-			this->label9->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label9->Location = System::Drawing::Point(22, 208);
 			this->label9->Name = L"label9";
-			this->label9->Size = System::Drawing::Size(225, 39);
+			this->label9->Size = System::Drawing::Size(169, 32);
 			this->label9->TabIndex = 27;
 			this->label9->Text = L"Hora Inicio:";
 			this->label9->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -244,10 +196,9 @@ namespace TransPorticoView {
 			this->label8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label8->ForeColor = System::Drawing::Color::Black;
-			this->label8->Location = System::Drawing::Point(30, 196);
-			this->label8->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label8->Location = System::Drawing::Point(22, 159);
 			this->label8->Name = L"label8";
-			this->label8->Size = System::Drawing::Size(225, 39);
+			this->label8->Size = System::Drawing::Size(169, 32);
 			this->label8->TabIndex = 26;
 			this->label8->Text = L"Número Paraderos";
 			this->label8->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -259,10 +210,9 @@ namespace TransPorticoView {
 			this->label7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label7->ForeColor = System::Drawing::Color::Black;
-			this->label7->Location = System::Drawing::Point(30, 124);
-			this->label7->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label7->Location = System::Drawing::Point(22, 101);
 			this->label7->Name = L"label7";
-			this->label7->Size = System::Drawing::Size(225, 39);
+			this->label7->Size = System::Drawing::Size(169, 32);
 			this->label7->TabIndex = 25;
 			this->label7->Text = L"Línea:";
 			this->label7->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -274,26 +224,80 @@ namespace TransPorticoView {
 			this->L_Identificador->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->L_Identificador->ForeColor = System::Drawing::Color::Black;
-			this->L_Identificador->Location = System::Drawing::Point(30, 54);
-			this->L_Identificador->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->L_Identificador->Location = System::Drawing::Point(22, 44);
 			this->L_Identificador->Name = L"L_Identificador";
-			this->L_Identificador->Size = System::Drawing::Size(225, 39);
+			this->L_Identificador->Size = System::Drawing::Size(169, 32);
 			this->L_Identificador->TabIndex = 24;
 			this->L_Identificador->Text = L"Código:";
 			this->L_Identificador->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
+			// dateTimePicker2
+			// 
+			this->dateTimePicker2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dateTimePicker2->Format = System::Windows::Forms::DateTimePickerFormat::Short;
+			this->dateTimePicker2->Location = System::Drawing::Point(211, 261);
+			this->dateTimePicker2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->dateTimePicker2->Name = L"dateTimePicker2";
+			this->dateTimePicker2->Size = System::Drawing::Size(128, 23);
+			this->dateTimePicker2->TabIndex = 13;
+			// 
+			// dateTimePicker1
+			// 
+			this->dateTimePicker1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->dateTimePicker1->Format = System::Windows::Forms::DateTimePickerFormat::Short;
+			this->dateTimePicker1->Location = System::Drawing::Point(209, 206);
+			this->dateTimePicker1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->dateTimePicker1->Name = L"dateTimePicker1";
+			this->dateTimePicker1->Size = System::Drawing::Size(128, 23);
+			this->dateTimePicker1->TabIndex = 12;
+			// 
+			// textBox6
+			// 
+			this->textBox6->Location = System::Drawing::Point(211, 314);
+			this->textBox6->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox6->Name = L"textBox6";
+			this->textBox6->Size = System::Drawing::Size(128, 26);
+			this->textBox6->TabIndex = 11;
+			// 
+			// textBox3
+			// 
+			this->textBox3->Location = System::Drawing::Point(211, 154);
+			this->textBox3->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox3->Name = L"textBox3";
+			this->textBox3->Size = System::Drawing::Size(128, 26);
+			this->textBox3->TabIndex = 8;
+			// 
+			// textBox2
+			// 
+			this->textBox2->Location = System::Drawing::Point(211, 104);
+			this->textBox2->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->Size = System::Drawing::Size(128, 26);
+			this->textBox2->TabIndex = 7;
+			// 
+			// textBox1
+			// 
+			this->textBox1->Location = System::Drawing::Point(211, 50);
+			this->textBox1->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
+			this->textBox1->Name = L"textBox1";
+			this->textBox1->Size = System::Drawing::Size(128, 26);
+			this->textBox1->TabIndex = 6;
+			// 
 			// RutaMantenimientoAnadir
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::Color::DarkBlue;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(636, 601);
+			this->ClientSize = System::Drawing::Size(477, 488);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->groupBox1);
 			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"RutaMantenimientoAnadir";
 			this->Text = L"RutaMantenimientoAnadir";
 			this->Load += gcnew System::EventHandler(this, &RutaMantenimientoAnadir::RutaMantenimientoAnadir_Load);

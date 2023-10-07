@@ -59,7 +59,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -99,7 +99,7 @@ namespace TransPorticoView {
 			this->GB_VER_ATAJO->Controls->Add(this->pictureBox1);
 			this->GB_VER_ATAJO->Location = System::Drawing::Point(34, 27);
 			this->GB_VER_ATAJO->Name = L"GB_VER_ATAJO";
-			this->GB_VER_ATAJO->Size = System::Drawing::Size(1049, 800);
+			this->GB_VER_ATAJO->Size = System::Drawing::Size(951, 800);
 			this->GB_VER_ATAJO->TabIndex = 0;
 			this->GB_VER_ATAJO->TabStop = false;
 			// 
@@ -283,8 +283,10 @@ namespace TransPorticoView {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1113, 836);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(1016, 836);
 			this->Controls->Add(this->GB_VER_ATAJO);
+			this->DoubleBuffered = true;
 			this->Name = L"Pantalla_Ver_Atajo";
 			this->Text = L"Pantalla_Ver_Atajo";
 			this->Load += gcnew System::EventHandler(this, &Pantalla_Ver_Atajo::Pantalla_Ver_Atajo_Load);
@@ -304,13 +306,13 @@ namespace TransPorticoView {
 	};
 	private: System::Void groupBox2_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
-private: System::Void Pantalla_Ver_Atajo_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
-	CentrarForm();
-}
+	private: System::Void Pantalla_Ver_Atajo_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
 
-private: System::Void Pantalla_Ver_Atajo_Load(System::Object^ sender, System::EventArgs^ e) {
-	this->SizeChanged += (gcnew System::EventHandler(this, &Pantalla_Ver_Atajo::Pantalla_Ver_Atajo_SizeChanged));
-	CentrarForm();
-}
-};
+	private: System::Void Pantalla_Ver_Atajo_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this, &Pantalla_Ver_Atajo::Pantalla_Ver_Atajo_SizeChanged));
+		CentrarForm();
+	}
+	};
 }

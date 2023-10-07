@@ -2,6 +2,8 @@ A2;A;Plaza Tupac Amaru;Bolivar;1.5
 A3;A;Plaza Tupac Amaru;Grau;2
 A4;A;Plaza Tupac Amaru;Alfonso Ugarte;2.25
 B1;B;Calle M;20a, 150;1
-B2;B;Calle M;Avenida T�pac Amaru;1.5
+B2;B;Calle M;Avenida T pac Amaru;1.5
 B3;B;Calle M;20a, 140;2
 A5;A;Javier Prado;Alvarez Calderón;4
+A6;A;Jamaica;Católica;3
+A7;A;Javier Prado;Godofredo;1.5

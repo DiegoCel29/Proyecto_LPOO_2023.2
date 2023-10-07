@@ -39,47 +39,20 @@ namespace TransPorticoView {
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Button^ button4;
-	private: System::Windows::Forms::DataGridView^ dataGridView1;
-	protected:
-
-	protected:
-
-
-
+	private: System::Windows::Forms::Button^ B_Anadir;
+	private: System::Windows::Forms::Button^ B_Borrar;
+	private: System::Windows::Forms::Button^ B_Editar;
+	private: System::Windows::Forms::DataGridView^ DGV_Paraderos;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ dataGridViewTextBoxColumn1;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column7;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column8;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column9;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column10;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column11;
-	private: System::Windows::Forms::GroupBox^ groupBox1;
-
-	private: System::Windows::Forms::Label^ label1;
-
-
-	private: System::Windows::Forms::Button^ button1;
-	private: System::Windows::Forms::TextBox^ textBox1;
-
-
-	protected:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	private:
+	private: System::Windows::Forms::GroupBox^ GB_Datos;
+	private: System::Windows::Forms::Label^ L_Nombre;
+	private: System::Windows::Forms::Button^ B_Buscar;
+	private: System::Windows::Forms::TextBox^ TB_Nombre;
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
@@ -95,79 +68,76 @@ namespace TransPorticoView {
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ParaderoMantenimiento::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->button3 = (gcnew System::Windows::Forms::Button());
-			this->button4 = (gcnew System::Windows::Forms::Button());
-			this->dataGridView1 = (gcnew System::Windows::Forms::DataGridView());
+			this->B_Anadir = (gcnew System::Windows::Forms::Button());
+			this->B_Borrar = (gcnew System::Windows::Forms::Button());
+			this->B_Editar = (gcnew System::Windows::Forms::Button());
+			this->DGV_Paraderos = (gcnew System::Windows::Forms::DataGridView());
 			this->dataGridViewTextBoxColumn1 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column7 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column8 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column9 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column10 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->Column11 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->button1 = (gcnew System::Windows::Forms::Button());
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->BeginInit();
-			this->groupBox1->SuspendLayout();
+			this->GB_Datos = (gcnew System::Windows::Forms::GroupBox());
+			this->TB_Nombre = (gcnew System::Windows::Forms::TextBox());
+			this->L_Nombre = (gcnew System::Windows::Forms::Label());
+			this->B_Buscar = (gcnew System::Windows::Forms::Button());
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Paraderos))->BeginInit();
+			this->GB_Datos->SuspendLayout();
 			this->SuspendLayout();
 			// 
-			// button2
+			// B_Anadir
 			// 
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
-			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button2->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->B_Anadir->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Anadir.BackgroundImage")));
+			this->B_Anadir->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Anadir->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Anadir->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(175, 659);
-			this->button2->Margin = System::Windows::Forms::Padding(4);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(133, 49);
-			this->button2->TabIndex = 16;
-			this->button2->Text = L"Añadir";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::button2_Click_1);
+			this->B_Anadir->Location = System::Drawing::Point(131, 535);
+			this->B_Anadir->Name = L"B_Anadir";
+			this->B_Anadir->Size = System::Drawing::Size(100, 40);
+			this->B_Anadir->TabIndex = 16;
+			this->B_Anadir->Text = L"Añadir";
+			this->B_Anadir->UseVisualStyleBackColor = true;
+			this->B_Anadir->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::B_Anadir_Click_1);
 			// 
-			// button3
+			// B_Borrar
 			// 
-			this->button3->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button3.BackgroundImage")));
-			this->button3->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button3->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->B_Borrar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Borrar.BackgroundImage")));
+			this->B_Borrar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Borrar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(453, 659);
-			this->button3->Margin = System::Windows::Forms::Padding(4);
-			this->button3->Name = L"button3";
-			this->button3->Size = System::Drawing::Size(133, 49);
-			this->button3->TabIndex = 18;
-			this->button3->Text = L"Editar";
-			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::button3_Click_1);
+			this->B_Borrar->Location = System::Drawing::Point(340, 535);
+			this->B_Borrar->Name = L"B_Borrar";
+			this->B_Borrar->Size = System::Drawing::Size(100, 40);
+			this->B_Borrar->TabIndex = 18;
+			this->B_Borrar->Text = L"Editar";
+			this->B_Borrar->UseVisualStyleBackColor = true;
+			this->B_Borrar->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::B_Borrar_Click);
 			// 
-			// button4
+			// B_Editar
 			// 
-			this->button4->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button4.BackgroundImage")));
-			this->button4->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button4->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->B_Editar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Editar.BackgroundImage")));
+			this->B_Editar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Editar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(757, 659);
-			this->button4->Margin = System::Windows::Forms::Padding(4);
-			this->button4->Name = L"button4";
-			this->button4->Size = System::Drawing::Size(133, 49);
-			this->button4->TabIndex = 17;
-			this->button4->Text = L"Borrar";
-			this->button4->UseVisualStyleBackColor = true;
-			this->button4->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::button4_Click_1);
+			this->B_Editar->Location = System::Drawing::Point(568, 535);
+			this->B_Editar->Name = L"B_Editar";
+			this->B_Editar->Size = System::Drawing::Size(100, 40);
+			this->B_Editar->TabIndex = 17;
+			this->B_Editar->Text = L"Borrar";
+			this->B_Editar->UseVisualStyleBackColor = true;
+			this->B_Editar->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::B_Editar_Click);
 			// 
-			// dataGridView1
+			// DGV_Paraderos
 			// 
-			this->dataGridView1->AllowUserToDeleteRows = false;
-			this->dataGridView1->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
-			this->dataGridView1->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
-			this->dataGridView1->BackgroundColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->dataGridView1->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
+			this->DGV_Paraderos->AllowUserToDeleteRows = false;
+			this->DGV_Paraderos->AutoSizeColumnsMode = System::Windows::Forms::DataGridViewAutoSizeColumnsMode::Fill;
+			this->DGV_Paraderos->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
+			this->DGV_Paraderos->BackgroundColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->DGV_Paraderos->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
 			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
 			dataGridViewCellStyle1->BackColor = System::Drawing::Color::Wheat;
 			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
@@ -176,9 +146,9 @@ namespace TransPorticoView {
 			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::Color::OliveDrab;
 			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::White;
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->dataGridView1->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-			this->dataGridView1->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->dataGridView1->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
+			this->DGV_Paraderos->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			this->DGV_Paraderos->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
+			this->DGV_Paraderos->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(6) {
 				this->dataGridViewTextBoxColumn1,
 					this->Column7, this->Column8, this->Column9, this->Column10, this->Column11
 			});
@@ -190,17 +160,15 @@ namespace TransPorticoView {
 			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
 			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->dataGridView1->DefaultCellStyle = dataGridViewCellStyle2;
-			this->dataGridView1->EnableHeadersVisualStyles = false;
-			this->dataGridView1->Location = System::Drawing::Point(51, 254);
-			this->dataGridView1->Margin = System::Windows::Forms::Padding(4);
-			this->dataGridView1->Name = L"dataGridView1";
-			this->dataGridView1->ReadOnly = true;
-			this->dataGridView1->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
-			this->dataGridView1->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->dataGridView1->Size = System::Drawing::Size(937, 369);
-			this->dataGridView1->TabIndex = 20;
-			this->dataGridView1->CellContentClick += gcnew System::Windows::Forms::DataGridViewCellEventHandler(this, &ParaderoMantenimiento::dataGridView1_CellContentClick_1);
+			this->DGV_Paraderos->DefaultCellStyle = dataGridViewCellStyle2;
+			this->DGV_Paraderos->EnableHeadersVisualStyles = false;
+			this->DGV_Paraderos->Location = System::Drawing::Point(38, 206);
+			this->DGV_Paraderos->Name = L"DGV_Paraderos";
+			this->DGV_Paraderos->ReadOnly = true;
+			this->DGV_Paraderos->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
+			this->DGV_Paraderos->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
+			this->DGV_Paraderos->Size = System::Drawing::Size(703, 300);
+			this->DGV_Paraderos->TabIndex = 20;
 			// 
 			// dataGridViewTextBoxColumn1
 			// 
@@ -244,98 +212,91 @@ namespace TransPorticoView {
 			this->Column11->Name = L"Column11";
 			this->Column11->ReadOnly = true;
 			// 
-			// groupBox1
+			// GB_Datos
 			// 
-			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
-			this->groupBox1->Controls->Add(this->textBox1);
-			this->groupBox1->Controls->Add(this->label1);
-			this->groupBox1->Controls->Add(this->button1);
-			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->GB_Datos->BackColor = System::Drawing::Color::Transparent;
+			this->GB_Datos->Controls->Add(this->TB_Nombre);
+			this->GB_Datos->Controls->Add(this->L_Nombre);
+			this->GB_Datos->Controls->Add(this->B_Buscar);
+			this->GB_Datos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->groupBox1->ForeColor = System::Drawing::Color::White;
-			this->groupBox1->Location = System::Drawing::Point(157, 86);
-			this->groupBox1->Margin = System::Windows::Forms::Padding(4);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Padding = System::Windows::Forms::Padding(4);
-			this->groupBox1->Size = System::Drawing::Size(733, 124);
-			this->groupBox1->TabIndex = 19;
-			this->groupBox1->TabStop = false;
-			this->groupBox1->Text = L"Criterios de busqueda:";
-			this->groupBox1->Enter += gcnew System::EventHandler(this, &ParaderoMantenimiento::groupBox1_Enter_1);
+			this->GB_Datos->ForeColor = System::Drawing::Color::White;
+			this->GB_Datos->Location = System::Drawing::Point(118, 70);
+			this->GB_Datos->Name = L"GB_Datos";
+			this->GB_Datos->Size = System::Drawing::Size(580, 80);
+			this->GB_Datos->TabIndex = 19;
+			this->GB_Datos->TabStop = false;
+			this->GB_Datos->Text = L"Criterios de busqueda:";
 			// 
-			// textBox1
+			// TB_Nombre
 			// 
-			this->textBox1->Location = System::Drawing::Point(244, 60);
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->Size = System::Drawing::Size(259, 34);
-			this->textBox1->TabIndex = 6;
-			this->textBox1->TextChanged += gcnew System::EventHandler(this, &ParaderoMantenimiento::textBox1_TextChanged);
+			this->TB_Nombre->Location = System::Drawing::Point(205, 30);
+			this->TB_Nombre->Margin = System::Windows::Forms::Padding(2);
+			this->TB_Nombre->Name = L"TB_Nombre";
+			this->TB_Nombre->Size = System::Drawing::Size(250, 29);
+			this->TB_Nombre->TabIndex = 6;
 			// 
-			// label1
+			// L_Nombre
 			// 
-			this->label1->BackColor = System::Drawing::Color::Moccasin;
-			this->label1->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->L_Nombre->BackColor = System::Drawing::Color::Moccasin;
+			this->L_Nombre->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_Nombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label1->ForeColor = System::Drawing::Color::Black;
-			this->label1->Location = System::Drawing::Point(66, 60);
-			this->label1->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(110, 37);
-			this->label1->TabIndex = 5;
-			this->label1->Text = L"Nombre: ";
-			this->label1->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			this->label1->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::label1_Click_1);
+			this->L_Nombre->ForeColor = System::Drawing::Color::Black;
+			this->L_Nombre->Location = System::Drawing::Point(10, 30);
+			this->L_Nombre->Name = L"L_Nombre";
+			this->L_Nombre->Size = System::Drawing::Size(180, 30);
+			this->L_Nombre->TabIndex = 5;
+			this->L_Nombre->Text = L"Nombre: ";
+			this->L_Nombre->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
-			// button1
+			// B_Buscar
 			// 
-			this->button1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button1.BackgroundImage")));
-			this->button1->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->button1->Cursor = System::Windows::Forms::Cursors::Hand;
-			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->B_Buscar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_Buscar.BackgroundImage")));
+			this->B_Buscar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_Buscar->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->ForeColor = System::Drawing::Color::Black;
-			this->button1->Location = System::Drawing::Point(582, 53);
-			this->button1->Margin = System::Windows::Forms::Padding(4);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(133, 49);
-			this->button1->TabIndex = 1;
-			this->button1->Text = L"Buscar";
-			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::button1_Click_1);
+			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
+			this->B_Buscar->Location = System::Drawing::Point(470, 25);
+			this->B_Buscar->Name = L"B_Buscar";
+			this->B_Buscar->Size = System::Drawing::Size(100, 40);
+			this->B_Buscar->TabIndex = 1;
+			this->B_Buscar->Text = L"Buscar";
+			this->B_Buscar->UseVisualStyleBackColor = true;
+			this->B_Buscar->Click += gcnew System::EventHandler(this, &ParaderoMantenimiento::B_Buscar_Click);
 			// 
 			// ParaderoMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1030, 858);
-			this->Controls->Add(this->button2);
-			this->Controls->Add(this->button3);
-			this->Controls->Add(this->button4);
-			this->Controls->Add(this->dataGridView1);
-			this->Controls->Add(this->groupBox1);
-			this->Margin = System::Windows::Forms::Padding(4);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(772, 697);
+			this->Controls->Add(this->B_Anadir);
+			this->Controls->Add(this->B_Borrar);
+			this->Controls->Add(this->B_Editar);
+			this->Controls->Add(this->DGV_Paraderos);
+			this->Controls->Add(this->GB_Datos);
+			this->DoubleBuffered = true;
 			this->Name = L"ParaderoMantenimiento";
 			this->Text = L"ParaderoMantenimiento";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
 			this->Load += gcnew System::EventHandler(this, &ParaderoMantenimiento::ParaderoMantenimiento_Load);
 			this->SizeChanged += gcnew System::EventHandler(this, &ParaderoMantenimiento::ParaderoMantenimiento_SizeChanged);
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->dataGridView1))->EndInit();
-			this->groupBox1->ResumeLayout(false);
-			this->groupBox1->PerformLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Paraderos))->EndInit();
+			this->GB_Datos->ResumeLayout(false);
+			this->GB_Datos->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void label1_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
 	private: System::Void ParaderoMantenimiento_Load(System::Object^ sender, System::EventArgs^ e) {
 		this->SizeChanged += (gcnew System::EventHandler(this, &ParaderoMantenimiento::ParaderoMantenimiento_SizeChanged));
 		CentrarForm();
 	}
 	private: void mostrarGrilla(List<Paradero^>^ listaParadero) {
-		this->dataGridView1->Rows->Clear();
+		this->DGV_Paraderos->Rows->Clear();
 		for (int i = 0; i < listaParadero->Count; i++) {
 			Paradero^ objParadero = listaParadero[i];
 			array<String^>^ filaGrilla = gcnew array<String^>(6);
@@ -345,55 +306,51 @@ namespace TransPorticoView {
 			filaGrilla[3] = Convert::ToString(objParadero->getY_Paradero());
 			filaGrilla[4] = Convert::ToString(objParadero->getFrecuencia());
 			filaGrilla[5] = Convert::ToString(objParadero->getDistancia());
-			this->dataGridView1->Rows->Add(filaGrilla);
+			this->DGV_Paraderos->Rows->Add(filaGrilla);
 		}
 	}
-	private: System::Void button2_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	private: System::Void B_Anadir_Click_1(System::Object^ sender, System::EventArgs^ e) {
 		ParaderoMantenimientoAnadir^ ventanaNuevoParadero = gcnew ParaderoMantenimientoAnadir();
 		ventanaNuevoParadero->ShowDialog();
 	}
-	private: System::Void button3_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index;
-		int codigoEditar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
-		ParaderoController^ objParaderoController = gcnew ParaderoController();
-		Paradero^ objParadero = objParaderoController->buscarParaderoxCodigo(codigoEditar);
-		ParaderoMantenimientoEditar^ ventanaEditarParadero = gcnew ParaderoMantenimientoEditar(objParadero);
-		ventanaEditarParadero->ShowDialog();
+	private: System::Void B_Borrar_Click(System::Object^ sender, System::EventArgs^ e) {
+		if (this->DGV_Paraderos->SelectedRows->Count != 0) {
+			int filaSeleccionada = this->DGV_Paraderos->SelectedRows[0]->Index;
+			int codigoEditar = Convert::ToInt32(this->DGV_Paraderos->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+			ParaderoController^ objParaderoController = gcnew ParaderoController();
+			Paradero^ objParadero = objParaderoController->buscarParaderoxCodigo(codigoEditar);
+			ParaderoMantenimientoEditar^ ventanaEditarParadero = gcnew ParaderoMantenimientoEditar(objParadero);
+			ventanaEditarParadero->ShowDialog();
+		}
 	}
-	private: System::Void button4_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		ParaderoController^ objeto;
-		int filaSeleccionada = this->dataGridView1->SelectedRows[0]->Index; /*Le pongo [0] porque en este caso estamos asumiendo que solo seleccionamos una fila, por ello es la de la posicion 0*/
-		int codigoEliminar = Convert::ToInt32(this->dataGridView1->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
-		objeto->eliminarParaderoFisico(codigoEliminar);
-		MessageBox::Show("El paradero ha sido eliminado con éxito");
+	private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ e) {
+		if(this->DGV_Paraderos->SelectedRows->Count != 0){
+			ParaderoController^ objeto;
+			int filaSeleccionada = this->DGV_Paraderos->SelectedRows[0]->Index;
+			int codigoEliminar = Convert::ToInt32(this->DGV_Paraderos->Rows[filaSeleccionada]->Cells[0]->Value->ToString());
+			objeto->eliminarParaderoFisico(codigoEliminar);
+			MessageBox::Show("El paradero ha sido eliminado con éxito");
+		}
 	}
-	private: System::Void label1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	}
-	private: System::Void button1_Click_1(System::Object^ sender, System::EventArgs^ e) {
-		String^ Nombre = this->textBox1->Text;
+	private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
+		String^ Nombre = this->TB_Nombre->Text;
 		ParaderoController^ objParaderoController = gcnew ParaderoController();
 		objParaderoController->buscarParaderos(Nombre);
 		List<Paradero^>^ listaParadero = objParaderoController->buscarParaderos(Nombre);
 		mostrarGrilla(listaParadero);
 	}
-	private: System::Void dataGridView1_CellContentClick_1(System::Object^ sender, System::Windows::Forms::DataGridViewCellEventArgs^ e) {
-	}
-	private: System::Void groupBox1_Enter_1(System::Object^ sender, System::EventArgs^ e) {
-	}
 	private: System::Void ParaderoMantenimiento_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
 		CentrarForm();
 	}
 	private: void CentrarForm() {
-		int PosXGB_CriteriosBusqueda = ((this->ClientSize.Width) - (this->groupBox1->Width)) / 2;
-		int PosXDGV_Mantenimiento = ((this->ClientSize.Width) - (this->dataGridView1->Width)) / 2;
+		int PosXGB_CriteriosBusqueda = ((this->ClientSize.Width) - (this->GB_Datos->Width)) / 2;
+		int PosXDGV_Mantenimiento = ((this->ClientSize.Width) - (this->DGV_Paraderos->Width)) / 2;
 
-		this->groupBox1->Location = System::Drawing::Point(PosXGB_CriteriosBusqueda, 25);
-		this->dataGridView1->Location = System::Drawing::Point(PosXDGV_Mantenimiento, 225);
-		this->button2->Location = System::Drawing::Point(PosXDGV_Mantenimiento, 545);
-		this->button4->Location = System::Drawing::Point(PosXDGV_Mantenimiento + 320, 545);
-		this->button3->Location = System::Drawing::Point(PosXDGV_Mantenimiento + 600, 545);
+		this->GB_Datos->Location = System::Drawing::Point(PosXGB_CriteriosBusqueda, 25);
+		this->DGV_Paraderos->Location = System::Drawing::Point(PosXDGV_Mantenimiento, 225);
+		this->B_Anadir->Location = System::Drawing::Point(PosXDGV_Mantenimiento, 545);
+		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Mantenimiento + 320, 545);
+		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Mantenimiento + 600, 545);
 	};
 	};
 }

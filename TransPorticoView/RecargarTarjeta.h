@@ -55,7 +55,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -100,7 +100,6 @@ namespace TransPorticoView {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Enabled = false;
 			this->textBox1->Location = System::Drawing::Point(332, 213);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->Size = System::Drawing::Size(211, 34);
@@ -118,10 +117,10 @@ namespace TransPorticoView {
 			this->button6->TabIndex = 31;
 			this->button6->Text = L"ACEPTAR";
 			this->button6->UseVisualStyleBackColor = false;
+			this->button6->Click += gcnew System::EventHandler(this, &RecargarTarjeta::button6_Click);
 			// 
 			// textBox2
 			// 
-			this->textBox2->Enabled = false;
 			this->textBox2->Location = System::Drawing::Point(332, 129);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->Size = System::Drawing::Size(211, 34);
@@ -150,6 +149,7 @@ namespace TransPorticoView {
 			this->button2->TabIndex = 21;
 			this->button2->Text = L"SALIR";
 			this->button2->UseVisualStyleBackColor = false;
+			this->button2->Click += gcnew System::EventHandler(this, &RecargarTarjeta::button2_Click);
 			// 
 			// Logo
 			// 
@@ -187,6 +187,8 @@ namespace TransPorticoView {
 			this->DoubleBuffered = true;
 			this->Name = L"RecargarTarjeta";
 			this->Text = L"RecargarTarjeta";
+			this->Load += gcnew System::EventHandler(this, &RecargarTarjeta::RecargarTarjeta_Load);
+			this->SizeChanged += gcnew System::EventHandler(this, &RecargarTarjeta::RecargarTarjeta_SizeChanged);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
@@ -196,5 +198,27 @@ namespace TransPorticoView {
 #pragma endregion
 	private: System::Void groupBox1_Enter(System::Object^ sender, System::EventArgs^ e) {
 	}
-};
+	private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+
+		MessageBox::Show("Tu recarga ha sido exitosa");
+
+
+	}
+	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		this->Close();
+	}
+	private: System::Void RecargarTarjeta_Load(System::Object^ sender, System::EventArgs^ e) {
+		this->SizeChanged += (gcnew System::EventHandler(this, &RecargarTarjeta::RecargarTarjeta_SizeChanged));
+		CentrarForm();
+	}
+
+	private: System::Void RecargarTarjeta_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
+		CentrarForm();
+	}
+	private: System::Void CentrarForm() {
+		int CentroX = (this->ClientSize.Width - this->groupBox1->Width) / 2;
+		int CentroY = (this->ClientSize.Height - this->groupBox1->Height) / 2;
+		this->groupBox1->Location = System::Drawing::Point(CentroX, CentroY);
+	}
+	};
 }

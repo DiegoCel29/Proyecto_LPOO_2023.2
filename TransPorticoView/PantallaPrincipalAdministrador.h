@@ -1,4 +1,5 @@
 #pragma once
+#include "FrmPantallaAdministrador.h"
 
 namespace TransPorticoView {
 
@@ -52,6 +53,8 @@ namespace TransPorticoView {
 
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::PictureBox^ Logo;
+	private: System::Windows::Forms::PictureBox^ pictureBox7;
+	private: System::Windows::Forms::Button^ button1;
 
 
 
@@ -71,7 +74,7 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container ^components;
+		System::ComponentModel::Container^ components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -96,6 +99,8 @@ namespace TransPorticoView {
 			this->B_TARJETA = (gcnew System::Windows::Forms::Button());
 			this->pictureBox1 = (gcnew System::Windows::Forms::PictureBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->pictureBox7 = (gcnew System::Windows::Forms::PictureBox());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->GB_OPCIONES->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox6))->BeginInit();
@@ -104,11 +109,14 @@ namespace TransPorticoView {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// GB_OPCIONES
 			// 
 			this->GB_OPCIONES->BackColor = System::Drawing::Color::Transparent;
+			this->GB_OPCIONES->Controls->Add(this->pictureBox7);
+			this->GB_OPCIONES->Controls->Add(this->button1);
 			this->GB_OPCIONES->Controls->Add(this->Logo);
 			this->GB_OPCIONES->Controls->Add(this->pictureBox6);
 			this->GB_OPCIONES->Controls->Add(this->B_CONTRATO_CONDUCTOR);
@@ -125,7 +133,7 @@ namespace TransPorticoView {
 			this->GB_OPCIONES->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->GB_OPCIONES->Location = System::Drawing::Point(28, 52);
 			this->GB_OPCIONES->Name = L"GB_OPCIONES";
-			this->GB_OPCIONES->Size = System::Drawing::Size(823, 487);
+			this->GB_OPCIONES->Size = System::Drawing::Size(823, 538);
 			this->GB_OPCIONES->TabIndex = 1;
 			this->GB_OPCIONES->TabStop = false;
 			this->GB_OPCIONES->Text = L"Menu de Opciones";
@@ -195,7 +203,7 @@ namespace TransPorticoView {
 			this->B_MATENIMIENTO_BUSES->Name = L"B_MATENIMIENTO_BUSES";
 			this->B_MATENIMIENTO_BUSES->Size = System::Drawing::Size(290, 37);
 			this->B_MATENIMIENTO_BUSES->TabIndex = 10;
-			this->B_MATENIMIENTO_BUSES->Text = L"MANTENIMIENTO DE BUSES";
+			this->B_MATENIMIENTO_BUSES->Text = L"MANT. BUSES";
 			this->B_MATENIMIENTO_BUSES->UseVisualStyleBackColor = false;
 			// 
 			// B_GESTION_REPORTES_PARADEROS
@@ -317,12 +325,40 @@ namespace TransPorticoView {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->label1->ForeColor = System::Drawing::SystemColors::Control;
-			this->label1->Location = System::Drawing::Point(351, 25);
+			this->label1->Location = System::Drawing::Point(416, 25);
 			this->label1->Margin = System::Windows::Forms::Padding(2, 0, 2, 0);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(147, 24);
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"BIENVENIDO !";
+			// 
+			// pictureBox7
+			// 
+			this->pictureBox7->BackColor = System::Drawing::Color::Transparent;
+			this->pictureBox7->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->pictureBox7->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
+			this->pictureBox7->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"pictureBox7.Image")));
+			this->pictureBox7->Location = System::Drawing::Point(69, 481);
+			this->pictureBox7->Margin = System::Windows::Forms::Padding(2);
+			this->pictureBox7->Name = L"pictureBox7";
+			this->pictureBox7->Size = System::Drawing::Size(52, 37);
+			this->pictureBox7->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
+			this->pictureBox7->TabIndex = 16;
+			this->pictureBox7->TabStop = false;
+			// 
+			// button1
+			// 
+			this->button1->BackColor = System::Drawing::Color::DarkBlue;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, static_cast<System::Drawing::FontStyle>((System::Drawing::FontStyle::Bold | System::Drawing::FontStyle::Italic)),
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->button1->Location = System::Drawing::Point(147, 481);
+			this->button1->Margin = System::Windows::Forms::Padding(2);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(297, 37);
+			this->button1->TabIndex = 15;
+			this->button1->Text = L"MANTENIMIENTOS";
+			this->button1->UseVisualStyleBackColor = false;
+			this->button1->Click += gcnew System::EventHandler(this, &PantallaPrincipalAdministrador::button1_Click);
 			// 
 			// PantallaPrincipalAdministrador
 			// 
@@ -330,7 +366,7 @@ namespace TransPorticoView {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(885, 570);
+			this->ClientSize = System::Drawing::Size(885, 704);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->GB_OPCIONES);
 			this->DoubleBuffered = true;
@@ -346,6 +382,7 @@ namespace TransPorticoView {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox3))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox2))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox1))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->pictureBox7))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -353,5 +390,12 @@ namespace TransPorticoView {
 #pragma endregion
 	private: System::Void PantallaPrincipalAdministrador_Load(System::Object^ sender, System::EventArgs^ e) {
 	}
-	};
+	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		FrmPantallaAdministrador^ ObjFrmPantallaAdministrador = gcnew FrmPantallaAdministrador();
+		this->Hide();
+		ObjFrmPantallaAdministrador->ShowDialog();
+		this->Show();
+
+	}
+};
 }

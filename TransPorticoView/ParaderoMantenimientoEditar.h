@@ -45,7 +45,6 @@ namespace TransPorticoView {
 			}
 		}
 	private: System::Windows::Forms::Button^ button2;
-	protected:
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::TextBox^ textBox6;
@@ -54,12 +53,6 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::TextBox^ textBox3;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::TextBox^ textBox1;
-
-
-
-
-
-
 	private: Paradero^ objParadero;
 	private: System::Windows::Forms::Label^ label11;
 	private: System::Windows::Forms::Label^ label10;

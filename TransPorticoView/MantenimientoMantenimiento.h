@@ -65,9 +65,9 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MantenimientoMantenimiento::typeid));
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MantenimientoMantenimiento::typeid));
 			this->Boton_Anadir = (gcnew System::Windows::Forms::Button());
 			this->Boton_Editar = (gcnew System::Windows::Forms::Button());
 			this->Boton_Borrar = (gcnew System::Windows::Forms::Button());
@@ -86,15 +86,13 @@ namespace TransPorticoView {
 			// 
 			// Boton_Anadir
 			// 
-			this->Boton_Anadir->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Boton_Anadir.BackgroundImage")));
 			this->Boton_Anadir->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->Boton_Anadir->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Boton_Anadir->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Boton_Anadir->Location = System::Drawing::Point(132, 668);
-			this->Boton_Anadir->Margin = System::Windows::Forms::Padding(4);
+			this->Boton_Anadir->Location = System::Drawing::Point(99, 543);
 			this->Boton_Anadir->Name = L"Boton_Anadir";
-			this->Boton_Anadir->Size = System::Drawing::Size(133, 49);
+			this->Boton_Anadir->Size = System::Drawing::Size(100, 40);
 			this->Boton_Anadir->TabIndex = 41;
 			this->Boton_Anadir->Text = L"Añadir";
 			this->Boton_Anadir->UseVisualStyleBackColor = true;
@@ -102,15 +100,13 @@ namespace TransPorticoView {
 			// 
 			// Boton_Editar
 			// 
-			this->Boton_Editar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Boton_Editar.BackgroundImage")));
 			this->Boton_Editar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->Boton_Editar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Boton_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Boton_Editar->Location = System::Drawing::Point(714, 668);
-			this->Boton_Editar->Margin = System::Windows::Forms::Padding(4);
+			this->Boton_Editar->Location = System::Drawing::Point(536, 543);
 			this->Boton_Editar->Name = L"Boton_Editar";
-			this->Boton_Editar->Size = System::Drawing::Size(133, 49);
+			this->Boton_Editar->Size = System::Drawing::Size(100, 40);
 			this->Boton_Editar->TabIndex = 43;
 			this->Boton_Editar->Text = L"Editar";
 			this->Boton_Editar->UseVisualStyleBackColor = true;
@@ -118,15 +114,13 @@ namespace TransPorticoView {
 			// 
 			// Boton_Borrar
 			// 
-			this->Boton_Borrar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Boton_Borrar.BackgroundImage")));
 			this->Boton_Borrar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->Boton_Borrar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Boton_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->Boton_Borrar->Location = System::Drawing::Point(416, 668);
-			this->Boton_Borrar->Margin = System::Windows::Forms::Padding(4);
+			this->Boton_Borrar->Location = System::Drawing::Point(312, 543);
 			this->Boton_Borrar->Name = L"Boton_Borrar";
-			this->Boton_Borrar->Size = System::Drawing::Size(133, 49);
+			this->Boton_Borrar->Size = System::Drawing::Size(100, 40);
 			this->Boton_Borrar->TabIndex = 42;
 			this->Boton_Borrar->Text = L"Borrar";
 			this->Boton_Borrar->UseVisualStyleBackColor = true;
@@ -163,13 +157,12 @@ namespace TransPorticoView {
 			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
 			this->DGV_Mantenimiento->DefaultCellStyle = dataGridViewCellStyle2;
 			this->DGV_Mantenimiento->EnableHeadersVisualStyles = false;
-			this->DGV_Mantenimiento->Location = System::Drawing::Point(31, 247);
-			this->DGV_Mantenimiento->Margin = System::Windows::Forms::Padding(4);
+			this->DGV_Mantenimiento->Location = System::Drawing::Point(23, 201);
 			this->DGV_Mantenimiento->Name = L"DGV_Mantenimiento";
 			this->DGV_Mantenimiento->ReadOnly = true;
 			this->DGV_Mantenimiento->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
 			this->DGV_Mantenimiento->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->DGV_Mantenimiento->Size = System::Drawing::Size(937, 369);
+			this->DGV_Mantenimiento->Size = System::Drawing::Size(703, 300);
 			this->DGV_Mantenimiento->TabIndex = 45;
 			// 
 			// dataGridViewTextBoxColumn1
@@ -209,11 +202,9 @@ namespace TransPorticoView {
 			this->GB_CriteriosBusqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->GB_CriteriosBusqueda->ForeColor = System::Drawing::Color::White;
-			this->GB_CriteriosBusqueda->Location = System::Drawing::Point(132, 78);
-			this->GB_CriteriosBusqueda->Margin = System::Windows::Forms::Padding(4);
+			this->GB_CriteriosBusqueda->Location = System::Drawing::Point(99, 63);
 			this->GB_CriteriosBusqueda->Name = L"GB_CriteriosBusqueda";
-			this->GB_CriteriosBusqueda->Padding = System::Windows::Forms::Padding(4);
-			this->GB_CriteriosBusqueda->Size = System::Drawing::Size(733, 124);
+			this->GB_CriteriosBusqueda->Size = System::Drawing::Size(550, 101);
 			this->GB_CriteriosBusqueda->TabIndex = 44;
 			this->GB_CriteriosBusqueda->TabStop = false;
 			this->GB_CriteriosBusqueda->Text = L"Criterios de busqueda:";
@@ -221,9 +212,10 @@ namespace TransPorticoView {
 			// dateTimePicker
 			// 
 			this->dateTimePicker->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->dateTimePicker->Location = System::Drawing::Point(229, 60);
+			this->dateTimePicker->Location = System::Drawing::Point(172, 49);
+			this->dateTimePicker->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->dateTimePicker->Name = L"dateTimePicker";
-			this->dateTimePicker->Size = System::Drawing::Size(200, 34);
+			this->dateTimePicker->Size = System::Drawing::Size(151, 29);
 			this->dateTimePicker->TabIndex = 2;
 			// 
 			// LabelIrMantenimiento
@@ -233,26 +225,23 @@ namespace TransPorticoView {
 			this->LabelIrMantenimiento->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->LabelIrMantenimiento->ForeColor = System::Drawing::Color::Black;
-			this->LabelIrMantenimiento->Location = System::Drawing::Point(66, 60);
-			this->LabelIrMantenimiento->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->LabelIrMantenimiento->Location = System::Drawing::Point(50, 49);
 			this->LabelIrMantenimiento->Name = L"LabelIrMantenimiento";
-			this->LabelIrMantenimiento->Size = System::Drawing::Size(110, 37);
+			this->LabelIrMantenimiento->Size = System::Drawing::Size(82, 30);
 			this->LabelIrMantenimiento->TabIndex = 5;
 			this->LabelIrMantenimiento->Text = L"Fecha: ";
 			this->LabelIrMantenimiento->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// Boton_Buscar
 			// 
-			this->Boton_Buscar->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Boton_Buscar.BackgroundImage")));
 			this->Boton_Buscar->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->Boton_Buscar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->Boton_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->Boton_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->Boton_Buscar->Location = System::Drawing::Point(582, 53);
-			this->Boton_Buscar->Margin = System::Windows::Forms::Padding(4);
+			this->Boton_Buscar->Location = System::Drawing::Point(436, 43);
 			this->Boton_Buscar->Name = L"Boton_Buscar";
-			this->Boton_Buscar->Size = System::Drawing::Size(133, 49);
+			this->Boton_Buscar->Size = System::Drawing::Size(100, 40);
 			this->Boton_Buscar->TabIndex = 1;
 			this->Boton_Buscar->Text = L"Buscar";
 			this->Boton_Buscar->UseVisualStyleBackColor = true;
@@ -260,15 +249,18 @@ namespace TransPorticoView {
 			// 
 			// MantenimientoMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1000, 735);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(750, 597);
 			this->Controls->Add(this->Boton_Anadir);
 			this->Controls->Add(this->Boton_Editar);
 			this->Controls->Add(this->Boton_Borrar);
 			this->Controls->Add(this->DGV_Mantenimiento);
 			this->Controls->Add(this->GB_CriteriosBusqueda);
+			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"MantenimientoMantenimiento";
 			this->Text = L"MantenimientoMantenimiento";
 			this->Load += gcnew System::EventHandler(this, &MantenimientoMantenimiento::MantenimientoMantenimiento_Load);

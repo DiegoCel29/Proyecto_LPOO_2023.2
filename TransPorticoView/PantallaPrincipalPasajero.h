@@ -2,7 +2,7 @@
 #include "MenuTarjeta.h"
 #include "CrearReporte.h"
 #include "VerBuses.h"
-#include "Promociones.h"
+#include "PPasajeroPromociones.h"
 #include "Historial_Ruta.h"
 
 namespace TransPorticoView {
@@ -316,7 +316,7 @@ private: System::Void B_ATAJOS_Click(System::Object^ sender, System::EventArgs^ 
 	VentanaVerBuses->ShowDialog();
 }
 private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-	Promociones^ VentanaPromociones = gcnew Promociones();
+	PPasajeroPromociones^ VentanaPromociones = gcnew PPasajeroPromociones();
 	VentanaPromociones->ShowDialog();
 }
 private: System::Void B_HORARIO_SEMANAL_Click(System::Object^ sender, System::EventArgs^ e) {

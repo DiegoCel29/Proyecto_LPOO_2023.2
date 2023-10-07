@@ -323,9 +323,9 @@ namespace TransPorticoView {
 		String^ RutaAsociado = this->CB_RutaAsociada->Text;
 		String^ ParaderoInicial = this->CB_ParaderoInicial->Text;
 		String^ ParaderoFinal = this->CB_ParaderoFinal->Text;
-		double Tarifa = Convert::ToDouble(this->TB_Tarifa->Text);
 
 		if (ParaderoInicial != ParaderoFinal) {
+			double Tarifa = Convert::ToDouble(this->TB_Tarifa->Text);	
 			Tarifario^ ObjTarifario = gcnew Tarifario(Identificador, RutaAsociado, ParaderoInicial, ParaderoFinal, Tarifa);
 			TarifarioController^ ObjTarifarioController = gcnew TarifarioController();
 			ObjTarifarioController->AgregarTarifario(ObjTarifario);
