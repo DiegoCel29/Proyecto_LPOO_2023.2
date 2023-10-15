@@ -13,12 +13,16 @@ namespace TransPorticoModel {
 		String^ HoraInicio;
 		String^ HoraCierre;
 		String^ Zona;
+		String^ Supervisor;
+		int CantAutobuses;
+		double Distancia;
+		double Duracion;
 		List<Paradero^>^ ListParadero;
 
 
 	public:
 		Ruta();
-		Ruta(int Codigo, String^ Linea, int CantParaderos, String^ HoraInicio, String^ HoraCierre, String^ Zona);
+		Ruta(int Codigo, String^ Linea, int CantParaderos, String^ HoraInicio, String^ HoraCierre, String^ Zona, String^ Supervisor,int CantAutobuses,double Distancia,double Duracion);
 		int getCodigo();
 		void setCodigo(int Codigo);
 		String^ getLinea();
@@ -31,5 +35,13 @@ namespace TransPorticoModel {
 		void setHoraCierre(String^ getHoraCierre);
 		String^ getZona();
 		void setZona(String^ getZona);
+		String^ getSupervisor();
+		void setSupervisor(String^ Supervisor);
+		int getCantBuses();
+		void setCantBuses(int CantAutobuses);
+		double getDistancia();
+		void setDistancia(double Distancia);
+		double getDuracion();
+		void setDuracion(double Duracion);
 	};
 };

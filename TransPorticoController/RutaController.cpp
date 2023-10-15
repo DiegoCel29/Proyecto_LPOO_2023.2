@@ -20,8 +20,12 @@ List<Ruta^>^ RutaController::buscarRutas(String^ Linea) {
 		String^ HoraInicioRuta = datos[3];
 		String^ HoraCierreRuta = datos[4];
 		String^ ZonaRuta = datos[5];
+		String^ Supervisor = datos[6];
+		int CantBuses= Convert::ToInt32(datos[7]);
+		double Distancia = Convert::ToDouble(datos[8]);
+		double Duracion = Convert::ToDouble(datos[9]);
 		if (LineaRuta->Contains(Linea)) {
-			Ruta^ objRuta = gcnew Ruta(CodigoRuta, LineaRuta, CantParaderosRuta, HoraInicioRuta, HoraCierreRuta, ZonaRuta);
+			Ruta^ objRuta = gcnew Ruta(CodigoRuta, LineaRuta, CantParaderosRuta, HoraInicioRuta, HoraCierreRuta, ZonaRuta, Supervisor, CantBuses, Distancia, Duracion);
 			listaRutasEncontradas->Add(objRuta);
 		}
 	}
@@ -39,7 +43,11 @@ List<Ruta^>^ RutaController::buscarAll() {
 		String^ HoraInicioRuta = datos[3];
 		String^ HoraCierreRuta = datos[4];
 		String^ ZonaRuta = datos[5];
-		Ruta^ objRuta = gcnew Ruta(CodigoRuta, LineaRuta, CantParaderosRuta, HoraInicioRuta, HoraCierreRuta, ZonaRuta);
+		String^ Supervisor = datos[6];
+		int CantBuses = Convert::ToInt32(datos[7]);
+		double Distancia = Convert::ToDouble(datos[8]);
+		double Duracion = Convert::ToDouble(datos[9]);
+		Ruta^ objRuta = gcnew Ruta(CodigoRuta, LineaRuta, CantParaderosRuta, HoraInicioRuta, HoraCierreRuta, ZonaRuta, Supervisor, CantBuses, Distancia, Duracion);
 		listaRutasEncontradas->Add(objRuta);
 	}
 	return listaRutasEncontradas;
@@ -48,7 +56,7 @@ void RutaController::escribirArchivo(List<Ruta^>^ listaRuta) {
 	array<String^>^ lineasArchivo = gcnew array<String^>(listaRuta->Count);
 	for (int i = 0; i < listaRuta->Count; i++) {
 		Ruta^ objeto = listaRuta[i];
-		lineasArchivo[i] = objeto->getCodigo() + ";" + objeto->getLinea() + ";" + objeto->getCantParaderos() + ";" + objeto->getHoraInicio() + ";" + objeto->getHoraCierre() + ";" + objeto->getZona();
+		lineasArchivo[i] = objeto->getCodigo() + ";" + objeto->getLinea() + ";" + objeto->getCantParaderos() + ";" + objeto->getHoraInicio() + ";" + objeto->getHoraCierre() + ";" + objeto->getZona() + ";" + objeto->getSupervisor() + ";" + objeto->getCantBuses() + ";" + objeto->getDistancia() + ";" + objeto->getDuracion();
 	}
 	File::WriteAllLines("Ruta.txt", lineasArchivo);
 }
@@ -84,6 +92,10 @@ void RutaController::actualizarRuta(Ruta^ objRuta) {
 			listaRuta[i]->setHoraInicio(objRuta->getHoraInicio());
 			listaRuta[i]->setHoraCierre(objRuta->getHoraCierre());
 			listaRuta[i]->setZona(objRuta->getZona());
+			listaRuta[i]->setSupervisor(objRuta->getSupervisor());
+			listaRuta[i]->setCantBuses(objRuta->getCantBuses());
+			listaRuta[i]->setDistancia(objRuta->getDistancia());
+			listaRuta[i]->setDuracion(objRuta->getDuracion());
 			break;
 		}
 	}
