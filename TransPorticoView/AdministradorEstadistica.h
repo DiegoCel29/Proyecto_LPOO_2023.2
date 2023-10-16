@@ -10,12 +10,12 @@ namespace TransPorticoView {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Resumen de PPAdministrador_Estadistica
+	/// Resumen de AdministradorEstadistica
 	/// </summary>
-	public ref class PPAdministrador_Estadistica : public System::Windows::Forms::Form
+	public ref class AdministradorEstadistica : public System::Windows::Forms::Form
 	{
 	public:
-		PPAdministrador_Estadistica(void)
+		AdministradorEstadistica(void)
 		{
 			InitializeComponent();
 			//
@@ -27,36 +27,30 @@ namespace TransPorticoView {
 		/// <summary>
 		/// Limpiar los recursos que se estén usando.
 		/// </summary>
-		~PPAdministrador_Estadistica()
+		~AdministradorEstadistica()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
+	private: System::Windows::Forms::GroupBox^ groupBox1;
+	protected:
 	private: System::Windows::Forms::GroupBox^ GB_Datos;
 	private: System::Windows::Forms::ComboBox^ CB_Mes;
 	private: System::Windows::Forms::ComboBox^ CB_Tipo;
 	private: System::Windows::Forms::Label^ L_Tipo;
-	protected:
-
-
-
 	private: System::Windows::Forms::ComboBox^ CB_Año;
 	private: System::Windows::Forms::Label^ L_Mes;
-
-
 	private: System::Windows::Forms::Label^ L_Año;
-
 	private: System::Windows::Forms::Button^ B_Cancelar;
 	private: System::Windows::Forms::Button^ B_Grabar;
-	private: System::Windows::Forms::GroupBox^ groupBox1;
 
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
-		System::ComponentModel::Container^ components;
+		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -65,7 +59,8 @@ namespace TransPorticoView {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(PPAdministrador_Estadistica::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(AdministradorEstadistica::typeid));
+			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->GB_Datos = (gcnew System::Windows::Forms::GroupBox());
 			this->CB_Mes = (gcnew System::Windows::Forms::ComboBox());
 			this->CB_Tipo = (gcnew System::Windows::Forms::ComboBox());
@@ -75,10 +70,21 @@ namespace TransPorticoView {
 			this->L_Año = (gcnew System::Windows::Forms::Label());
 			this->B_Cancelar = (gcnew System::Windows::Forms::Button());
 			this->B_Grabar = (gcnew System::Windows::Forms::Button());
-			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
-			this->GB_Datos->SuspendLayout();
 			this->groupBox1->SuspendLayout();
+			this->GB_Datos->SuspendLayout();
 			this->SuspendLayout();
+			// 
+			// groupBox1
+			// 
+			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
+			this->groupBox1->Controls->Add(this->GB_Datos);
+			this->groupBox1->Controls->Add(this->B_Cancelar);
+			this->groupBox1->Controls->Add(this->B_Grabar);
+			this->groupBox1->Location = System::Drawing::Point(100, 73);
+			this->groupBox1->Name = L"groupBox1";
+			this->groupBox1->Size = System::Drawing::Size(712, 481);
+			this->groupBox1->TabIndex = 13;
+			this->groupBox1->TabStop = false;
 			// 
 			// GB_Datos
 			// 
@@ -94,9 +100,9 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->GB_Datos->ForeColor = System::Drawing::Color::White;
 			this->GB_Datos->Location = System::Drawing::Point(44, 34);
-			this->GB_Datos->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->GB_Datos->Margin = System::Windows::Forms::Padding(4);
 			this->GB_Datos->Name = L"GB_Datos";
-			this->GB_Datos->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->GB_Datos->Padding = System::Windows::Forms::Padding(4);
 			this->GB_Datos->Size = System::Drawing::Size(605, 254);
 			this->GB_Datos->TabIndex = 11;
 			this->GB_Datos->TabStop = false;
@@ -107,7 +113,7 @@ namespace TransPorticoView {
 			this->CB_Mes->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->CB_Mes->FormattingEnabled = true;
 			this->CB_Mes->Location = System::Drawing::Point(240, 121);
-			this->CB_Mes->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CB_Mes->Margin = System::Windows::Forms::Padding(4);
 			this->CB_Mes->Name = L"CB_Mes";
 			this->CB_Mes->Size = System::Drawing::Size(332, 37);
 			this->CB_Mes->TabIndex = 18;
@@ -117,7 +123,7 @@ namespace TransPorticoView {
 			this->CB_Tipo->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->CB_Tipo->FormattingEnabled = true;
 			this->CB_Tipo->Location = System::Drawing::Point(240, 183);
-			this->CB_Tipo->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CB_Tipo->Margin = System::Windows::Forms::Padding(4);
 			this->CB_Tipo->Name = L"CB_Tipo";
 			this->CB_Tipo->Size = System::Drawing::Size(332, 37);
 			this->CB_Tipo->TabIndex = 17;
@@ -142,7 +148,7 @@ namespace TransPorticoView {
 			this->CB_Año->DropDownStyle = System::Windows::Forms::ComboBoxStyle::DropDownList;
 			this->CB_Año->FormattingEnabled = true;
 			this->CB_Año->Location = System::Drawing::Point(240, 59);
-			this->CB_Año->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CB_Año->Margin = System::Windows::Forms::Padding(4);
 			this->CB_Año->Name = L"CB_Año";
 			this->CB_Año->Size = System::Drawing::Size(332, 37);
 			this->CB_Año->TabIndex = 11;
@@ -184,7 +190,7 @@ namespace TransPorticoView {
 			this->B_Cancelar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Cancelar->Location = System::Drawing::Point(382, 361);
-			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4);
 			this->B_Cancelar->Name = L"B_Cancelar";
 			this->B_Cancelar->Size = System::Drawing::Size(133, 49);
 			this->B_Cancelar->TabIndex = 10;
@@ -198,45 +204,27 @@ namespace TransPorticoView {
 			this->B_Grabar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Grabar->Location = System::Drawing::Point(161, 361);
-			this->B_Grabar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Grabar->Margin = System::Windows::Forms::Padding(4);
 			this->B_Grabar->Name = L"B_Grabar";
 			this->B_Grabar->Size = System::Drawing::Size(133, 49);
 			this->B_Grabar->TabIndex = 9;
 			this->B_Grabar->Text = L"Ingresar";
 			this->B_Grabar->UseVisualStyleBackColor = true;
-			this->B_Grabar->Click += gcnew System::EventHandler(this, &PPAdministrador_Estadistica::B_Grabar_Click);
 			// 
-			// groupBox1
-			// 
-			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
-			this->groupBox1->Controls->Add(this->GB_Datos);
-			this->groupBox1->Controls->Add(this->B_Cancelar);
-			this->groupBox1->Controls->Add(this->B_Grabar);
-			this->groupBox1->Location = System::Drawing::Point(15, 16);
-			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(712, 481);
-			this->groupBox1->TabIndex = 12;
-			this->groupBox1->TabStop = false;
-			// 
-			// PPAdministrador_Estadistica
+			// AdministradorEstadistica
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(743, 517);
+			this->ClientSize = System::Drawing::Size(932, 683);
 			this->Controls->Add(this->groupBox1);
-			this->DoubleBuffered = true;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
-			this->Name = L"PPAdministrador_Estadistica";
-			this->Text = L"Estadística";
-			this->GB_Datos->ResumeLayout(false);
+			this->Name = L"AdministradorEstadistica";
+			this->Text = L"AdministradorEstadistica";
 			this->groupBox1->ResumeLayout(false);
+			this->GB_Datos->ResumeLayout(false);
 			this->ResumeLayout(false);
 
 		}
 #pragma endregion
-	private: System::Void B_Grabar_Click(System::Object^ sender, System::EventArgs^ e) {
-	}
-};
+	};
 }

@@ -114,6 +114,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdministradorEstadistica.cpp" />
+    <ClCompile Include="AdministradorInformesEconomicos.cpp" />
     <ClCompile Include="BusesCercanos.cpp" />
     <ClCompile Include="CrearReporte.cpp" />
     <ClCompile Include="Historial_Ruta.cpp" />
@@ -179,6 +181,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdministradorEstadistica.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="AdministradorInformesEconomicos.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="BusesCercanos.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -346,6 +354,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdministradorEstadistica.resx">
+      <DependentUpon>AdministradorEstadistica.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdministradorInformesEconomicos.resx">
+      <DependentUpon>AdministradorInformesEconomicos.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AutobusMantenimiento.resx">
       <DependentUpon>AutobusMantenimiento.h</DependentUpon>
     </EmbeddedResource>

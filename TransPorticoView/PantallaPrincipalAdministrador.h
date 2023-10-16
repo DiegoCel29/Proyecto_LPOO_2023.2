@@ -1,8 +1,8 @@
 #pragma once
 #include "FrmPantallaAdministrador.h"
-#include "PPAdministrador_Estadistica.h"
+#include "AdministradorEstadistica.h"
 #include "PPAdministradorGestionReportesPasajeros.h"
-#include "PPAdministrador_InformesEconomicos_.h"
+#include "AdministradorInformesEconomicos.h"
 #include "PPAdministradorMantenimientoBuses.h"
 #include "MenuTarjeta.h"
 namespace TransPorticoView {
@@ -416,11 +416,11 @@ private: System::Void B_TARJETA_Click(System::Object^ sender, System::EventArgs^
 	VentanaCrearCuenta->ShowDialog();
 }
 private: System::Void B_ESTADISTICAS_Click(System::Object^ sender, System::EventArgs^ e) {
-	PPAdministrador_Estadistica^ ObjFrmPantallaAdministrador = gcnew PPAdministrador_Estadistica();
+	AdministradorEstadistica^ ObjFrmPantallaAdministrador = gcnew AdministradorEstadistica();
 	ObjFrmPantallaAdministrador->ShowDialog();
 }
 private: System::Void B_REPORTES_ECONOMICOS_Click(System::Object^ sender, System::EventArgs^ e) {
-	PPAdministrador_InformesEconomicos_^ VentanaCrearCuenta = gcnew PPAdministrador_InformesEconomicos_();
+	AdministradorInformesEconomicos^ VentanaCrearCuenta = gcnew AdministradorInformesEconomicos();
 	VentanaCrearCuenta->ShowDialog();
 }
 private: System::Void B_GESTION_REPORTES_PARADEROS_Click(System::Object^ sender, System::EventArgs^ e) {
