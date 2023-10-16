@@ -56,6 +56,7 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Button^ B_Editar;
 	private: System::Windows::Forms::Button^ B_Borrar;
 	private: System::Windows::Forms::Button^ B_VER;
+	private: System::Windows::Forms::Label^ label2;
 
 
 
@@ -78,6 +79,7 @@ namespace TransPorticoView {
 			this->TB_Nombre = (gcnew System::Windows::Forms::TextBox());
 			this->L_Nombre = (gcnew System::Windows::Forms::Label());
 			this->GB_Busqueda = (gcnew System::Windows::Forms::GroupBox());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->DGV_Pasajero = (gcnew System::Windows::Forms::DataGridView());
 			this->DGVC_Identificador = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->DGVC_RutaAsociada = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
@@ -153,6 +155,21 @@ namespace TransPorticoView {
 			this->GB_Busqueda->TabIndex = 9;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
+			// 
+			// label2
+			// 
+			this->label2->BackColor = System::Drawing::Color::Moccasin;
+			this->label2->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::Black;
+			this->label2->Location = System::Drawing::Point(932, 91);
+			this->label2->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(407, 37);
+			this->label2->TabIndex = 17;
+			this->label2->Text = L"Mantenimiento de los pasajeros";
+			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			// 
 			// DGV_Pasajero
 			// 
@@ -314,6 +331,7 @@ namespace TransPorticoView {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(1414, 768);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->B_VER);
 			this->Controls->Add(this->B_Editar);
 			this->Controls->Add(this->B_Borrar);
@@ -336,11 +354,12 @@ namespace TransPorticoView {
 		int PosXGB_Busqueda = ((this->ClientSize.Width) - (this->GB_Busqueda->Width)) / 2;
 		int PosXDGV_Pasajero = ((this->ClientSize.Width) - (this->DGV_Pasajero->Width)) / 2;
 
-		this->GB_Busqueda->Location = System::Drawing::Point(PosXGB_Busqueda-200, 25);
-		this->DGV_Pasajero->Location = System::Drawing::Point(PosXDGV_Pasajero, 130);
-		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Pasajero, 455);
-		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Pasajero + 900, 455);
-		this->B_VER->Location = System::Drawing::Point(PosXDGV_Pasajero + 900, 50);
+		this->GB_Busqueda->Location = System::Drawing::Point(PosXGB_Busqueda-200, 90);
+		this->DGV_Pasajero->Location = System::Drawing::Point(PosXDGV_Pasajero, 205);
+		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Pasajero, 530);
+		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Pasajero + 900, 530);
+		this->B_VER->Location = System::Drawing::Point(PosXDGV_Pasajero + 900, 125);
+		this->label2->Location = System::Drawing::Point(PosXDGV_Pasajero+300,25);
 	};
 private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ ParaderosBuscar = this->TB_Nombre->Text;

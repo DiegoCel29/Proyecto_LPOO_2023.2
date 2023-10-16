@@ -401,7 +401,7 @@ namespace TransPorticoView {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(350, 37);
 			this->label2->TabIndex = 16;
-			this->label2->Text = L"Manteniemiento de las rutas";
+			this->label2->Text = L"Mantenimiento de las rutas";
 			this->label2->TextAlign = System::Drawing::ContentAlignment::MiddleCenter;
 			this->label2->Click += gcnew System::EventHandler(this, &RutaMantenimiento::label2_Click_1);
 			// 
