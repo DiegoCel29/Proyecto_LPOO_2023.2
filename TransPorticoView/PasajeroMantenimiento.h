@@ -1,6 +1,7 @@
 #pragma once
 #include "CrearCuenta.h"
 #include "PasajeroMantenimientoEditar.h"
+#include "PasajeroMantenimientoFoto.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -54,6 +55,9 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 	private: System::Windows::Forms::Button^ B_Editar;
 	private: System::Windows::Forms::Button^ B_Borrar;
+	private: System::Windows::Forms::Button^ B_VER;
+
+
 
 	private:
 		/// <summary>
@@ -86,6 +90,7 @@ namespace TransPorticoView {
 			this->Column4 = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->B_Editar = (gcnew System::Windows::Forms::Button());
 			this->B_Borrar = (gcnew System::Windows::Forms::Button());
+			this->B_VER = (gcnew System::Windows::Forms::Button());
 			this->GB_Busqueda->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Pasajero))->BeginInit();
 			this->SuspendLayout();
@@ -98,9 +103,10 @@ namespace TransPorticoView {
 			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->B_Buscar->Location = System::Drawing::Point(450, 25);
+			this->B_Buscar->Location = System::Drawing::Point(600, 31);
+			this->B_Buscar->Margin = System::Windows::Forms::Padding(4);
 			this->B_Buscar->Name = L"B_Buscar";
-			this->B_Buscar->Size = System::Drawing::Size(100, 40);
+			this->B_Buscar->Size = System::Drawing::Size(133, 49);
 			this->B_Buscar->TabIndex = 1;
 			this->B_Buscar->Text = L"Buscar";
 			this->B_Buscar->UseVisualStyleBackColor = true;
@@ -109,9 +115,10 @@ namespace TransPorticoView {
 			// TB_Nombre
 			// 
 			this->TB_Nombre->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Nombre->Location = System::Drawing::Point(175, 30);
+			this->TB_Nombre->Location = System::Drawing::Point(233, 37);
+			this->TB_Nombre->Margin = System::Windows::Forms::Padding(4);
 			this->TB_Nombre->Name = L"TB_Nombre";
-			this->TB_Nombre->Size = System::Drawing::Size(250, 29);
+			this->TB_Nombre->Size = System::Drawing::Size(333, 34);
 			this->TB_Nombre->TabIndex = 10;
 			// 
 			// L_Nombre
@@ -121,9 +128,10 @@ namespace TransPorticoView {
 			this->L_Nombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->L_Nombre->ForeColor = System::Drawing::Color::Black;
-			this->L_Nombre->Location = System::Drawing::Point(10, 30);
+			this->L_Nombre->Location = System::Drawing::Point(13, 37);
+			this->L_Nombre->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Nombre->Name = L"L_Nombre";
-			this->L_Nombre->Size = System::Drawing::Size(150, 30);
+			this->L_Nombre->Size = System::Drawing::Size(200, 37);
 			this->L_Nombre->TabIndex = 9;
 			this->L_Nombre->Text = L"Nombre: ";
 			this->L_Nombre->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -138,9 +146,10 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
 			this->GB_Busqueda->Location = System::Drawing::Point(0, 0);
-			this->GB_Busqueda->Margin = System::Windows::Forms::Padding(20);
+			this->GB_Busqueda->Margin = System::Windows::Forms::Padding(27, 25, 27, 25);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Size = System::Drawing::Size(570, 80);
+			this->GB_Busqueda->Padding = System::Windows::Forms::Padding(4);
+			this->GB_Busqueda->Size = System::Drawing::Size(760, 98);
 			this->GB_Busqueda->TabIndex = 9;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
@@ -168,13 +177,13 @@ namespace TransPorticoView {
 					this->Column3, this->Column4
 			});
 			this->DGV_Pasajero->EnableHeadersVisualStyles = false;
-			this->DGV_Pasajero->Location = System::Drawing::Point(23, 124);
-			this->DGV_Pasajero->Margin = System::Windows::Forms::Padding(20);
+			this->DGV_Pasajero->Location = System::Drawing::Point(31, 153);
+			this->DGV_Pasajero->Margin = System::Windows::Forms::Padding(27, 25, 27, 25);
 			this->DGV_Pasajero->Name = L"DGV_Pasajero";
 			this->DGV_Pasajero->ReadOnly = true;
 			this->DGV_Pasajero->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToFirstHeader;
 			this->DGV_Pasajero->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->DGV_Pasajero->Size = System::Drawing::Size(1000, 300);
+			this->DGV_Pasajero->Size = System::Drawing::Size(1333, 369);
 			this->DGV_Pasajero->TabIndex = 10;
 			// 
 			// DGVC_Identificador
@@ -183,7 +192,7 @@ namespace TransPorticoView {
 			this->DGVC_Identificador->MinimumWidth = 6;
 			this->DGVC_Identificador->Name = L"DGVC_Identificador";
 			this->DGVC_Identificador->ReadOnly = true;
-			this->DGVC_Identificador->Width = 65;
+			this->DGVC_Identificador->Width = 82;
 			// 
 			// DGVC_RutaAsociada
 			// 
@@ -191,7 +200,7 @@ namespace TransPorticoView {
 			this->DGVC_RutaAsociada->MinimumWidth = 6;
 			this->DGVC_RutaAsociada->Name = L"DGVC_RutaAsociada";
 			this->DGVC_RutaAsociada->ReadOnly = true;
-			this->DGVC_RutaAsociada->Width = 103;
+			this->DGVC_RutaAsociada->Width = 129;
 			// 
 			// DGCV_ParaderoInicial
 			// 
@@ -199,7 +208,7 @@ namespace TransPorticoView {
 			this->DGCV_ParaderoInicial->MinimumWidth = 6;
 			this->DGCV_ParaderoInicial->Name = L"DGCV_ParaderoInicial";
 			this->DGCV_ParaderoInicial->ReadOnly = true;
-			this->DGCV_ParaderoInicial->Width = 158;
+			this->DGCV_ParaderoInicial->Width = 200;
 			// 
 			// DGVC_ParaderoFinal
 			// 
@@ -207,7 +216,7 @@ namespace TransPorticoView {
 			this->DGVC_ParaderoFinal->MinimumWidth = 6;
 			this->DGVC_ParaderoFinal->Name = L"DGVC_ParaderoFinal";
 			this->DGVC_ParaderoFinal->ReadOnly = true;
-			this->DGVC_ParaderoFinal->Width = 161;
+			this->DGVC_ParaderoFinal->Width = 204;
 			// 
 			// DGVC_Tarifa
 			// 
@@ -215,7 +224,7 @@ namespace TransPorticoView {
 			this->DGVC_Tarifa->MinimumWidth = 6;
 			this->DGVC_Tarifa->Name = L"DGVC_Tarifa";
 			this->DGVC_Tarifa->ReadOnly = true;
-			this->DGVC_Tarifa->Width = 79;
+			this->DGVC_Tarifa->Width = 98;
 			// 
 			// Column1
 			// 
@@ -223,7 +232,7 @@ namespace TransPorticoView {
 			this->Column1->MinimumWidth = 6;
 			this->Column1->Name = L"Column1";
 			this->Column1->ReadOnly = true;
-			this->Column1->Width = 98;
+			this->Column1->Width = 122;
 			// 
 			// Column2
 			// 
@@ -231,7 +240,7 @@ namespace TransPorticoView {
 			this->Column2->MinimumWidth = 6;
 			this->Column2->Name = L"Column2";
 			this->Column2->ReadOnly = true;
-			this->Column2->Width = 109;
+			this->Column2->Width = 138;
 			// 
 			// Column3
 			// 
@@ -239,7 +248,7 @@ namespace TransPorticoView {
 			this->Column3->MinimumWidth = 6;
 			this->Column3->Name = L"Column3";
 			this->Column3->ReadOnly = true;
-			this->Column3->Width = 130;
+			this->Column3->Width = 164;
 			// 
 			// Column4
 			// 
@@ -247,7 +256,7 @@ namespace TransPorticoView {
 			this->Column4->MinimumWidth = 6;
 			this->Column4->Name = L"Column4";
 			this->Column4->ReadOnly = true;
-			this->Column4->Width = 206;
+			this->Column4->Width = 258;
 			// 
 			// B_Editar
 			// 
@@ -256,10 +265,10 @@ namespace TransPorticoView {
 			this->B_Editar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Editar->Location = System::Drawing::Point(736, 222);
-			this->B_Editar->Margin = System::Windows::Forms::Padding(20);
+			this->B_Editar->Location = System::Drawing::Point(981, 273);
+			this->B_Editar->Margin = System::Windows::Forms::Padding(27, 25, 27, 25);
 			this->B_Editar->Name = L"B_Editar";
-			this->B_Editar->Size = System::Drawing::Size(100, 40);
+			this->B_Editar->Size = System::Drawing::Size(133, 49);
 			this->B_Editar->TabIndex = 13;
 			this->B_Editar->Text = L"Editar";
 			this->B_Editar->UseVisualStyleBackColor = true;
@@ -272,28 +281,46 @@ namespace TransPorticoView {
 			this->B_Borrar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Borrar->Location = System::Drawing::Point(456, 222);
-			this->B_Borrar->Margin = System::Windows::Forms::Padding(20);
+			this->B_Borrar->Location = System::Drawing::Point(608, 273);
+			this->B_Borrar->Margin = System::Windows::Forms::Padding(27, 25, 27, 25);
 			this->B_Borrar->Name = L"B_Borrar";
-			this->B_Borrar->Size = System::Drawing::Size(100, 40);
+			this->B_Borrar->Size = System::Drawing::Size(133, 49);
 			this->B_Borrar->TabIndex = 12;
 			this->B_Borrar->Text = L"Borrar";
 			this->B_Borrar->UseVisualStyleBackColor = true;
 			this->B_Borrar->Click += gcnew System::EventHandler(this, &PasajeroMantenimiento::B_Borrar_Click);
 			// 
+			// B_VER
+			// 
+			this->B_VER->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_VER.BackgroundImage")));
+			this->B_VER->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_VER->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_VER->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_VER->Location = System::Drawing::Point(828, 34);
+			this->B_VER->Margin = System::Windows::Forms::Padding(27, 25, 27, 25);
+			this->B_VER->Name = L"B_VER";
+			this->B_VER->Size = System::Drawing::Size(133, 49);
+			this->B_VER->TabIndex = 14;
+			this->B_VER->Text = L"Ver";
+			this->B_VER->UseVisualStyleBackColor = true;
+			this->B_VER->Click += gcnew System::EventHandler(this, &PasajeroMantenimiento::B_VER_Click);
+			// 
 			// PasajeroMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->AutoScroll = true;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(971, 483);
+			this->ClientSize = System::Drawing::Size(1414, 768);
+			this->Controls->Add(this->B_VER);
 			this->Controls->Add(this->B_Editar);
 			this->Controls->Add(this->B_Borrar);
 			this->Controls->Add(this->DGV_Pasajero);
 			this->Controls->Add(this->GB_Busqueda);
 			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"PasajeroMantenimiento";
 			this->Text = L"PasajeroMantenimiento";
 			this->Load += gcnew System::EventHandler(this, &PasajeroMantenimiento::PasajeroMantenimiento_Load);
@@ -309,10 +336,11 @@ namespace TransPorticoView {
 		int PosXGB_Busqueda = ((this->ClientSize.Width) - (this->GB_Busqueda->Width)) / 2;
 		int PosXDGV_Pasajero = ((this->ClientSize.Width) - (this->DGV_Pasajero->Width)) / 2;
 
-		this->GB_Busqueda->Location = System::Drawing::Point(PosXGB_Busqueda, 25);
+		this->GB_Busqueda->Location = System::Drawing::Point(PosXGB_Busqueda-200, 25);
 		this->DGV_Pasajero->Location = System::Drawing::Point(PosXDGV_Pasajero, 130);
 		this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Pasajero, 455);
 		this->B_Editar->Location = System::Drawing::Point(PosXDGV_Pasajero + 900, 455);
+		this->B_VER->Location = System::Drawing::Point(PosXDGV_Pasajero + 900, 50);
 	};
 private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
 	String^ ParaderosBuscar = this->TB_Nombre->Text;
@@ -341,7 +369,7 @@ private: void mostrarGrilla(List<Pasajero^>^ listaPASAJEROS) {
 }
 private: System::Void PasajeroMantenimiento_Load(System::Object^ sender, System::EventArgs^ e) {
 	this->SizeChanged += (gcnew System::EventHandler(this, &PasajeroMantenimiento::PasajeroMantenimiento_SizeChanged));
-	CentrarForm();
+	CentrarForm();	
 }
 private: System::Void B_Anadir_Click(System::Object^ sender, System::EventArgs^ e) {
 	CrearCuenta^ VentanaCrearCuenta = gcnew CrearCuenta();
@@ -369,6 +397,17 @@ private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void PasajeroMantenimiento_SizeChanged(System::Object^ sender, System::EventArgs^ e) {
 	CentrarForm();
+
+}
+private: System::Void B_VER_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->DGV_Pasajero->SelectedRows->Count != 0) {
+		int filaSeleccionada = this->DGV_Pasajero->SelectedRows[0]->Index;
+		String^ DNI_Mostrar = this->DGV_Pasajero->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+		PasajeroController^ objPasajeroController = gcnew PasajeroController();
+		Pasajero^ objPasajero = objPasajeroController->BuscarPasajeroDNI(DNI_Mostrar);
+		PasajeroMantenimientoFoto^ ventanaMostrarPasajero = gcnew PasajeroMantenimientoFoto(objPasajero);
+		ventanaMostrarPasajero->ShowDialog();
+	}
 }
 };
 }

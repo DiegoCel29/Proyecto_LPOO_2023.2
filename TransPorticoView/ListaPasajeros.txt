@@ -1,4 +1,6 @@
-76849076;Milen Margaret;Toribio;Alva;19;Masculino;991593244;Alasha26;
-72457071;Cesar Edú;Peña;Rengifo;19;Masculino;936893016;123456;
-71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;
-71744136;Diego;Cel;Cco;21;Masculino;980152637;C0ntr4s;
+76849076;Milen Margaret;Toribio;Alva;19;Masculino;991593244;Alasha26;26/01/2004
+71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;13/03/2000
+71744136;Diego;Cel;Cco;21;Masculino;980152637;C0ntr4s;21/05/2002
+72457071;Cesar Edu;Peña;Rengifo;19;Masculino;936893016;Sultan29;29/01/2004
+71717171;Diego;Celis;Ccoricasa;19;Masculino;917651234;Bestprogrammer;17/05/2004
+70707070;Diego Junior;Sinche;Estacio;20;Masculino;913245900;educacion;27/09/2003

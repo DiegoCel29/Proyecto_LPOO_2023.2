@@ -138,6 +138,7 @@
     <ClCompile Include="HorarioMantenimiento.cpp" />
     <ClCompile Include="MantenimientoMantenimiento.cpp" />
     <ClCompile Include="MantenimientoParadero.cpp" />
+    <ClCompile Include="PasajeroMantenimientoFoto.cpp" />
     <ClCompile Include="PPAdministradorEstadistica.cpp" />
     <ClCompile Include="PPAdministradorInformesEconomicos.cpp" />
     <ClCompile Include="PPAdministradorGestionReportesPasajeros.cpp" />
@@ -247,6 +248,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="ParaderoMantenimiento.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PasajeroMantenimientoFoto.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PPAdministradorEstadistica.h">
@@ -412,6 +416,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoMantenimiento.resx">
       <DependentUpon>MantenimientoMantenimiento.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PasajeroMantenimientoFoto.resx">
+      <DependentUpon>PasajeroMantenimientoFoto.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPAdministradorEstadistica.resx">
       <DependentUpon>PPAdministradorEstadistica.h</DependentUpon>

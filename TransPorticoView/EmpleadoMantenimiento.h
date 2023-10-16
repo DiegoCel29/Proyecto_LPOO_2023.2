@@ -1,6 +1,7 @@
 #pragma once
 #include "EmpleadoMantenimientoEditar.h"
 #include "EmpleadoMantenimientoNuevo.h"
+#include "PasajeroMantenimientoFoto.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -56,7 +57,8 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column3;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column4;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Column5;
-		/// <summary>
+	private: System::Windows::Forms::Button^ B_VER;
+		   /// <summary>
 		/// Variable del diseñador necesaria.
 		/// </summary>
 		System::ComponentModel::Container^ components;
@@ -69,8 +71,8 @@ namespace TransPorticoView {
 		void InitializeComponent(void)
 		{
 			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(EmpleadoMantenimiento::typeid));
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle1 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
-			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle2 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle3 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
+			System::Windows::Forms::DataGridViewCellStyle^ dataGridViewCellStyle4 = (gcnew System::Windows::Forms::DataGridViewCellStyle());
 			this->GB_Busqueda = (gcnew System::Windows::Forms::GroupBox());
 			this->L_Nombre = (gcnew System::Windows::Forms::Label());
 			this->TB_Nombre = (gcnew System::Windows::Forms::TextBox());
@@ -89,6 +91,7 @@ namespace TransPorticoView {
 			this->B_Editar = (gcnew System::Windows::Forms::Button());
 			this->B_Borrar = (gcnew System::Windows::Forms::Button());
 			this->B_Anadir = (gcnew System::Windows::Forms::Button());
+			this->B_VER = (gcnew System::Windows::Forms::Button());
 			this->GB_Busqueda->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Empleado))->BeginInit();
 			this->SuspendLayout();
@@ -103,8 +106,10 @@ namespace TransPorticoView {
 				static_cast<System::Byte>(0)));
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
 			this->GB_Busqueda->Location = System::Drawing::Point(0, 0);
+			this->GB_Busqueda->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Size = System::Drawing::Size(550, 80);
+			this->GB_Busqueda->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->GB_Busqueda->Size = System::Drawing::Size(733, 98);
 			this->GB_Busqueda->TabIndex = 9;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
@@ -116,9 +121,10 @@ namespace TransPorticoView {
 			this->L_Nombre->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->L_Nombre->ForeColor = System::Drawing::Color::Black;
-			this->L_Nombre->Location = System::Drawing::Point(10, 30);
+			this->L_Nombre->Location = System::Drawing::Point(13, 37);
+			this->L_Nombre->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
 			this->L_Nombre->Name = L"L_Nombre";
-			this->L_Nombre->Size = System::Drawing::Size(150, 30);
+			this->L_Nombre->Size = System::Drawing::Size(200, 37);
 			this->L_Nombre->TabIndex = 9;
 			this->L_Nombre->Text = L"Nombre :";
 			this->L_Nombre->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -126,9 +132,10 @@ namespace TransPorticoView {
 			// TB_Nombre
 			// 
 			this->TB_Nombre->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->TB_Nombre->Location = System::Drawing::Point(175, 30);
+			this->TB_Nombre->Location = System::Drawing::Point(233, 37);
+			this->TB_Nombre->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->TB_Nombre->Name = L"TB_Nombre";
-			this->TB_Nombre->Size = System::Drawing::Size(250, 29);
+			this->TB_Nombre->Size = System::Drawing::Size(333, 34);
 			this->TB_Nombre->TabIndex = 10;
 			// 
 			// B_Buscar
@@ -139,9 +146,10 @@ namespace TransPorticoView {
 			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->B_Buscar->Location = System::Drawing::Point(440, 25);
+			this->B_Buscar->Location = System::Drawing::Point(587, 31);
+			this->B_Buscar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->B_Buscar->Name = L"B_Buscar";
-			this->B_Buscar->Size = System::Drawing::Size(100, 40);
+			this->B_Buscar->Size = System::Drawing::Size(133, 49);
 			this->B_Buscar->TabIndex = 1;
 			this->B_Buscar->Text = L"Buscar";
 			this->B_Buscar->UseVisualStyleBackColor = true;
@@ -154,37 +162,38 @@ namespace TransPorticoView {
 			this->DGV_Empleado->AutoSizeRowsMode = System::Windows::Forms::DataGridViewAutoSizeRowsMode::AllCells;
 			this->DGV_Empleado->BackgroundColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->DGV_Empleado->ColumnHeadersBorderStyle = System::Windows::Forms::DataGridViewHeaderBorderStyle::Single;
-			dataGridViewCellStyle1->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
-			dataGridViewCellStyle1->BackColor = System::Drawing::Color::Wheat;
-			dataGridViewCellStyle1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+			dataGridViewCellStyle3->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleCenter;
+			dataGridViewCellStyle3->BackColor = System::Drawing::Color::Wheat;
+			dataGridViewCellStyle3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			dataGridViewCellStyle1->ForeColor = System::Drawing::SystemColors::WindowText;
-			dataGridViewCellStyle1->SelectionBackColor = System::Drawing::Color::OliveDrab;
-			dataGridViewCellStyle1->SelectionForeColor = System::Drawing::Color::White;
-			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
-			this->DGV_Empleado->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3->ForeColor = System::Drawing::SystemColors::WindowText;
+			dataGridViewCellStyle3->SelectionBackColor = System::Drawing::Color::OliveDrab;
+			dataGridViewCellStyle3->SelectionForeColor = System::Drawing::Color::White;
+			dataGridViewCellStyle3->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
+			this->DGV_Empleado->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this->DGV_Empleado->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
 			this->DGV_Empleado->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(10) {
 				this->DGVC_Identificador,
 					this->DGVC_RutaAsociada, this->DGCV_ParaderoInicial, this->DGVC_ParaderoFinal, this->DGVC_Tarifa, this->Column1, this->Column2,
 					this->Column3, this->Column4, this->Column5
 			});
-			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
-			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
-			dataGridViewCellStyle2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			dataGridViewCellStyle4->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
+			dataGridViewCellStyle4->BackColor = System::Drawing::SystemColors::Window;
+			dataGridViewCellStyle4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			dataGridViewCellStyle2->ForeColor = System::Drawing::SystemColors::ControlText;
-			dataGridViewCellStyle2->SelectionBackColor = System::Drawing::SystemColors::Highlight;
-			dataGridViewCellStyle2->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
-			dataGridViewCellStyle2->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
-			this->DGV_Empleado->DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4->ForeColor = System::Drawing::SystemColors::ControlText;
+			dataGridViewCellStyle4->SelectionBackColor = System::Drawing::SystemColors::Highlight;
+			dataGridViewCellStyle4->SelectionForeColor = System::Drawing::SystemColors::HighlightText;
+			dataGridViewCellStyle4->WrapMode = System::Windows::Forms::DataGridViewTriState::False;
+			this->DGV_Empleado->DefaultCellStyle = dataGridViewCellStyle4;
 			this->DGV_Empleado->EnableHeadersVisualStyles = false;
-			this->DGV_Empleado->Location = System::Drawing::Point(33, 286);
+			this->DGV_Empleado->Location = System::Drawing::Point(44, 352);
+			this->DGV_Empleado->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->DGV_Empleado->Name = L"DGV_Empleado";
 			this->DGV_Empleado->ReadOnly = true;
 			this->DGV_Empleado->RowHeadersWidthSizeMode = System::Windows::Forms::DataGridViewRowHeadersWidthSizeMode::AutoSizeToDisplayedHeaders;
 			this->DGV_Empleado->SelectionMode = System::Windows::Forms::DataGridViewSelectionMode::FullRowSelect;
-			this->DGV_Empleado->Size = System::Drawing::Size(1000, 300);
+			this->DGV_Empleado->Size = System::Drawing::Size(1333, 369);
 			this->DGV_Empleado->TabIndex = 10;
 			// 
 			// DGVC_Identificador
@@ -193,7 +202,7 @@ namespace TransPorticoView {
 			this->DGVC_Identificador->MinimumWidth = 6;
 			this->DGVC_Identificador->Name = L"DGVC_Identificador";
 			this->DGVC_Identificador->ReadOnly = true;
-			this->DGVC_Identificador->Width = 65;
+			this->DGVC_Identificador->Width = 82;
 			// 
 			// DGVC_RutaAsociada
 			// 
@@ -201,7 +210,7 @@ namespace TransPorticoView {
 			this->DGVC_RutaAsociada->MinimumWidth = 6;
 			this->DGVC_RutaAsociada->Name = L"DGVC_RutaAsociada";
 			this->DGVC_RutaAsociada->ReadOnly = true;
-			this->DGVC_RutaAsociada->Width = 103;
+			this->DGVC_RutaAsociada->Width = 129;
 			// 
 			// DGCV_ParaderoInicial
 			// 
@@ -209,7 +218,7 @@ namespace TransPorticoView {
 			this->DGCV_ParaderoInicial->MinimumWidth = 6;
 			this->DGCV_ParaderoInicial->Name = L"DGCV_ParaderoInicial";
 			this->DGCV_ParaderoInicial->ReadOnly = true;
-			this->DGCV_ParaderoInicial->Width = 158;
+			this->DGCV_ParaderoInicial->Width = 200;
 			// 
 			// DGVC_ParaderoFinal
 			// 
@@ -217,7 +226,7 @@ namespace TransPorticoView {
 			this->DGVC_ParaderoFinal->MinimumWidth = 6;
 			this->DGVC_ParaderoFinal->Name = L"DGVC_ParaderoFinal";
 			this->DGVC_ParaderoFinal->ReadOnly = true;
-			this->DGVC_ParaderoFinal->Width = 161;
+			this->DGVC_ParaderoFinal->Width = 204;
 			// 
 			// DGVC_Tarifa
 			// 
@@ -225,7 +234,7 @@ namespace TransPorticoView {
 			this->DGVC_Tarifa->MinimumWidth = 6;
 			this->DGVC_Tarifa->Name = L"DGVC_Tarifa";
 			this->DGVC_Tarifa->ReadOnly = true;
-			this->DGVC_Tarifa->Width = 79;
+			this->DGVC_Tarifa->Width = 98;
 			// 
 			// Column1
 			// 
@@ -233,7 +242,7 @@ namespace TransPorticoView {
 			this->Column1->MinimumWidth = 6;
 			this->Column1->Name = L"Column1";
 			this->Column1->ReadOnly = true;
-			this->Column1->Width = 98;
+			this->Column1->Width = 122;
 			// 
 			// Column2
 			// 
@@ -241,7 +250,7 @@ namespace TransPorticoView {
 			this->Column2->MinimumWidth = 6;
 			this->Column2->Name = L"Column2";
 			this->Column2->ReadOnly = true;
-			this->Column2->Width = 109;
+			this->Column2->Width = 138;
 			// 
 			// Column3
 			// 
@@ -249,7 +258,7 @@ namespace TransPorticoView {
 			this->Column3->MinimumWidth = 6;
 			this->Column3->Name = L"Column3";
 			this->Column3->ReadOnly = true;
-			this->Column3->Width = 72;
+			this->Column3->Width = 91;
 			// 
 			// Column4
 			// 
@@ -257,7 +266,7 @@ namespace TransPorticoView {
 			this->Column4->MinimumWidth = 6;
 			this->Column4->Name = L"Column4";
 			this->Column4->ReadOnly = true;
-			this->Column4->Width = 94;
+			this->Column4->Width = 118;
 			// 
 			// Column5
 			// 
@@ -265,7 +274,7 @@ namespace TransPorticoView {
 			this->Column5->MinimumWidth = 6;
 			this->Column5->Name = L"Column5";
 			this->Column5->ReadOnly = true;
-			this->Column5->Width = 177;
+			this->Column5->Width = 225;
 			// 
 			// B_Editar
 			// 
@@ -274,9 +283,10 @@ namespace TransPorticoView {
 			this->B_Editar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Editar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Editar->Location = System::Drawing::Point(802, 240);
+			this->B_Editar->Location = System::Drawing::Point(1069, 295);
+			this->B_Editar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->B_Editar->Name = L"B_Editar";
-			this->B_Editar->Size = System::Drawing::Size(100, 40);
+			this->B_Editar->Size = System::Drawing::Size(133, 49);
 			this->B_Editar->TabIndex = 13;
 			this->B_Editar->Text = L"Editar";
 			this->B_Editar->UseVisualStyleBackColor = true;
@@ -289,9 +299,10 @@ namespace TransPorticoView {
 			this->B_Borrar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Borrar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Borrar->Location = System::Drawing::Point(522, 240);
+			this->B_Borrar->Location = System::Drawing::Point(696, 295);
+			this->B_Borrar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->B_Borrar->Name = L"B_Borrar";
-			this->B_Borrar->Size = System::Drawing::Size(100, 40);
+			this->B_Borrar->Size = System::Drawing::Size(133, 49);
 			this->B_Borrar->TabIndex = 12;
 			this->B_Borrar->Text = L"Borrar";
 			this->B_Borrar->UseVisualStyleBackColor = true;
@@ -304,28 +315,47 @@ namespace TransPorticoView {
 			this->B_Anadir->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Anadir->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Anadir->Location = System::Drawing::Point(202, 240);
+			this->B_Anadir->Location = System::Drawing::Point(269, 295);
+			this->B_Anadir->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->B_Anadir->Name = L"B_Anadir";
-			this->B_Anadir->Size = System::Drawing::Size(100, 40);
+			this->B_Anadir->Size = System::Drawing::Size(133, 49);
 			this->B_Anadir->TabIndex = 11;
 			this->B_Anadir->Text = L"Añadir";
 			this->B_Anadir->UseVisualStyleBackColor = true;
 			this->B_Anadir->Click += gcnew System::EventHandler(this, &EmpleadoMantenimiento::B_Anadir_Click);
 			// 
+			// B_VER
+			// 
+			this->B_VER->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"B_VER.BackgroundImage")));
+			this->B_VER->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->B_VER->Cursor = System::Windows::Forms::Cursors::Hand;
+			this->B_VER->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->B_VER->Location = System::Drawing::Point(827, 31);
+			this->B_VER->Margin = System::Windows::Forms::Padding(27, 25, 27, 25);
+			this->B_VER->Name = L"B_VER";
+			this->B_VER->Size = System::Drawing::Size(133, 49);
+			this->B_VER->TabIndex = 15;
+			this->B_VER->Text = L"Ver";
+			this->B_VER->UseVisualStyleBackColor = true;
+			this->B_VER->Click += gcnew System::EventHandler(this, &EmpleadoMantenimiento::B_VER_Click);
+			// 
 			// EmpleadoMantenimiento
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
+			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::Control;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(1175, 715);
+			this->ClientSize = System::Drawing::Size(1567, 880);
+			this->Controls->Add(this->B_VER);
 			this->Controls->Add(this->B_Editar);
 			this->Controls->Add(this->B_Borrar);
 			this->Controls->Add(this->B_Anadir);
 			this->Controls->Add(this->DGV_Empleado);
 			this->Controls->Add(this->GB_Busqueda);
 			this->DoubleBuffered = true;
+			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
 			this->Name = L"EmpleadoMantenimiento";
 			this->Text = L"EmpleadoMantenimiento";
 			this->Load += gcnew System::EventHandler(this, &EmpleadoMantenimiento::EmpleadoMantenimiento_Load);
@@ -345,6 +375,7 @@ private: void CentrarForm() {
 	this->B_Anadir->Location = System::Drawing::Point(PosXDGV_Empleado, 455);
 	this->B_Borrar->Location = System::Drawing::Point(PosXDGV_Empleado + 480, 455);
 	this->B_Editar->Location = System::Drawing::Point(PosXDGV_Empleado + 900, 455);
+	this->B_VER->Location = System::Drawing::Point(PosXDGV_Empleado + 900, 50);
 };
 private: void mostrarGrilla(List<Empleado^>^ listaEmpleadoES) {
 		this->DGV_Empleado->Rows->Clear(); /*Elimino toda la informacion del datagrid*/
@@ -404,6 +435,16 @@ private: System::Void B_Editar_Click(System::Object^ sender, System::EventArgs^ 
 		Empleado^ objEmpleado = objEmpleadoController->BuscarEmpleadoDNI(DNI_EmpleadoMantenimientoEditar);
 		EmpleadoMantenimientoEditar^ ventanaEditarEmpleado = gcnew EmpleadoMantenimientoEditar(objEmpleado);
 		ventanaEditarEmpleado->ShowDialog();
+	}
+}
+private: System::Void B_VER_Click(System::Object^ sender, System::EventArgs^ e) {
+	if (this->DGV_Empleado->SelectedRows->Count != 0) {
+		int filaSeleccionada = this->DGV_Empleado->SelectedRows[0]->Index;
+		String^ DNI_Mostrar = this->DGV_Empleado->Rows[filaSeleccionada]->Cells[0]->Value->ToString();
+		PasajeroController^ objPasajeroController = gcnew PasajeroController();
+		Pasajero^ objPasajero = objPasajeroController->BuscarPasajeroDNI(DNI_Mostrar);
+		PasajeroMantenimientoFoto^ ventanaMostrarPasajero = gcnew PasajeroMantenimientoFoto(objPasajero);
+		ventanaMostrarPasajero->ShowDialog();
 	}
 }
 };

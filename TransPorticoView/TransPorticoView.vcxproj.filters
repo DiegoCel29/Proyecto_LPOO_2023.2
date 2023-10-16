@@ -1,411 +1,144 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Archivos de origen">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Archivos de encabezado">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Archivos de recursos">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
-    <Filter Include="Archivod de texto">
-      <UniqueIdentifier>{05847739-0b30-417e-b12d-2433ca7ea357}</UniqueIdentifier>
-    </Filter>
+    <ClCompile Include="BusesCercanos.cpp" />
+    <ClCompile Include="CrearReporte.cpp" />
+    <ClCompile Include="Historial_Ruta.cpp" />
+    <ClCompile Include="MenuTarjeta.cpp" />
+    <ClCompile Include="PantallaPrincipalConductor.cpp" />
+    <ClCompile Include="CrearCuenta.cpp" />
+    <ClCompile Include="AtajosMantenimientoEditar.cpp" />
+    <ClCompile Include="EmpleadoMantenimientoEditar.cpp" />
+    <ClCompile Include="HorarioMantenimientoAnadir.cpp" />
+    <ClCompile Include="HorarioMantenimientoEditar.cpp" />
+    <ClCompile Include="MantenimientoMantenimientoAnadir.cpp" />
+    <ClCompile Include="MantenimientoMantenimientoEditar.cpp" />
+    <ClCompile Include="PantallaPrincipalPasajero.cpp" />
+    <ClCompile Include="Pantalla_Horario_Conductor.cpp" />
+    <ClCompile Include="Pantalla_Ver_Atajo.cpp" />
+    <ClCompile Include="Pantalla_Ver_Ruta.cpp" />
+    <ClCompile Include="ParaderoMantenimientoAnadir.cpp" />
+    <ClCompile Include="ParaderoMantenimientoEditar.cpp" />
+    <ClCompile Include="PasajeroMantenimientoEditar.cpp" />
+    <ClCompile Include="AutobusMantenimientoAnadir.cpp" />
+    <ClCompile Include="AutobusMantenimientoEditar.cpp" />
+    <ClCompile Include="HorarioMantenimiento.cpp" />
+    <ClCompile Include="MantenimientoMantenimiento.cpp" />
+    <ClCompile Include="MantenimientoParadero.cpp" />
+    <ClCompile Include="PPAdministradorEstadistica.cpp" />
+    <ClCompile Include="PPAdministradorInformesEconomicos.cpp" />
+    <ClCompile Include="PPAdministradorGestionReportesPasajeros.cpp" />
+    <ClCompile Include="PPAdministradorMantenimientoBuses.cpp" />
+    <ClCompile Include="PPPasajeroBusesCercanos.cpp" />
+    <ClCompile Include="PPasajeroPromociones.cpp" />
+    <ClCompile Include="PromocionesMantenimiento.cpp" />
+    <ClCompile Include="RecargarTarjeta.cpp" />
+    <ClCompile Include="RutaMantenimiento.cpp" />
+    <ClCompile Include="AutobusMantenimiento.cpp" />
+    <ClCompile Include="FrmPantallaAdministrador.cpp" />
+    <ClCompile Include="EmpleadoMantenimientoNuevo.cpp" />
+    <ClCompile Include="AtajosMantenimientoAnadir.cpp" />
+    <ClCompile Include="PantallaIngreso.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="AtajoMantenimiento.cpp" />
+    <ClCompile Include="EmpleadoMantenimiento.cpp" />
+    <ClCompile Include="PasajeroMantenimiento.cpp" />
+    <ClCompile Include="OlvidoContrasena.cpp" />
+    <ClCompile Include="PantallaPrincipalAdministrador.cpp" />
+    <ClCompile Include="PromocionesMantenimientoAnadir.cpp" />
+    <ClCompile Include="PromocionesMantenimientoEditar.cpp" />
+    <ClCompile Include="RutaMantenimientoAnadir.cpp" />
+    <ClCompile Include="RutaMantenimientoEditar.cpp" />
+    <ClCompile Include="SaldoPasajero.cpp" />
+    <ClCompile Include="TarifarioVer.cpp" />
+    <ClCompile Include="TarifarioMantenimiento.cpp" />
+    <ClCompile Include="TarifarioMantenimientoAnadir.cpp" />
+    <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
+    <ClCompile Include="VerBuses.cpp" />
+    <ClCompile Include="PasajeroMantenimientoFoto.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="TarifarioMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="TarifarioMantenimiento.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
-    <ClCompile Include="main.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="AtajosMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="EmpleadoMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="HorarioMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="HorarioMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="MantenimientoMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="MantenimientoMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="ParaderoMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="ParaderoMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PasajeroMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="AutobusMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="AutobusMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="HorarioMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="MantenimientoMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="MantenimientoParadero.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="RutaMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="AutobusMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="EmpleadoMantenimientoNuevo.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="AtajosMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="AtajoMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="EmpleadoMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PasajeroMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="RutaMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="RutaMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PantallaPrincipalConductor.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PantallaPrincipalPasajero.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Pantalla_Horario_Conductor.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Pantalla_Ver_Atajo.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Pantalla_Ver_Ruta.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="TarifarioVer.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="BusesCercanos.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="CrearCuenta.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="CrearReporte.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="FrmPantallaAdministrador.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Historial_Ruta.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="MenuTarjeta.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="OlvidoContrasena.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PantallaIngreso.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PantallaPrincipalAdministrador.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Promociones.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PromocionesMantenimiento.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PromocionesMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-<<<<<<< HEAD
-    <ClCompile Include="PromocionesMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="RecargarTarjeta.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-=======
->>>>>>> hola aqui estoy
-    <ClCompile Include="SaldoPasajero.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="TarifarioMantenimientoAnadir.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="TarifarioMantenimientoEditar.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="VerBuses.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="TarifarioVer.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="PPAdministrador_GestionReportesPasajeros1.cpp">
-      <Filter>Archivos de encabezado</Filter>
-    </ClCompile>
-    <ClCompile Include="PPAdministrador_MantenimientoBuses.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
+    <ClInclude Include="BusesCercanos.h" />
+    <ClInclude Include="CrearReporte.h" />
+    <ClInclude Include="Historial_Ruta.h" />
+    <ClInclude Include="MenuTarjeta.h" />
+    <ClInclude Include="PantallaPrincipalConductor.h" />
+    <ClInclude Include="CrearCuenta.h" />
+    <ClInclude Include="AtajosMantenimientoEditar.h" />
+    <ClInclude Include="EmpleadoMantenimientoEditar.h" />
+    <ClInclude Include="HorarioMantenimientoAnadir.h" />
+    <ClInclude Include="HorarioMantenimientoEditar.h" />
+    <ClInclude Include="MantenimientoMantenimientoAnadir.h" />
+    <ClInclude Include="MantenimientoMantenimientoEditar.h" />
+    <ClInclude Include="PantallaPrincipalPasajero.h" />
+    <ClInclude Include="Pantalla_Horario_Conductor.h" />
+    <ClInclude Include="Pantalla_Ver_Atajo.h" />
+    <ClInclude Include="Pantalla_Ver_Ruta.h" />
+    <ClInclude Include="ParaderoMantenimientoAnadir.h" />
+    <ClInclude Include="ParaderoMantenimientoEditar.h" />
+    <ClInclude Include="PasajeroMantenimientoEditar.h" />
+    <ClInclude Include="AutobusMantenimientoAnadir.h" />
+    <ClInclude Include="AutobusMantenimientoEditar.h" />
+    <ClInclude Include="HorarioMantenimiento.h" />
+    <ClInclude Include="MantenimientoMantenimiento.h" />
+    <ClInclude Include="ParaderoMantenimiento.h" />
+    <ClInclude Include="PPAdministradorEstadistica.h" />
+    <ClInclude Include="PPAdministradorInformesEconomicos.h" />
+    <ClInclude Include="PPAdministradorGestionReportesPasajeros.h" />
+    <ClInclude Include="PPAdministradorMantenimientoBuses.h" />
+    <ClInclude Include="PPPasajeroBusesCercanos.h" />
+    <ClInclude Include="PPasajeroPromociones.h" />
+    <ClInclude Include="PromocionesMantenimiento.h" />
+    <ClInclude Include="RecargarTarjeta.h" />
+    <ClInclude Include="RutaMantenimiento.h" />
+    <ClInclude Include="AutobusMantenimiento.h" />
+    <ClInclude Include="FrmPantallaAdministrador.h" />
+    <ClInclude Include="EmpleadoMantenimientoNuevo.h" />
+    <ClInclude Include="AtajosMantenimientoAnadir.h" />
+    <ClInclude Include="PantallaIngreso.h" />
+    <ClInclude Include="AtajoMantenimiento.h" />
+    <ClInclude Include="EmpleadoMantenimiento.h" />
+    <ClInclude Include="PasajeroMantenimiento.h" />
+    <ClInclude Include="OlvidoContrasena.h" />
+    <ClInclude Include="PantallaPrincipalAdministrador.h" />
+    <ClInclude Include="PromocionesMantenimientoAnadir.h" />
+    <ClInclude Include="PromocionesMantenimientoEditar.h" />
+    <ClInclude Include="RutaMantenimientoAnadir.h" />
+    <ClInclude Include="RutaMantenimientoEditar.h" />
+    <ClInclude Include="SaldoPasajero.h" />
+    <ClInclude Include="TarifarioVer.h" />
+    <ClInclude Include="TarifarioMantenimiento.h" />
+    <ClInclude Include="TarifarioMantenimientoAnadir.h" />
+    <ClInclude Include="TarifarioMantenimientoEditar.h" />
+    <ClInclude Include="VerBuses.h" />
+    <ClInclude Include="PasajeroMantenimientoFoto.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PantallaIngreso.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="FrmPantallaAdministrador.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="OlvidoContrasena.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="CrearCuenta.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PantallaPrincipalAdministrador.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="TarifarioMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="TarifarioMantenimientoAnadir.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="TarifarioMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PromocionesMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PromocionesMantenimientoAnadir.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PromocionesMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="AtajosMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="EmpleadoMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="HorarioMantenimientoAnadir.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="HorarioMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="MantenimientoMantenimientoAnadir.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="MantenimientoMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ParaderoMantenimientoAnadir.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ParaderoMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PasajeroMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="AutobusMantenimientoAnadir.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="AutobusMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="HorarioMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="MantenimientoMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="ParaderoMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="RutaMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="AutobusMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="EmpleadoMantenimientoNuevo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="AtajosMantenimientoAnadir.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="AtajoMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="EmpleadoMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PasajeroMantenimiento.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="RutaMantenimientoAnadir.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="RutaMantenimientoEditar.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PantallaPrincipalConductor.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PantallaPrincipalPasajero.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="CrearReporte.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="RecargarTarjeta.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="MenuTarjeta.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="VerBuses.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Promociones.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Historial_Ruta.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="BusesCercanos.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="SaldoPasajero.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Pantalla_Horario_Conductor.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Pantalla_Ver_Atajo.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Pantalla_Ver_Ruta.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="TarifarioVer.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-<<<<<<< HEAD
-=======
-    <ClInclude Include="PPAdministrador_GestionReportesPasajeros1.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="PPAdministrador_MantenimientoBuses.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
->>>>>>> hola aqui estoy
+    <Image Include="Botones.jpeg" />
+    <Image Include="Fondo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="BuzonSugerencia.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Calificacion.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Emergencia.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="ListaEmpleados.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Horario.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Lista_Atajos.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Lista_Autobuses.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Lista_Informes.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="ListaPasajeros.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Lista_Rutas.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Lista_SituacionRecorrido.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Mantenimientos.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="MedidasEstadisticas.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Paradero.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Personas.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Promociones.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Ruta.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Tarifario.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
-    <Text Include="Tarjetas.txt">
-      <Filter>Archivod de texto</Filter>
-    </Text>
+    <EmbeddedResource Include="TarifarioMantenimiento.resx" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Botones.jpeg">
-      <Filter>Archivos de recursos</Filter>
-    </Image>
-    <Image Include="Fondo.png">
-      <Filter>Archivos de recursos</Filter>
-    </Image>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="TarifarioMantenimiento.resx">
-      <Filter>Archivos de recursos</Filter>
-    </EmbeddedResource>
+    <Text Include="BuzonSugerencia.txt" />
+    <Text Include="Calificacion.txt" />
+    <Text Include="Emergencia.txt" />
+    <Text Include="ListaEmpleados.txt" />
+    <Text Include="Horario.txt" />
+    <Text Include="Lista_Atajos.txt" />
+    <Text Include="Lista_Autobuses.txt" />
+    <Text Include="Lista_Informes.txt" />
+    <Text Include="Tarifario.txt" />
+    <Text Include="ListaPasajeros.txt" />
+    <Text Include="Lista_Rutas.txt" />
+    <Text Include="Lista_SituacionRecorrido.txt" />
+    <Text Include="Mantenimientos.txt" />
+    <Text Include="MedidasEstadisticas.txt" />
+    <Text Include="Paradero.txt" />
+    <Text Include="Personas.txt" />
+    <Text Include="Promociones.txt" />
+    <Text Include="Ruta.txt" />
+    <Text Include="Tarjetas.txt" />
   </ItemGroup>
 </Project>
