@@ -38,10 +38,6 @@ namespace TransPorticoView {
 		}
 	private: System::Windows::Forms::Label^ L_Nombres;
 	private: System::Windows::Forms::TextBox^ TB_Nombres;
-	protected:
-
-	protected:
-
 	private: System::Windows::Forms::Label^ L_ApellidoPat;
 	private: System::Windows::Forms::TextBox^ TB_ApellidoPat;
 	private: System::Windows::Forms::Label^ L_ApellidoMat;
@@ -50,44 +46,20 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::TextBox^ TB_DNI;
 	private: System::Windows::Forms::Label^ L_Edad;
 	private: System::Windows::Forms::TextBox^ TB_Edad;
-
-
 	private: System::Windows::Forms::Label^ L_Genero;
-
-
 	private: System::Windows::Forms::Label^ L_Telefono;
 	private: System::Windows::Forms::TextBox^ TB_Telefono;
-
-
 	private: System::Windows::Forms::Label^ L_Contrasena;
 	private: System::Windows::Forms::TextBox^ TB_Contrasena;
-
-
-
 	private: System::Windows::Forms::ComboBox^ CB_Genero;
 	private: System::Windows::Forms::Button^ B_Cancelar;
 	private: System::Windows::Forms::Button^ B_Crear;
-
 	private: System::Windows::Forms::Label^ Cumpleanos;
 	private: System::Windows::Forms::DateTimePicker^ Tiempo_Cumpleanos;
 	private: System::Windows::Forms::GroupBox^ GB_Datos;
 	private: System::Windows::Forms::Label^ L_Registrarte;
 	private: System::Windows::Forms::Label^ L_info;
 	private: System::Windows::Forms::GroupBox^ GB_Text;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -526,7 +498,7 @@ namespace TransPorticoView {
 			int Edad = Convert::ToInt32(this->TB_Edad->Text);
 
 			PasajeroController^ ObjPasajeroController = gcnew PasajeroController();
-			Pasajero^ ObjPasajero = gcnew Pasajero(DNI, Nombres, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, "Pasajero");
+			Pasajero^ ObjPasajero = gcnew Pasajero(DNI, Nombres, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, FechaCumpleanos);
 			ObjPasajeroController->AgregarPasajero(ObjPasajero);
 			MessageBox::Show("Cuenta creada con exito.");
 			this->Close();

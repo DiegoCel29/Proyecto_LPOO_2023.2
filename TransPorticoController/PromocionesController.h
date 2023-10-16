@@ -11,8 +11,7 @@ namespace TransPorticoController {
 		PromocionesController();
 		List<Promociones^>^ BuscarPromocionAll();
 		Promociones^ BuscarPromocionCodigo(int Codigo);
-		List<Promociones^>^ BuscarPromocionFechaInicio(List<Promociones^>^ ListPromocionesGeneral, String^ FechaInicio);
-		List<Promociones^>^ BuscarPromocionFechaFin(List<Promociones^>^ ListPromocionesGeneral, String^ FechaFin);
+		List<Promociones^>^ BuscarPromocionFechaPromocion(List<Promociones^>^ ListPromocionesGeneral, String^ FechaPromocion);
 		void EscribirPromociones(List<Promociones^>^ ListPromociones);
 		void EliminarPromocion(int Codigo);
 		void AgregarPromocion(Promociones^ ObjPromociones);

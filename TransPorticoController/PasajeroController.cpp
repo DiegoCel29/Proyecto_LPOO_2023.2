@@ -59,7 +59,7 @@ List<Pasajero^>^ PasajeroController::BuscarAllPasajeros() {
 		String^ Genero = Datos[5];
 		String^ Telefono = Datos[6];
 		String^ Contrasena = Datos[7];
-		String^ FechaNacimiento = Datos[8];
+		String^ FechaNacimiento = Datos[9];
 		Pasajero^ objPasajero = gcnew Pasajero(DNI, Nombre, ApellidoPat, ApellidoMat, Edad, Genero, Telefono, Contrasena, FechaNacimiento);
 		listaPasajerosEncontrados->Add(objPasajero);
 	}
@@ -69,7 +69,7 @@ void PasajeroController::EscribirPasajero(List<Pasajero^>^ lista) {
 	array<String^>^ lineasPasajero = gcnew array<String^>(lista->Count);
 	for (int i = 0; i < lista->Count; i++) {
 		Pasajero^ objeto = lista[i];
-		lineasPasajero[i] = objeto->GetDNI_Pasajero() + ";" + objeto->GetNombre_Pasajero() + ";" + objeto->GetApellidoPat_Pasajero() + ";" + objeto->GetApellidoMat_Pasajero() + ";" + objeto->GetEdad_Pasajero() + ";" + objeto->GetGenero_Pasajero() + ";" + objeto->GetTelefono_Pasajero() + ";" + objeto->GetContrasena_Pasajero() + ";", objeto->GetTipo_Pasajero() + ";" + objeto->GetFechaNacimiento_Pasajero();
+		lineasPasajero[i] = objeto->GetDNI_Pasajero() + ";" + objeto->GetNombre_Pasajero() + ";" + objeto->GetApellidoPat_Pasajero() + ";" + objeto->GetApellidoMat_Pasajero() + ";" + objeto->GetEdad_Pasajero() + ";" + objeto->GetGenero_Pasajero() + ";" + objeto->GetTelefono_Pasajero() + ";" + objeto->GetContrasena_Pasajero() + ";" + objeto->GetTipo() + ";" + objeto->GetFechaNacimiento_Pasajero();
 	}
 	File::WriteAllLines("ListaPasajeros.txt", lineasPasajero);
 }
@@ -99,6 +99,7 @@ void PasajeroController::ActualizarPasajero(Pasajero^ objPasajero) {
 			listaPasajeros[i]->SetEdad_Pasajero(objPasajero->GetEdad_Pasajero());
 			listaPasajeros[i]->SetGenero_Pasajero(objPasajero->GetGenero_Pasajero());
 			listaPasajeros[i]->SetTelefono_Pasajero(objPasajero->GetTelefono_Pasajero());
+			listaPasajeros[i]->SetTipo(objPasajero->GetTipo());
 			listaPasajeros[i]->SetFechaNacimiento_Pasajero(objPasajero->GetFechaNacimiento_Pasajero());
 			break;
 		}

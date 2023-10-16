@@ -1,4 +1,5 @@
 #include "PromocionesController.h"
+#include "ParaderoController.h"
 
 using namespace TransPorticoController;
 using namespace System::IO;
@@ -14,13 +15,18 @@ List<Promociones^>^ PromocionesController::BuscarPromocionAll() {
 	for each (String ^ Linea in Lineas) {
 		array<String^>^ Datos = Linea->Split(Separador->ToCharArray());
 
+		ParaderoController^ ObjParaderoController = gcnew ParaderoController();
+
 		int Codigo = Convert::ToInt32(Datos[0]);
 		String^ Titulo = Datos[1];
 		String^ Descripcion = Datos[2];
-		String^ FechaInicio = Datos[3];
-		String^ FechaFin = Datos[4];
+		String^ FechaPromocion = Datos[3];
+		int AforoPromocion = Convert::ToInt32(Datos[4]);
+		double CantDescuento = Convert::ToDouble(Datos[5]);
+		Paradero^ ParaderoAsociado = ObjParaderoController->buscarParaderoxCodigo(Convert::ToDouble(Datos[6]));
+		bool Estado = Convert::ToBoolean(Datos[7]);
 
-		Promociones^ ObjPromocion = gcnew Promociones(Codigo, Titulo, Descripcion, FechaInicio, FechaFin);
+		Promociones^ ObjPromocion = gcnew Promociones(Codigo, Titulo, Descripcion, FechaPromocion, AforoPromocion, CantDescuento, ParaderoAsociado, Estado);
 		ListPromocionesEncontrados->Add(ObjPromocion);
 	}
 	return ListPromocionesEncontrados;
@@ -37,20 +43,10 @@ Promociones^ PromocionesController::BuscarPromocionCodigo(int Codigo) {
 	}
 };
 
-List<Promociones^>^ PromocionesController::BuscarPromocionFechaInicio(List<Promociones^>^ ListPromocionesGeneral, String^ FechaInicio) {
+List<Promociones^>^ PromocionesController::BuscarPromocionFechaPromocion(List<Promociones^>^ ListPromocionesGeneral, String^ FechaPromocion) {
 	List<Promociones^>^ ListPromocionesEspecifico = gcnew List<Promociones^>();
 	for (int i = 0; i < ListPromocionesGeneral->Count; i++) {
-		if (ListPromocionesGeneral[i]->GetFechaInicio()->Contains(FechaInicio)) {
-			ListPromocionesEspecifico->Add(ListPromocionesGeneral[i]);
-		}
-	}
-	return ListPromocionesEspecifico;
-};
-
-List<Promociones^>^ PromocionesController::BuscarPromocionFechaFin(List<Promociones^>^ ListPromocionesGeneral, String^ FechaFin) {
-	List<Promociones^>^ ListPromocionesEspecifico = gcnew List<Promociones^>();
-	for (int i = 0; i < ListPromocionesGeneral->Count; i++) {
-		if (ListPromocionesGeneral[i]->GetFechaFin()->Contains(FechaFin)) {
+		if (ListPromocionesGeneral[i]->GetFechaPromocion()->Contains(FechaPromocion)) {
 			ListPromocionesEspecifico->Add(ListPromocionesGeneral[i]);
 		}
 	}
@@ -62,7 +58,7 @@ void PromocionesController::EscribirPromociones(List<Promociones^>^ ListPromocio
 
 	for (int i = 0; i < ListPromociones->Count; i++) {
 		Promociones^ ObjPromociones = ListPromociones[i];
-		Lineas[i] = Convert::ToString(ObjPromociones->GetCodigo()) + ";" + ObjPromociones->GetTitulo() + ";" + ObjPromociones->GetDescripcion() + ";" + ObjPromociones->GetFechaInicio() + ";" + ObjPromociones->GetFechaFin();
+		Lineas[i] = Convert::ToString(ObjPromociones->GetCodigo()) + ";" + ObjPromociones->GetTitulo() + ";" + ObjPromociones->GetDescripcion() + ";" + ObjPromociones->GetFechaPromocion() + ";" + ObjPromociones->GetAforoPromocion()+ ";" + ObjPromociones->GetCantDescuento()+ ";" + ObjPromociones->GetParaderoAsociado()->getCodigo()+ ";" + ObjPromociones->GetEstado();
 	}
 	File::WriteAllLines("Promociones.txt", Lineas);
 };
@@ -89,8 +85,11 @@ void PromocionesController::ActualizarPromocion(Promociones^ ObjPromociones) {
 		if (ListPromociones[i]->GetCodigo() == ObjPromociones->GetCodigo()) {
 			ListPromociones[i]->SetTitulo(ObjPromociones->GetTitulo());
 			ListPromociones[i]->SetDescripcion(ObjPromociones->GetDescripcion());
-			ListPromociones[i]->SetFechaInicio(ObjPromociones->GetFechaInicio());
-			ListPromociones[i]->SetFechaFin(ObjPromociones->GetFechaFin());
+			ListPromociones[i]->SetFechaPromocion(ObjPromociones->GetFechaPromocion());
+			ListPromociones[i]->SetAforoPromocion(ObjPromociones->GetAforoPromocion());
+			ListPromociones[i]->SetCantDescuento(ObjPromociones->GetCantDescuento());
+			ListPromociones[i]->SetParaderoAsociado(ObjPromociones->GetParaderoAsociado());
+			ListPromociones[i]->SetEstado(ObjPromociones->GetEstado	());
 			break;
 		}
 	}

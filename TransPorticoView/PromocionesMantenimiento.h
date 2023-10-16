@@ -43,17 +43,37 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::Button^ B_Anadir;
 	private: System::Windows::Forms::Button^ B_Borrar;
 	private: System::Windows::Forms::Button^ B_Editar;
-	private: System::Windows::Forms::Label^ L_ParaderoInicial;
 	private: System::Windows::Forms::GroupBox^ GB_Busqueda;
 	private: System::Windows::Forms::DataGridView^ DGV_Promociones;
+
+
+
+
+
+	private: System::Windows::Forms::DateTimePicker^ DTP_FechaPromocion;
+
+	private: System::Windows::Forms::Label^ L_FechaPromocion;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Codigo;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Titulo;
 	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGCV_Descripcion;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_FechaInicio;
-	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_FechaFin;
-	private: System::Windows::Forms::DateTimePicker^ DTP_FechaInicio;
-	private: System::Windows::Forms::DateTimePicker^ DTP_FechaFin;
-	private: System::Windows::Forms::Label^ L_FechaInicio;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_FechaPromocion;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_Aforo;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_CantidadDescuento;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ DGVC_ParaderoAsociado;
+	private: System::Windows::Forms::DataGridViewTextBoxColumn^ Estado;
+
+
+
+
+
+
+
+
+
+
+
+
+
 	private:
 		/// <summary>
 		/// Variable del diseñador necesaria.
@@ -74,17 +94,18 @@ namespace TransPorticoView {
 			this->B_Anadir = (gcnew System::Windows::Forms::Button());
 			this->B_Borrar = (gcnew System::Windows::Forms::Button());
 			this->B_Editar = (gcnew System::Windows::Forms::Button());
-			this->L_ParaderoInicial = (gcnew System::Windows::Forms::Label());
 			this->GB_Busqueda = (gcnew System::Windows::Forms::GroupBox());
-			this->DTP_FechaInicio = (gcnew System::Windows::Forms::DateTimePicker());
-			this->DTP_FechaFin = (gcnew System::Windows::Forms::DateTimePicker());
-			this->L_FechaInicio = (gcnew System::Windows::Forms::Label());
+			this->DTP_FechaPromocion = (gcnew System::Windows::Forms::DateTimePicker());
+			this->L_FechaPromocion = (gcnew System::Windows::Forms::Label());
 			this->DGV_Promociones = (gcnew System::Windows::Forms::DataGridView());
 			this->DGVC_Codigo = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->DGVC_Titulo = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->DGCV_Descripcion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->DGVC_FechaInicio = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
-			this->DGVC_FechaFin = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC_FechaPromocion = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC_Aforo = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC_CantidadDescuento = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->DGVC_ParaderoAsociado = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
+			this->Estado = (gcnew System::Windows::Forms::DataGridViewTextBoxColumn());
 			this->GB_Busqueda->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->DGV_Promociones))->BeginInit();
 			this->SuspendLayout();
@@ -97,7 +118,7 @@ namespace TransPorticoView {
 			this->B_Buscar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->B_Buscar->ForeColor = System::Drawing::Color::Black;
-			this->B_Buscar->Location = System::Drawing::Point(440, 50);
+			this->B_Buscar->Location = System::Drawing::Point(460, 50);
 			this->B_Buscar->Name = L"B_Buscar";
 			this->B_Buscar->Size = System::Drawing::Size(100, 40);
 			this->B_Buscar->TabIndex = 1;
@@ -150,67 +171,43 @@ namespace TransPorticoView {
 			this->B_Editar->UseVisualStyleBackColor = true;
 			this->B_Editar->Click += gcnew System::EventHandler(this, &PromocionesMantenimiento::B_Editar_Click);
 			// 
-			// L_ParaderoInicial
-			// 
-			this->L_ParaderoInicial->BackColor = System::Drawing::Color::Moccasin;
-			this->L_ParaderoInicial->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->L_ParaderoInicial->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
-				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
-			this->L_ParaderoInicial->ForeColor = System::Drawing::Color::Black;
-			this->L_ParaderoInicial->Location = System::Drawing::Point(10, 80);
-			this->L_ParaderoInicial->Name = L"L_ParaderoInicial";
-			this->L_ParaderoInicial->Size = System::Drawing::Size(150, 30);
-			this->L_ParaderoInicial->TabIndex = 5;
-			this->L_ParaderoInicial->Text = L"Fecha fin:";
-			this->L_ParaderoInicial->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
-			// 
 			// GB_Busqueda
 			// 
 			this->GB_Busqueda->BackColor = System::Drawing::Color::Transparent;
-			this->GB_Busqueda->Controls->Add(this->DTP_FechaInicio);
-			this->GB_Busqueda->Controls->Add(this->DTP_FechaFin);
-			this->GB_Busqueda->Controls->Add(this->L_FechaInicio);
-			this->GB_Busqueda->Controls->Add(this->L_ParaderoInicial);
+			this->GB_Busqueda->Controls->Add(this->DTP_FechaPromocion);
+			this->GB_Busqueda->Controls->Add(this->L_FechaPromocion);
 			this->GB_Busqueda->Controls->Add(this->B_Buscar);
 			this->GB_Busqueda->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GB_Busqueda->ForeColor = System::Drawing::Color::White;
 			this->GB_Busqueda->Location = System::Drawing::Point(262, 0);
 			this->GB_Busqueda->Name = L"GB_Busqueda";
-			this->GB_Busqueda->Size = System::Drawing::Size(550, 130);
+			this->GB_Busqueda->Size = System::Drawing::Size(570, 130);
 			this->GB_Busqueda->TabIndex = 8;
 			this->GB_Busqueda->TabStop = false;
 			this->GB_Busqueda->Text = L"Criterios de busqueda:";
 			// 
-			// DTP_FechaInicio
+			// DTP_FechaPromocion
 			// 
-			this->DTP_FechaInicio->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->DTP_FechaInicio->Location = System::Drawing::Point(175, 30);
-			this->DTP_FechaInicio->Name = L"DTP_FechaInicio";
-			this->DTP_FechaInicio->Size = System::Drawing::Size(250, 29);
-			this->DTP_FechaInicio->TabIndex = 12;
+			this->DTP_FechaPromocion->Format = System::Windows::Forms::DateTimePickerFormat::Short;
+			this->DTP_FechaPromocion->Location = System::Drawing::Point(195, 30);
+			this->DTP_FechaPromocion->Name = L"DTP_FechaPromocion";
+			this->DTP_FechaPromocion->Size = System::Drawing::Size(250, 29);
+			this->DTP_FechaPromocion->TabIndex = 12;
 			// 
-			// DTP_FechaFin
+			// L_FechaPromocion
 			// 
-			this->DTP_FechaFin->Format = System::Windows::Forms::DateTimePickerFormat::Short;
-			this->DTP_FechaFin->Location = System::Drawing::Point(175, 80);
-			this->DTP_FechaFin->Name = L"DTP_FechaFin";
-			this->DTP_FechaFin->Size = System::Drawing::Size(250, 29);
-			this->DTP_FechaFin->TabIndex = 11;
-			// 
-			// L_FechaInicio
-			// 
-			this->L_FechaInicio->BackColor = System::Drawing::Color::Moccasin;
-			this->L_FechaInicio->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
-			this->L_FechaInicio->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(0)));
-			this->L_FechaInicio->ForeColor = System::Drawing::Color::Black;
-			this->L_FechaInicio->Location = System::Drawing::Point(10, 30);
-			this->L_FechaInicio->Name = L"L_FechaInicio";
-			this->L_FechaInicio->Size = System::Drawing::Size(150, 30);
-			this->L_FechaInicio->TabIndex = 9;
-			this->L_FechaInicio->Text = L"Fecha inicio:";
-			this->L_FechaInicio->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
+			this->L_FechaPromocion->BackColor = System::Drawing::Color::Moccasin;
+			this->L_FechaPromocion->BorderStyle = System::Windows::Forms::BorderStyle::Fixed3D;
+			this->L_FechaPromocion->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
+			this->L_FechaPromocion->ForeColor = System::Drawing::Color::Black;
+			this->L_FechaPromocion->Location = System::Drawing::Point(10, 30);
+			this->L_FechaPromocion->Name = L"L_FechaPromocion";
+			this->L_FechaPromocion->Size = System::Drawing::Size(170, 30);
+			this->L_FechaPromocion->TabIndex = 9;
+			this->L_FechaPromocion->Text = L"Fecha promocion:";
+			this->L_FechaPromocion->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
 			// 
 			// DGV_Promociones
 			// 
@@ -229,9 +226,10 @@ namespace TransPorticoView {
 			dataGridViewCellStyle1->WrapMode = System::Windows::Forms::DataGridViewTriState::True;
 			this->DGV_Promociones->ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this->DGV_Promociones->ColumnHeadersHeightSizeMode = System::Windows::Forms::DataGridViewColumnHeadersHeightSizeMode::AutoSize;
-			this->DGV_Promociones->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(5) {
+			this->DGV_Promociones->Columns->AddRange(gcnew cli::array< System::Windows::Forms::DataGridViewColumn^  >(8) {
 				this->DGVC_Codigo,
-					this->DGVC_Titulo, this->DGCV_Descripcion, this->DGVC_FechaInicio, this->DGVC_FechaFin
+					this->DGVC_Titulo, this->DGCV_Descripcion, this->DGVC_FechaPromocion, this->DGVC_Aforo, this->DGVC_CantidadDescuento, this->DGVC_ParaderoAsociado,
+					this->Estado
 			});
 			dataGridViewCellStyle2->Alignment = System::Windows::Forms::DataGridViewContentAlignment::MiddleLeft;
 			dataGridViewCellStyle2->BackColor = System::Drawing::SystemColors::Window;
@@ -270,17 +268,35 @@ namespace TransPorticoView {
 			this->DGCV_Descripcion->Name = L"DGCV_Descripcion";
 			this->DGCV_Descripcion->ReadOnly = true;
 			// 
-			// DGVC_FechaInicio
+			// DGVC_FechaPromocion
 			// 
-			this->DGVC_FechaInicio->HeaderText = L"Fecha inicio";
-			this->DGVC_FechaInicio->Name = L"DGVC_FechaInicio";
-			this->DGVC_FechaInicio->ReadOnly = true;
+			this->DGVC_FechaPromocion->HeaderText = L"Fecha promocion";
+			this->DGVC_FechaPromocion->Name = L"DGVC_FechaPromocion";
+			this->DGVC_FechaPromocion->ReadOnly = true;
 			// 
-			// DGVC_FechaFin
+			// DGVC_Aforo
 			// 
-			this->DGVC_FechaFin->HeaderText = L"Fecha fin";
-			this->DGVC_FechaFin->Name = L"DGVC_FechaFin";
-			this->DGVC_FechaFin->ReadOnly = true;
+			this->DGVC_Aforo->HeaderText = L"Aforo";
+			this->DGVC_Aforo->Name = L"DGVC_Aforo";
+			this->DGVC_Aforo->ReadOnly = true;
+			// 
+			// DGVC_CantidadDescuento
+			// 
+			this->DGVC_CantidadDescuento->HeaderText = L"Descuento";
+			this->DGVC_CantidadDescuento->Name = L"DGVC_CantidadDescuento";
+			this->DGVC_CantidadDescuento->ReadOnly = true;
+			// 
+			// DGVC_ParaderoAsociado
+			// 
+			this->DGVC_ParaderoAsociado->HeaderText = L"Paradero asociado";
+			this->DGVC_ParaderoAsociado->Name = L"DGVC_ParaderoAsociado";
+			this->DGVC_ParaderoAsociado->ReadOnly = true;
+			// 
+			// Estado
+			// 
+			this->Estado->HeaderText = L"DGVC_Estado";
+			this->Estado->Name = L"Estado";
+			this->Estado->ReadOnly = true;
 			// 
 			// PromocionesMantenimiento
 			// 
@@ -308,15 +324,13 @@ namespace TransPorticoView {
 		}
 #pragma endregion
 	private: System::Void B_Buscar_Click(System::Object^ sender, System::EventArgs^ e) {
-		String^ BuscarFechaInicio = this->DTP_FechaInicio->Text;
-		String^ BuscarFechaFin = (this->DTP_FechaFin->Text);
+		String^ BuscarFechaPromocion = this->DTP_FechaPromocion->Text;
 
 		PromocionesController^ ObjPromocionesController = gcnew PromocionesController();
 		List<Promociones^>^ ListPromocionesGeneral = ObjPromocionesController->BuscarPromocionAll();
 		List<Promociones^>^ ListPromocionesBuscado = gcnew List<Promociones^>();
 
-		ListPromocionesBuscado = ObjPromocionesController->BuscarPromocionFechaInicio(ListPromocionesGeneral, BuscarFechaInicio);
-		ListPromocionesBuscado = ObjPromocionesController->BuscarPromocionFechaFin(ListPromocionesBuscado, BuscarFechaFin);
+		ListPromocionesBuscado = ObjPromocionesController->BuscarPromocionFechaPromocion(ListPromocionesGeneral, BuscarFechaPromocion);
 		MostrarGrilla(ListPromocionesBuscado);
 	};
 	private: void MostrarGrilla(List<Promociones^>^ ListPromociones) {
@@ -331,8 +345,12 @@ namespace TransPorticoView {
 			FilaGrilla[0] = Convert::ToString(ListPromociones[i]->GetCodigo());
 			FilaGrilla[1] = ListPromociones[i]->GetTitulo();
 			FilaGrilla[2] = ListPromociones[i]->GetDescripcion();
-			FilaGrilla[3] = ListPromociones[i]->GetFechaInicio();
-			FilaGrilla[4] = ListPromociones[i]->GetFechaFin();
+			FilaGrilla[3] = ListPromociones[i]->GetFechaPromocion();
+			FilaGrilla[4] = Convert::ToString(ListPromociones[i]->GetAforoPromocion());
+			FilaGrilla[5] = Convert::ToString(ListPromociones[i]->GetCantDescuento());
+			FilaGrilla[6] = Convert::ToString(ListPromociones[i]->GetParaderoAsociado()->getNombre());
+			FilaGrilla[7] = Convert::ToString(ListPromociones[i]->GetEstado());
+
 
 			this->DGV_Promociones->Rows->Add(FilaGrilla);
 		}

@@ -39,7 +39,7 @@ namespace TransPorticoModel {
 		String^ GetTipo_Pasajero();
 
 		String^ GetFechaNacimiento_Pasajero();
-		void SetFechaNacimiento_Pasajero(String^ Contrasena);
+		void SetFechaNacimiento_Pasajero(String^ FechaNacimiento);
 
 	};
 };
