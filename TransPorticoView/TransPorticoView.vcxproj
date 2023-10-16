@@ -114,6 +114,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdministradorContratoConductor.cpp" />
     <ClCompile Include="AdministradorEstadistica.cpp" />
     <ClCompile Include="AdministradorInformesEconomicos.cpp" />
     <ClCompile Include="BusesCercanos.cpp" />
@@ -181,6 +182,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdministradorContratoConductor.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="AdministradorEstadistica.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -354,6 +358,9 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AdministradorContratoConductor.resx">
+      <DependentUpon>AdministradorContratoConductor.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AdministradorEstadistica.resx">
       <DependentUpon>AdministradorEstadistica.h</DependentUpon>
     </EmbeddedResource>
@@ -455,6 +462,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PPasajeroPromociones.resx">
       <DependentUpon>PPasajeroPromociones.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPPasajeroBusesCercanos.resx">
+      <DependentUpon>PPPasajeroBusesCercanos.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PromocionesMantenimiento.resx">
       <DependentUpon>PromocionesMantenimiento.h</DependentUpon>

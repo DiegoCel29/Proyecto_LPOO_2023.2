@@ -47,7 +47,7 @@ namespace TransPorticoView {
 	private: System::Windows::Forms::ComboBox^ comboBox1;
 	private: System::Windows::Forms::Button^ button1;
 	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::PictureBox^ Logo;
+
 	private: System::Windows::Forms::Button^ B_TARJETA;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::TextBox^ textBox3;
@@ -75,10 +75,8 @@ namespace TransPorticoView {
 			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->Logo = (gcnew System::Windows::Forms::PictureBox());
 			this->B_TARJETA = (gcnew System::Windows::Forms::Button());
 			this->groupBox1->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// groupBox1
@@ -92,14 +90,13 @@ namespace TransPorticoView {
 			this->groupBox1->Controls->Add(this->comboBox1);
 			this->groupBox1->Controls->Add(this->button1);
 			this->groupBox1->Controls->Add(this->button2);
-			this->groupBox1->Controls->Add(this->Logo);
 			this->groupBox1->Controls->Add(this->B_TARJETA);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->groupBox1->ForeColor = System::Drawing::SystemColors::HighlightText;
-			this->groupBox1->Location = System::Drawing::Point(30, 29);
+			this->groupBox1->Location = System::Drawing::Point(29, 28);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(694, 522);
+			this->groupBox1->Size = System::Drawing::Size(785, 591);
 			this->groupBox1->TabIndex = 2;
 			this->groupBox1->TabStop = false;
 			// 
@@ -171,7 +168,6 @@ namespace TransPorticoView {
 			// button2
 			// 
 			this->button2->BackColor = System::Drawing::Color::DarkBlue;
-			this->button2->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"button2.BackgroundImage")));
 			this->button2->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->button2->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->button2->Location = System::Drawing::Point(251, 464);
@@ -181,20 +177,6 @@ namespace TransPorticoView {
 			this->button2->Text = L"REGRESAR";
 			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &PPPasajeroBusesCercanos::button2_Click);
-			// 
-			// Logo
-			// 
-			this->Logo->BackColor = System::Drawing::SystemColors::Control;
-			this->Logo->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->Logo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
-			this->Logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Logo.Image")));
-			this->Logo->Location = System::Drawing::Point(561, 9);
-			this->Logo->Margin = System::Windows::Forms::Padding(1);
-			this->Logo->Name = L"Logo";
-			this->Logo->Size = System::Drawing::Size(137, 90);
-			this->Logo->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
-			this->Logo->TabIndex = 10;
-			this->Logo->TabStop = false;
 			// 
 			// B_TARJETA
 			// 
@@ -213,7 +195,7 @@ namespace TransPorticoView {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(746, 588);
+			this->ClientSize = System::Drawing::Size(882, 682);
 			this->Controls->Add(this->groupBox1);
 			this->DoubleBuffered = true;
 			this->Name = L"PPPasajeroBusesCercanos";
@@ -222,7 +204,6 @@ namespace TransPorticoView {
 			this->SizeChanged += gcnew System::EventHandler(this, &PPPasajeroBusesCercanos::PPPasajeroBusesCercanos_SizeChanged);
 			this->groupBox1->ResumeLayout(false);
 			this->groupBox1->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->Logo))->EndInit();
 			this->ResumeLayout(false);
 
 		}

@@ -5,6 +5,7 @@
 #include "AdministradorInformesEconomicos.h"
 #include "PPAdministradorMantenimientoBuses.h"
 #include "MenuTarjeta.h"
+#include "AdministradorContratoConductor.h"
 namespace TransPorticoView {
 
 	using namespace System;
@@ -166,7 +167,7 @@ namespace TransPorticoView {
 			this->button1->Location = System::Drawing::Point(196, 592);
 			this->button1->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(396, 46);
+			this->button1->Size = System::Drawing::Size(427, 46);
 			this->button1->TabIndex = 15;
 			this->button1->Text = L"MANTENIMIENTOS";
 			this->button1->UseVisualStyleBackColor = false;
@@ -178,10 +179,10 @@ namespace TransPorticoView {
 			this->Logo->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->Logo->BorderStyle = System::Windows::Forms::BorderStyle::FixedSingle;
 			this->Logo->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"Logo.Image")));
-			this->Logo->Location = System::Drawing::Point(664, 159);
+			this->Logo->Location = System::Drawing::Point(676, 193);
 			this->Logo->Margin = System::Windows::Forms::Padding(1);
 			this->Logo->Name = L"Logo";
-			this->Logo->Size = System::Drawing::Size(319, 276);
+			this->Logo->Size = System::Drawing::Size(334, 236);
 			this->Logo->SizeMode = System::Windows::Forms::PictureBoxSizeMode::Zoom;
 			this->Logo->TabIndex = 14;
 			this->Logo->TabStop = false;
@@ -208,7 +209,7 @@ namespace TransPorticoView {
 			this->B_CONTRATO_CONDUCTOR->Location = System::Drawing::Point(196, 514);
 			this->B_CONTRATO_CONDUCTOR->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->B_CONTRATO_CONDUCTOR->Name = L"B_CONTRATO_CONDUCTOR";
-			this->B_CONTRATO_CONDUCTOR->Size = System::Drawing::Size(396, 46);
+			this->B_CONTRATO_CONDUCTOR->Size = System::Drawing::Size(427, 46);
 			this->B_CONTRATO_CONDUCTOR->TabIndex = 12;
 			this->B_CONTRATO_CONDUCTOR->Text = L"CONTRATO DE CONDUCTOR";
 			this->B_CONTRATO_CONDUCTOR->UseVisualStyleBackColor = false;
@@ -236,7 +237,7 @@ namespace TransPorticoView {
 			this->B_MATENIMIENTO_BUSES->Location = System::Drawing::Point(196, 433);
 			this->B_MATENIMIENTO_BUSES->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->B_MATENIMIENTO_BUSES->Name = L"B_MATENIMIENTO_BUSES";
-			this->B_MATENIMIENTO_BUSES->Size = System::Drawing::Size(387, 46);
+			this->B_MATENIMIENTO_BUSES->Size = System::Drawing::Size(427, 46);
 			this->B_MATENIMIENTO_BUSES->TabIndex = 10;
 			this->B_MATENIMIENTO_BUSES->Text = L"MANT. BUSES";
 			this->B_MATENIMIENTO_BUSES->UseVisualStyleBackColor = false;
@@ -251,7 +252,7 @@ namespace TransPorticoView {
 			this->B_GESTION_REPORTES_PARADEROS->Location = System::Drawing::Point(196, 345);
 			this->B_GESTION_REPORTES_PARADEROS->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->B_GESTION_REPORTES_PARADEROS->Name = L"B_GESTION_REPORTES_PARADEROS";
-			this->B_GESTION_REPORTES_PARADEROS->Size = System::Drawing::Size(387, 46);
+			this->B_GESTION_REPORTES_PARADEROS->Size = System::Drawing::Size(427, 46);
 			this->B_GESTION_REPORTES_PARADEROS->TabIndex = 9;
 			this->B_GESTION_REPORTES_PARADEROS->Text = L"REPORTES DE PASAJEROS";
 			this->B_GESTION_REPORTES_PARADEROS->UseVisualStyleBackColor = false;
@@ -266,7 +267,7 @@ namespace TransPorticoView {
 			this->B_REPORTES_ECONOMICOS->Location = System::Drawing::Point(196, 252);
 			this->B_REPORTES_ECONOMICOS->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->B_REPORTES_ECONOMICOS->Name = L"B_REPORTES_ECONOMICOS";
-			this->B_REPORTES_ECONOMICOS->Size = System::Drawing::Size(387, 46);
+			this->B_REPORTES_ECONOMICOS->Size = System::Drawing::Size(427, 46);
 			this->B_REPORTES_ECONOMICOS->TabIndex = 8;
 			this->B_REPORTES_ECONOMICOS->Text = L"REPORTES ECONÓMICOS";
 			this->B_REPORTES_ECONOMICOS->UseVisualStyleBackColor = false;
@@ -281,7 +282,7 @@ namespace TransPorticoView {
 			this->B_ESTADISTICAS->Location = System::Drawing::Point(196, 159);
 			this->B_ESTADISTICAS->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->B_ESTADISTICAS->Name = L"B_ESTADISTICAS";
-			this->B_ESTADISTICAS->Size = System::Drawing::Size(387, 46);
+			this->B_ESTADISTICAS->Size = System::Drawing::Size(427, 46);
 			this->B_ESTADISTICAS->TabIndex = 7;
 			this->B_ESTADISTICAS->Text = L"ESTADÍSTICAS";
 			this->B_ESTADISTICAS->UseVisualStyleBackColor = false;
@@ -338,7 +339,7 @@ namespace TransPorticoView {
 			this->B_TARJETA->Location = System::Drawing::Point(196, 63);
 			this->B_TARJETA->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
 			this->B_TARJETA->Name = L"B_TARJETA";
-			this->B_TARJETA->Size = System::Drawing::Size(387, 46);
+			this->B_TARJETA->Size = System::Drawing::Size(427, 46);
 			this->B_TARJETA->TabIndex = 1;
 			this->B_TARJETA->Text = L"TARJETA";
 			this->B_TARJETA->UseVisualStyleBackColor = false;
@@ -410,6 +411,8 @@ namespace TransPorticoView {
 
 	}
 private: System::Void B_CONTRATO_CONDUCTOR_Click(System::Object^ sender, System::EventArgs^ e) {
+	AdministradorContratoConductor^ VentanaCrearCuenta = gcnew AdministradorContratoConductor();
+	VentanaCrearCuenta->ShowDialog();
 }
 private: System::Void B_TARJETA_Click(System::Object^ sender, System::EventArgs^ e) {
 	MenuTarjeta^ VentanaCrearCuenta = gcnew MenuTarjeta();

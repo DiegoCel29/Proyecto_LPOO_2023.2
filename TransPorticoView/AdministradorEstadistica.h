@@ -80,9 +80,9 @@ namespace TransPorticoView {
 			this->groupBox1->Controls->Add(this->GB_Datos);
 			this->groupBox1->Controls->Add(this->B_Cancelar);
 			this->groupBox1->Controls->Add(this->B_Grabar);
-			this->groupBox1->Location = System::Drawing::Point(100, 73);
+			this->groupBox1->Location = System::Drawing::Point(98, 79);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(712, 481);
+			this->groupBox1->Size = System::Drawing::Size(714, 475);
 			this->groupBox1->TabIndex = 13;
 			this->groupBox1->TabStop = false;
 			// 
