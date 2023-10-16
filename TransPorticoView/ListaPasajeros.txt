@@ -1,6 +1,7 @@
 76849076;Milen Margaret;Toribio;Alva;19;Masculino;991593244;Alasha26;Pasajero;26/01/2004
-71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;Pasajero;13/03/2000
-71744136;Diego;Cel;Cco;21;Masculino;980152637;C0ntr4s;Pasajero;21/05/2002
+71809234;Maria;Torres;Rengifo;23;Femenino;978543120;Asado;Pasajero;28/02/2000
+71744136;Diego;Cel;Cco;21;Masculino;980152637;C0ntr4s;Pasajero;13/11/2002
 72457071;Cesar Edu;Peña;Rengifo;19;Masculino;936893016;Sultan29;Pasajero;29/01/2004
-71717171;Diego;Celis;Ccoricasa;19;Masculino;917651234;Bestprogrammer;Pasajero;17/05/2004
-70707070;Diego Junior;Sinche;Estacio;20;Masculino;913245900;educacion;Pasajero;27/09/2003
+71717171;Diego;Celis;Ccoricasa;19;Masculino;917651234;Bestprogrammer;Pasajero;10/03/2004
+70707070;Diego Junior;Sinche;Estacio;20;Masculino;913245900;educacion;Pasajero;13/08/2003
+75231049;Juan Diego;Ronaldo;Diaz;29;Masculino;924100453;tomate32;Pasajero;23/05/1994
