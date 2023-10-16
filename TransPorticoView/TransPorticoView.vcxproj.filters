@@ -56,6 +56,11 @@
     <ClCompile Include="TarifarioMantenimientoEditar.cpp" />
     <ClCompile Include="VerBuses.cpp" />
     <ClCompile Include="PasajeroMantenimientoFoto.cpp" />
+    <ClCompile Include="AdministradorEstadistica.cpp" />
+    <ClCompile Include="AdministradorInformesEconomicos.cpp" />
+    <ClCompile Include="MantenimientoAdministradorEstadistica.cpp" />
+    <ClCompile Include="PPAdministradorVerNombres.cpp" />
+    <ClCompile Include="PPAdministradorGestion_Ruta.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BusesCercanos.h" />
@@ -112,6 +117,11 @@
     <ClInclude Include="TarifarioMantenimientoEditar.h" />
     <ClInclude Include="VerBuses.h" />
     <ClInclude Include="PasajeroMantenimientoFoto.h" />
+    <ClInclude Include="AdministradorEstadistica.h" />
+    <ClInclude Include="AdministradorInformesEconomicos.h" />
+    <ClInclude Include="MantenimientoAdministradorEstadistica.h" />
+    <ClInclude Include="PPAdministradorVerNombres.h" />
+    <ClInclude Include="PPAdministradorGestion_Ruta.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Botones.jpeg" />

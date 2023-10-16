@@ -144,9 +144,11 @@
     <ClCompile Include="MantenimientoParadero.cpp" />
     <ClCompile Include="PasajeroMantenimientoFoto.cpp" />
     <ClCompile Include="PPAdministradorEstadistica.cpp" />
+    <ClCompile Include="PPAdministradorGestion_Ruta.cpp" />
     <ClCompile Include="PPAdministradorInformesEconomicos.cpp" />
     <ClCompile Include="PPAdministradorGestionReportesPasajeros.cpp" />
     <ClCompile Include="PPAdministradorMantenimientoBuses.cpp" />
+    <ClCompile Include="PPAdministradorVerNombres.cpp" />
     <ClCompile Include="PPPasajeroBusesCercanos.cpp" />
     <ClCompile Include="PPasajeroPromociones.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
@@ -272,6 +274,9 @@
     <ClInclude Include="PPAdministradorEstadistica.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="PPAdministradorGestion_Ruta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="PPAdministradorInformesEconomicos.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -279,6 +284,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PPAdministradorMantenimientoBuses.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="PPAdministradorVerNombres.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="PPPasajeroBusesCercanos.h">
@@ -454,11 +462,17 @@
     <EmbeddedResource Include="PPAdministradorGestionReportesPasajeros.resx">
       <DependentUpon>PPAdministradorGestionReportesPasajeros.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PPAdministradorGestion_Ruta.resx">
+      <DependentUpon>PPAdministradorGestion_Ruta.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PPAdministradorInformesEconomicos.resx">
       <DependentUpon>PPAdministradorInformesEconomicos.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPAdministradorMantenimientoBuses.resx">
       <DependentUpon>PPAdministradorMantenimientoBuses.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPAdministradorVerNombres.resx">
+      <DependentUpon>PPAdministradorVerNombres.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPasajeroPromociones.resx">
       <DependentUpon>PPasajeroPromociones.h</DependentUpon>
