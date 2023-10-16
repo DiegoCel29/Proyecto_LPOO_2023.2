@@ -117,6 +117,7 @@
     <ClCompile Include="BusesCercanos.cpp" />
     <ClCompile Include="CrearReporte.cpp" />
     <ClCompile Include="Historial_Ruta.cpp" />
+    <ClCompile Include="MantenimientoAdministradorEstadistica.cpp" />
     <ClCompile Include="MenuTarjeta.cpp" />
     <ClCompile Include="PantallaPrincipalConductor.cpp" />
     <ClCompile Include="CrearCuenta.cpp" />
@@ -185,6 +186,9 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Historial_Ruta.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MantenimientoAdministradorEstadistica.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuTarjeta.h">
@@ -356,6 +360,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="HorarioMantenimientoAnadir.resx">
       <DependentUpon>HorarioMantenimientoAnadir.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenimientoAdministradorEstadistica.resx">
+      <DependentUpon>MantenimientoAdministradorEstadistica.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenimientoMantenimientoEditar.resx">
       <DependentUpon>MantenimientoMantenimientoEditar.h</DependentUpon>

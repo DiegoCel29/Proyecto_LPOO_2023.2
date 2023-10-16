@@ -178,7 +178,7 @@ namespace TransPorticoView {
 			this->Controls->Add(this->menuStrip1);
 			this->DoubleBuffered = true;
 			this->MainMenuStrip = this->menuStrip1;
-			this->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->Margin = System::Windows::Forms::Padding(4);
 			this->Name = L"FrmPantallaAdministrador";
 			this->Text = L"FrmPantallaAdministrador";
 			this->WindowState = System::Windows::Forms::FormWindowState::Maximized;
