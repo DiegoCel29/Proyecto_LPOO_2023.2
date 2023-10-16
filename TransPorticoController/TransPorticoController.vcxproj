@@ -154,16 +154,16 @@
     <ClCompile Include="TarjetaController.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TransPorticoModel\TransPorticoModel.vcxproj">
-      <Project>{d71ae4d6-0f14-4f12-b17f-5b69bee2c1cb}</Project>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Text Include="BuzonSugerencia.txt" />
     <Text Include="Promociones.txt" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Fondo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TransPorticoModel\TransPorticoModel.vcxproj">
+      <Project>{d71ae4d6-0f14-4f12-b17f-5b69bee2c1cb}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

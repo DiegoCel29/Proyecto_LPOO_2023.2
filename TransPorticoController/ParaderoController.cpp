@@ -18,10 +18,13 @@ List<Paradero^>^ ParaderoController::buscarParaderos(String^ Nombre) {
 		String^ NombreParadero = datos[1];
 		double X_Paradero = Convert::ToDouble(datos[2]);
 		double Y_Paradero = Convert::ToDouble(datos[3]);
-		int FrecuenciaParadero = Convert::ToInt32(datos[4]);
-		double DistanciaParadero = Convert::ToDouble(datos[5]);
+		String^ Ruta = datos[4];
+		String^ Horario = datos[5];
+		String^ Publicidad = datos[6];
+		String^ Referencia = datos[7];
+		String^ Seguridad = datos[8];
 		if (NombreParadero->Contains(Nombre)) {
-			Paradero^ objParadero = gcnew Paradero(CodigoParadero, NombreParadero, X_Paradero, Y_Paradero, FrecuenciaParadero, DistanciaParadero);
+			Paradero^ objParadero = gcnew Paradero(CodigoParadero, NombreParadero, X_Paradero, Y_Paradero,Ruta,Horario,Publicidad,Referencia,Seguridad);
 			listaParaderosEncontradas->Add(objParadero);
 		}
 	}
@@ -37,9 +40,12 @@ List<Paradero^>^ ParaderoController::buscarAll() {
 		String^ NombreParadero = datos[1];
 		double X_Paradero = Convert::ToDouble(datos[2]);
 		double Y_Paradero = Convert::ToDouble(datos[3]);
-		int FrecuenciaParadero = Convert::ToInt32(datos[4]);
-		double DistanciaParadero = Convert::ToDouble(datos[5]);
-		Paradero^ objParadero = gcnew Paradero(CodigoParadero, NombreParadero, X_Paradero, Y_Paradero, FrecuenciaParadero, DistanciaParadero);
+		String^ Ruta = datos[4];
+		String^ Horario = datos[5];
+		String^ Publicidad = datos[6];
+		String^ Referencia = datos[7];
+		String^ Seguridad = datos[8];
+		Paradero^ objParadero = gcnew Paradero(CodigoParadero, NombreParadero, X_Paradero, Y_Paradero, Ruta, Horario, Publicidad, Referencia, Seguridad);
 		listaParaderosEncontradas->Add(objParadero);
 	}
 	return listaParaderosEncontradas;
@@ -48,7 +54,7 @@ void ParaderoController::escribirArchivo(List<Paradero^>^ listaParaderos) {
 	array<String^>^ lineasArchivo = gcnew array<String^>(listaParaderos->Count);
 	for (int i = 0; i < listaParaderos->Count; i++) {
 		Paradero^ objeto = listaParaderos[i];
-		lineasArchivo[i] = objeto->getCodigo() + ";" + objeto->getNombre() + ";" + objeto->getX_Paradero() + ";" + objeto->getY_Paradero() + ";" + objeto->getFrecuencia() + ";" + objeto->getDistancia();
+		lineasArchivo[i] = objeto->getCodigo() + ";" + objeto->getNombre() + ";" + objeto->getX_Paradero() + ";" + objeto->getY_Paradero() + ";" + objeto->getRuta() + ";" + objeto->getHorario() + ";" + objeto->getPublicidad() + ";" + objeto->getReferencia() + ";" + objeto->getSeguridad();
 	}
 	File::WriteAllLines("Paradero.txt", lineasArchivo);
 }
@@ -82,8 +88,11 @@ void ParaderoController::actualizarParadero(Paradero^ objParadero) {
 			listaParadero[i]->setNombre(objParadero->getNombre());
 			listaParadero[i]->setX_Paradero(objParadero->getX_Paradero());
 			listaParadero[i]->setY_Paradero(objParadero->getY_Paradero());
-			listaParadero[i]->setFrecuencia(objParadero->getFrecuencia());
-			listaParadero[i]->setDistancia(objParadero->getDistancia());
+			listaParadero[i]->setRuta(objParadero->getRuta());
+			listaParadero[i]->setHorario(objParadero->getHorario());
+			listaParadero[i]->setPublicidad(objParadero->getPublicidad());
+			listaParadero[i]->setReferencia(objParadero->getReferencia());
+			listaParadero[i]->setSeguridad(objParadero->getSeguridad());
 			break;
 		}
 	}
