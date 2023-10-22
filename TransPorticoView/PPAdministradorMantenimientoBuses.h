@@ -1,5 +1,5 @@
 #pragma once
-#include "PPPasajeroBusesCercanos.h"
+
 namespace TransPorticoView {
 
 	using namespace System;
@@ -74,10 +74,9 @@ namespace TransPorticoView {
 			this->B_Cancelar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Cancelar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Cancelar->Location = System::Drawing::Point(455, 453);
-			this->B_Cancelar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Cancelar->Location = System::Drawing::Point(341, 368);
 			this->B_Cancelar->Name = L"B_Cancelar";
-			this->B_Cancelar->Size = System::Drawing::Size(133, 49);
+			this->B_Cancelar->Size = System::Drawing::Size(100, 40);
 			this->B_Cancelar->TabIndex = 134;
 			this->B_Cancelar->Text = L"Cancelar";
 			this->B_Cancelar->UseVisualStyleBackColor = true;
@@ -92,11 +91,9 @@ namespace TransPorticoView {
 			this->GB_Datos->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->GB_Datos->ForeColor = System::Drawing::Color::White;
-			this->GB_Datos->Location = System::Drawing::Point(127, 172);
-			this->GB_Datos->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->GB_Datos->Location = System::Drawing::Point(95, 140);
 			this->GB_Datos->Name = L"GB_Datos";
-			this->GB_Datos->Padding = System::Windows::Forms::Padding(4, 4, 4, 4);
-			this->GB_Datos->Size = System::Drawing::Size(613, 231);
+			this->GB_Datos->Size = System::Drawing::Size(460, 188);
 			this->GB_Datos->TabIndex = 132;
 			this->GB_Datos->TabStop = false;
 			this->GB_Datos->Text = L"Datos de Mantenimiento:";
@@ -107,10 +104,9 @@ namespace TransPorticoView {
 			this->CB_Ruta->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->CB_Ruta->FormattingEnabled = true;
-			this->CB_Ruta->Location = System::Drawing::Point(247, 146);
-			this->CB_Ruta->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CB_Ruta->Location = System::Drawing::Point(185, 119);
 			this->CB_Ruta->Name = L"CB_Ruta";
-			this->CB_Ruta->Size = System::Drawing::Size(332, 37);
+			this->CB_Ruta->Size = System::Drawing::Size(250, 32);
 			this->CB_Ruta->TabIndex = 126;
 			// 
 			// CB_Ordenar
@@ -119,10 +115,9 @@ namespace TransPorticoView {
 			this->CB_Ordenar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->CB_Ordenar->FormattingEnabled = true;
-			this->CB_Ordenar->Location = System::Drawing::Point(247, 66);
-			this->CB_Ordenar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->CB_Ordenar->Location = System::Drawing::Point(185, 54);
 			this->CB_Ordenar->Name = L"CB_Ordenar";
-			this->CB_Ordenar->Size = System::Drawing::Size(332, 37);
+			this->CB_Ordenar->Size = System::Drawing::Size(250, 32);
 			this->CB_Ordenar->TabIndex = 125;
 			// 
 			// L_Ordenar
@@ -133,11 +128,10 @@ namespace TransPorticoView {
 			this->L_Ordenar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->L_Ordenar->ForeColor = System::Drawing::Color::Black;
-			this->L_Ordenar->Location = System::Drawing::Point(13, 65);
-			this->L_Ordenar->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->L_Ordenar->Location = System::Drawing::Point(10, 53);
 			this->L_Ordenar->Name = L"L_Ordenar";
 			this->L_Ordenar->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->L_Ordenar->Size = System::Drawing::Size(213, 37);
+			this->L_Ordenar->Size = System::Drawing::Size(160, 30);
 			this->L_Ordenar->TabIndex = 111;
 			this->L_Ordenar->Text = L"Ordenar:";
 			this->L_Ordenar->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -150,11 +144,10 @@ namespace TransPorticoView {
 			this->L_Paradero_Final->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(0)));
 			this->L_Paradero_Final->ForeColor = System::Drawing::Color::Black;
-			this->L_Paradero_Final->Location = System::Drawing::Point(13, 145);
-			this->L_Paradero_Final->Margin = System::Windows::Forms::Padding(4, 0, 4, 0);
+			this->L_Paradero_Final->Location = System::Drawing::Point(10, 118);
 			this->L_Paradero_Final->Name = L"L_Paradero_Final";
 			this->L_Paradero_Final->RightToLeft = System::Windows::Forms::RightToLeft::No;
-			this->L_Paradero_Final->Size = System::Drawing::Size(213, 37);
+			this->L_Paradero_Final->Size = System::Drawing::Size(160, 30);
 			this->L_Paradero_Final->TabIndex = 117;
 			this->L_Paradero_Final->Text = L"Ruta:";
 			this->L_Paradero_Final->TextAlign = System::Drawing::ContentAlignment::MiddleLeft;
@@ -166,27 +159,25 @@ namespace TransPorticoView {
 			this->B_Ingresar->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->B_Ingresar->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->B_Ingresar->Location = System::Drawing::Point(251, 453);
-			this->B_Ingresar->Margin = System::Windows::Forms::Padding(4, 4, 4, 4);
+			this->B_Ingresar->Location = System::Drawing::Point(188, 368);
 			this->B_Ingresar->Name = L"B_Ingresar";
-			this->B_Ingresar->Size = System::Drawing::Size(133, 49);
+			this->B_Ingresar->Size = System::Drawing::Size(100, 40);
 			this->B_Ingresar->TabIndex = 133;
 			this->B_Ingresar->Text = L"Ingresar";
 			this->B_Ingresar->UseVisualStyleBackColor = true;
-			this->B_Ingresar->Click += gcnew System::EventHandler(this, &PPAdministradorMantenimientoBuses::B_Ingresar_Click);
 			// 
 			// PPAdministradorMantenimientoBuses
 			// 
-			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
+			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
-			this->ClientSize = System::Drawing::Size(869, 674);
+			this->ClientSize = System::Drawing::Size(652, 548);
 			this->Controls->Add(this->B_Cancelar);
 			this->Controls->Add(this->GB_Datos);
 			this->Controls->Add(this->B_Ingresar);
 			this->DoubleBuffered = true;
-			this->Margin = System::Windows::Forms::Padding(3, 2, 3, 2);
+			this->Margin = System::Windows::Forms::Padding(2, 2, 2, 2);
 			this->Name = L"PPAdministradorMantenimientoBuses";
 			this->Text = L"PPAdministradorMantenimientoBuses";
 			this->GB_Datos->ResumeLayout(false);
@@ -194,9 +185,5 @@ namespace TransPorticoView {
 
 		}
 #pragma endregion
-	private: System::Void B_Ingresar_Click(System::Object^ sender, System::EventArgs^ e) {
-		PPPasajeroBusesCercanos^ ObjFrmPantallaAdministrador = gcnew PPPasajeroBusesCercanos();
-		ObjFrmPantallaAdministrador->ShowDialog();
-	}
-};
+	};
 }
