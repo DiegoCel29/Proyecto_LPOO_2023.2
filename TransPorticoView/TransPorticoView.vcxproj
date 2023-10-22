@@ -148,10 +148,7 @@
     <ClCompile Include="PPAdministradorInformesEconomicos.cpp" />
     <ClCompile Include="PPAdministradorGestionReportesPasajeros.cpp" />
     <ClCompile Include="PPAdministradorMantenimientoBuses.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="PPAdministradorVerNombres.cpp" />
-=======
->>>>>>> V6.2.3
     <ClCompile Include="PPPasajeroBusesCercanos.cpp" />
     <ClCompile Include="PPasajeroPromociones.cpp" />
     <ClCompile Include="PromocionesMantenimiento.cpp" />
@@ -289,12 +286,9 @@
     <ClInclude Include="PPAdministradorMantenimientoBuses.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="PPAdministradorVerNombres.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-=======
->>>>>>> V6.2.3
     <ClInclude Include="PPPasajeroBusesCercanos.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -396,12 +390,9 @@
     <EmbeddedResource Include="HorarioMantenimientoAnadir.resx">
       <DependentUpon>HorarioMantenimientoAnadir.h</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="MantenimientoAdministradorEstadistica.resx">
       <DependentUpon>MantenimientoAdministradorEstadistica.h</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> V6.2.3
     <EmbeddedResource Include="MantenimientoMantenimientoEditar.resx">
       <DependentUpon>MantenimientoMantenimientoEditar.h</DependentUpon>
     </EmbeddedResource>
@@ -471,31 +462,23 @@
     <EmbeddedResource Include="PPAdministradorGestionReportesPasajeros.resx">
       <DependentUpon>PPAdministradorGestionReportesPasajeros.h</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="PPAdministradorGestion_Ruta.resx">
       <DependentUpon>PPAdministradorGestion_Ruta.h</DependentUpon>
     </EmbeddedResource>
-=======
->>>>>>> V6.2.3
     <EmbeddedResource Include="PPAdministradorInformesEconomicos.resx">
       <DependentUpon>PPAdministradorInformesEconomicos.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPAdministradorMantenimientoBuses.resx">
       <DependentUpon>PPAdministradorMantenimientoBuses.h</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="PPAdministradorVerNombres.resx">
       <DependentUpon>PPAdministradorVerNombres.h</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PPasajeroPromociones.resx">
-      <DependentUpon>PPasajeroPromociones.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="PPPasajeroBusesCercanos.resx">
       <DependentUpon>PPPasajeroBusesCercanos.h</DependentUpon>
-=======
+	</EmbeddedResource>
     <EmbeddedResource Include="PPasajeroPromociones.resx">
       <DependentUpon>PPasajeroPromociones.h</DependentUpon>
->>>>>>> V6.2.3
     </EmbeddedResource>
     <EmbeddedResource Include="PromocionesMantenimiento.resx">
       <DependentUpon>PromocionesMantenimiento.h</DependentUpon>
